@@ -89245,5 +89245,8 @@
     "MOVE_WILL_O_WISP",
     "MOVE_WORK_UP",
     "MOVE_ZEN_HEADBUTT"
+  ],
+  "HAMTARO": [
+    "MOVE_TOXIC"
   ]
 }

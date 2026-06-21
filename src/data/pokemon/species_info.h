@@ -246,6 +246,76 @@ const struct SpeciesInfo gSpeciesInfo[] =
         //.perfectIVCount = NUM_STATS,
     },
     */
+    
+    [SPECIES_HAMTARO] =
+    {
+        .baseHP        = 85,
+        .baseAttack    = 90,
+        .baseDefense   = 85,
+        .baseSpeed     = 100,
+        .baseSpAttack  = 65,
+        .baseSpDefense = 65,
+        .types = MON_TYPES(TYPE_NORMAL),
+        .catchRate = 255,
+        .expYield = 67,
+        .evYield_HP = 1,
+        .evYield_Defense = 1,
+        .evYield_SpDefense = 1,
+        .genderRatio = PERCENT_FEMALE(0),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
+        .abilities = { ABILITY_GLUTTONY, ABILITY_CHEEK_POUCH, ABILITY_TECHNICIAN },
+        .bodyColor = BODY_COLOR_BROWN,
+        .speciesName = _("Hamtaro"),
+        .cryId = CRY_HAMTARO,
+        .natDexNum = NATIONAL_DEX_HAMTARO,
+        .categoryName = _("Hamster"),
+        .height = 1,
+        .weight = 1,
+        .description = COMPOUND_STRING(
+            "Hamtaro is the protagonist of a\n"
+            "popular children's anime series.\n"
+            "He likely got here through one of\n"
+            "his Game Boy Adventure Games."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Hamtaro,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 10),
+            ANIMCMD_FRAME(1, 50),
+            ANIMCMD_FRAME(0, 10),
+        ),
+        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .backPic = gMonBackPic_Hamtaro,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 0,
+        .backAnimId = ANIM_CONCAVE_ARC_SMALL,
+        .palette = gMonPalette_Hamtaro,
+        .shinyPalette = gMonShinyPalette_Hamtaro,
+        .iconSprite = gMonIcon_Hamtaro,
+        .iconPalIndex =5,
+        FOOTPRINT(QuestionMark)
+        .levelUpLearnset = sHamtaroLevelUpLearnset,
+        .teachableLearnset = sHamtaroTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
+                                {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
+        OVERWORLD(
+            sPicTable_Hamtaro,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_NONE,
+            sAnimTable_Following,
+            gOverworldPalette_Hamtaro,
+            gShinyOverworldPalette_Hamtaro
+        )
+    },
+    
 };
 
 const struct EggData gEggDatas[EGG_ID_COUNT] =

@@ -3048,3 +3048,41 @@ const u16 ALIGNED(4) gTilesetPalettes_General_Frlg[][16] =
 const u32 gTilesetTiles_General_Frlg[] = INCGFX_U32("data/tilesets/primary/general_frlg/tiles.png", ".4bpp.smol");
 
 #endif // IS_FRLG
+
+const u16 gTilesetPalettes_JohtoPrimary[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/johto_primary/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_primary/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_primary/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_primary/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_primary/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_primary/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_primary/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_primary/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_primary/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_primary/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_primary/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_primary/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_primary/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_JohtoPrimary[] = INCBIN_U32("data/tilesets/primary/johto_primary/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_JohtoInterior[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/johto_interior/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_interior/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_interior/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_interior/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_interior/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_interior/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_interior/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_interior/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_interior/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_interior/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_interior/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_interior/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johto_interior/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_JohtoInterior[] = INCBIN_U32("data/tilesets/primary/johto_interior/tiles.4bpp.lz");

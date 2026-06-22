@@ -1552,3 +1552,14 @@ const struct Tileset gTileset_HamtaroAcornShrine =
     .metatileAttributes = gMetatileAttributes_HamtaroAcornShrine,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_HamtaroShrine =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_HamtaroShrine,
+    .palettes = gTilesetPalettes_HamtaroShrine,
+    .metatiles = gMetatiles_HamtaroShrine,
+    .metatileAttributes = gMetatileAttributes_HamtaroShrine,
+    .callback = NULL,
+};

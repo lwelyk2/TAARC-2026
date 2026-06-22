@@ -310,7 +310,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_NONE,
-            sAnimTable_Following,
+            sAnimTable_Following_Asym,
             gOverworldPalette_Hamtaro,
             gShinyOverworldPalette_Hamtaro
         )

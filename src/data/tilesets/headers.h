@@ -1546,10 +1546,10 @@ const struct Tileset gTileset_HamtaroAcornShrine =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_HamtaroAcornShrine,
-    .palettes = gTilesetPalettes_HamtaroAcornShrine,
-    .metatiles = gMetatiles_HamtaroAcornShrine,
-    .metatileAttributes = gMetatileAttributes_HamtaroAcornShrine,
+    .tiles = gTilesetTiles_PorytilesManaged_HamtaroAcornShrine,
+    .palettes = gTilesetPalettes_PorytilesManaged_HamtaroAcornShrine,
+    .metatiles = gMetatiles_PorytilesManaged_HamtaroAcornShrine,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_HamtaroAcornShrine,
     .callback = NULL,
 };
 
@@ -1562,4 +1562,15 @@ const struct Tileset gTileset_HamtaroShrine =
     .metatiles = gMetatiles_HamtaroShrine,
     .metatileAttributes = gMetatileAttributes_HamtaroShrine,
     .callback = NULL,
+};
+
+const struct Tileset gTileset_HamtaroExterior =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_PorytilesManaged_HamtaroExterior,
+    .palettes = gTilesetPalettes_PorytilesManaged_HamtaroExterior,
+    .metatiles = gMetatiles_PorytilesManaged_HamtaroExterior,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_HamtaroExterior,
+    .callback = InitTilesetAnim_PorytilesManaged_HamtaroExterior,
 };

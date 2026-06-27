@@ -9329,7 +9329,7 @@
       "name": "HamtaroTestMap_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_HamtaroAcornShrine",
+      "primary_tileset": "gTileset_HamtaroExterior",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/HamtaroTestMap/border.bin",
       "blockdata_filepath": "data/layouts/HamtaroTestMap/map.bin"

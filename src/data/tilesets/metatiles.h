@@ -414,3 +414,6 @@ const u16 gMetatileAttributes_JohtoPrimary[] = INCBIN_U16("data/tilesets/primary
 
 const u16 gMetatiles_JohtoInterior[] = INCBIN_U16("data/tilesets/primary/johto_interior/metatiles.bin");
 const u16 gMetatileAttributes_JohtoInterior[] = INCBIN_U16("data/tilesets/primary/johto_interior/metatile_attributes.bin");
+
+const u16 gMetatiles_ZeldaExterior[] = INCBIN_U16("data/tilesets/primary/zelda_exterior/metatiles.bin");
+const u16 gMetatileAttributes_ZeldaExterior[] = INCBIN_U16("data/tilesets/primary/zelda_exterior/metatile_attributes.bin");

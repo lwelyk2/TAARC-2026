@@ -3086,3 +3086,22 @@ const u16 gTilesetPalettes_JohtoInterior[][16] =
 };
 
 const u32 gTilesetTiles_JohtoInterior[] = INCBIN_U32("data/tilesets/primary/johto_interior/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_ZeldaExterior[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/zelda_exterior/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/zelda_exterior/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/zelda_exterior/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/zelda_exterior/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/zelda_exterior/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/zelda_exterior/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/zelda_exterior/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/zelda_exterior/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/zelda_exterior/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/zelda_exterior/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/zelda_exterior/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/zelda_exterior/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/zelda_exterior/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_ZeldaExterior[] = INCBIN_U32("data/tilesets/primary/zelda_exterior/tiles.4bpp.lz");

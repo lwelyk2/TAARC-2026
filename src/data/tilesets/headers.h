@@ -1563,3 +1563,14 @@ const struct Tileset gTileset_JohtoInterior =
     .metatileAttributes = gMetatileAttributes_JohtoInterior,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_ZeldaExterior =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_ZeldaExterior,
+    .palettes = gTilesetPalettes_ZeldaExterior,
+    .metatiles = gMetatiles_ZeldaExterior,
+    .metatileAttributes = gMetatileAttributes_ZeldaExterior,
+    .callback = NULL,
+};

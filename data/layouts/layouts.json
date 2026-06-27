@@ -9323,6 +9323,16 @@
       "border_height": 2,
       "border_width": 2,
       "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_ZELDA_TEST",
+      "name": "ZeldaTest_Layout",
+      "width": 46,
+      "height": 26,
+      "primary_tileset": "gTileset_ZeldaExterior",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ZeldaTest/border.bin",
+      "blockdata_filepath": "data/layouts/ZeldaTest/map.bin"
     }
   ]
 }

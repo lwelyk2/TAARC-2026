@@ -12,7 +12,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal = {
     .tracks = TRACKS_FOOT,
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
-    .anims = sAnimTable_BrendanMayWide,
+    .anims = sAnimTable_BrendanMay_Asym,
     .images = sPicTable_BrendanNormal,
 };
 

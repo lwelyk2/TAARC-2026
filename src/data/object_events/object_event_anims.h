@@ -871,6 +871,16 @@ static const union AnimCmd sAnim_FieldMove[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_HamHa[] =
+{
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(1, 4),
+    ANIMCMD_FRAME(2, 4),
+    ANIMCMD_FRAME(3, 8),
+    ANIMCMD_FRAME(4, 4),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_VSSeeker[] = {
     ANIMCMD_FRAME(0, 4),
     ANIMCMD_FRAME(1, 4),

@@ -393,6 +393,9 @@ const u16 gObjectEventPal_Substitute[] = INCGFX_U16("graphics/object_events/pics
 const u16 gObjectEventPaletteEmotes[] = INCGFX_U16("graphics/misc/emotes.pal", ".gbapal");
 const u16 gObjectEventPaletteNeonLight[] = INCGFX_U16("graphics/object_events/palettes/neon_light.pal", ".gbapal");
 
+const u32 gObjectEventPic_HamtaroHamHa[] = INCGFX_U32("graphics/object_events/pics/brendan/hamha.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+
 #if OW_FOLLOWERS_POKEBALLS
 const u32 gObjectEventPic_MasterBall[] = INCGFX_U32("graphics/object_events/pics/misc/ball_master.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gObjectEventPic_UltraBall[] = INCGFX_U32("graphics/object_events/pics/misc/ball_ultra.png", ".4bpp", "-mwidth 2 -mheight 4");

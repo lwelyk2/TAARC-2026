@@ -408,9 +408,3 @@ const u16 gMetatiles_HallOfFame[] = INCBIN_U16("data/tilesets/secondary/hall_of_
 const u16 gMetatileAttributes_HallOfFame[] = INCBIN_U16("data/tilesets/secondary/hall_of_fame_frlg/metatile_attributes.bin");
 
 #endif // IS_FRLG
-
-const u16 gMetatiles_JohtoPrimary[] = INCBIN_U16("data/tilesets/primary/johto_primary/metatiles.bin");
-const u16 gMetatileAttributes_JohtoPrimary[] = INCBIN_U16("data/tilesets/primary/johto_primary/metatile_attributes.bin");
-
-const u16 gMetatiles_JohtoInterior[] = INCBIN_U16("data/tilesets/primary/johto_interior/metatiles.bin");
-const u16 gMetatileAttributes_JohtoInterior[] = INCBIN_U16("data/tilesets/primary/johto_interior/metatile_attributes.bin");

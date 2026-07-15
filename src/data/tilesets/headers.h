@@ -1541,25 +1541,3 @@ const struct Tileset gTileset_HallOfFame =
 };
 
 #endif // IS_FRLG
-
-const struct Tileset gTileset_JohtoPrimary =
-{
-    .isCompressed = TRUE,
-    .isSecondary = FALSE,
-    .tiles = gTilesetTiles_JohtoPrimary,
-    .palettes = gTilesetPalettes_JohtoPrimary,
-    .metatiles = gMetatiles_JohtoPrimary,
-    .metatileAttributes = gMetatileAttributes_JohtoPrimary,
-    .callback = NULL,
-};
-
-const struct Tileset gTileset_JohtoInterior =
-{
-    .isCompressed = TRUE,
-    .isSecondary = FALSE,
-    .tiles = gTilesetTiles_JohtoInterior,
-    .palettes = gTilesetPalettes_JohtoInterior,
-    .metatiles = gMetatiles_JohtoInterior,
-    .metatileAttributes = gMetatileAttributes_JohtoInterior,
-    .callback = NULL,
-};

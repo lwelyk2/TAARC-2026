@@ -1,0 +1,47 @@
+{
+  "id": "MAP_HAMTARO_TEST_MAP",
+  "name": "HamtaroTestMap",
+  "layout": "LAYOUT_HAMTARO_TEST_MAP",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BIJOU",
+      "x": 7,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_UP_RIGHT_LEFT",
+      "movement_range_x": 3,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HamtaroTalk",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BOSS",
+      "x": 14,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}

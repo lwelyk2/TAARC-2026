@@ -1,0 +1,12 @@
+mapscripts HamtaroTestMap_MapScripts {
+
+}
+
+script HamtaroTalk {
+    lock
+    faceplayer
+    playmoncry(SPECIES_HAMTARO, CRY_MODE_ENCOUNTER)
+    msgbox("Hamha!")
+    release
+    end
+}

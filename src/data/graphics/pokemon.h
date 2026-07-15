@@ -27499,7 +27499,15 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
 #endif //OW_PKMN_OBJECTS_SHARE_PALETTES
 #endif //OW_POKEMON_OBJECT_EVENTS
 #endif //P_FAMILY_PECHARUNT
-
+    const u32 gMonFrontPic_Hamtaro[] = INCGFX_U32("graphics/pokemon/hamtaro/anim_front.png", ".4bpp.smol");
+    const u16 gMonPalette_Hamtaro[] = INCGFX_U16("graphics/pokemon/hamtaro/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Hamtaro[] = INCGFX_U32("graphics/pokemon/hamtaro/back.png", ".4bpp.smol");
+    const u16 gMonShinyPalette_Hamtaro[] = INCGFX_U16("graphics/pokemon/hamtaro/shiny.pal", ".gbapal");
+    const u8 gMonIcon_Hamtaro[] = INCGFX_U8("graphics/pokemon/hamtaro/icon.png", ".4bpp");
+    const u32 gObjectEventPic_Hamtaro[] = INCGFX_COMP("graphics/pokemon/hamtaro/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+    const u16 gOverworldPalette_Hamtaro[] = INCGFX_U16("graphics/pokemon/hamtaro/overworld_normal.pal", ".gbapal");
+    const u16 gShinyOverworldPalette_Hamtaro[] = INCGFX_U16("graphics/pokemon/hamtaro/overworld_shiny.pal", ".gbapal");
     const u32 gMonFrontPic_Egg[] = INCGFX_U32("graphics/pokemon/egg/anim_front.png", ".4bpp.smol");
+
     const u16 gMonPalette_Egg[] = INCGFX_U16("graphics/pokemon/egg/normal.pal", ".gbapal");
     const u8 gMonIcon_Egg[] = INCGFX_U8("graphics/pokemon/egg/icon.png", ".4bpp");

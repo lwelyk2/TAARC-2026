@@ -1,5 +1,28 @@
 static const struct SpriteFrameImage sPicTable_BrendanNormal[] = {
-    overworld_ascending_frames(gObjectEventPic_BrendanNormalRunning, 2, 4),
+        overworld_frame(gObjectEventPic_BrendanNormal, 4, 4, 0),
+        overworld_frame(gObjectEventPic_BrendanNormal, 4, 4, 1),
+        overworld_frame(gObjectEventPic_BrendanNormal, 4, 4, 2),
+        overworld_frame(gObjectEventPic_BrendanNormal, 4, 4, 3),
+        overworld_frame(gObjectEventPic_BrendanNormal, 4, 4, 4),
+        overworld_frame(gObjectEventPic_BrendanNormal, 4, 4, 5),
+        overworld_frame(gObjectEventPic_BrendanNormal, 4, 4, 6),
+        overworld_frame(gObjectEventPic_BrendanNormal, 4, 4, 7),
+        overworld_frame(gObjectEventPic_BrendanNormal, 4, 4, 8),
+        overworld_frame(gObjectEventPic_BrendanNormal, 4, 4, 9),
+        overworld_frame(gObjectEventPic_BrendanNormal, 4, 4, 10),
+        overworld_frame(gObjectEventPic_BrendanNormal, 4, 4, 11),
+        overworld_frame(gObjectEventPic_BrendanRunning, 4, 4, 0),
+        overworld_frame(gObjectEventPic_BrendanRunning, 4, 4, 1),
+        overworld_frame(gObjectEventPic_BrendanRunning, 4, 4, 2),
+        overworld_frame(gObjectEventPic_BrendanRunning, 4, 4, 3),
+        overworld_frame(gObjectEventPic_BrendanRunning, 4, 4, 4),
+        overworld_frame(gObjectEventPic_BrendanRunning, 4, 4, 5),
+        overworld_frame(gObjectEventPic_BrendanRunning, 4, 4, 6),
+        overworld_frame(gObjectEventPic_BrendanRunning, 4, 4, 7),
+        overworld_frame(gObjectEventPic_BrendanRunning, 4, 4, 8),
+        overworld_frame(gObjectEventPic_BrendanRunning, 4, 4, 9),
+        overworld_frame(gObjectEventPic_BrendanRunning, 4, 4, 10),
+        overworld_frame(gObjectEventPic_BrendanRunning, 4, 4, 11),
 };
 
 static const struct SpriteFrameImage sPicTable_BrendanMachBike[] = {
@@ -411,7 +434,30 @@ static const struct SpriteFrameImage sPicTable_Artist[] = {
 };
 
 static const struct SpriteFrameImage sPicTable_MayNormal[] = {
-    overworld_ascending_frames(gObjectEventPic_MayNormalRunning, 2, 4),
+        overworld_frame(gObjectEventPic_MayNormal, 4, 4, 0),
+        overworld_frame(gObjectEventPic_MayNormal, 4, 4, 1),
+        overworld_frame(gObjectEventPic_MayNormal, 4, 4, 2),
+        overworld_frame(gObjectEventPic_MayNormal, 4, 4, 3),
+        overworld_frame(gObjectEventPic_MayNormal, 4, 4, 4),
+        overworld_frame(gObjectEventPic_MayNormal, 4, 4, 5),
+        overworld_frame(gObjectEventPic_MayNormal, 4, 4, 6),
+        overworld_frame(gObjectEventPic_MayNormal, 4, 4, 7),
+        overworld_frame(gObjectEventPic_MayNormal, 4, 4, 8),
+        overworld_frame(gObjectEventPic_MayNormal, 4, 4, 9),
+        overworld_frame(gObjectEventPic_MayNormal, 4, 4, 10),
+        overworld_frame(gObjectEventPic_MayNormal, 4, 4, 11),
+        overworld_frame(gObjectEventPic_MayRunning, 4, 4, 0),
+        overworld_frame(gObjectEventPic_MayRunning, 4, 4, 1),
+        overworld_frame(gObjectEventPic_MayRunning, 4, 4, 2),
+        overworld_frame(gObjectEventPic_MayRunning, 4, 4, 3),
+        overworld_frame(gObjectEventPic_MayRunning, 4, 4, 4),
+        overworld_frame(gObjectEventPic_MayRunning, 4, 4, 5),
+        overworld_frame(gObjectEventPic_MayRunning, 4, 4, 6),
+        overworld_frame(gObjectEventPic_MayRunning, 4, 4, 7),
+        overworld_frame(gObjectEventPic_MayRunning, 4, 4, 8),
+        overworld_frame(gObjectEventPic_MayRunning, 4, 4, 9),
+        overworld_frame(gObjectEventPic_MayRunning, 4, 4, 10),
+        overworld_frame(gObjectEventPic_MayRunning, 4, 4, 11),
 };
 
 static const struct SpriteFrameImage sPicTable_MayMachBike[] = {
@@ -1359,6 +1405,15 @@ static const struct SpriteFrameImage sPicTable_RubySapphireMay[] = {
 
 static const struct SpriteFrameImage sPicTable_ApricornTree[] = {
     overworld_frame(gObjectEventPic_ApricornTree, 2, 2, 0),
+};
+
+
+static const struct SpriteFrameImage sPicTable_Boss[] = {
+    overworld_ascending_frames(gObjectEventPic_Boss, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Bijou[] = {
+    overworld_ascending_frames(gObjectEventPic_Bijou, 4, 4),
 };
 
 #if IS_FRLG

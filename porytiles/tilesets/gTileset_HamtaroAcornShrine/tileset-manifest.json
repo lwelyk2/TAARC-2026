@@ -1,0 +1,9 @@
+{
+  ".callback": "NULL",
+  ".metatileAttributes": "gMetatileAttributes_HamtaroAcornShrine",
+  ".metatiles": "gMetatiles_HamtaroAcornShrine",
+  ".palettes": "gTilesetPalettes_HamtaroAcornShrine",
+  ".tiles": "gTilesetTiles_HamtaroAcornShrine",
+  "imported": true,
+  "version": 1
+}

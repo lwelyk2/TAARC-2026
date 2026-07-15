@@ -1,4 +1,5 @@
-const u32 gObjectEventPic_BrendanNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/brendan/walking.4bpp", "graphics/object_events/pics/people/brendan/running.4bpp");
+const u32 gObjectEventPic_BrendanNormal[] = INCBIN_U32("graphics/object_events/pics/people/brendan/walking.4bpp");
+const u32 gObjectEventPic_BrendanRunning[] = INCBIN_U32("graphics/object_events/pics/people/brendan/running.4bpp");
 const u16 gObjectEventPal_Brendan[] = INCGFX_U16("graphics/object_events/palettes/brendan.pal", ".gbapal");
 const u32 gObjectEventPic_RubySapphireBrendanNormal[] = INCGFX_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/walking.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gObjectEventPic_RubySapphireBrendanRunning[] = INCGFX_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/running.png", ".4bpp", "-mwidth 2 -mheight 4");
@@ -31,7 +32,8 @@ const u32 gObjectEventPic_MayDecorating[] = INCGFX_U32("graphics/object_events/p
 const u32 gObjectEventPic_BrendanUnderwater[] = INCGFX_U32("graphics/object_events/pics/people/brendan/underwater.png", ".4bpp", "-mwidth 4 -mheight 4");
 const u32 gObjectEventPic_MayUnderwater[] = INCGFX_U32("graphics/object_events/pics/people/may/underwater.png", ".4bpp", "-mwidth 4 -mheight 4");
 const u16 gObjectEventPal_PlayerUnderwater[] = INCGFX_U16("graphics/object_events/palettes/player_underwater.pal", ".gbapal");
-const u32 gObjectEventPic_MayNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/may/walking.4bpp", "graphics/object_events/pics/people/may/running.4bpp");
+const u32 gObjectEventPic_MayNormal[] = INCBIN_U32("graphics/object_events/pics/people/may/walking.4bpp");
+const u32 gObjectEventPic_MayRunning[] = INCBIN_U32("graphics/object_events/pics/people/may/running.4bpp");
 const u16 gObjectEventPal_May[] = INCGFX_U16("graphics/object_events/palettes/may.pal", ".gbapal");
 const u16 gObjectEventPal_MayReflection[] = INCGFX_U16("graphics/object_events/palettes/may_reflection.pal", ".gbapal");
 const u32 gObjectEventPic_RubySapphireMayNormal[] = INCGFX_U32("graphics/object_events/pics/people/ruby_sapphire_may/walking.png", ".4bpp", "-mwidth 2 -mheight 4");
@@ -391,6 +393,10 @@ const u16 gObjectEventPal_Substitute[] = INCGFX_U16("graphics/object_events/pics
 
 const u16 gObjectEventPaletteEmotes[] = INCGFX_U16("graphics/misc/emotes.pal", ".gbapal");
 const u16 gObjectEventPaletteNeonLight[] = INCGFX_U16("graphics/object_events/palettes/neon_light.pal", ".gbapal");
+
+const u32 gObjectEventPic_Boss[] = INCGFX_U32("graphics/object_events/pics/people/boss.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_Bijou[] = INCGFX_U32("graphics/object_events/pics/people/bijou.png", ".4bpp", "-mwidth 4 -mheight 4");
+
 
 #if OW_FOLLOWERS_POKEBALLS
 const u32 gObjectEventPic_MasterBall[] = INCGFX_U32("graphics/object_events/pics/misc/ball_master.png", ".4bpp", "-mwidth 2 -mheight 4");

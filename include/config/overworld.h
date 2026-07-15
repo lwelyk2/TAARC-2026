@@ -11,7 +11,7 @@
 #define OW_HIDE_REPEAT_MAP_POPUP        FALSE      // If enabled, map popups will not appear if entering a map with the same Map Section Id as the last.
 #define OW_WHITEOUT_CUTSCENE            GEN_LATEST // In Gen4+, whiting out shows an additional message and post whiteout event script cutscene with a healing NPC. (While this change was also in FRLG, for the sake of simplicity, setting this to GEN_3 will result in RSE behavior.)
 #define OW_DEFOG_FIELD_MOVE             FALSE      // If enabled, Defog can be used as a Field Move as seen in DPPt.
-#define OW_ROCK_CLIMB_FIELD_MOVE        FALSE      // If enabled, Rock Climb can be used as a Field Move as seen in DPPt.
+#define OW_ROCK_CLIMB_FIELD_MOVE        TRUE       // If enabled, Rock Climb can be used as a Field Move as seen in DPPt.
 #define OW_CHOOSE_FROM_PC_AND_PARTY     TRUE       // If enabled, NPCs like move tutors or trainers asking for trade will let you pick a Pokémon from your PC or party instead of just your party
 
 // Item Obtain Description Box
@@ -58,7 +58,7 @@
                                                   // 16x32, 32x32, 64x64 etc are fine
 #define OW_MON_WANDER_WALK             TRUE       // If true, OW Pokémon with MOVEMENT_TYPE_WANDER will walk-in-place in between steps.
 // Follower Pokémon
-#define OW_FOLLOWERS_ENABLED           FALSE      // Enables follower Pokémon, HGSS style. Requires OW_POKEMON_OBJECT_EVENTS. Note that additional scripting may be required for them to be fully supported!
+#define OW_FOLLOWERS_ENABLED           TRUE      // Enables follower Pokémon, HGSS style. Requires OW_POKEMON_OBJECT_EVENTS. Note that additional scripting may be required for them to be fully supported!
 #define OW_FOLLOWERS_BOBBING           TRUE       // If TRUE, follower Pokémon will bob up and down during their idle & walking animations
 #define OW_FOLLOWERS_POKEBALLS         TRUE       // If TRUE, follower Pokémon will emerge from the Poké Ball they are stored in, instead of a normal Poké Ball
 #define OW_FOLLOWERS_WEATHER_FORMS     FALSE      // If TRUE, Castform and Cherrim gain FORM_CHANGE_OVERWORLD_WEATHER, which will make them transform in the overworld based on the weather.

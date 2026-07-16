@@ -9333,6 +9333,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/HamtaroTestMap/border.bin",
       "blockdata_filepath": "data/layouts/HamtaroTestMap/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAM_HAM_CLUBHOUSE",
+      "name": "HamHamClubhouse_Layout",
+      "width": 16,
+      "height": 17,
+      "primary_tileset": "gTileset_HamtaroInterior",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HamHamClubhouse/border.bin",
+      "blockdata_filepath": "data/layouts/HamHamClubhouse/map.bin"
     }
   ]
 }

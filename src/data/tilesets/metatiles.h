@@ -420,3 +420,6 @@ const u16 gMetatileAttributes_PorytilesManaged_HamtaroAcornShrine[] = INCBIN_U16
 
 const u16 gMetatiles_PorytilesManaged_HamtaroExterior[] = INCBIN_U16("data/tilesets/primary/hamtaro_exterior/porytiles_bin/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesManaged_HamtaroExterior[] = INCBIN_U16("data/tilesets/primary/hamtaro_exterior/porytiles_bin/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_HamtaroInterior[] = INCBIN_U16("data/tilesets/primary/hamtaro_interior/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_HamtaroInterior[] = INCBIN_U16("data/tilesets/primary/hamtaro_interior/porytiles_bin/metatile_attributes.bin");

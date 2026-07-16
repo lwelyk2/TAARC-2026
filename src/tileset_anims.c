@@ -1435,3 +1435,6 @@ void InitTilesetAnim_CeladonGym(void)
 
 // [Porytiles] Auto-generated include. Do not remove.
 #include "porytiles_generated/tilesets/hamtaro_exterior/generated_anim_code.h"
+
+// [Porytiles] Auto-generated include. Do not remove.
+#include "porytiles_generated/tilesets/hamtaro_interior/generated_anim_code.h"

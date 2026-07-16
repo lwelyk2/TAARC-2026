@@ -43,4 +43,7 @@ void InitTilesetAnim_MtEmber(void);
 // [Porytiles] Auto-generated declaration. Do not remove.
 void InitTilesetAnim_PorytilesManaged_HamtaroExterior(void);
 
+// [Porytiles] Auto-generated declaration. Do not remove.
+void InitTilesetAnim_PorytilesManaged_HamtaroInterior(void);
+
 #endif // GUARD_TILESET_ANIMS_H

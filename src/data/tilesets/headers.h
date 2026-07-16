@@ -1574,3 +1574,14 @@ const struct Tileset gTileset_HamtaroExterior =
     .metatileAttributes = gMetatileAttributes_PorytilesManaged_HamtaroExterior,
     .callback = InitTilesetAnim_PorytilesManaged_HamtaroExterior,
 };
+
+const struct Tileset gTileset_HamtaroInterior =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_PorytilesManaged_HamtaroInterior,
+    .palettes = gTilesetPalettes_PorytilesManaged_HamtaroInterior,
+    .metatiles = gMetatiles_PorytilesManaged_HamtaroInterior,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_HamtaroInterior,
+    .callback = InitTilesetAnim_PorytilesManaged_HamtaroInterior,
+};

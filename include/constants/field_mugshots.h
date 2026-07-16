@@ -4,6 +4,9 @@
 enum Mugshots {
     MUGSHOT_NONE = 0,
     MUGSHOT_TEST,
+    MUGSHOT_HAMTARO,
+    MUGSHOT_BIJOU,
+    MUGSHOT_BOSS,
     MUGSHOT_COUNT,
 };
 

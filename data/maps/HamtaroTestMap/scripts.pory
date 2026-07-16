@@ -5,8 +5,32 @@ mapscripts HamtaroTestMap_MapScripts {
 script HamtaroTalk {
     lock
     faceplayer
+    createfieldmugshot(MUGSHOT_HAMTARO, EMOTE_NORMAL)
     playmoncry(SPECIES_HAMTARO, CRY_MODE_ENCOUNTER)
-    msgbox("Hamha!")
+    msgbox("Hamha! My name is Hamtaro!")
+	removefieldmugshot
+    release
+    end
+}
+
+script BijouTalk {
+    lock
+    faceplayer
+    createfieldmugshot(MUGSHOT_BIJOU, EMOTE_NORMAL)
+    playmoncry(SPECIES_HAMTARO, CRY_MODE_ENCOUNTER)
+    msgbox("Hamha! My name is Bijou!")
+	removefieldmugshot
+    release
+    end
+}
+
+script BossTalk {
+    lock
+    faceplayer
+    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+    playmoncry(SPECIES_HAMTARO, CRY_MODE_ENCOUNTER)
+    msgbox("Hamha! My name is Boss!")
+	removefieldmugshot
     release
     end
 }

@@ -423,3 +423,6 @@ const u16 gMetatileAttributes_PorytilesManaged_HamtaroExterior[] = INCBIN_U16("d
 
 const u16 gMetatiles_PorytilesManaged_HamtaroInterior[] = INCBIN_U16("data/tilesets/primary/hamtaro_interior/porytiles_bin/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesManaged_HamtaroInterior[] = INCBIN_U16("data/tilesets/primary/hamtaro_interior/porytiles_bin/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_MaxwellLab[] = INCBIN_U16("data/tilesets/secondary/maxwell_lab/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_MaxwellLab[] = INCBIN_U16("data/tilesets/secondary/maxwell_lab/porytiles_bin/metatile_attributes.bin");

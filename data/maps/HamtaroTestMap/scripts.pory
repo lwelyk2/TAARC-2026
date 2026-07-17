@@ -8,6 +8,22 @@ script HamtaroTalk {
     createfieldmugshot(MUGSHOT_HAMTARO, EMOTE_NORMAL)
     playmoncry(SPECIES_HAMTARO, CRY_MODE_ENCOUNTER)
     msgbox("Hamha! My name is Hamtaro!")
+    giveitem(ITEM_TM_BULK_UP, 1)
+    giveitem(ITEM_TM_DRAGON_CLAW, 1)
+    giveitem(ITEM_TM_WATER_PULSE, 1)
+    giveitem(ITEM_TM_CALM_MIND, 1)
+    giveitem(ITEM_TM_ROAR, 1)
+    giveitem(ITEM_TM_TOXIC, 1)
+    giveitem(ITEM_TM_HAIL, 1)
+    giveitem(ITEM_TM_BULLET_SEED, 1)
+    giveitem(ITEM_TM_SUNNY_DAY, 1)
+    giveitem(ITEM_TM_IRON_TAIL, 1)
+    giveitem(ITEM_TM_DIG, 1)
+    giveitem(ITEM_POTION, 1)
+    giveitem(ITEM_LEPPA_BERRY, 1)
+    giveitem(ITEM_ASPEAR_BERRY, 1)
+    giveitem(ITEM_CHERI_BERRY, 1)
+    giveitem(ITEM_EON_TICKET, 1)
 	removefieldmugshot
     release
     end

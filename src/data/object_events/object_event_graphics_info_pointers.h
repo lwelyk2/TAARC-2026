@@ -403,7 +403,18 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTre
 
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Boss;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bijou;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cappy;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Dexter;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Howdy;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jingle;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Maxwell;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Oxnard;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Panda;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pashmina;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Penelope;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sandy;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Snoozer;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Stan;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -649,8 +660,19 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
     [OBJ_EVENT_GFX_LIGHT_SPRITE] =             &gObjectEventGraphicsInfo_BallLight,
     [OBJ_EVENT_GFX_APRICORN_TREE] =            &gObjectEventGraphicsInfo_ApricornTree,
-    [OBJ_EVENT_GFX_BIJOU] =                    &gObjectEventGraphicsInfo_Bijou,
     [OBJ_EVENT_GFX_BOSS] =                     &gObjectEventGraphicsInfo_Boss,
+    [OBJ_EVENT_GFX_CAPPY] =                    &gObjectEventGraphicsInfo_Cappy,
+    [OBJ_EVENT_GFX_DEXTER] =                    &gObjectEventGraphicsInfo_Dexter,
+    [OBJ_EVENT_GFX_HOWDY] =                    &gObjectEventGraphicsInfo_Howdy,
+    [OBJ_EVENT_GFX_JINGLE] =                   &gObjectEventGraphicsInfo_Jingle,
+    [OBJ_EVENT_GFX_MAXWELL] =                  &gObjectEventGraphicsInfo_Maxwell,
+    [OBJ_EVENT_GFX_OXNARD] =                   &gObjectEventGraphicsInfo_Oxnard,
+    [OBJ_EVENT_GFX_PANDA] =                    &gObjectEventGraphicsInfo_Panda,
+    [OBJ_EVENT_GFX_PASHMINA] =                 &gObjectEventGraphicsInfo_Pashmina,
+    [OBJ_EVENT_GFX_PENELOPE] =                 &gObjectEventGraphicsInfo_Penelope,
+    [OBJ_EVENT_GFX_SANDY] =                    &gObjectEventGraphicsInfo_Sandy,
+    [OBJ_EVENT_GFX_SNOOZER] =                  &gObjectEventGraphicsInfo_Snoozer,
+    [OBJ_EVENT_GFX_STAN] =                     &gObjectEventGraphicsInfo_Stan,
 #if IS_FRLG
     [OBJ_EVENT_GFX_RED_NORMAL] =               &gObjectEventGraphicsInfo_RedNormal,
     [OBJ_EVENT_GFX_RED_BIKE] =                 &gObjectEventGraphicsInfo_RedBike,

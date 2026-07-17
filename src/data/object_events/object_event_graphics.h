@@ -395,7 +395,18 @@ const u16 gObjectEventPaletteEmotes[] = INCGFX_U16("graphics/misc/emotes.pal", "
 const u16 gObjectEventPaletteNeonLight[] = INCGFX_U16("graphics/object_events/palettes/neon_light.pal", ".gbapal");
 
 const u32 gObjectEventPic_Boss[] = INCGFX_U32("graphics/object_events/pics/people/boss.png", ".4bpp", "-mwidth 4 -mheight 4");
-const u32 gObjectEventPic_Bijou[] = INCGFX_U32("graphics/object_events/pics/people/bijou.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_Cappy[] = INCGFX_U32("graphics/object_events/pics/people/cappy.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_Dexter[] = INCGFX_U32("graphics/object_events/pics/people/dexter.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_Howdy[] = INCGFX_U32("graphics/object_events/pics/people/howdy.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_Jingle[] = INCGFX_U32("graphics/object_events/pics/people/jingle.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_Maxwell[] = INCGFX_U32("graphics/object_events/pics/people/maxwell.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_Oxnard[] = INCGFX_U32("graphics/object_events/pics/people/oxnard.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_Panda[] = INCGFX_U32("graphics/object_events/pics/people/panda.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_Pashmina[] = INCGFX_U32("graphics/object_events/pics/people/pashmina.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_Penelope[] = INCGFX_U32("graphics/object_events/pics/people/penelope.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_Sandy[] = INCGFX_U32("graphics/object_events/pics/people/sandy.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_Snoozer[] = INCGFX_U32("graphics/object_events/pics/people/snoozer.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_Stan[] = INCGFX_U32("graphics/object_events/pics/people/stan.png", ".4bpp", "-mwidth 4 -mheight 4");
 
 
 #if OW_FOLLOWERS_POKEBALLS

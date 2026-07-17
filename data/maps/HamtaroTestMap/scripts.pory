@@ -20,6 +20,42 @@ script BijouTalk {
     playmoncry(SPECIES_HAMTARO, CRY_MODE_ENCOUNTER)
     msgbox("Hamha! My name is Bijou!")
 	removefieldmugshot
+    createfieldmugshot(MUGSHOT_CAPPY, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Cappy!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_DEXTER, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Dexter!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_HOWDY, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Howdy!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_JINGLE, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Jingle!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_MAXWELL, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Maxwell!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_OXNARD, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Oxnard!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_PANDA, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Panda!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_PASHMINA, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Pashmina!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_PENELOPE, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Penelope!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_SANDY, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Sandy!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_SNOOZER, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Snoozer!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_STAN, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Stan!")
+	removefieldmugshot
     release
     end
 }

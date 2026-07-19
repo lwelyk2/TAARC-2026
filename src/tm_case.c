@@ -247,8 +247,8 @@ static const u8 sText_SingleSpace[] = _(" ");
 static const u8 sText_Close[] = _("Close");
 static const u8 sText_FontSmall[] = _("{FONT_SMALL}");
 static const u8 sText_FontShort[] = _("{FONT_SHORT}");
-static const u8 sText_TMCase[] = _("TM CASE");
-static const u8 sText_TMCaseWillBePutAway[] = _("The TM Case will be\nput away.");
+static const u8 sText_TMCase[] = _("DICTIONARY");
+static const u8 sText_TMCaseWillBePutAway[] = _("The Dictionary will be\nput away.");
 
 static const u32 sTMCase_Gfx[] = INCGFX_U32("graphics/tm_case/hamham_dictionary.png", ".4bpp.smol");
 static const u32 sTMCaseMenu_Tilemap[] = INCBIN_U32("graphics/tm_case/hamham_menu.bin.smolTM");

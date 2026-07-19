@@ -383,7 +383,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Swords Dance"),
         .description = COMPOUND_STRING(
-            "A fighting pose that\n"
+            "A fighting dance that\n"
             "sharply raises Attack."),
         .effect = EFFECT_STAT_CHANGE,
         .power = 0,
@@ -5834,8 +5834,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Koochi-Q"),
         .description = COMPOUND_STRING(
-            "Attact the foe to make 'em\n"
-            "less likely to attack."),
+            "Attract the foe to make\n"
+            "'em less likely to attack."),
         .effect = EFFECT_ATTRACT,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -9238,7 +9238,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_BULK_UP] =
     {
-        .name = COMPOUND_STRING("Bulk Up"),
+        .name = COMPOUND_STRING("Mega-Q"),
         .description = COMPOUND_STRING(
             "Bulks up the body to boost\n"
             "both Attack and Defense."),

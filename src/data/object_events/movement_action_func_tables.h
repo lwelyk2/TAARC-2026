@@ -301,6 +301,7 @@ u8 MovementAction_SpinLeft_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementAction_SpinLeft_Step1(struct ObjectEvent *, struct Sprite *);
 u8 MovementAction_SpinRight_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementAction_SpinRight_Step1(struct ObjectEvent *, struct Sprite *);
+u8 MovementAction_Hamha_Step0(struct ObjectEvent *, struct Sprite *);
 
 
 u8 (*const gMovementActionFuncs_FaceDown[])(struct ObjectEvent *, struct Sprite *);
@@ -488,6 +489,8 @@ u8 (*const gMovementActionFuncs_SpinUp[])(struct ObjectEvent *, struct Sprite *)
 u8 (*const gMovementActionFuncs_SpinLeft[])(struct ObjectEvent *, struct Sprite *);
 u8 (*const gMovementActionFuncs_SpinRight[])(struct ObjectEvent *, struct Sprite *);
 
+u8 (*const gMovementActionFuncs_Hamha[])(struct ObjectEvent *, struct Sprite *);
+
 u8 (*const *const gMovementActionFuncs[])(struct ObjectEvent *, struct Sprite *) = {
     [MOVEMENT_ACTION_FACE_DOWN] = gMovementActionFuncs_FaceDown,
     [MOVEMENT_ACTION_FACE_UP] = gMovementActionFuncs_FaceUp,
@@ -672,6 +675,7 @@ u8 (*const *const gMovementActionFuncs[])(struct ObjectEvent *, struct Sprite *)
     [MOVEMENT_ACTION_SPIN_UP]          = gMovementActionFuncs_SpinUp,
     [MOVEMENT_ACTION_SPIN_LEFT]        = gMovementActionFuncs_SpinLeft,
     [MOVEMENT_ACTION_SPIN_RIGHT]       = gMovementActionFuncs_SpinRight,
+    [MOVEMENT_ACTION_HAMHA]            = gMovementActionFuncs_Hamha,
 };
 
 u8 (*const gMovementActionFuncs_FaceDown[])(struct ObjectEvent *, struct Sprite *) = {
@@ -1220,6 +1224,12 @@ u8 (*const gMovementActionFuncs_FaceOriginalDirection[])(struct ObjectEvent *, s
 
 u8 (*const gMovementActionFuncs_NurseJoyBowDown[])(struct ObjectEvent *, struct Sprite *) = {
     MovementAction_NurseJoyBowDown_Step0,
+    MovementAction_WaitSpriteAnim,
+    MovementAction_PauseSpriteAnim,
+};
+
+u8 (*const gMovementActionFuncs_Hamha[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementAction_Hamha_Step0,
     MovementAction_WaitSpriteAnim,
     MovementAction_PauseSpriteAnim,
 };

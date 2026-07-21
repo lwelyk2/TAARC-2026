@@ -1127,11 +1127,20 @@ static const struct MenuAction MultichoiceList_Exit[] =
     {gText_Exit},
 };
 
+static const struct MenuAction sMultichoiceList_Hamtaro_Standard[] =
+{
+    {COMPOUND_STRING("Hamha")},
+    {COMPOUND_STRING("Hif-Hif")},
+    {COMPOUND_STRING("Tack-Q")},
+    {COMPOUND_STRING("Dig-Dig")},
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
     u8 count;
 };
+
 
 static const struct MultichoiceListStruct sMultichoiceLists[] =
 {
@@ -1294,6 +1303,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_HOF_VICTORIES_QUIT]                         = MULTICHOICE(sMultichoiceList_HOF_Victories_Quit),
     [MULTI_EGGS_VICTORIES_QUIT]                        = MULTICHOICE(sMultichoiceList_Eggs_Victories_Quit),
     [MULTI_HOF_EGGS_VICTORIES_QUIT]                    = MULTICHOICE(sMultichoiceList_HOF_Eggs_Victories_Quit),
+    [MULTI_HAMTARO_STANDARD]                           = MULTICHOICE(sMultichoiceList_Hamtaro_Standard),
 };
 
 const u8 *const gStdStrings[] =

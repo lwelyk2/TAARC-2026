@@ -90,11 +90,35 @@ script BijouTalk {
 
 script BossTalk {
     lock
-    faceplayer
-    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
-    playmoncry(SPECIES_HAMTARO, CRY_MODE_ENCOUNTER)
-    msgbox("Hamha! My name is Boss!")
-	removefieldmugshot
+    multichoice(20, 6, MULTI_HAMTARO_STANDARD, FALSE)
+    switch(var(VAR_RESULT)) {
+        case 0:
+            faceplayer
+            createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+            playmoncry(SPECIES_HAMTARO, CRY_MODE_ENCOUNTER)
+            msgbox("Hamha! My name is Boss!")
+	        removefieldmugshot
+            break
+        case 1:
+            msgbox("hif-hif")
+            msgbox("Smells like Boss.")
+            break
+        case 2:
+            msgbox("tack-q")
+            createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+            playmoncry(SPECIES_HAMTARO, CRY_MODE_ENCOUNTER)
+            msgbox("Hey! Don't do that!")
+	        removefieldmugshot
+            break
+        case 3:
+            msgbox("dig-dig")
+            msgbox("Nothing here...")
+            break
+        case MULTI_B_PRESSED:
+            break
+        default:
+            break
+    }
     release
     end
 }

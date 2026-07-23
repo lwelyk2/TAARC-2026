@@ -5,8 +5,96 @@ mapscripts HamtaroTestMap_MapScripts {
 script HamtaroTalk {
     lock
     faceplayer
+    createfieldmugshot(MUGSHOT_HAMTARO, EMOTE_NORMAL)
     playmoncry(SPECIES_HAMTARO, CRY_MODE_ENCOUNTER)
-    msgbox("Hamha!")
+    msgbox("Hamha! My name is Hamtaro!")
+    additem(ITEM_TM_TACKLE, 1)
+    additem(ITEM_TM_SCRATCH, 1)
+    additem(ITEM_TM_BODY_SLAM, 1)
+    additem(ITEM_TM_BITE, 1)
+    additem(ITEM_TM_SING, 1)
+    additem(ITEM_TM_DISABLE, 1)
+    additem(ITEM_TM_WATER_GUN, 1)
+    additem(ITEM_TM_BULK_UP, 1)
+    additem(ITEM_TM_DIG, 1)
+    additem(ITEM_TM_RAGE, 1)
+    additem(ITEM_TM_DOUBLE_TEAM, 1)
+    additem(ITEM_TM_MINIMIZE, 1)
+    additem(ITEM_TM_CONFUSE_RAY, 1)
+    additem(ITEM_TM_LOVELY_KISS, 1)
+    additem(ITEM_TM_REST, 1)
+    additem(ITEM_TM_SUBSTITUTE, 1)
+    additem(ITEM_TM_THIEF, 1)
+    additem(ITEM_TM_SCARY_FACE, 1)
+    additem(ITEM_TM_LOCK_ON, 1)
+    additem(ITEM_TM_MILK_DRINK, 1)
+    additem(ITEM_TM_ATTRACT, 1)
+    additem(ITEM_TM_ENCORE, 1)
+    additem(ITEM_TM_UPROAR, 1)
+    additem(ITEM_TM_ASTONISH, 1)
+    additem(ITEM_TM_ROCK_POLISH, 1)
+    additem(ITEM_TM_SWITCHEROO, 1)
+    additem(ITEM_TM_ACID_SPRAY, 1)
+    givemon(SPECIES_HAMTARO, 5)
+	removefieldmugshot
+    release
+    end
+}
+
+script BijouTalk {
+    lock
+    faceplayer
+    createfieldmugshot(MUGSHOT_BIJOU, EMOTE_NORMAL)
+    playmoncry(SPECIES_HAMTARO, CRY_MODE_ENCOUNTER)
+    msgbox("Hamha! My name is Bijou!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_CAPPY, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Cappy!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_DEXTER, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Dexter!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_HOWDY, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Howdy!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_JINGLE, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Jingle!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_MAXWELL, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Maxwell!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_OXNARD, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Oxnard!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_PANDA, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Panda!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_PASHMINA, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Pashmina!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_PENELOPE, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Penelope!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_SANDY, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Sandy!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_SNOOZER, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Snoozer!")
+	removefieldmugshot
+    createfieldmugshot(MUGSHOT_STAN, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Stan!")
+	removefieldmugshot
+    release
+    end
+}
+
+script BossTalk {
+    lock
+    faceplayer
+    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+    playmoncry(SPECIES_HAMTARO, CRY_MODE_ENCOUNTER)
+    msgbox("Hamha! My name is Boss!")
+	removefieldmugshot
     release
     end
 }

@@ -2,38 +2,38 @@
 #define GUARD_CONSTANTS_TMS_HMS_H
 
 #define FOREACH_TM(F) \
-    F(FOCUS_PUNCH) \
-    F(DRAGON_CLAW) \
-    F(WATER_PULSE) \
-    F(CALM_MIND) \
-    F(ROAR) \
-    F(TOXIC) \
-    F(HAIL) \
+    F(TACKLE) \
+    F(SCRATCH) \
+    F(BODY_SLAM) \
+    F(BITE) \
+    F(SING) \
+    F(DISABLE) \
+    F(WATER_GUN) \
     F(BULK_UP) \
-    F(BULLET_SEED) \
-    F(HIDDEN_POWER) \
-    F(SUNNY_DAY) \
-    F(TAUNT) \
-    F(ICE_BEAM) \
-    F(BLIZZARD) \
-    F(HYPER_BEAM) \
-    F(LIGHT_SCREEN) \
-    F(PROTECT) \
-    F(RAIN_DANCE) \
-    F(GIGA_DRAIN) \
-    F(SAFEGUARD) \
-    F(FRUSTRATION) \
-    F(SOLAR_BEAM) \
-    F(IRON_TAIL) \
-    F(THUNDERBOLT) \
-    F(THUNDER) \
-    F(EARTHQUAKE) \
-    F(RETURN) \
     F(DIG) \
+    F(RAGE) \
+    F(DOUBLE_TEAM) \
+    F(MINIMIZE) \
+    F(CONFUSE_RAY) \
+    F(LOVELY_KISS) \
+    F(REST) \
+    F(SUBSTITUTE) \
+    F(THIEF) \
+    F(SCARY_FACE) \
+    F(LOCK_ON) \
+    F(MILK_DRINK) \
+    F(ATTRACT) \
+    F(ENCORE) \
+    F(UPROAR) \
+    F(ASTONISH) \
+    F(ROCK_POLISH) \
+    F(SWITCHEROO) \
+    F(ACID_SPRAY) \
+    F(EMBER) \
     F(PSYCHIC) \
     F(SHADOW_BALL) \
     F(BRICK_BREAK) \
-    F(DOUBLE_TEAM) \
+    F(GROWL) \
     F(REFLECT) \
     F(SHOCK_WAVE) \
     F(FLAMETHROWER) \
@@ -45,9 +45,9 @@
     F(TORMENT) \
     F(FACADE) \
     F(SECRET_POWER) \
-    F(REST) \
-    F(ATTRACT) \
-    F(THIEF) \
+    F(BUBBLE) \
+    F(POUND) \
+    F(LEER) \
     F(STEEL_WING) \
     F(SKILL_SWAP) \
     F(SNATCH) \

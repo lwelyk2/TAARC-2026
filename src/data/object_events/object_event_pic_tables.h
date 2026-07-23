@@ -1412,8 +1412,52 @@ static const struct SpriteFrameImage sPicTable_Boss[] = {
     overworld_ascending_frames(gObjectEventPic_Boss, 4, 4),
 };
 
-static const struct SpriteFrameImage sPicTable_Bijou[] = {
-    overworld_ascending_frames(gObjectEventPic_Bijou, 4, 4),
+static const struct SpriteFrameImage sPicTable_Cappy[] = {
+    overworld_ascending_frames(gObjectEventPic_Cappy, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Dexter[] = {
+    overworld_ascending_frames(gObjectEventPic_Dexter, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Howdy[] = {
+    overworld_ascending_frames(gObjectEventPic_Howdy, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Jingle[] = {
+    overworld_ascending_frames(gObjectEventPic_Jingle, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Maxwell[] = {
+    overworld_ascending_frames(gObjectEventPic_Maxwell, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Oxnard[] = {
+    overworld_ascending_frames(gObjectEventPic_Oxnard, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Panda[] = {
+    overworld_ascending_frames(gObjectEventPic_Panda, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Pashmina[] = {
+    overworld_ascending_frames(gObjectEventPic_Pashmina, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Penelope[] = {
+    overworld_ascending_frames(gObjectEventPic_Penelope, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Sandy[] = {
+    overworld_ascending_frames(gObjectEventPic_Sandy, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Snoozer[] = {
+    overworld_ascending_frames(gObjectEventPic_Snoozer, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Stan[] = {
+    overworld_ascending_frames(gObjectEventPic_Stan, 4, 4),
 };
 
 #if IS_FRLG

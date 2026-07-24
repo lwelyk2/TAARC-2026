@@ -23,6 +23,12 @@ static const struct SpriteFrameImage sPicTable_BrendanNormal[] = {
         overworld_frame(gObjectEventPic_BrendanRunning, 4, 4, 9),
         overworld_frame(gObjectEventPic_BrendanRunning, 4, 4, 10),
         overworld_frame(gObjectEventPic_BrendanRunning, 4, 4, 11),
+        overworld_frame(gObjectEventPic_HamtaroHamha, 4, 4, 0),
+        overworld_frame(gObjectEventPic_HamtaroHamha, 4, 4, 1),
+        overworld_frame(gObjectEventPic_HamtaroHamha, 4, 4, 2),
+        overworld_frame(gObjectEventPic_HamtaroHamha, 4, 4, 3),
+        overworld_frame(gObjectEventPic_HamtaroHamha, 4, 4, 4),
+        overworld_frame(gObjectEventPic_HamtaroHamha, 4, 4, 5),
 };
 
 static const struct SpriteFrameImage sPicTable_BrendanMachBike[] = {

@@ -172,17 +172,27 @@ BossTalk::
 # 93 "data/maps/HamtaroTestMap/scripts.pory"
 	faceplayer
 # 94 "data/maps/HamtaroTestMap/scripts.pory"
-	createfieldmugshot MUGSHOT_BOSS, EMOTE_NORMAL
-# 95 "data/maps/HamtaroTestMap/scripts.pory"
 	playmoncry SPECIES_HAMTARO, CRY_MODE_ENCOUNTER
+# 95 "data/maps/HamtaroTestMap/scripts.pory"
+	applymovement LOCALID_PLAYER, Hamha
 # 96 "data/maps/HamtaroTestMap/scripts.pory"
-	msgbox BossTalk_Text_0
+	facetogether
 # 97 "data/maps/HamtaroTestMap/scripts.pory"
-	removefieldmugshot
+	createfieldmugshot MUGSHOT_BOSS, EMOTE_NORMAL
 # 98 "data/maps/HamtaroTestMap/scripts.pory"
+	msgbox BossTalk_Text_0
+# 99 "data/maps/HamtaroTestMap/scripts.pory"
+	removefieldmugshot
+# 100 "data/maps/HamtaroTestMap/scripts.pory"
 	release
 	end
 
+
+# 104 "data/maps/HamtaroTestMap/scripts.pory"
+Hamha:
+# 105 "data/maps/HamtaroTestMap/scripts.pory"
+	hamha
+	step_end
 
 HamtaroTalk_Text_0:
 # 10 "data/maps/HamtaroTestMap/scripts.pory"
@@ -241,5 +251,5 @@ BijouTalk_Text_12:
 	.string "Hamha! My name is Stan!$"
 
 BossTalk_Text_0:
-# 96 "data/maps/HamtaroTestMap/scripts.pory"
+# 98 "data/maps/HamtaroTestMap/scripts.pory"
 	.string "Hamha! My name is Boss!$"

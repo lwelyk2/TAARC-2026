@@ -1122,9 +1122,11 @@ static const union AnimCmd sAnim_NurseBow[] =
 
 static const union AnimCmd sAnim_Hamha[] =
 {
-    ANIMCMD_FRAME(0, 8),
-    ANIMCMD_FRAME(9, 32),
-    ANIMCMD_FRAME(0, 8),
+    ANIMCMD_FRAME(25, 4),
+    ANIMCMD_FRAME(26, 4),
+    ANIMCMD_FRAME(27, 4),
+    ANIMCMD_FRAME(28, 4),
+    ANIMCMD_FRAME(0, 4),
     ANIMCMD_END,
 };
 

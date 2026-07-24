@@ -1231,7 +1231,7 @@ u8 (*const gMovementActionFuncs_NurseJoyBowDown[])(struct ObjectEvent *, struct 
 u8 (*const gMovementActionFuncs_Hamha[])(struct ObjectEvent *, struct Sprite *) = {
     MovementAction_Hamha_Step0,
     MovementAction_WaitSpriteAnim,
-    MovementAction_PauseSpriteAnim,
+    MovementAction_Finish,
 };
 
 u8 (*const gMovementActionFuncs_EnableJumpLandingGroundEffect[])(struct ObjectEvent *, struct Sprite *) = {

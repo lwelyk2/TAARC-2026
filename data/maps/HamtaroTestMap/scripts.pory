@@ -44,6 +44,13 @@ script HamtaroTalk {
 script BijouTalk {
     lock
     faceplayer
+    getplayerxycoordsvar(VAR_TEMP_1, VAR_TEMP_2)
+    hideplayer
+    setobjectxycoords(LOCAL_HAMTARO_HAMHA, VAR_TEMP_1, VAR_TEMP_2)
+    applymovement(LOCAL_HAMTARO_HAMHA, ANIM_HAMHA)
+    waitmovetocomplete(LOCAL_HAMTARO_HAMHA)
+    hideobject(LOCAL_HAMTARO_HAMHA)
+    showplayer
     createfieldmugshot(MUGSHOT_BIJOU, EMOTE_NORMAL)
     playmoncry(SPECIES_HAMTARO, CRY_MODE_ENCOUNTER)
     msgbox("Hamha! My name is Bijou!")

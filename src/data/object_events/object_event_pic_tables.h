@@ -60,6 +60,22 @@ static const struct SpriteFrameImage sPicTable_BrendanUnderwater[] = {
     overworld_frame(gObjectEventPic_BrendanUnderwater, 4, 4, 2),
 };
 
+static const struct SpriteFrameImage sPicTable_HamtaroHamha[] = {
+    overworld_ascending_frames(gObjectEventPic_HamtaroHamha, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_HamtaroHifHif[] = {
+    overworld_ascending_frames(gObjectEventPic_HamtaroHifHif, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_HamtaroTackQ[] = {
+    overworld_ascending_frames(gObjectEventPic_HamtaroTackQ, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_HamtaroDigDig[] = {
+    overworld_ascending_frames(gObjectEventPic_HamtaroDigDig, 4, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_BrendanFieldMove[] = {
     overworld_ascending_frames(gObjectEventPic_BrendanFieldMove, 4, 4),
 };

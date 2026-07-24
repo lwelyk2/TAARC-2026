@@ -82,104 +82,118 @@ BijouTalk::
 # 46 "data/maps/HamtaroTestMap/scripts.pory"
 	faceplayer
 # 47 "data/maps/HamtaroTestMap/scripts.pory"
-	createfieldmugshot MUGSHOT_BIJOU, EMOTE_NORMAL
+	getplayerxycoordsvar VAR_TEMP_1, VAR_TEMP_2
 # 48 "data/maps/HamtaroTestMap/scripts.pory"
-	playmoncry SPECIES_HAMTARO, CRY_MODE_ENCOUNTER
+	hideplayer
 # 49 "data/maps/HamtaroTestMap/scripts.pory"
-	msgbox BijouTalk_Text_0
+	setobjectxycoords LOCAL_HAMTARO_HAMHA, VAR_TEMP_1, VAR_TEMP_2
 # 50 "data/maps/HamtaroTestMap/scripts.pory"
-	removefieldmugshot
+	applymovement LOCAL_HAMTARO_HAMHA, ANIM_HAMHA
 # 51 "data/maps/HamtaroTestMap/scripts.pory"
-	createfieldmugshot MUGSHOT_CAPPY, EMOTE_NORMAL
+	waitmovetocomplete LOCAL_HAMTARO_HAMHA
 # 52 "data/maps/HamtaroTestMap/scripts.pory"
-	msgbox BijouTalk_Text_1
+	hideobject LOCAL_HAMTARO_HAMHA
 # 53 "data/maps/HamtaroTestMap/scripts.pory"
-	removefieldmugshot
+	showplayer
 # 54 "data/maps/HamtaroTestMap/scripts.pory"
-	createfieldmugshot MUGSHOT_DEXTER, EMOTE_NORMAL
+	createfieldmugshot MUGSHOT_BIJOU, EMOTE_NORMAL
 # 55 "data/maps/HamtaroTestMap/scripts.pory"
-	msgbox BijouTalk_Text_2
+	playmoncry SPECIES_HAMTARO, CRY_MODE_ENCOUNTER
 # 56 "data/maps/HamtaroTestMap/scripts.pory"
-	removefieldmugshot
+	msgbox BijouTalk_Text_0
 # 57 "data/maps/HamtaroTestMap/scripts.pory"
-	createfieldmugshot MUGSHOT_HOWDY, EMOTE_NORMAL
+	removefieldmugshot
 # 58 "data/maps/HamtaroTestMap/scripts.pory"
-	msgbox BijouTalk_Text_3
+	createfieldmugshot MUGSHOT_CAPPY, EMOTE_NORMAL
 # 59 "data/maps/HamtaroTestMap/scripts.pory"
-	removefieldmugshot
+	msgbox BijouTalk_Text_1
 # 60 "data/maps/HamtaroTestMap/scripts.pory"
-	createfieldmugshot MUGSHOT_JINGLE, EMOTE_NORMAL
+	removefieldmugshot
 # 61 "data/maps/HamtaroTestMap/scripts.pory"
-	msgbox BijouTalk_Text_4
+	createfieldmugshot MUGSHOT_DEXTER, EMOTE_NORMAL
 # 62 "data/maps/HamtaroTestMap/scripts.pory"
-	removefieldmugshot
+	msgbox BijouTalk_Text_2
 # 63 "data/maps/HamtaroTestMap/scripts.pory"
-	createfieldmugshot MUGSHOT_MAXWELL, EMOTE_NORMAL
+	removefieldmugshot
 # 64 "data/maps/HamtaroTestMap/scripts.pory"
-	msgbox BijouTalk_Text_5
+	createfieldmugshot MUGSHOT_HOWDY, EMOTE_NORMAL
 # 65 "data/maps/HamtaroTestMap/scripts.pory"
-	removefieldmugshot
+	msgbox BijouTalk_Text_3
 # 66 "data/maps/HamtaroTestMap/scripts.pory"
-	createfieldmugshot MUGSHOT_OXNARD, EMOTE_NORMAL
+	removefieldmugshot
 # 67 "data/maps/HamtaroTestMap/scripts.pory"
-	msgbox BijouTalk_Text_6
+	createfieldmugshot MUGSHOT_JINGLE, EMOTE_NORMAL
 # 68 "data/maps/HamtaroTestMap/scripts.pory"
-	removefieldmugshot
+	msgbox BijouTalk_Text_4
 # 69 "data/maps/HamtaroTestMap/scripts.pory"
-	createfieldmugshot MUGSHOT_PANDA, EMOTE_NORMAL
+	removefieldmugshot
 # 70 "data/maps/HamtaroTestMap/scripts.pory"
-	msgbox BijouTalk_Text_7
+	createfieldmugshot MUGSHOT_MAXWELL, EMOTE_NORMAL
 # 71 "data/maps/HamtaroTestMap/scripts.pory"
-	removefieldmugshot
+	msgbox BijouTalk_Text_5
 # 72 "data/maps/HamtaroTestMap/scripts.pory"
-	createfieldmugshot MUGSHOT_PASHMINA, EMOTE_NORMAL
+	removefieldmugshot
 # 73 "data/maps/HamtaroTestMap/scripts.pory"
-	msgbox BijouTalk_Text_8
+	createfieldmugshot MUGSHOT_OXNARD, EMOTE_NORMAL
 # 74 "data/maps/HamtaroTestMap/scripts.pory"
-	removefieldmugshot
+	msgbox BijouTalk_Text_6
 # 75 "data/maps/HamtaroTestMap/scripts.pory"
-	createfieldmugshot MUGSHOT_PENELOPE, EMOTE_NORMAL
+	removefieldmugshot
 # 76 "data/maps/HamtaroTestMap/scripts.pory"
-	msgbox BijouTalk_Text_9
+	createfieldmugshot MUGSHOT_PANDA, EMOTE_NORMAL
 # 77 "data/maps/HamtaroTestMap/scripts.pory"
-	removefieldmugshot
+	msgbox BijouTalk_Text_7
 # 78 "data/maps/HamtaroTestMap/scripts.pory"
-	createfieldmugshot MUGSHOT_SANDY, EMOTE_NORMAL
+	removefieldmugshot
 # 79 "data/maps/HamtaroTestMap/scripts.pory"
-	msgbox BijouTalk_Text_10
+	createfieldmugshot MUGSHOT_PASHMINA, EMOTE_NORMAL
 # 80 "data/maps/HamtaroTestMap/scripts.pory"
-	removefieldmugshot
+	msgbox BijouTalk_Text_8
 # 81 "data/maps/HamtaroTestMap/scripts.pory"
-	createfieldmugshot MUGSHOT_SNOOZER, EMOTE_NORMAL
+	removefieldmugshot
 # 82 "data/maps/HamtaroTestMap/scripts.pory"
-	msgbox BijouTalk_Text_11
+	createfieldmugshot MUGSHOT_PENELOPE, EMOTE_NORMAL
 # 83 "data/maps/HamtaroTestMap/scripts.pory"
-	removefieldmugshot
+	msgbox BijouTalk_Text_9
 # 84 "data/maps/HamtaroTestMap/scripts.pory"
-	createfieldmugshot MUGSHOT_STAN, EMOTE_NORMAL
-# 85 "data/maps/HamtaroTestMap/scripts.pory"
-	msgbox BijouTalk_Text_12
-# 86 "data/maps/HamtaroTestMap/scripts.pory"
 	removefieldmugshot
+# 85 "data/maps/HamtaroTestMap/scripts.pory"
+	createfieldmugshot MUGSHOT_SANDY, EMOTE_NORMAL
+# 86 "data/maps/HamtaroTestMap/scripts.pory"
+	msgbox BijouTalk_Text_10
 # 87 "data/maps/HamtaroTestMap/scripts.pory"
+	removefieldmugshot
+# 88 "data/maps/HamtaroTestMap/scripts.pory"
+	createfieldmugshot MUGSHOT_SNOOZER, EMOTE_NORMAL
+# 89 "data/maps/HamtaroTestMap/scripts.pory"
+	msgbox BijouTalk_Text_11
+# 90 "data/maps/HamtaroTestMap/scripts.pory"
+	removefieldmugshot
+# 91 "data/maps/HamtaroTestMap/scripts.pory"
+	createfieldmugshot MUGSHOT_STAN, EMOTE_NORMAL
+# 92 "data/maps/HamtaroTestMap/scripts.pory"
+	msgbox BijouTalk_Text_12
+# 93 "data/maps/HamtaroTestMap/scripts.pory"
+	removefieldmugshot
+# 94 "data/maps/HamtaroTestMap/scripts.pory"
 	release
 	end
 
 
 BossTalk::
-# 92 "data/maps/HamtaroTestMap/scripts.pory"
+# 99 "data/maps/HamtaroTestMap/scripts.pory"
 	lock
-# 93 "data/maps/HamtaroTestMap/scripts.pory"
+# 100 "data/maps/HamtaroTestMap/scripts.pory"
 	faceplayer
-# 94 "data/maps/HamtaroTestMap/scripts.pory"
+# 101 "data/maps/HamtaroTestMap/scripts.pory"
 	createfieldmugshot MUGSHOT_BOSS, EMOTE_NORMAL
-# 95 "data/maps/HamtaroTestMap/scripts.pory"
+# 102 "data/maps/HamtaroTestMap/scripts.pory"
 	playmoncry SPECIES_HAMTARO, CRY_MODE_ENCOUNTER
-# 96 "data/maps/HamtaroTestMap/scripts.pory"
+# 103 "data/maps/HamtaroTestMap/scripts.pory"
 	msgbox BossTalk_Text_0
-# 97 "data/maps/HamtaroTestMap/scripts.pory"
+# 104 "data/maps/HamtaroTestMap/scripts.pory"
 	removefieldmugshot
-# 98 "data/maps/HamtaroTestMap/scripts.pory"
+# 105 "data/maps/HamtaroTestMap/scripts.pory"
 	release
 	end
 
@@ -189,57 +203,57 @@ HamtaroTalk_Text_0:
 	.string "Hamha! My name is Hamtaro!$"
 
 BijouTalk_Text_0:
-# 49 "data/maps/HamtaroTestMap/scripts.pory"
+# 56 "data/maps/HamtaroTestMap/scripts.pory"
 	.string "Hamha! My name is Bijou!$"
 
 BijouTalk_Text_1:
-# 52 "data/maps/HamtaroTestMap/scripts.pory"
+# 59 "data/maps/HamtaroTestMap/scripts.pory"
 	.string "Hamha! My name is Cappy!$"
 
 BijouTalk_Text_2:
-# 55 "data/maps/HamtaroTestMap/scripts.pory"
+# 62 "data/maps/HamtaroTestMap/scripts.pory"
 	.string "Hamha! My name is Dexter!$"
 
 BijouTalk_Text_3:
-# 58 "data/maps/HamtaroTestMap/scripts.pory"
+# 65 "data/maps/HamtaroTestMap/scripts.pory"
 	.string "Hamha! My name is Howdy!$"
 
 BijouTalk_Text_4:
-# 61 "data/maps/HamtaroTestMap/scripts.pory"
+# 68 "data/maps/HamtaroTestMap/scripts.pory"
 	.string "Hamha! My name is Jingle!$"
 
 BijouTalk_Text_5:
-# 64 "data/maps/HamtaroTestMap/scripts.pory"
+# 71 "data/maps/HamtaroTestMap/scripts.pory"
 	.string "Hamha! My name is Maxwell!$"
 
 BijouTalk_Text_6:
-# 67 "data/maps/HamtaroTestMap/scripts.pory"
+# 74 "data/maps/HamtaroTestMap/scripts.pory"
 	.string "Hamha! My name is Oxnard!$"
 
 BijouTalk_Text_7:
-# 70 "data/maps/HamtaroTestMap/scripts.pory"
+# 77 "data/maps/HamtaroTestMap/scripts.pory"
 	.string "Hamha! My name is Panda!$"
 
 BijouTalk_Text_8:
-# 73 "data/maps/HamtaroTestMap/scripts.pory"
+# 80 "data/maps/HamtaroTestMap/scripts.pory"
 	.string "Hamha! My name is Pashmina!$"
 
 BijouTalk_Text_9:
-# 76 "data/maps/HamtaroTestMap/scripts.pory"
+# 83 "data/maps/HamtaroTestMap/scripts.pory"
 	.string "Hamha! My name is Penelope!$"
 
 BijouTalk_Text_10:
-# 79 "data/maps/HamtaroTestMap/scripts.pory"
+# 86 "data/maps/HamtaroTestMap/scripts.pory"
 	.string "Hamha! My name is Sandy!$"
 
 BijouTalk_Text_11:
-# 82 "data/maps/HamtaroTestMap/scripts.pory"
+# 89 "data/maps/HamtaroTestMap/scripts.pory"
 	.string "Hamha! My name is Snoozer!$"
 
 BijouTalk_Text_12:
-# 85 "data/maps/HamtaroTestMap/scripts.pory"
+# 92 "data/maps/HamtaroTestMap/scripts.pory"
 	.string "Hamha! My name is Stan!$"
 
 BossTalk_Text_0:
-# 96 "data/maps/HamtaroTestMap/scripts.pory"
+# 103 "data/maps/HamtaroTestMap/scripts.pory"
 	.string "Hamha! My name is Boss!$"

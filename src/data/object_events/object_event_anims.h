@@ -871,6 +871,69 @@ static const union AnimCmd sAnim_FieldMove[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_Hamha[] =
+{
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(1, 1),
+    ANIMCMD_FRAME(2, 2),
+    ANIMCMD_FRAME(3, 1),
+    ANIMCMD_FRAME(4, 1),
+    ANIMCMD_FRAME(5, 3),
+    ANIMCMD_FRAME(6, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_HifHif[] =
+{
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(1, 1),
+    ANIMCMD_FRAME(2, 1),
+    ANIMCMD_FRAME(3, 1),
+    ANIMCMD_FRAME(4, 1),
+    ANIMCMD_FRAME(5, 1),
+    ANIMCMD_FRAME(6, 1),
+    ANIMCMD_FRAME(7, 1),
+    ANIMCMD_FRAME(8, 1),
+    ANIMCMD_FRAME(9, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_TackQ[] =
+{
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(1, 1),
+    ANIMCMD_FRAME(2, 1),
+    ANIMCMD_FRAME(3, 1),
+    ANIMCMD_FRAME(4, 1),
+    ANIMCMD_FRAME(5, 1),
+    ANIMCMD_FRAME(6, 1),
+    ANIMCMD_FRAME(7, 1),
+    ANIMCMD_FRAME(6, 1),
+    ANIMCMD_FRAME(5, 1),
+    ANIMCMD_FRAME(4, 1),
+    ANIMCMD_FRAME(3, 1),
+    ANIMCMD_FRAME(2, 1),
+    ANIMCMD_FRAME(1, 1),
+    ANIMCMD_FRAME(0, 2),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_DigDig[] =
+{
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(1, 2),
+    ANIMCMD_FRAME(2, 2),
+    ANIMCMD_FRAME(1, 2),
+    ANIMCMD_FRAME(3, 2),
+    ANIMCMD_FRAME(1, 2),
+    ANIMCMD_FRAME(2, 2),
+    ANIMCMD_FRAME(1, 2),
+    ANIMCMD_FRAME(3, 2),
+    ANIMCMD_FRAME(1, 2),
+    ANIMCMD_FRAME(0, 2),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_VSSeeker[] = {
     ANIMCMD_FRAME(0, 4),
     ANIMCMD_FRAME(1, 4),
@@ -1726,6 +1789,22 @@ static const union AnimCmd *const sAnimTable_Nurse[] = {
 
 static const union AnimCmd *const sAnimTable_FieldMove[] = {
     [ANIM_FIELD_MOVE] = sAnim_FieldMove,
+};
+
+static const union AnimCmd *const sAnimTable_Hamha[] = {
+    [ANIM_STD_GO_SOUTH] = sAnim_Hamha,
+};
+
+static const union AnimCmd *const sAnimTable_HifHif[] = {
+    [ANIM_HIFHIF] = sAnim_HifHif,
+};
+
+static const union AnimCmd *const sAnimTable_TackQ[] = {
+    [ANIM_TACKQ] = sAnim_TackQ,
+};
+
+static const union AnimCmd *const sAnimTable_DigDig[] = {
+    [ANIM_DIG_DIG] = sAnim_DigDig,
 };
 
 static const union AnimCmd *const sAnimTable_BerryTree[] = {

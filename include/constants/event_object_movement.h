@@ -352,6 +352,10 @@
 #define ANIM_RAISE_HAND (ANIM_STD_COUNT + 0)
 
 #define ANIM_FIELD_MOVE 0
+#define ANIM_HAMHA 0
+#define ANIM_HIFHIF 0
+#define ANIM_TACKQ 0
+#define ANIM_DIG_DIG 0
 
 #define ANIM_STAY_STILL      0
 #define ANIM_REMOVE_OBSTACLE 1

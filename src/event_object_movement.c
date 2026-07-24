@@ -8690,12 +8690,6 @@ bool8 MovementAction_NurseJoyBowDown_Step0(struct ObjectEvent *objectEvent, stru
     return FALSE;
 }
 
-bool8 MovementAction_Hamha_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
-{
-    StartSpriteAnimInDirection(objectEvent, sprite, DIR_SOUTH, ANIM_HAMHA);
-    return FALSE;
-}
-
 bool8 MovementAction_EnableJumpLandingGroundEffect_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
     objectEvent->disableJumpLandingGroundEffect = FALSE;

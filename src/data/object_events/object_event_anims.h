@@ -1120,14 +1120,6 @@ static const union AnimCmd sAnim_NurseBow[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_Hamha[] =
-{
-    ANIMCMD_FRAME(0, 8),
-    ANIMCMD_FRAME(9, 32),
-    ANIMCMD_FRAME(0, 8),
-    ANIMCMD_END,
-};
-
 static const union AnimCmd sAnim_RockBreak[] =
 {
     ANIMCMD_FRAME(0, 8),
@@ -1636,7 +1628,6 @@ static const union AnimCmd *const sAnimTable_BrendanMay_Asym[] = {
     [ANIM_SPIN_NORTH] = sAnim_SpinNorth_Asym,
     [ANIM_SPIN_WEST] = sAnim_SpinWest_Asym,
     [ANIM_SPIN_EAST] = sAnim_SpinEast_Asym,
-    [ANIM_HAMHA] = sAnim_Hamha,
 };
 
 static const union AnimCmd *const sAnimTable_AcroBike[] = {

@@ -1122,10 +1122,58 @@ static const union AnimCmd sAnim_NurseBow[] =
 
 static const union AnimCmd sAnim_Hamha[] =
 {
+    ANIMCMD_FRAME(0, 4),
     ANIMCMD_FRAME(25, 4),
-    ANIMCMD_FRAME(26, 4),
+    ANIMCMD_FRAME(26, 8),
     ANIMCMD_FRAME(27, 4),
-    ANIMCMD_FRAME(28, 4),
+    ANIMCMD_FRAME(28, 12),
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_END,
+};
+
+
+static const union AnimCmd sAnim_HifHif[] =
+{
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(29, 4),
+    ANIMCMD_FRAME(30, 4),
+    ANIMCMD_FRAME(31, 4),
+    ANIMCMD_FRAME(32, 4),
+    ANIMCMD_FRAME(33, 4),
+    ANIMCMD_FRAME(34, 4),
+    ANIMCMD_FRAME(35, 4),
+    ANIMCMD_FRAME(36, 4),
+    ANIMCMD_FRAME(37, 4),
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_TackQ[] =
+{
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(38, 4),
+    ANIMCMD_FRAME(39, 4),
+    ANIMCMD_FRAME(40, 4),
+    ANIMCMD_FRAME(41, 4),
+    ANIMCMD_FRAME(42, 4),
+    ANIMCMD_FRAME(43, 4),
+    ANIMCMD_FRAME(44, 4),
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_DigDig[] =
+{
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(45, 4),
+    ANIMCMD_FRAME(46, 4),
+    ANIMCMD_FRAME(45, 4),
+    ANIMCMD_FRAME(47, 4),
+    ANIMCMD_FRAME(45, 4),
+    ANIMCMD_FRAME(46, 4),
+    ANIMCMD_FRAME(45, 4),
+    ANIMCMD_FRAME(47, 4),
+    ANIMCMD_FRAME(45, 4),
     ANIMCMD_FRAME(0, 4),
     ANIMCMD_END,
 };
@@ -1639,6 +1687,9 @@ static const union AnimCmd *const sAnimTable_BrendanMay_Asym[] = {
     [ANIM_SPIN_WEST] = sAnim_SpinWest_Asym,
     [ANIM_SPIN_EAST] = sAnim_SpinEast_Asym,
     [ANIM_HAMHA] = sAnim_Hamha,
+    [ANIM_HIFHIF] = sAnim_HifHif,
+    [ANIM_TACKQ] = sAnim_TackQ,
+    [ANIM_DIGDIG] = sAnim_DigDig,
 };
 
 static const union AnimCmd *const sAnimTable_AcroBike[] = {

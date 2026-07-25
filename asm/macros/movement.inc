@@ -169,6 +169,9 @@
 	create_movement_action walk_slow_stairs_left, MOVEMENT_ACTION_WALK_SLOW_STAIRS_LEFT
 	create_movement_action walk_slow_stairs_right, MOVEMENT_ACTION_WALK_SLOW_STAIRS_RIGHT
 	create_movement_action hamha, MOVEMENT_ACTION_HAMHA
+	create_movement_action hifhif, MOVEMENT_ACTION_HIFHIF
+	create_movement_action tackq, MOVEMENT_ACTION_TACKQ
+	create_movement_action digdig, MOVEMENT_ACTION_DIGDIG
 
 	create_movement_action exit_pokeball, MOVEMENT_ACTION_EXIT_POKEBALL
 	create_movement_action enter_pokeball, MOVEMENT_ACTION_ENTER_POKEBALL

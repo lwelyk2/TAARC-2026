@@ -8717,6 +8717,18 @@ bool8 MovementAction_Digdig_Step0(struct ObjectEvent *objectEvent, struct Sprite
     return FALSE;
 }
 
+bool8 MovementAction_YepP_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    StartSpriteAnimInDirection(objectEvent, sprite, DIR_SOUTH, ANIM_YEPP);
+    return FALSE;
+}
+
+bool8 MovementAction_NoP_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    StartSpriteAnimInDirection(objectEvent, sprite, DIR_SOUTH, ANIM_NOP);
+    return FALSE;
+}
+
 bool8 MovementAction_EnableJumpLandingGroundEffect_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
     objectEvent->disableJumpLandingGroundEffect = FALSE;

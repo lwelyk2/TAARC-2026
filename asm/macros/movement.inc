@@ -172,6 +172,8 @@
 	create_movement_action hifhif, MOVEMENT_ACTION_HIFHIF
 	create_movement_action tackq, MOVEMENT_ACTION_TACKQ
 	create_movement_action digdig, MOVEMENT_ACTION_DIGDIG
+	create_movement_action yepp, MOVEMENT_ACTION_YEPP
+	create_movement_action nopp, MOVEMENT_ACTION_NOP
 
 	create_movement_action exit_pokeball, MOVEMENT_ACTION_EXIT_POKEBALL
 	create_movement_action enter_pokeball, MOVEMENT_ACTION_ENTER_POKEBALL

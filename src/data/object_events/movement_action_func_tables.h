@@ -305,6 +305,8 @@ u8 MovementAction_Hamha_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementAction_HifHif_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementAction_TackQ_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementAction_Digdig_Step0(struct ObjectEvent *, struct Sprite *);
+u8 MovementAction_YepP_Step0(struct ObjectEvent *, struct Sprite *);
+u8 MovementAction_NoP_Step0(struct ObjectEvent *, struct Sprite *);
 
 
 u8 (*const gMovementActionFuncs_FaceDown[])(struct ObjectEvent *, struct Sprite *);
@@ -496,6 +498,8 @@ u8 (*const gMovementActionFuncs_Hamha[])(struct ObjectEvent *, struct Sprite *);
 u8 (*const gMovementActionFuncs_HifHif[])(struct ObjectEvent *, struct Sprite *);
 u8 (*const gMovementActionFuncs_TackQ[])(struct ObjectEvent *, struct Sprite *);
 u8 (*const gMovementActionFuncs_Digdig[])(struct ObjectEvent *, struct Sprite *);
+u8 (*const gMovementActionFuncs_YepP[])(struct ObjectEvent *, struct Sprite *);
+u8 (*const gMovementActionFuncs_NoP[])(struct ObjectEvent *, struct Sprite *);
 
 u8 (*const *const gMovementActionFuncs[])(struct ObjectEvent *, struct Sprite *) = {
     [MOVEMENT_ACTION_FACE_DOWN] = gMovementActionFuncs_FaceDown,
@@ -685,6 +689,8 @@ u8 (*const *const gMovementActionFuncs[])(struct ObjectEvent *, struct Sprite *)
     [MOVEMENT_ACTION_HIFHIF]           = gMovementActionFuncs_HifHif,
     [MOVEMENT_ACTION_TACKQ]            = gMovementActionFuncs_TackQ,
     [MOVEMENT_ACTION_DIGDIG]           = gMovementActionFuncs_Digdig,
+    [MOVEMENT_ACTION_YEPP]             = gMovementActionFuncs_YepP,
+    [MOVEMENT_ACTION_NOP]              = gMovementActionFuncs_NoP,
 };
 
 u8 (*const gMovementActionFuncs_FaceDown[])(struct ObjectEvent *, struct Sprite *) = {
@@ -1257,6 +1263,20 @@ u8 (*const gMovementActionFuncs_TackQ[])(struct ObjectEvent *, struct Sprite *) 
 
 u8 (*const gMovementActionFuncs_Digdig[])(struct ObjectEvent *, struct Sprite *) = {
     MovementAction_Digdig_Step0,
+    MovementAction_WaitSpriteAnim,
+    MovementAction_Finish,
+};
+
+
+u8 (*const gMovementActionFuncs_YepP[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementAction_YepP_Step0,
+    MovementAction_WaitSpriteAnim,
+    MovementAction_Finish,
+};
+
+
+u8 (*const gMovementActionFuncs_NoP[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementAction_NoP_Step0,
     MovementAction_WaitSpriteAnim,
     MovementAction_Finish,
 };

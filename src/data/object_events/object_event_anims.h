@@ -1190,6 +1190,31 @@ static const union AnimCmd sAnim_DigDig[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_YepP[] =
+{
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(49, 4),
+    ANIMCMD_FRAME(50, 4),
+    ANIMCMD_FRAME(51, 8),
+    ANIMCMD_FRAME(52, 8),
+    ANIMCMD_FRAME(53, 4),
+    ANIMCMD_FRAME(29, 4),
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_NoP[] =
+{
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(49, 4),
+    ANIMCMD_FRAME(54, 4),
+    ANIMCMD_FRAME(55, 8),
+    ANIMCMD_FRAME(56, 8),
+    ANIMCMD_FRAME(29, 4),
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_RockBreak[] =
 {
     ANIMCMD_FRAME(0, 8),
@@ -1702,6 +1727,8 @@ static const union AnimCmd *const sAnimTable_BrendanMay_Asym[] = {
     [ANIM_HIFHIF] = sAnim_HifHif,
     [ANIM_TACKQ] = sAnim_TackQ,
     [ANIM_DIGDIG] = sAnim_DigDig,
+    [ANIM_YEPP] = sAnim_YepP,
+    [ANIM_NOP] = sAnim_NoP,
 };
 
 static const union AnimCmd *const sAnimTable_AcroBike[] = {

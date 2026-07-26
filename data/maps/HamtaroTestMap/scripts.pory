@@ -94,6 +94,13 @@ script ScoochieTest {
     release
     end
 }
+script ScoochieTest2 {
+    lock
+    applymovement(LOCALID_PLAYER, Scoochie2)
+    waitmovement(LOCALID_PLAYER)
+    release
+    end
+}
 
 script CappyTalk {
     lock
@@ -144,10 +151,29 @@ movement NoP {
     nopp
 }
 movement Scoochie {
-    player_run_up
-    player_run_up
-    player_run_up
-    player_run_up
-    player_run_up
-    player_run_up
+    scoochie
+    scoochie
+    scoochie
+    scoochie
+    scoochie
+    scoochie
+    scoochie
+}
+movement Scoochie2 {
+    face_up
+    lock_facing_direction
+    scoochie
+    player_run_down
+    scoochie
+    player_run_down
+    scoochie
+    player_run_down
+    scoochie
+    player_run_down
+    scoochie
+    player_run_down
+    scoochie
+    player_run_down
+    scoochie
+    unlock_facing_direction
 }

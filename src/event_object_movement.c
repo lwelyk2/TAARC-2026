@@ -8729,6 +8729,12 @@ bool8 MovementAction_NoP_Step0(struct ObjectEvent *objectEvent, struct Sprite *s
     return FALSE;
 }
 
+bool8 MovementAction_Scoochie_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    StartSpriteAnimInDirection(objectEvent, sprite, DIR_NORTH, ANIM_SCOOCHIE);
+    return FALSE;
+}
+
 bool8 MovementAction_EnableJumpLandingGroundEffect_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
     objectEvent->disableJumpLandingGroundEffect = FALSE;

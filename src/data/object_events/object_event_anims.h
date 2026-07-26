@@ -755,6 +755,13 @@ static const union AnimCmd sAnim_RunEast_Asym[] =
     ANIMCMD_JUMP(0),
 };
 
+static const union AnimCmd sAnim_Scoochie[] =
+{
+    ANIMCMD_FRAME(57, 5),
+    ANIMCMD_FRAME(58, 3),
+    ANIMCMD_FRAME(59, 5),
+    ANIMCMD_JUMP(0),
+};
 
 static const union AnimCmd sAnim_RunSouthFrlg[] = {
     ANIMCMD_FRAME(9, 5),
@@ -1729,6 +1736,7 @@ static const union AnimCmd *const sAnimTable_BrendanMay_Asym[] = {
     [ANIM_DIGDIG] = sAnim_DigDig,
     [ANIM_YEPP] = sAnim_YepP,
     [ANIM_NOP] = sAnim_NoP,
+    [ANIM_SCOOCHIE] = sAnim_Scoochie,
 };
 
 static const union AnimCmd *const sAnimTable_AcroBike[] = {

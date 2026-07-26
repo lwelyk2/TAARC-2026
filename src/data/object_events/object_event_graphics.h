@@ -7,6 +7,8 @@ const u32 gObjectEventPic_HamtaroTackQ[] = INCGFX_U32("graphics/object_events/pi
 const u32 gObjectEventPic_HamtaroDigdig[] = INCGFX_U32("graphics/object_events/pics/people/brendan/digdig.png", ".4bpp", "-mwidth 4 -mheight 4");
 const u32 gObjectEventPic_HamtaroNoP[] = INCGFX_U32("graphics/object_events/pics/people/brendan/no-p.png", ".4bpp", "-mwidth 4 -mheight 4");
 const u32 gObjectEventPic_HamtaroYepP[] = INCGFX_U32("graphics/object_events/pics/people/brendan/yep-p.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_HamtaroScoochie[] = INCGFX_U32("graphics/object_events/pics/people/brendan/scoochie.png", ".4bpp", "-mwidth 4 -mheight 4");
+
 const u32 gObjectEventPic_RubySapphireBrendanNormal[] = INCGFX_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/walking.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u32 gObjectEventPic_RubySapphireBrendanRunning[] = INCGFX_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/running.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPal_RubySapphireBrendan[] = INCGFX_U16("graphics/object_events/palettes/ruby_sapphire_brendan.pal", ".gbapal");

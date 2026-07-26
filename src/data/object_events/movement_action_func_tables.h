@@ -301,6 +301,12 @@ u8 MovementAction_SpinLeft_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementAction_SpinLeft_Step1(struct ObjectEvent *, struct Sprite *);
 u8 MovementAction_SpinRight_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementAction_SpinRight_Step1(struct ObjectEvent *, struct Sprite *);
+u8 MovementAction_Hamha_Step0(struct ObjectEvent *, struct Sprite *);
+u8 MovementAction_HifHif_Step0(struct ObjectEvent *, struct Sprite *);
+u8 MovementAction_TackQ_Step0(struct ObjectEvent *, struct Sprite *);
+u8 MovementAction_Digdig_Step0(struct ObjectEvent *, struct Sprite *);
+u8 MovementAction_YepP_Step0(struct ObjectEvent *, struct Sprite *);
+u8 MovementAction_NoP_Step0(struct ObjectEvent *, struct Sprite *);
 
 
 u8 (*const gMovementActionFuncs_FaceDown[])(struct ObjectEvent *, struct Sprite *);
@@ -488,6 +494,13 @@ u8 (*const gMovementActionFuncs_SpinUp[])(struct ObjectEvent *, struct Sprite *)
 u8 (*const gMovementActionFuncs_SpinLeft[])(struct ObjectEvent *, struct Sprite *);
 u8 (*const gMovementActionFuncs_SpinRight[])(struct ObjectEvent *, struct Sprite *);
 
+u8 (*const gMovementActionFuncs_Hamha[])(struct ObjectEvent *, struct Sprite *);
+u8 (*const gMovementActionFuncs_HifHif[])(struct ObjectEvent *, struct Sprite *);
+u8 (*const gMovementActionFuncs_TackQ[])(struct ObjectEvent *, struct Sprite *);
+u8 (*const gMovementActionFuncs_Digdig[])(struct ObjectEvent *, struct Sprite *);
+u8 (*const gMovementActionFuncs_YepP[])(struct ObjectEvent *, struct Sprite *);
+u8 (*const gMovementActionFuncs_NoP[])(struct ObjectEvent *, struct Sprite *);
+
 u8 (*const *const gMovementActionFuncs[])(struct ObjectEvent *, struct Sprite *) = {
     [MOVEMENT_ACTION_FACE_DOWN] = gMovementActionFuncs_FaceDown,
     [MOVEMENT_ACTION_FACE_UP] = gMovementActionFuncs_FaceUp,
@@ -672,6 +685,12 @@ u8 (*const *const gMovementActionFuncs[])(struct ObjectEvent *, struct Sprite *)
     [MOVEMENT_ACTION_SPIN_UP]          = gMovementActionFuncs_SpinUp,
     [MOVEMENT_ACTION_SPIN_LEFT]        = gMovementActionFuncs_SpinLeft,
     [MOVEMENT_ACTION_SPIN_RIGHT]       = gMovementActionFuncs_SpinRight,
+    [MOVEMENT_ACTION_HAMHA]            = gMovementActionFuncs_Hamha,
+    [MOVEMENT_ACTION_HIFHIF]           = gMovementActionFuncs_HifHif,
+    [MOVEMENT_ACTION_TACKQ]            = gMovementActionFuncs_TackQ,
+    [MOVEMENT_ACTION_DIGDIG]           = gMovementActionFuncs_Digdig,
+    [MOVEMENT_ACTION_YEPP]             = gMovementActionFuncs_YepP,
+    [MOVEMENT_ACTION_NOP]              = gMovementActionFuncs_NoP,
 };
 
 u8 (*const gMovementActionFuncs_FaceDown[])(struct ObjectEvent *, struct Sprite *) = {
@@ -1222,6 +1241,44 @@ u8 (*const gMovementActionFuncs_NurseJoyBowDown[])(struct ObjectEvent *, struct 
     MovementAction_NurseJoyBowDown_Step0,
     MovementAction_WaitSpriteAnim,
     MovementAction_PauseSpriteAnim,
+};
+
+u8 (*const gMovementActionFuncs_Hamha[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementAction_Hamha_Step0,
+    MovementAction_WaitSpriteAnim,
+    MovementAction_Finish,
+};
+
+u8 (*const gMovementActionFuncs_HifHif[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementAction_HifHif_Step0,
+    MovementAction_WaitSpriteAnim,
+    MovementAction_Finish,
+};
+
+u8 (*const gMovementActionFuncs_TackQ[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementAction_TackQ_Step0,
+    MovementAction_WaitSpriteAnim,
+    MovementAction_Finish,
+};
+
+u8 (*const gMovementActionFuncs_Digdig[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementAction_Digdig_Step0,
+    MovementAction_WaitSpriteAnim,
+    MovementAction_Finish,
+};
+
+
+u8 (*const gMovementActionFuncs_YepP[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementAction_YepP_Step0,
+    MovementAction_WaitSpriteAnim,
+    MovementAction_Finish,
+};
+
+
+u8 (*const gMovementActionFuncs_NoP[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementAction_NoP_Step0,
+    MovementAction_WaitSpriteAnim,
+    MovementAction_Finish,
 };
 
 u8 (*const gMovementActionFuncs_EnableJumpLandingGroundEffect[])(struct ObjectEvent *, struct Sprite *) = {

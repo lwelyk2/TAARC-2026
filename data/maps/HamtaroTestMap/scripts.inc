@@ -166,23 +166,125 @@ BijouTalk::
 	end
 
 
-BossTalk::
-# 92 "data/maps/HamtaroTestMap/scripts.pory"
+ScoochieTest::
+# 91 "data/maps/HamtaroTestMap/scripts.pory"
 	lock
+# 92 "data/maps/HamtaroTestMap/scripts.pory"
+	applymovement LOCALID_PLAYER, Scoochie
 # 93 "data/maps/HamtaroTestMap/scripts.pory"
-	faceplayer
+	waitmovement LOCALID_PLAYER
 # 94 "data/maps/HamtaroTestMap/scripts.pory"
-	createfieldmugshot MUGSHOT_BOSS, EMOTE_NORMAL
-# 95 "data/maps/HamtaroTestMap/scripts.pory"
-	playmoncry SPECIES_HAMTARO, CRY_MODE_ENCOUNTER
-# 96 "data/maps/HamtaroTestMap/scripts.pory"
-	msgbox BossTalk_Text_0
-# 97 "data/maps/HamtaroTestMap/scripts.pory"
-	removefieldmugshot
-# 98 "data/maps/HamtaroTestMap/scripts.pory"
 	release
 	end
 
+
+CappyTalk::
+# 99 "data/maps/HamtaroTestMap/scripts.pory"
+	lock
+# 100 "data/maps/HamtaroTestMap/scripts.pory"
+	faceplayer
+# 101 "data/maps/HamtaroTestMap/scripts.pory"
+	playmoncry SPECIES_HAMTARO, CRY_MODE_ENCOUNTER
+# 102 "data/maps/HamtaroTestMap/scripts.pory"
+	applymovement LOCALID_PLAYER, Hamha
+# 103 "data/maps/HamtaroTestMap/scripts.pory"
+	waitmovement LOCALID_PLAYER
+# 104 "data/maps/HamtaroTestMap/scripts.pory"
+	msgbox CappyTalk_Text_0
+# 105 "data/maps/HamtaroTestMap/scripts.pory"
+	applymovement LOCALID_PLAYER, HifHif
+# 106 "data/maps/HamtaroTestMap/scripts.pory"
+	waitmovement LOCALID_PLAYER
+# 107 "data/maps/HamtaroTestMap/scripts.pory"
+	msgbox CappyTalk_Text_1
+# 108 "data/maps/HamtaroTestMap/scripts.pory"
+	applymovement LOCALID_PLAYER, TackQ
+# 109 "data/maps/HamtaroTestMap/scripts.pory"
+	waitmovement LOCALID_PLAYER
+# 110 "data/maps/HamtaroTestMap/scripts.pory"
+	msgbox CappyTalk_Text_2
+# 111 "data/maps/HamtaroTestMap/scripts.pory"
+	applymovement LOCALID_PLAYER, DigDig
+# 112 "data/maps/HamtaroTestMap/scripts.pory"
+	waitmovement LOCALID_PLAYER
+# 113 "data/maps/HamtaroTestMap/scripts.pory"
+	msgbox CappyTalk_Text_3
+# 114 "data/maps/HamtaroTestMap/scripts.pory"
+	applymovement LOCALID_PLAYER, YepP
+# 115 "data/maps/HamtaroTestMap/scripts.pory"
+	waitmovement LOCALID_PLAYER
+# 116 "data/maps/HamtaroTestMap/scripts.pory"
+	msgbox CappyTalk_Text_4
+# 117 "data/maps/HamtaroTestMap/scripts.pory"
+	applymovement LOCALID_PLAYER, NoP
+# 118 "data/maps/HamtaroTestMap/scripts.pory"
+	waitmovement LOCALID_PLAYER
+# 119 "data/maps/HamtaroTestMap/scripts.pory"
+	msgbox CappyTalk_Text_5
+# 120 "data/maps/HamtaroTestMap/scripts.pory"
+	facetogether
+# 121 "data/maps/HamtaroTestMap/scripts.pory"
+	createfieldmugshot MUGSHOT_CAPPY, EMOTE_NORMAL
+# 122 "data/maps/HamtaroTestMap/scripts.pory"
+	msgbox BijouTalk_Text_1
+# 123 "data/maps/HamtaroTestMap/scripts.pory"
+	removefieldmugshot
+# 124 "data/maps/HamtaroTestMap/scripts.pory"
+	release
+	end
+
+
+# 128 "data/maps/HamtaroTestMap/scripts.pory"
+Hamha:
+# 129 "data/maps/HamtaroTestMap/scripts.pory"
+	hamha
+	step_end
+
+# 131 "data/maps/HamtaroTestMap/scripts.pory"
+HifHif:
+# 132 "data/maps/HamtaroTestMap/scripts.pory"
+	hifhif
+	step_end
+
+# 134 "data/maps/HamtaroTestMap/scripts.pory"
+TackQ:
+# 135 "data/maps/HamtaroTestMap/scripts.pory"
+	tackq
+	step_end
+
+# 137 "data/maps/HamtaroTestMap/scripts.pory"
+DigDig:
+# 138 "data/maps/HamtaroTestMap/scripts.pory"
+	digdig
+	step_end
+
+# 140 "data/maps/HamtaroTestMap/scripts.pory"
+YepP:
+# 141 "data/maps/HamtaroTestMap/scripts.pory"
+	yepp
+	step_end
+
+# 143 "data/maps/HamtaroTestMap/scripts.pory"
+NoP:
+# 144 "data/maps/HamtaroTestMap/scripts.pory"
+	nopp
+	step_end
+
+# 146 "data/maps/HamtaroTestMap/scripts.pory"
+Scoochie:
+# 147 "data/maps/HamtaroTestMap/scripts.pory"
+	player_run_up
+# 148 "data/maps/HamtaroTestMap/scripts.pory"
+	player_run_up
+# 149 "data/maps/HamtaroTestMap/scripts.pory"
+	player_run_up
+# 150 "data/maps/HamtaroTestMap/scripts.pory"
+	player_run_up
+# 151 "data/maps/HamtaroTestMap/scripts.pory"
+	player_run_up
+# 152 "data/maps/HamtaroTestMap/scripts.pory"
+	player_run_up
+	step_end
 
 HamtaroTalk_Text_0:
 # 10 "data/maps/HamtaroTestMap/scripts.pory"
@@ -240,6 +342,26 @@ BijouTalk_Text_12:
 # 85 "data/maps/HamtaroTestMap/scripts.pory"
 	.string "Hamha! My name is Stan!$"
 
-BossTalk_Text_0:
-# 96 "data/maps/HamtaroTestMap/scripts.pory"
-	.string "Hamha! My name is Boss!$"
+CappyTalk_Text_0:
+# 104 "data/maps/HamtaroTestMap/scripts.pory"
+	.string "I just hamhad$"
+
+CappyTalk_Text_1:
+# 107 "data/maps/HamtaroTestMap/scripts.pory"
+	.string "I just hifhifed$"
+
+CappyTalk_Text_2:
+# 110 "data/maps/HamtaroTestMap/scripts.pory"
+	.string "I just tackqed$"
+
+CappyTalk_Text_3:
+# 113 "data/maps/HamtaroTestMap/scripts.pory"
+	.string "I just digdigged$"
+
+CappyTalk_Text_4:
+# 116 "data/maps/HamtaroTestMap/scripts.pory"
+	.string "I just Yep-Ped$"
+
+CappyTalk_Text_5:
+# 119 "data/maps/HamtaroTestMap/scripts.pory"
+	.string "I just No-Ped$"

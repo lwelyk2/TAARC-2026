@@ -87,14 +87,67 @@ script BijouTalk {
     release
     end
 }
+script ScoochieTest {
+    lock
+    applymovement(LOCALID_PLAYER, Scoochie)
+    waitmovement(LOCALID_PLAYER)
+    release
+    end
+}
 
-script BossTalk {
+script CappyTalk {
     lock
     faceplayer
-    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
     playmoncry(SPECIES_HAMTARO, CRY_MODE_ENCOUNTER)
-    msgbox("Hamha! My name is Boss!")
+    applymovement(LOCALID_PLAYER, Hamha)
+    waitmovement(LOCALID_PLAYER)
+    msgbox("I just hamhad")
+    applymovement(LOCALID_PLAYER, HifHif)
+    waitmovement(LOCALID_PLAYER)
+    msgbox("I just hifhifed")
+    applymovement(LOCALID_PLAYER, TackQ)
+    waitmovement(LOCALID_PLAYER)
+    msgbox("I just tackqed")
+    applymovement(LOCALID_PLAYER, DigDig)
+    waitmovement(LOCALID_PLAYER)
+    msgbox("I just digdigged")
+    applymovement(LOCALID_PLAYER, YepP)
+    waitmovement(LOCALID_PLAYER)
+    msgbox("I just Yep-Ped")
+    applymovement(LOCALID_PLAYER, NoP)
+    waitmovement(LOCALID_PLAYER)
+    msgbox("I just No-Ped")
+    facetogether
+    createfieldmugshot(MUGSHOT_CAPPY, EMOTE_NORMAL)
+    msgbox("Hamha! My name is Cappy!")
 	removefieldmugshot
     release
     end
+}
+
+movement Hamha {
+    hamha
+}
+movement HifHif {
+    hifhif
+}
+movement TackQ {
+    tackq
+}
+movement DigDig {
+    digdig
+}
+movement YepP {
+    yepp
+}
+movement NoP {
+    nopp
+}
+movement Scoochie {
+    player_run_up
+    player_run_up
+    player_run_up
+    player_run_up
+    player_run_up
+    player_run_up
 }

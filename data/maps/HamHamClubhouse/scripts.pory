@@ -1,0 +1,12 @@
+mapscripts HamHamClubhouse_MapScripts {
+
+}
+
+script ClubhouseBoss {
+    lock
+    faceplayer
+    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+    msgbox(format("Hamtaro! You're late! Everyone else has already left!"))
+    release
+    end
+}

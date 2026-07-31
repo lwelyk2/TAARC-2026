@@ -415,6 +415,10 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Penelope;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sandy;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Snoozer;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Stan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Broski;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Harmony;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pepper;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Spat;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -673,7 +677,11 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SANDY] =                    &gObjectEventGraphicsInfo_Sandy,
     [OBJ_EVENT_GFX_SNOOZER] =                  &gObjectEventGraphicsInfo_Snoozer,
     [OBJ_EVENT_GFX_STAN] =                     &gObjectEventGraphicsInfo_Stan,
-#if IS_FRLG
+    [OBJ_EVENT_GFX_BROSKI] =                   &gObjectEventGraphicsInfo_Broski,
+    [OBJ_EVENT_GFX_HARMONY] =                  &gObjectEventGraphicsInfo_Harmony,
+    [OBJ_EVENT_GFX_PEPPER] =                   &gObjectEventGraphicsInfo_Pepper,
+    [OBJ_EVENT_GFX_SPAT] =                     &gObjectEventGraphicsInfo_Spat,
+    #if IS_FRLG
     [OBJ_EVENT_GFX_RED_NORMAL] =               &gObjectEventGraphicsInfo_RedNormal,
     [OBJ_EVENT_GFX_RED_BIKE] =                 &gObjectEventGraphicsInfo_RedBike,
     [OBJ_EVENT_GFX_RED_SURF] =                 &gObjectEventGraphicsInfo_RedSurf,

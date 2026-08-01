@@ -6731,4 +6731,22 @@ static const struct SpriteFrameImage sPicTable_Pecharunt[] = {
 static const struct SpriteFrameImage sPicTable_Hamtaro[] = {
     overworld_ascending_frames(gObjectEventPic_Hamtaro, 4, 4),
 };
+static const struct SpriteFrameImage sPicTable_Herk_Q_Ham[] = {
+    overworld_ascending_frames(gObjectEventPic_Herk_Q_Ham, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_Teenie_Girl[] = {
+    overworld_ascending_frames(gObjectEventPic_Teenie_Girl, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_Ballad_Ham[] = {
+    overworld_ascending_frames(gObjectEventPic_Ballad_Ham, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_Nurse_Ham[] = {
+    overworld_ascending_frames(gObjectEventPic_Nurse_Ham, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_Sun_Bather_Ham[] = {
+    overworld_ascending_frames(gObjectEventPic_Sun_Bather_Ham, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_Strawberry_Soccer_Ham[] = {
+    overworld_ascending_frames(gObjectEventPic_Strawberry_Soccer_Ham, 4, 4),
+};
 #endif //OW_POKEMON_OBJECT_EVENTS

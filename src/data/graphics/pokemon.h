@@ -27634,6 +27634,21 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
     const u8 gMonIcon_Strawberry_Soccer_Ham[] = INCGFX_U8("graphics/pokemon/strawberry_soccer_ham/icon.png", ".4bpp");
     const u32 gObjectEventPic_Strawberry_Soccer_Ham[] = INCGFX_COMP("graphics/pokemon/strawberry_soccer_ham/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
     
+    const u32 gMonFrontPic_Hamtaro_Beautiful[] = INCGFX_U32("graphics/pokemon/hamtaro/hamtaro_beautiful/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Hamtaro_Beautiful[] = INCGFX_U16("graphics/pokemon/hamtaro/hamtaro_beautiful/normal.pal", ".gbapal");
+    
+    const u32 gMonFrontPic_Hamtaro_Cool[] = INCGFX_U32("graphics/pokemon/hamtaro/hamtaro_cool/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Hamtaro_Cool[] = INCGFX_U16("graphics/pokemon/hamtaro/hamtaro_cool/normal.pal", ".gbapal");
+    
+    const u32 gMonFrontPic_Hamtaro_Cute[] = INCGFX_U32("graphics/pokemon/hamtaro/hamtaro_cute/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Hamtaro_Cute[] = INCGFX_U16("graphics/pokemon/hamtaro/hamtaro_cute/normal.pal", ".gbapal");
+    
+    const u32 gMonFrontPic_Hamtaro_Smart[] = INCGFX_U32("graphics/pokemon/hamtaro/hamtaro_smart/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Hamtaro_Smart[] = INCGFX_U16("graphics/pokemon/hamtaro/hamtaro_smart/normal.pal", ".gbapal");
+
+    const u32 gMonFrontPic_Hamtaro_Tough[] = INCGFX_U32("graphics/pokemon/hamtaro/hamtaro_tough/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Hamtaro_Tough[] = INCGFX_U16("graphics/pokemon/hamtaro/hamtaro_tough/normal.pal", ".gbapal");
+
     const u32 gMonFrontPic_Egg[] = INCGFX_U32("graphics/pokemon/egg/anim_front.png", ".4bpp.smol");
 
     const u16 gMonPalette_Egg[] = INCGFX_U16("graphics/pokemon/egg/normal.pal", ".gbapal");

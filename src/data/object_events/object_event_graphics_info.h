@@ -4701,6 +4701,78 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Stan = {
     .images = sPicTable_Stan,
 };
 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Broski = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 32,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_3,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = sOamTables_32x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Broski,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Harmony = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 32,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_3,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = sOamTables_32x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Harmony,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pepper = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 32,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_3,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = sOamTables_32x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Pepper,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Spat = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 32,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_3,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = sOamTables_32x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Spat,
+};
+
 #if IS_FRLG
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedNormal = {

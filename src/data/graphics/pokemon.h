@@ -27507,6 +27507,160 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
     const u32 gObjectEventPic_Hamtaro[] = INCGFX_COMP("graphics/pokemon/hamtaro/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
     const u16 gOverworldPalette_Hamtaro[] = INCGFX_U16("graphics/pokemon/hamtaro/overworld_normal.pal", ".gbapal");
     const u16 gShinyOverworldPalette_Hamtaro[] = INCGFX_U16("graphics/pokemon/hamtaro/overworld_shiny.pal", ".gbapal");
+    
+    const u32 gMonFrontPic_Bijou[] = INCGFX_U32("graphics/pokemon/bijou/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Bijou[] = INCGFX_U16("graphics/pokemon/bijou/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Bijou[] = INCGFX_U32("graphics/pokemon/bijou/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Bijou[] = INCGFX_U8("graphics/pokemon/bijou/icon.png", ".4bpp");
+    
+    const u32 gMonFrontPic_Oxnard[] = INCGFX_U32("graphics/pokemon/oxnard/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Oxnard[] = INCGFX_U16("graphics/pokemon/oxnard/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Oxnard[] = INCGFX_U32("graphics/pokemon/oxnard/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Oxnard[] = INCGFX_U8("graphics/pokemon/oxnard/icon.png", ".4bpp");
+    
+    const u32 gMonFrontPic_Boss[] = INCGFX_U32("graphics/pokemon/boss/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Boss[] = INCGFX_U16("graphics/pokemon/boss/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Boss[] = INCGFX_U32("graphics/pokemon/boss/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Boss[] = INCGFX_U8("graphics/pokemon/boss/icon.png", ".4bpp");
+    
+    const u32 gMonFrontPic_Maxwell[] = INCGFX_U32("graphics/pokemon/maxwell/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Maxwell[] = INCGFX_U16("graphics/pokemon/maxwell/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Maxwell[] = INCGFX_U32("graphics/pokemon/maxwell/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Maxwell[] = INCGFX_U8("graphics/pokemon/maxwell/icon.png", ".4bpp");
+    
+    const u32 gMonFrontPic_Cappy[] = INCGFX_U32("graphics/pokemon/cappy/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Cappy[] = INCGFX_U16("graphics/pokemon/cappy/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Cappy[] = INCGFX_U32("graphics/pokemon/cappy/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Cappy[] = INCGFX_U8("graphics/pokemon/cappy/icon.png", ".4bpp");
+    
+    const u32 gMonFrontPic_Pashmina[] = INCGFX_U32("graphics/pokemon/pashmina/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Pashmina[] = INCGFX_U16("graphics/pokemon/pashmina/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Pashmina[] = INCGFX_U32("graphics/pokemon/pashmina/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Pashmina[] = INCGFX_U8("graphics/pokemon/pashmina/icon.png", ".4bpp");
+    
+    const u32 gMonFrontPic_Penelope[] = INCGFX_U32("graphics/pokemon/penelope/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Penelope[] = INCGFX_U16("graphics/pokemon/penelope/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Penelope[] = INCGFX_U32("graphics/pokemon/penelope/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Penelope[] = INCGFX_U8("graphics/pokemon/penelope/icon.png", ".4bpp");
+    
+    const u32 gMonFrontPic_Howdy[] = INCGFX_U32("graphics/pokemon/howdy/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Howdy[] = INCGFX_U16("graphics/pokemon/howdy/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Howdy[] = INCGFX_U32("graphics/pokemon/howdy/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Howdy[] = INCGFX_U8("graphics/pokemon/howdy/icon.png", ".4bpp");
+   
+    const u32 gMonFrontPic_Dexter[] = INCGFX_U32("graphics/pokemon/dexter/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Dexter[] = INCGFX_U16("graphics/pokemon/dexter/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Dexter[] = INCGFX_U32("graphics/pokemon/dexter/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Dexter[] = INCGFX_U8("graphics/pokemon/dexter/icon.png", ".4bpp");
+    
+    const u32 gMonFrontPic_Sandy[] = INCGFX_U32("graphics/pokemon/sandy/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Sandy[] = INCGFX_U16("graphics/pokemon/sandy/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Sandy[] = INCGFX_U32("graphics/pokemon/sandy/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Sandy[] = INCGFX_U8("graphics/pokemon/sandy/icon.png", ".4bpp");
+    
+    const u32 gMonFrontPic_Stan[] = INCGFX_U32("graphics/pokemon/stan/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Stan[] = INCGFX_U16("graphics/pokemon/stan/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Stan[] = INCGFX_U32("graphics/pokemon/stan/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Stan[] = INCGFX_U8("graphics/pokemon/stan/icon.png", ".4bpp");
+    
+    const u32 gMonFrontPic_Panda[] = INCGFX_U32("graphics/pokemon/panda/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Panda[] = INCGFX_U16("graphics/pokemon/panda/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Panda[] = INCGFX_U32("graphics/pokemon/panda/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Panda[] = INCGFX_U8("graphics/pokemon/panda/icon.png", ".4bpp");
+    
+    const u32 gMonFrontPic_Snoozer[] = INCGFX_U32("graphics/pokemon/snoozer/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Snoozer[] = INCGFX_U16("graphics/pokemon/snoozer/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Snoozer[] = INCGFX_U32("graphics/pokemon/snoozer/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Snoozer[] = INCGFX_U8("graphics/pokemon/snoozer/icon.png", ".4bpp");
+    
+    const u32 gMonFrontPic_Jingle[] = INCGFX_U32("graphics/pokemon/jingle/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Jingle[] = INCGFX_U16("graphics/pokemon/jingle/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Jingle[] = INCGFX_U32("graphics/pokemon/jingle/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Jingle[] = INCGFX_U8("graphics/pokemon/jingle/icon.png", ".4bpp");
+    
+    const u32 gMonFrontPic_Pepper[] = INCGFX_U32("graphics/pokemon/pepper/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Pepper[] = INCGFX_U16("graphics/pokemon/pepper/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Pepper[] = INCGFX_U32("graphics/pokemon/pepper/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Pepper[] = INCGFX_U8("graphics/pokemon/pepper/icon.png", ".4bpp");
+        
+    const u32 gMonFrontPic_Harmony[] = INCGFX_U32("graphics/pokemon/harmony/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Harmony[] = INCGFX_U16("graphics/pokemon/harmony/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Harmony[] = INCGFX_U32("graphics/pokemon/harmony/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Harmony[] = INCGFX_U8("graphics/pokemon/harmony/icon.png", ".4bpp");
+
+    const u32 gMonFrontPic_Spat[] = INCGFX_U32("graphics/pokemon/spat/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Spat[] = INCGFX_U16("graphics/pokemon/spat/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Spat[] = INCGFX_U32("graphics/pokemon/spat/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Spat[] = INCGFX_U8("graphics/pokemon/spat/icon.png", ".4bpp");
+
+    const u32 gMonFrontPic_Broski[] = INCGFX_U32("graphics/pokemon/broski/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Broski[] = INCGFX_U16("graphics/pokemon/broski/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Broski[] = INCGFX_U32("graphics/pokemon/broski/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Broski[] = INCGFX_U8("graphics/pokemon/broski/icon.png", ".4bpp");
+
+    const u32 gMonFrontPic_Herk_Q_Ham[] = INCGFX_U32("graphics/pokemon/herk_q_ham/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Herk_Q_Ham[] = INCGFX_U16("graphics/pokemon/herk_q_ham/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Herk_Q_Ham[] = INCGFX_U32("graphics/pokemon/herk_q_ham/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Herk_Q_Ham[] = INCGFX_U8("graphics/pokemon/herk_q_ham/icon.png", ".4bpp");
+    const u32 gObjectEventPic_Herk_Q_Ham[] = INCGFX_COMP("graphics/pokemon/herk_q_ham/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+    const u32 gMonFrontPic_Teenie_Girl[] = INCGFX_U32("graphics/pokemon/teenie_girl/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Teenie_Girl[] = INCGFX_U16("graphics/pokemon/teenie_girl/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Teenie_Girl[] = INCGFX_U32("graphics/pokemon/teenie_girl/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Teenie_Girl[] = INCGFX_U8("graphics/pokemon/teenie_girl/icon.png", ".4bpp");
+    const u32 gObjectEventPic_Teenie_Girl[] = INCGFX_COMP("graphics/pokemon/teenie_girl/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+    const u32 gMonFrontPic_Ballad_Ham[] = INCGFX_U32("graphics/pokemon/ballad_ham/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Ballad_Ham[] = INCGFX_U16("graphics/pokemon/ballad_ham/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Ballad_Ham[] = INCGFX_U32("graphics/pokemon/ballad_ham/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Ballad_Ham[] = INCGFX_U8("graphics/pokemon/ballad_ham/icon.png", ".4bpp");
+    const u32 gObjectEventPic_Ballad_Ham[] = INCGFX_COMP("graphics/pokemon/ballad_ham/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+    const u32 gMonFrontPic_Nurse_Ham[] = INCGFX_U32("graphics/pokemon/nurse_ham/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Nurse_Ham[] = INCGFX_U16("graphics/pokemon/nurse_ham/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Nurse_Ham[] = INCGFX_U32("graphics/pokemon/nurse_ham/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Nurse_Ham[] = INCGFX_U8("graphics/pokemon/nurse_ham/icon.png", ".4bpp");
+    const u32 gObjectEventPic_Nurse_Ham[] = INCGFX_COMP("graphics/pokemon/nurse_ham/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+    const u32 gMonFrontPic_Sun_Bather_Ham[] = INCGFX_U32("graphics/pokemon/sun_bather_ham/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Sun_Bather_Ham[] = INCGFX_U16("graphics/pokemon/sun_bather_ham/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Sun_Bather_Ham[] = INCGFX_U32("graphics/pokemon/sun_bather_ham/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Sun_Bather_Ham[] = INCGFX_U8("graphics/pokemon/sun_bather_ham/icon.png", ".4bpp");
+    const u32 gObjectEventPic_Sun_Bather_Ham[] = INCGFX_COMP("graphics/pokemon/sun_bather_ham/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+    const u32 gMonFrontPic_Strawberry_Soccer_Ham[] = INCGFX_U32("graphics/pokemon/strawberry_soccer_ham/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Strawberry_Soccer_Ham[] = INCGFX_U16("graphics/pokemon/strawberry_soccer_ham/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Strawberry_Soccer_Ham[] = INCGFX_U32("graphics/pokemon/strawberry_soccer_ham/back.png", ".4bpp.smol");
+    const u8 gMonIcon_Strawberry_Soccer_Ham[] = INCGFX_U8("graphics/pokemon/strawberry_soccer_ham/icon.png", ".4bpp");
+    const u32 gObjectEventPic_Strawberry_Soccer_Ham[] = INCGFX_COMP("graphics/pokemon/strawberry_soccer_ham/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+    
+    const u32 gMonFrontPic_Hamtaro_Beautiful[] = INCGFX_U32("graphics/pokemon/hamtaro/hamtaro_beautiful/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Hamtaro_Beautiful[] = INCGFX_U16("graphics/pokemon/hamtaro/hamtaro_beautiful/normal.pal", ".gbapal");
+    
+    const u32 gMonFrontPic_Hamtaro_Cool[] = INCGFX_U32("graphics/pokemon/hamtaro/hamtaro_cool/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Hamtaro_Cool[] = INCGFX_U16("graphics/pokemon/hamtaro/hamtaro_cool/normal.pal", ".gbapal");
+    
+    const u32 gMonFrontPic_Hamtaro_Cute[] = INCGFX_U32("graphics/pokemon/hamtaro/hamtaro_cute/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Hamtaro_Cute[] = INCGFX_U16("graphics/pokemon/hamtaro/hamtaro_cute/normal.pal", ".gbapal");
+    
+    const u32 gMonFrontPic_Hamtaro_Smart[] = INCGFX_U32("graphics/pokemon/hamtaro/hamtaro_smart/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Hamtaro_Smart[] = INCGFX_U16("graphics/pokemon/hamtaro/hamtaro_smart/normal.pal", ".gbapal");
+
+    const u32 gMonFrontPic_Hamtaro_Tough[] = INCGFX_U32("graphics/pokemon/hamtaro/hamtaro_tough/front.png", ".4bpp.smol");
+    const u16 gMonPalette_Hamtaro_Tough[] = INCGFX_U16("graphics/pokemon/hamtaro/hamtaro_tough/normal.pal", ".gbapal");
+
+    const u32 gMonFrontPic_OliveOilHam[] = INCGFX_U32("graphics/pokemon/olive_oil_ham/front.png", ".4bpp.smol");
+    const u16 gMonPalette_OliveOilHam[] = INCGFX_U16("graphics/pokemon/olive_oil_ham/normal.pal", ".gbapal");
+    const u32 gMonBackPic_OliveOilHam[] = INCGFX_U32("graphics/pokemon/olive_oil_ham/back.png", ".4bpp.smol");
+    const u8 gMonIcon_OliveOilHam[] = INCGFX_U8("graphics/pokemon/olive_oil_ham/icon.png", ".4bpp");
+    const u32 gObjectEventPic_OliveOilHam[] = INCGFX_COMP("graphics/pokemon/olive_oil_ham/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+    const u32 gMonFrontPic_ShopkeeperHam[] = INCGFX_U32("graphics/pokemon/shopkeeper_ham/front.png", ".4bpp.smol");
+    const u16 gMonPalette_ShopkeeperHam[] = INCGFX_U16("graphics/pokemon/shopkeeper_ham/normal.pal", ".gbapal");
+    const u32 gMonBackPic_ShopkeeperHam[] = INCGFX_U32("graphics/pokemon/shopkeeper_ham/back.png", ".4bpp.smol");
+    const u8 gMonIcon_ShopkeeperHam[] = INCGFX_U8("graphics/pokemon/shopkeeper_ham/icon.png", ".4bpp");
+    const u32 gObjectEventPic_ShopkeeperHam[] = INCGFX_COMP("graphics/pokemon/shopkeeper_ham/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+
     const u32 gMonFrontPic_Egg[] = INCGFX_U32("graphics/pokemon/egg/anim_front.png", ".4bpp.smol");
 
     const u16 gMonPalette_Egg[] = INCGFX_U16("graphics/pokemon/egg/normal.pal", ".gbapal");

@@ -413,6 +413,10 @@ const u32 gObjectEventPic_Penelope[] = INCGFX_U32("graphics/object_events/pics/p
 const u32 gObjectEventPic_Sandy[] = INCGFX_U32("graphics/object_events/pics/people/sandy.png", ".4bpp", "-mwidth 4 -mheight 4");
 const u32 gObjectEventPic_Snoozer[] = INCGFX_U32("graphics/object_events/pics/people/snoozer.png", ".4bpp", "-mwidth 4 -mheight 4");
 const u32 gObjectEventPic_Stan[] = INCGFX_U32("graphics/object_events/pics/people/stan.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_Broski[] = INCGFX_U32("graphics/object_events/pics/people/broski.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_Harmony[] = INCGFX_U32("graphics/object_events/pics/people/harmony.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_Pepper[] = INCGFX_U32("graphics/object_events/pics/people/pepper.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u32 gObjectEventPic_Spat[] = INCGFX_U32("graphics/object_events/pics/people/spat.png", ".4bpp", "-mwidth 4 -mheight 4");
 
 
 #if OW_FOLLOWERS_POKEBALLS

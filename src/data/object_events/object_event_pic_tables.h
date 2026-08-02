@@ -1493,6 +1493,22 @@ static const struct SpriteFrameImage sPicTable_Stan[] = {
     overworld_ascending_frames(gObjectEventPic_Stan, 4, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_Broski[] = {
+    overworld_ascending_frames(gObjectEventPic_Broski, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Harmony[] = {
+    overworld_ascending_frames(gObjectEventPic_Harmony, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Pepper[] = {
+    overworld_ascending_frames(gObjectEventPic_Pepper, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Spat[] = {
+    overworld_ascending_frames(gObjectEventPic_Spat, 4, 4),
+};
+
 #if IS_FRLG
 
 static const struct SpriteFrameImage sPicTable_RedNormal[] = {

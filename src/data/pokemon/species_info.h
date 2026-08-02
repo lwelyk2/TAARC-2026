@@ -286,11 +286,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Hamtaro,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Hamtaro,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -299,7 +295,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Hamtaro,
         .shinyPalette = gMonPalette_Hamtaro,
         .iconSprite = gMonIcon_Hamtaro,
-        .iconPalIndex =0
+        .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -355,11 +351,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Hamtaro,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Hamtaro,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -368,7 +360,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Hamtaro,
         .shinyPalette = gMonPalette_Hamtaro,
         .iconSprite = gMonIcon_Hamtaro,
-        .iconPalIndex =0
+        .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -424,11 +416,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Hamtaro,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Hamtaro,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -437,7 +425,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Hamtaro,
         .shinyPalette = gMonPalette_Hamtaro,
         .iconSprite = gMonIcon_Hamtaro,
-        .iconPalIndex =0
+        .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -493,11 +481,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Hamtaro,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Hamtaro,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -506,7 +490,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Hamtaro,
         .shinyPalette = gMonPalette_Hamtaro,
         .iconSprite = gMonIcon_Hamtaro,
-        .iconPalIndex =0
+        .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -562,11 +546,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Hamtaro,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Hamtaro,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -575,7 +555,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Hamtaro,
         .shinyPalette = gMonPalette_Hamtaro,
         .iconSprite = gMonIcon_Hamtaro,
-        .iconPalIndex =0
+        .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -631,11 +611,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Hamtaro,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Hamtaro,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -644,7 +620,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Hamtaro,
         .shinyPalette = gMonPalette_Hamtaro,
         .iconSprite = gMonIcon_Hamtaro,
-        .iconPalIndex =0
+        .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -700,11 +676,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Bijou,
         .frontPicSize = MON_COORDS_SIZE(48, 48),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Bijou,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -769,11 +741,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Oxnard,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Oxnard,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -782,7 +750,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Oxnard,
         .shinyPalette = gMonPalette_Oxnard,
         .iconSprite = gMonIcon_Oxnard,
-        .iconPalIndex =0
+        .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -838,11 +806,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Boss,
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Boss,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -851,7 +815,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Boss,
         .shinyPalette = gMonPalette_Boss,
         .iconSprite = gMonIcon_Boss,
-        .iconPalIndex =0
+        .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -907,11 +871,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Hamtaro,
         .frontPicSize = MON_COORDS_SIZE(48, 48),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Hamtaro,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -920,7 +880,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Maxwell,
         .shinyPalette = gMonPalette_Maxwell,
         .iconSprite = gMonIcon_Maxwell,
-        .iconPalIndex =0
+        .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -976,11 +936,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Hamtaro,
         .frontPicSize = MON_COORDS_SIZE(48, 48),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Cappy,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -1046,11 +1002,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Pashmina,
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Pashmina,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -1115,11 +1067,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Penelope,
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Penelope,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -1184,11 +1132,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Howdy,
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Howdy,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -1253,11 +1197,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Dexter,
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Dexter,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -1322,11 +1262,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Hamtaro,
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Sandy,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -1391,11 +1327,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Stan,
         .frontPicSize = MON_COORDS_SIZE(48, 48),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Stan,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -1461,11 +1393,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Panda,
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Panda,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -1530,11 +1458,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Snoozer,
         .frontPicSize = MON_COORDS_SIZE(48, 48),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Snoozer,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -1600,11 +1524,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Jingle,
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Jingle,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -1670,11 +1590,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Pepper,
         .frontPicSize = MON_COORDS_SIZE(48, 48),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Pepper,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -1740,11 +1656,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Hamtaro,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Hamtaro,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -1753,7 +1665,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Hamtaro,
         .shinyPalette = gMonPalette_Hamtaro,
         .iconSprite = gMonIcon_Hamtaro,
-        .iconPalIndex =0
+        .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -1810,11 +1722,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Hamtaro,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Hamtaro,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -1823,7 +1731,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Hamtaro,
         .shinyPalette = gMonPalette_Hamtaro,
         .iconSprite = gMonIcon_Hamtaro,
-        .iconPalIndex =0
+        .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -1880,11 +1788,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Harmony,
         .frontPicSize = MON_COORDS_SIZE(48, 48),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Harmony,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -1950,11 +1854,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Spat,
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Spat,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -2020,11 +1920,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Hamtaro,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Hamtaro,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -2033,7 +1929,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Hamtaro,
         .shinyPalette = gMonPalette_Hamtaro,
         .iconSprite = gMonIcon_Hamtaro,
-        .iconPalIndex =0
+        .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -2090,11 +1986,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Hamtaro,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Hamtaro,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -2103,7 +1995,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Hamtaro,
         .shinyPalette = gMonPalette_Hamtaro,
         .iconSprite = gMonIcon_Hamtaro,
-        .iconPalIndex =0
+        .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -2160,11 +2052,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Herk_Q_Ham,
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Hamtaro,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -2230,11 +2118,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Teenie_Girl,
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Teenie_Girl,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -2300,11 +2184,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Ballad_Ham,
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Ballad_Ham,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -2313,7 +2193,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Ballad_Ham,
         .shinyPalette = gMonPalette_Ballad_Ham,
         .iconSprite = gMonIcon_Ballad_Ham,
-        .iconPalIndex =0
+        .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -2371,11 +2251,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Hamtaro,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Hamtaro,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -2384,7 +2260,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Hamtaro,
         .shinyPalette = gMonPalette_Hamtaro,
         .iconSprite = gMonIcon_Hamtaro,
-        .iconPalIndex =0
+        .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -2441,11 +2317,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Broski,
         .frontPicSize = MON_COORDS_SIZE(56, 56),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Broski,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -2454,7 +2326,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Broski,
         .shinyPalette = gMonPalette_Broski,
         .iconSprite = gMonIcon_Broski,
-        .iconPalIndex =0
+        .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -2511,11 +2383,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Nurse_Ham,
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Nurse_Ham,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -2524,7 +2392,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Nurse_Ham,
         .shinyPalette = gMonPalette_Nurse_Ham,
         .iconSprite = gMonIcon_Nurse_Ham,
-        .iconPalIndex =0
+        .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -2581,11 +2449,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Sun_Bather_Ham,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Sun_Bather_Ham,
         .backPicSize = MON_COORDS_SIZE(56, 56),
@@ -2594,7 +2458,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Sun_Bather_Ham,
         .shinyPalette = gMonPalette_Sun_Bather_Ham,
         .iconSprite = gMonIcon_Sun_Bather_Ham,
-        .iconPalIndex =0
+        .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -2651,11 +2515,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontPic = gMonFrontPic_Strawberry_Soccer_Ham,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = ANIM_FRAMES(
-            ANIMCMD_FRAME(0, 10),
-            ANIMCMD_FRAME(1, 50),
-            ANIMCMD_FRAME(0, 10),
-        ),
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_Strawberry_Soccer_Ham,
         .backPicSize = MON_COORDS_SIZE(48,48),
@@ -2664,7 +2524,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Strawberry_Soccer_Ham,
         .shinyPalette = gMonPalette_Strawberry_Soccer_Ham,
         .iconSprite = gMonIcon_Strawberry_Soccer_Ham,
-        .iconPalIndex =0
+        .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,

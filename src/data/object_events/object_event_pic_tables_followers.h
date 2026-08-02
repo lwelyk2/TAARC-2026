@@ -6746,6 +6746,12 @@ static const struct SpriteFrameImage sPicTable_Nurse_Ham[] = {
 static const struct SpriteFrameImage sPicTable_Sun_Bather_Ham[] = {
     overworld_ascending_frames(gObjectEventPic_Sun_Bather_Ham, 4, 4),
 };
+static const struct SpriteFrameImage sPicTable_ShopkeeperHam[] = {
+    overworld_ascending_frames(gObjectEventPic_ShopkeeperHam, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_OliveOilHam[] = {
+    overworld_ascending_frames(gObjectEventPic_OliveOilHam, 4, 4),
+};
 static const struct SpriteFrameImage sPicTable_Strawberry_Soccer_Ham[] = {
     overworld_ascending_frames(gObjectEventPic_Strawberry_Soccer_Ham, 4, 4),
 };

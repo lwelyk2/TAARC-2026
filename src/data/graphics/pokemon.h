@@ -27649,6 +27649,18 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
     const u32 gMonFrontPic_Hamtaro_Tough[] = INCGFX_U32("graphics/pokemon/hamtaro/hamtaro_tough/front.png", ".4bpp.smol");
     const u16 gMonPalette_Hamtaro_Tough[] = INCGFX_U16("graphics/pokemon/hamtaro/hamtaro_tough/normal.pal", ".gbapal");
 
+    const u32 gMonFrontPic_OliveOilHam[] = INCGFX_U32("graphics/pokemon/olive_oil_ham/front.png", ".4bpp.smol");
+    const u16 gMonPalette_OliveOilHam[] = INCGFX_U16("graphics/pokemon/olive_oil_ham/normal.pal", ".gbapal");
+    const u32 gMonBackPic_OliveOilHam[] = INCGFX_U32("graphics/pokemon/olive_oil_ham/back.png", ".4bpp.smol");
+    const u8 gMonIcon_OliveOilHam[] = INCGFX_U8("graphics/pokemon/olive_oil_ham/icon.png", ".4bpp");
+    const u32 gObjectEventPic_OliveOilHam[] = INCGFX_COMP("graphics/pokemon/olive_oil_ham/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+    const u32 gMonFrontPic_ShopkeeperHam[] = INCGFX_U32("graphics/pokemon/shopkeeper_ham/front.png", ".4bpp.smol");
+    const u16 gMonPalette_ShopkeeperHam[] = INCGFX_U16("graphics/pokemon/shopkeeper_ham/normal.pal", ".gbapal");
+    const u32 gMonBackPic_ShopkeeperHam[] = INCGFX_U32("graphics/pokemon/shopkeeper_ham/back.png", ".4bpp.smol");
+    const u8 gMonIcon_ShopkeeperHam[] = INCGFX_U8("graphics/pokemon/shopkeeper_ham/icon.png", ".4bpp");
+    const u32 gObjectEventPic_ShopkeeperHam[] = INCGFX_COMP("graphics/pokemon/shopkeeper_ham/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+
     const u32 gMonFrontPic_Egg[] = INCGFX_U32("graphics/pokemon/egg/anim_front.png", ".4bpp.smol");
 
     const u16 gMonPalette_Egg[] = INCGFX_U16("graphics/pokemon/egg/normal.pal", ".gbapal");

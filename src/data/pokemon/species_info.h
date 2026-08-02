@@ -945,7 +945,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Cappy,
         .shinyPalette = gMonPalette_Cappy,
         .iconSprite = gMonIcon_Cappy,
-        .iconPalIndex = 5,
+        .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -1011,7 +1011,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Pashmina,
         .shinyPalette = gMonPalette_Pashmina,
         .iconSprite = gMonIcon_Pashmina,
-        .iconPalIndex = 5,
+        .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -1076,7 +1076,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Penelope,
         .shinyPalette = gMonPalette_Penelope,
         .iconSprite = gMonIcon_Penelope,
-        .iconPalIndex = 5,
+        .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -1141,7 +1141,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Howdy,
         .shinyPalette = gMonPalette_Howdy,
         .iconSprite = gMonIcon_Howdy,
-        .iconPalIndex = 5,
+        .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -1206,7 +1206,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Dexter,
         .shinyPalette = gMonPalette_Dexter,
         .iconSprite = gMonIcon_Dexter,
-        .iconPalIndex = 5,
+        .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -1271,7 +1271,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Sandy,
         .shinyPalette = gMonPalette_Sandy,
         .iconSprite = gMonIcon_Sandy,
-        .iconPalIndex = 5,
+        .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -1336,7 +1336,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Stan,
         .shinyPalette = gMonPalette_Stan,
         .iconSprite = gMonIcon_Stan,
-        .iconPalIndex = 5,
+        .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -1402,7 +1402,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Panda,
         .shinyPalette = gMonPalette_Panda,
         .iconSprite = gMonIcon_Panda,
-        .iconPalIndex = 5,
+        .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -1467,7 +1467,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Snoozer,
         .shinyPalette = gMonPalette_Snoozer,
         .iconSprite = gMonIcon_Snoozer,
-        .iconPalIndex = 5,
+        .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -1533,7 +1533,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Jingle,
         .shinyPalette = gMonPalette_Jingle,
         .iconSprite = gMonIcon_Jingle,
-        .iconPalIndex = 5,
+        .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -1599,7 +1599,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Pepper,
         .shinyPalette = gMonPalette_Pepper,
         .iconSprite = gMonIcon_Pepper,
-        .iconPalIndex = 5,
+        .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -1617,7 +1617,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     },
 
     
-    [SPECIES_LAPIS] =
+    [SPECIES_OLIVE_OIL_HAM] =
     {
         .baseHP        = 85,
         .baseAttack    = 90,
@@ -1638,33 +1638,33 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_GLUTTONY, ABILITY_CHEEK_POUCH, ABILITY_TECHNICIAN },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Lapis"),
+        .speciesName = _("Oliver"),
         .cryId = CRY_HAMTARO,
         .natDexNum = NATIONAL_DEX_HAMTARO,
         .categoryName = _("Hamster"),
         .height = 1,
         .weight = 1,
         .description = COMPOUND_STRING(
-            "Lapis a hamster who literally has\n"
-            "magical powers.\n"
-            "She also literally has a sister\n"
-            "named Lazuli."),
+            "While he enjoys lazing around\n"
+            "in the sun, he does also have a\n"
+            "sense of adventure. He doens't\n"
+            "understand suntan oils."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Hamtaro,
+        .frontPic = gMonFrontPic_OliveOilHam,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .backPic = gMonBackPic_Hamtaro,
+        .backPic = gMonBackPic_OliveOilHam,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 0,
         .backAnimId = ANIM_CONCAVE_ARC_SMALL,
-        .palette = gMonPalette_Hamtaro,
-        .shinyPalette = gMonPalette_Hamtaro,
-        .iconSprite = gMonIcon_Hamtaro,
+        .palette = gMonPalette_OliveOilHam,
+        .shinyPalette = gMonPalette_OliveOilHam,
+        .iconSprite = gMonIcon_OliveOilHam,
         .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
@@ -1672,18 +1672,18 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
         OVERWORLD(
-            sPicTable_Hamtaro,
+            sPicTable_OliveOilHam,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_NONE,
             sAnimTable_Following_Asym,
-            gOverworldPalette_Hamtaro,
-            gShinyOverworldPalette_Hamtaro
+            gMonPalette_OliveOilHam,
+            gMonPalette_OliveOilHam
         )
     },
 
     
-    [SPECIES_LAZULI] =
+    [SPECIES_SHOPKEEPER_HAM] =
     {
         .baseHP        = 85,
         .baseAttack    = 90,
@@ -1691,7 +1691,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpeed     = 100,
         .baseSpAttack  = 65,
         .baseSpDefense = 65,
-        .types = MON_TYPES(TYPE_FIRE, TYPE_WATER),
+        .types = MON_TYPES(TYPE_DRAGON, TYPE_GHOST),
         .catchRate = 255,
         .expYield = 67,
         .evYield_HP = 1,
@@ -1702,49 +1702,49 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_GLUTTONY, ABILITY_CHEEK_POUCH, ABILITY_TECHNICIAN },
+        .abilities = { ABILITY_WONDER_GUARD, ABILITY_WONDER_GUARD, ABILITY_WONDER_GUARD },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Lazuli"),
+        .speciesName = _("Mabe"),
         .cryId = CRY_HAMTARO,
         .natDexNum = NATIONAL_DEX_HAMTARO,
-        .categoryName = _("Hamster"),
+        .categoryName = _("Shopkeeper"),
         .height = 1,
         .weight = 1,
         .description = COMPOUND_STRING(
-            "Lazuli is a creative hamster who\n"
-            "possesses the following things:\n"
-            "magical powers, a blue purse, a bow\n"
-            "a sister named Lapis."),
+            "Keeping shop is dangerous, but\n"
+            "important work. You never know when\n"
+            "a hamster will go bad and need to be\n"
+            "dealt with. Nothing personnel kid."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Hamtaro,
+        .frontPic = gMonFrontPic_ShopkeeperHam,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_SingleFramePlaceHolder,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .backPic = gMonBackPic_Hamtaro,
+        .backPic = gMonBackPic_ShopkeeperHam,
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 0,
         .backAnimId = ANIM_CONCAVE_ARC_SMALL,
-        .palette = gMonPalette_Hamtaro,
-        .shinyPalette = gMonPalette_Hamtaro,
-        .iconSprite = gMonIcon_Hamtaro,
-        .iconPalIndex =0,
+        .palette = gMonPalette_ShopkeeperHam,
+        .shinyPalette = gMonPalette_ShopkeeperHam,
+        .iconSprite = gMonIcon_ShopkeeperHam,
+        .iconPalIndex =1,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
         OVERWORLD(
-            sPicTable_Hamtaro,
+            sPicTable_ShopkeeperHam,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_NONE,
             sAnimTable_Following_Asym,
-            gOverworldPalette_Hamtaro,
-            gShinyOverworldPalette_Hamtaro
+            gMonPalette_ShopkeeperHam,
+            gMonPalette_ShopkeeperHam
         )
     },
 
@@ -1797,7 +1797,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Harmony,
         .shinyPalette = gMonPalette_Harmony,
         .iconSprite = gMonIcon_Harmony,
-        .iconPalIndex = 5,
+        .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -1863,7 +1863,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Spat,
         .shinyPalette = gMonPalette_Spat,
         .iconSprite = gMonIcon_Spat,
-        .iconPalIndex = 5,
+        .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -1879,139 +1879,6 @@ const struct SpeciesInfo gSpeciesInfo[] =
             gShinyOverworldPalette_Hamtaro
         )
     },
-
-    
-    [SPECIES_BARETTE] =
-    {
-        .baseHP        = 85,
-        .baseAttack    = 90,
-        .baseDefense   = 85,
-        .baseSpeed     = 100,
-        .baseSpAttack  = 65,
-        .baseSpDefense = 65,
-        .types = MON_TYPES(TYPE_FAIRY),
-        .catchRate = 255,
-        .expYield = 67,
-        .evYield_HP = 1,
-        .evYield_Defense = 1,
-        .evYield_SpDefense = 1,
-        .genderRatio = PERCENT_FEMALE(0),
-        .eggCycles = 20,
-        .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_GLUTTONY, ABILITY_CHEEK_POUCH, ABILITY_TECHNICIAN },
-        .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Barrette"),
-        .cryId = CRY_HAMTARO,
-        .natDexNum = NATIONAL_DEX_HAMTARO,
-        .categoryName = _("Hamster"),
-        .height = 1,
-        .weight = 1,
-        .description = COMPOUND_STRING(
-            "Barette is a hamster who loves to knit.\n"
-            "She and her boyfriend Seamore also\n"
-            "run the photo studio in the Ham-Ham\n"
-            "Clubhouse."),
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Hamtaro,
-        .frontPicSize = MON_COORDS_SIZE(64, 64),
-        .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .backPic = gMonBackPic_Hamtaro,
-        .backPicSize = MON_COORDS_SIZE(64, 64),
-        .backPicYOffset = 0,
-        .backAnimId = ANIM_CONCAVE_ARC_SMALL,
-        .palette = gMonPalette_Hamtaro,
-        .shinyPalette = gMonPalette_Hamtaro,
-        .iconSprite = gMonIcon_Hamtaro,
-        .iconPalIndex =0,
-        FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sHamtaroLevelUpLearnset,
-        .teachableLearnset = sHamtaroTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
-                                {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
-        OVERWORLD(
-            sPicTable_Hamtaro,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_NONE,
-            sAnimTable_Following_Asym,
-            gOverworldPalette_Hamtaro,
-            gShinyOverworldPalette_Hamtaro
-        )
-    },
-
-    
-    [SPECIES_SEAMORE] =
-    {
-        .baseHP        = 85,
-        .baseAttack    = 90,
-        .baseDefense   = 85,
-        .baseSpeed     = 100,
-        .baseSpAttack  = 65,
-        .baseSpDefense = 65,
-        .types = MON_TYPES(TYPE_FIRE, TYPE_GROUND),
-        .catchRate = 255,
-        .expYield = 67,
-        .evYield_HP = 1,
-        .evYield_Defense = 1,
-        .evYield_SpDefense = 1,
-        .genderRatio = PERCENT_FEMALE(0),
-        .eggCycles = 20,
-        .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_GLUTTONY, ABILITY_CHEEK_POUCH, ABILITY_TECHNICIAN },
-        .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Seamore"),
-        .cryId = CRY_HAMTARO,
-        .natDexNum = NATIONAL_DEX_HAMTARO,
-        .categoryName = _("Hamster"),
-        .height = 1,
-        .weight = 1,
-        .description = COMPOUND_STRING(
-            "Seamore is a hamster who loves to\n"
-            "swim, which he can do thanks to the\n"
-            "turtle shell he wears on his back.\n"
-            "It's unclear how that helps."),
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Hamtaro,
-        .frontPicSize = MON_COORDS_SIZE(64, 64),
-        .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .backPic = gMonBackPic_Hamtaro,
-        .backPicSize = MON_COORDS_SIZE(64, 64),
-        .backPicYOffset = 0,
-        .backAnimId = ANIM_CONCAVE_ARC_SMALL,
-        .palette = gMonPalette_Hamtaro,
-        .shinyPalette = gMonPalette_Hamtaro,
-        .iconSprite = gMonIcon_Hamtaro,
-        .iconPalIndex =0,
-        FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sHamtaroLevelUpLearnset,
-        .teachableLearnset = sHamtaroTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
-                                {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
-        OVERWORLD(
-            sPicTable_Hamtaro,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_NONE,
-            sAnimTable_Following_Asym,
-            gOverworldPalette_Hamtaro,
-            gShinyOverworldPalette_Hamtaro
-        )
-    },
-
     
     [SPECIES_HERK_Q_HAM] =
     {
@@ -2061,7 +1928,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Herk_Q_Ham,
         .shinyPalette = gMonPalette_Herk_Q_Ham,
         .iconSprite = gMonIcon_Herk_Q_Ham,
-        .iconPalIndex = 5,
+        .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -2127,7 +1994,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Teenie_Girl,
         .shinyPalette = gMonPalette_Teenie_Girl,
         .iconSprite = gMonIcon_Teenie_Girl,
-        .iconPalIndex = 5,
+        .iconPalIndex = 1,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -2193,7 +2060,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Ballad_Ham,
         .shinyPalette = gMonPalette_Ballad_Ham,
         .iconSprite = gMonIcon_Ballad_Ham,
-        .iconPalIndex =0,
+        .iconPalIndex =1,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -2207,73 +2074,6 @@ const struct SpeciesInfo gSpeciesInfo[] =
             sAnimTable_Following,
             gMonPalette_Ballad_Ham,
             gMonPalette_Ballad_Ham
-        )
-    },
- 
-
-    
-    [SPECIES_DOCTOR_HAM] =
-    {
-        .baseHP        = 85,
-        .baseAttack    = 90,
-        .baseDefense   = 85,
-        .baseSpeed     = 100,
-        .baseSpAttack  = 65,
-        .baseSpDefense = 65,
-        .types = MON_TYPES(TYPE_GRASS),
-        .catchRate = 255,
-        .expYield = 67,
-        .evYield_HP = 1,
-        .evYield_Defense = 1,
-        .evYield_SpDefense = 1,
-        .genderRatio = PERCENT_FEMALE(0),
-        .eggCycles = 20,
-        .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
-        .abilities = { ABILITY_GLUTTONY, ABILITY_CHEEK_POUCH, ABILITY_TECHNICIAN },
-        .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Frankie"),
-        .cryId = CRY_HAMTARO,
-        .natDexNum = NATIONAL_DEX_HAMTARO,
-        .categoryName = _("Hamster"),
-        .height = 1,
-        .weight = 1,
-        .description = COMPOUND_STRING(
-            "Doctor\n"
-            "Doctor\n"
-            "Doctor\n"
-            "Doctor."),
-        .pokemonScale = 256,
-        .pokemonOffset = 0,
-        .trainerScale = 256,
-        .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Hamtaro,
-        .frontPicSize = MON_COORDS_SIZE(64, 64),
-        .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
-        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
-        .backPic = gMonBackPic_Hamtaro,
-        .backPicSize = MON_COORDS_SIZE(64, 64),
-        .backPicYOffset = 0,
-        .backAnimId = ANIM_CONCAVE_ARC_SMALL,
-        .palette = gMonPalette_Hamtaro,
-        .shinyPalette = gMonPalette_Hamtaro,
-        .iconSprite = gMonIcon_Hamtaro,
-        .iconPalIndex =0,
-        FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sHamtaroLevelUpLearnset,
-        .teachableLearnset = sHamtaroTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
-                                {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
-        OVERWORLD(
-            sPicTable_Hamtaro,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_NONE,
-            sAnimTable_Following,
-            gOverworldPalette_Hamtaro,
-            gShinyOverworldPalette_Hamtaro
         )
     },
  
@@ -2392,7 +2192,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Nurse_Ham,
         .shinyPalette = gMonPalette_Nurse_Ham,
         .iconSprite = gMonIcon_Nurse_Ham,
-        .iconPalIndex =0,
+        .iconPalIndex =1,
         FOOTPRINT(QuestionMark)
         .levelUpLearnset = sHamtaroLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
@@ -2418,7 +2218,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpeed     = 100,
         .baseSpAttack  = 65,
         .baseSpDefense = 65,
-        .types = MON_TYPES(TYPE_WATER, TYPE_GROUND),
+        .types = MON_TYPES(TYPE_WATER, TYPE_FAIRY),
         .catchRate = 255,
         .expYield = 67,
         .evYield_HP = 1,
@@ -2438,10 +2238,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .height = 1,
         .weight = 1,
         .description = COMPOUND_STRING(
-            "Mela loves to sunbathe and has a\n"
-            "sense of adventure.\n"
-            "For some reason, she thinks that\n"
-            "olive oil is used for sunbathing."),
+            "Mela loves to sunbathe and uses\n"
+            "her looks to get other hamsters\n"
+            "to run her errands for her. She's\n"
+            "worried it won't work forever."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,

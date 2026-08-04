@@ -1,7 +1,7 @@
 {
-  "id": "MAP_HAMTARO_ACORN_PARK_ENTRANCE",
-  "name": "Hamtaro_AcornParkEntrance",
-  "layout": "LAYOUT_HAMTARO_ACORN_PARK_ENTRANCE",
+  "id": "MAP_HAMTARO_ACORN_PARK_SOUTH",
+  "name": "Hamtaro_AcornParkSouth",
+  "layout": "LAYOUT_HAMTARO_ACORN_PARK_SOUTH",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
@@ -14,18 +14,18 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_HAMTARO_ACORN_PARK_SOUTH",
-      "offset": -2,
-      "direction": "up"
+      "map": "MAP_HAMTARO_ACORN_PARK_ENTRANCE",
+      "offset": 2,
+      "direction": "down"
     }
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_PEPPER",
-      "x": 10,
-      "y": 3,
+      "graphics_id": "OBJ_EVENT_GFX_PANDA",
+      "x": 5,
+      "y": 9,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -34,9 +34,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_OXNARD",
-      "x": 12,
-      "y": 3,
+      "graphics_id": "OBJ_EVENT_GFX_SNOOZER",
+      "x": 23,
+      "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,

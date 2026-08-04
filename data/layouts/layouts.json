@@ -9363,6 +9363,16 @@
       "secondary_tileset": "gTileset_HamtaroShrine",
       "border_filepath": "data/layouts/Hamtaro_BrokenTV/border.bin",
       "blockdata_filepath": "data/layouts/Hamtaro_BrokenTV/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAMTARO_ACORN_PARK_SOUTH",
+      "name": "Hamtaro_AcornParkSouth_Layout",
+      "width": 34,
+      "height": 22,
+      "primary_tileset": "gTileset_HamtaroExterior",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Hamtaro_AcornParkSouth/border.bin",
+      "blockdata_filepath": "data/layouts/Hamtaro_AcornParkSouth/map.bin"
     }
   ]
 }

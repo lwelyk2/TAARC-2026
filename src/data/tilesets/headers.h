@@ -1596,3 +1596,36 @@ const struct Tileset gTileset_MaxwellLab =
     .metatileAttributes = gMetatileAttributes_PorytilesManaged_MaxwellLab,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_BrokenTV =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PorytilesManaged_BrokenTV,
+    .palettes = gTilesetPalettes_PorytilesManaged_BrokenTV,
+    .metatiles = gMetatiles_PorytilesManaged_BrokenTV,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_BrokenTV,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_BrokenTVPrimary =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_PorytilesManaged_BrokenTVPrimary,
+    .palettes = gTilesetPalettes_PorytilesManaged_BrokenTVPrimary,
+    .metatiles = gMetatiles_PorytilesManaged_BrokenTVPrimary,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_BrokenTVPrimary,
+    .callback = InitTilesetAnim_PorytilesManaged_BrokenTVPrimary,
+};
+
+const struct Tileset gTileset_Playground =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_PorytilesManaged_Playground,
+    .palettes = gTilesetPalettes_PorytilesManaged_Playground,
+    .metatiles = gMetatiles_PorytilesManaged_Playground,
+    .metatileAttributes = gMetatileAttributes_PorytilesManaged_Playground,
+    .callback = InitTilesetAnim_PorytilesManaged_Playground,
+};

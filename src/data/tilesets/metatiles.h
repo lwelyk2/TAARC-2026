@@ -426,3 +426,12 @@ const u16 gMetatileAttributes_PorytilesManaged_HamtaroInterior[] = INCBIN_U16("d
 
 const u16 gMetatiles_PorytilesManaged_MaxwellLab[] = INCBIN_U16("data/tilesets/secondary/maxwell_lab/porytiles_bin/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesManaged_MaxwellLab[] = INCBIN_U16("data/tilesets/secondary/maxwell_lab/porytiles_bin/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_BrokenTV[] = INCBIN_U16("data/tilesets/secondary/broken_tv/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_BrokenTV[] = INCBIN_U16("data/tilesets/secondary/broken_tv/porytiles_bin/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_BrokenTVPrimary[] = INCBIN_U16("data/tilesets/primary/broken_tv_primary/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_BrokenTVPrimary[] = INCBIN_U16("data/tilesets/primary/broken_tv_primary/porytiles_bin/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesManaged_Playground[] = INCBIN_U16("data/tilesets/primary/playground/porytiles_bin/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesManaged_Playground[] = INCBIN_U16("data/tilesets/primary/playground/porytiles_bin/metatile_attributes.bin");

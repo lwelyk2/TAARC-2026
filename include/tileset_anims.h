@@ -46,4 +46,10 @@ void InitTilesetAnim_PorytilesManaged_HamtaroExterior(void);
 // [Porytiles] Auto-generated declaration. Do not remove.
 void InitTilesetAnim_PorytilesManaged_HamtaroInterior(void);
 
+// [Porytiles] Auto-generated declaration. Do not remove.
+void InitTilesetAnim_PorytilesManaged_BrokenTvPrimary(void);
+
+// [Porytiles] Auto-generated declaration. Do not remove.
+void InitTilesetAnim_PorytilesManaged_Playground(void);
+
 #endif // GUARD_TILESET_ANIMS_H

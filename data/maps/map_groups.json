@@ -1164,6 +1164,8 @@
   ],
   "gMapGroup_Hamtaro": [
     "HamtaroTestMap",
-    "HamHamClubhouse"
+    "HamHamClubhouse",
+    "Hamtaro_AcornParkEntrance",
+    "Hamtaro_BrokenTV"
   ]
 }

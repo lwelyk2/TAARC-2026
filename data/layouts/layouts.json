@@ -9343,6 +9343,26 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/HamHamClubhouse/border.bin",
       "blockdata_filepath": "data/layouts/HamHamClubhouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAMTARO_ACORN_PARK_ENTRANCE",
+      "name": "Hamtaro_AcornParkEntrance_Layout",
+      "width": 20,
+      "height": 21,
+      "primary_tileset": "gTileset_HamtaroExterior",
+      "secondary_tileset": "gTileset_HamtaroShrine",
+      "border_filepath": "data/layouts/Hamtaro_AcornParkEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/Hamtaro_AcornParkEntrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAMTARO_BROKEN_TV",
+      "name": "Hamtaro_BrokenTV_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_BrokenTVPrimary",
+      "secondary_tileset": "gTileset_HamtaroShrine",
+      "border_filepath": "data/layouts/Hamtaro_BrokenTV/border.bin",
+      "blockdata_filepath": "data/layouts/Hamtaro_BrokenTV/map.bin"
     }
   ]
 }

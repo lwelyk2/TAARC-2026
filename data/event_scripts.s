@@ -1742,3 +1742,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/HamtaroTestMap/scripts.inc"
 
 	.include "data/maps/HamHamClubhouse/scripts.inc"
+
+	.include "data/maps/Hamtaro_AcornParkEntrance/scripts.inc"
+
+	.include "data/maps/Hamtaro_BrokenTV/scripts.inc"

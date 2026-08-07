@@ -3,7 +3,7 @@
   "data/tilesets/primary/broken_tv_primary/porytiles_bin/anim/flower/left.png": "92959722f7937878c2d92bb0fe7d52bf",
   "data/tilesets/primary/broken_tv_primary/porytiles_bin/anim/flower/right.png": "a0c1feb87b1321a72f569b077414bd18",
   "data/tilesets/primary/broken_tv_primary/porytiles_bin/metatile_attributes.bin": "614122bb1b12e3b5d326cad2edda2b37",
-  "data/tilesets/primary/broken_tv_primary/porytiles_bin/metatiles.bin": "078b1f0f48ebf5569304a1ab80b275b9",
+  "data/tilesets/primary/broken_tv_primary/porytiles_bin/metatiles.bin": "d18ba5ab8b1a0652b9cbd485166d06e1",
   "data/tilesets/primary/broken_tv_primary/porytiles_bin/palettes/00.pal": "f078b2684e62c3feae68c90ea9ec3ff6",
   "data/tilesets/primary/broken_tv_primary/porytiles_bin/palettes/01.pal": "36bc26ca8237c3ff63a6ae6f25c69dff",
   "data/tilesets/primary/broken_tv_primary/porytiles_bin/palettes/02.pal": "f3f4e2e320ebddcc398d04cadb11412e",
@@ -27,8 +27,8 @@
   "data/tilesets/primary/broken_tv_primary/porytiles_src/anim/flower/left.png": "7e858dc053134492362878127be0a9cb",
   "data/tilesets/primary/broken_tv_primary/porytiles_src/anim/flower/right.png": "efb940d7995ca3b14e5bdb7e18f59d5d",
   "data/tilesets/primary/broken_tv_primary/porytiles_src/attributes.csv": "0ed81c0ef987fbebceacedb8951f2e5c",
-  "data/tilesets/primary/broken_tv_primary/porytiles_src/bottom.png": "d736c58be59b1df7179dd9a7efb5fa82",
-  "data/tilesets/primary/broken_tv_primary/porytiles_src/middle.png": "ec95f8d93bd6ae6ff115b3050ece0a9e",
+  "data/tilesets/primary/broken_tv_primary/porytiles_src/bottom.png": "e6a7d50c931e9c874ed4240788cca81d",
+  "data/tilesets/primary/broken_tv_primary/porytiles_src/middle.png": "80c114d199e07ff349a4e685d7dfac6b",
   "data/tilesets/primary/broken_tv_primary/porytiles_src/top.png": "4f0a14754469005780eb742af3d38b00",
   "include/porytiles_generated/tilesets/broken_tv_primary/generated_anim_code.h": "aad9b4d96ddbd5528f2d863f136d1e68"
 }

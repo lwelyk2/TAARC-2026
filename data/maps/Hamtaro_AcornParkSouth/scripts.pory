@@ -1,1 +1,200 @@
-mapscripts Hamtaro_AcornParkSouth_MapScripts {}
+mapscripts Hamtaro_AcornParkSouth_MapScripts {
+    MAP_SCRIPT_ON_LOAD: AcornPark_LadderCheck
+}
+
+script AcornPark_LadderCheck {
+    if(flag(FLAG_GAVE_PANDA_HAMMER)) {
+        call(AcornPark_FixLadder)
+    }
+    return
+}
+
+script AcornPark_FixLadder {
+        setmetatile(4, 5, 0x0DA, FALSE)
+        setmetatile(4, 6, 0x0E2, FALSE)
+        setmetatile(4, 7, 0x0EA, FALSE)
+        setmetatile(4, 8, 0x0F2, FALSE)
+        setmetatile(4, 9, 0x0FA, FALSE)
+        setmetatile(5, 5, 0x0DB, FALSE)
+        setmetatile(5, 6, 0x0E3, FALSE)
+        setmetatile(5, 7, 0x0EB, FALSE)
+        setmetatile(5, 8, 0x0F3, FALSE)
+        setmetatile(5, 9, 0x0FB, FALSE)
+        setmetatile(6, 5, 0x0DC, FALSE)
+        setmetatile(6, 6, 0x0E4, FALSE)
+        setmetatile(6, 7, 0x0EC, FALSE)
+        setmetatile(6, 8, 0x0F4, FALSE)
+        setmetatile(6, 9, 0x0FC, FALSE)
+}
+
+script AcornPathSouthPanda {
+    lock
+    getobjectfacingdirection(LOCALID_PLAYER, VAR_TEMP_1)
+    switch (var(VAR_TEMP_1)) {
+        case DIR_EAST:
+            applymovement(LOCALID_PLAYER, moves(
+                walk_down
+                walk_right
+                face_up
+            ))
+            waitmovement
+        case DIR_WEST:
+            applymovement(LOCALID_PLAYER, moves(
+                walk_down
+                walk_left
+                face_up
+            ))
+            waitmovement
+        default:
+            break
+    }
+    playmoncry(SPECIES_HAMTARO, CRY_MODE_ENCOUNTER)
+    createfieldmugshot(MUGSHOT_HAMTARO, EMOTE_NORMAL)
+    setspeaker("Hamtaro")
+    message("{COLOR RED}Hamha!$")
+    applymovement(LOCALID_PLAYER, AcornParkSouthHamha)
+    waitmovement(LOCALID_PLAYER)
+    waitmessage
+    waitbuttonpress
+    closemessage
+    applymovement(LOCALID_PLAYER, moves(face_up))
+    waitmovement
+    applymovement(LOCALID_PANDA, moves(walk_in_place_down))
+    waitmovement
+    createfieldmugshot(MUGSHOT_PANDA, EMOTE_NORMAL)
+    setspeaker("Panda")
+    msgbox("Hey Hamtaro, I'm glad you're here!\pI needed to get some extra parts,\nbut I came by this morning and saw this!$")
+    applymovement(LOCALID_PANDA, moves(walk_in_place_up))
+    waitmovement
+    createfieldmugshot(MUGSHOT_PANDA, EMOTE_NORMAL)
+    setspeaker("Panda")
+    message("The ladder is broken!$")
+    applymovement(LOCALID_PANDA, moves(walk_in_place_down))
+    waitmessage
+    waitbuttonpress
+    closemessage
+    createfieldmugshot(MUGSHOT_PANDA, EMOTE_NORMAL)
+    setspeaker("Panda")
+    message(format("I was completely {COLOR RED}SHOCKIE{COLOR DARK_GRAY}!$"))
+    applymovement(LOCALID_PANDA, AcornParkSouthShockie)
+    waitmessage
+    waitbuttonpress
+    closemessage
+	removefieldmugshot
+    if(checkitem(ITEM_TM_ASTONISH, 1) == 0) {
+        applymovement(LOCALID_PLAYER, AcornParkSouthShockie)
+        waitmovement
+        setspeaker(SP_NAME_NONE)
+        message(format("You learned {COLOR RED}Shockie!$"))
+        playse(MUS_RG_OBTAIN_KEY_ITEM)
+        additem(ITEM_TM_ASTONISH, 1)
+        applymovement(LOCALID_PLAYER, AcornParkSouthDictionary)
+        waitmovement
+        waitse
+        waitmessage
+        waitbuttonpress
+        closemessage
+        applymovement(LOCALID_PLAYER, moves(face_up))
+        waitmovement
+    }
+    if(checkitem(ITEM_HAMMER)) {
+        createfieldmugshot(MUGSHOT_PANDA, EMOTE_NORMAL)
+        setspeaker("Panda")
+        applymovement(LOCALID_PANDA, moves(emote_exclamation_mark))
+        msgbox(format("My Hammer! I've been looking all over for that!\pThanks Hamtaro, now I can fix this ladder! Stand back and I'll get to work!$"))
+        applymovement(LOCALID_PANDA, moves(walk_in_place_up))
+        waitmovement
+        applymovement(LOCALID_PLAYER, moves(
+            lock_facing_direction
+            walk_down
+            unlock_facing_direction
+        ))
+        waitmovement
+        fadescreen(FADE_TO_BLACK)
+        playse(SE_M_EARTHQUAKE)
+        waitse
+        playse(SE_M_DIG)
+        waitse
+        playse(SE_M_CUT)
+        waitse
+        call(AcornPark_FixLadder)
+        special(DrawWholeMapView)
+        fadescreen(FADE_FROM_BLACK)
+        setspeaker("Panda")
+        createfieldmugshot(MUGSHOT_PANDA, EMOTE_NORMAL)
+        msgbox(format("And that should do it!$"))
+        applymovement(LOCALID_PANDA, moves(
+            walk_up * 6
+            walk_down
+        ))
+        applymovement(LOCALID_PLAYER, moves(
+            walk_up * 2
+        ))
+        waitmovement
+        setspeaker("Panda")
+        createfieldmugshot(MUGSHOT_PANDA, EMOTE_NORMAL)
+        msgbox(format("It works! Thanks for your help Hamtaro! I'll see you at the clubhouse later!$"))
+        applymovement(LOCALID_PANDA, moves(
+            walk_left * 6
+        ))
+        waitmovement
+        removeobject(LOCALID_PANDA)
+        release
+        end
+    } else {
+        createfieldmugshot(MUGSHOT_PANDA, EMOTE_NORMAL)
+        setspeaker("Panda")
+        msgbox(format("I can fix this, but my hammer is missing too!\pIf you find it, can you bring it to me?"))
+        applymovement(LOCALID_PANDA, moves(walk_in_place_up))
+        waitmovement
+        release
+    }
+
+    end
+}
+
+script AcornParkSouthSnoozer {
+    lock
+    applymovement(LOCALID_PLAYER, EmoteTest)
+    waitmovement(LOCALID_PLAYER)
+    release
+    end
+}
+
+movement AcornParkSouthHamha {
+    hamha
+}
+
+movement AcornParkSouthShockie {
+    delay_16
+    delay_16
+    shockie
+}
+
+movement AcornParkSouthDictionary {
+    delay_8
+    emote_x
+}
+
+movement EmoteTest {
+    emote_x
+    delay_16
+    delay_16
+    delay_16
+    emote_exclamation_mark
+    delay_16
+    delay_16
+    delay_16
+    emote_question_mark
+    delay_16
+    delay_16
+    delay_16
+    emote_heart
+    delay_16
+    delay_16
+    delay_16
+    emote_double_exclamation_mark
+    delay_16
+    delay_16
+    delay_16
+}

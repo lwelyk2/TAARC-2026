@@ -1616,7 +1616,7 @@ const struct Tileset gTileset_BrokenTVPrimary =
     .palettes = gTilesetPalettes_PorytilesManaged_BrokenTVPrimary,
     .metatiles = gMetatiles_PorytilesManaged_BrokenTVPrimary,
     .metatileAttributes = gMetatileAttributes_PorytilesManaged_BrokenTVPrimary,
-    .callback = InitTilesetAnim_PorytilesManaged_BrokenTVPrimary,
+    .callback = InitTilesetAnim_PorytilesManaged_BrokenTvPrimary,
 };
 
 const struct Tileset gTileset_Playground =

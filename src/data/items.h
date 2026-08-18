@@ -7247,6 +7247,26 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_Glimmoranite,
     },
 
+// Hamtaro Items
+
+    [ITEM_HAMMER] = 
+    {
+        .name = ITEM_NAME("Hammer"),
+        .pluralName = ITEM_PLURAL_NAME("Hammer"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_NONE,
+        .description = COMPOUND_STRING(
+            "A hammer used by\n"
+            "Panda to fix\n"
+            "things."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 0,
+        .iconPic = gItemIcon_Hammer,
+        .iconPalette = gItemIconPalette_Hammer,
+    },
+
 // Gems
     #if I_PRICE >= GEN_9
         #define GEM_PRICE 15000

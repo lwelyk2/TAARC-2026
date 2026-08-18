@@ -2,8 +2,8 @@
   "id": "MAP_HAMTARO_ACORN_PARK_SOUTH",
   "name": "Hamtaro_AcornParkSouth",
   "layout": "LAYOUT_HAMTARO_ACORN_PARK_SOUTH",
-  "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "music": "MUS_MAP",
+  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
@@ -21,6 +21,7 @@
   ],
   "object_events": [
     {
+      "local_id": "LOCALID_PANDA",
       "graphics_id": "OBJ_EVENT_GFX_PANDA",
       "x": 5,
       "y": 9,
@@ -30,8 +31,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "AcornPathSouthPanda",
+      "flag": "FLAG_GAVE_PANDA_HAMMER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SNOOZER",
@@ -43,11 +44,20 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "AcornParkSouthSnoozer",
       "flag": "0"
     }
   ],
   "warp_events": [],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 17,
+      "y": 8,
+      "elevation": 0,
+      "item": "ITEM_HAMMER",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_111_STARDUST"
+    }
+  ]
 }

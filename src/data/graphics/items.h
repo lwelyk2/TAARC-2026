@@ -1966,6 +1966,9 @@ const u16 gItemIconPalette_RainbowPass[] = INCGFX_U16("graphics/items/icon_palet
 const u32 gItemIcon_Tea[] = INCGFX_U32("graphics/items/icons/tea.png", ".4bpp.smol");
 const u16 gItemIconPalette_Tea[] = INCGFX_U16("graphics/items/icon_palettes/tea.pal", ".gbapal");
 
+const u32 gItemIcon_Hammer[] = INCGFX_U32("graphics/items/icons/hammer.png", ".4bpp.smol");
+const u16 gItemIconPalette_Hammer[] = INCGFX_U16("graphics/items/icon_palettes/hammer.pal", ".gbapal");
+
 const u32 gItemIcon_Gem[] = INCGFX_U32("graphics/items/icons/gem.png", ".4bpp.smol");
 const u16 gItemIconPalette_Ruby[] = INCGFX_U16("graphics/items/icon_palettes/ruby.pal", ".gbapal");
 

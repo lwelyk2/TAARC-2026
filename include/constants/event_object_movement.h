@@ -282,6 +282,8 @@
 #define MOVEMENT_ACTION_DIGDIG							0xB9
 #define MOVEMENT_ACTION_YEPP							0xBA
 #define MOVEMENT_ACTION_NOP 							0xBB
+#define MOVEMENT_ACTION_SHOCKIE                         0xBC
+#define MOVEMENT_ACTION_HAMCHAT                         0xBD
 
 #define MOVEMENT_ACTION_STEP_END 0xFE
 #define MOVEMENT_ACTION_NONE     0xFF
@@ -362,6 +364,8 @@
 #define ANIM_DIGDIG (ANIM_STD_COUNT + 23)
 #define ANIM_YEPP (ANIM_STD_COUNT + 24)
 #define ANIM_NOP (ANIM_STD_COUNT + 25)
+#define ANIM_SHOCKIE (ANIM_STD_COUNT + 26)
+#define ANIM_HAMCHAT (ANIM_STD_COUNT + 27)
 
 #define ANIM_FIELD_MOVE 0
 

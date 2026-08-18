@@ -8474,7 +8474,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "the foe into flinching."),
         .effect = EFFECT_HIT,
         .power = 30,
-        .type = TYPE_GHOST,
+        .type = TYPE_GRASS,
         .accuracy = 100,
         .pp = 15,
         .target = TARGET_SELECTED,

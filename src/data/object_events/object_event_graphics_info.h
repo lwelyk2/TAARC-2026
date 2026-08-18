@@ -4607,7 +4607,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Panda = {
     .tracks = TRACKS_FOOT,
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
-    .anims = sAnimTable_Standard,
+    .anims = sAnimTable_Panda,
     .images = sPicTable_Panda,
 };
 

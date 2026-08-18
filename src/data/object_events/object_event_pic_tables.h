@@ -56,6 +56,9 @@ static const struct SpriteFrameImage sPicTable_BrendanNormal[] = {
         overworld_frame(gObjectEventPic_HamtaroNoP, 4, 4, 0),
         overworld_frame(gObjectEventPic_HamtaroNoP, 4, 4, 1),
         overworld_frame(gObjectEventPic_HamtaroNoP, 4, 4, 2),
+        overworld_frame(gObjectEventPic_HamtaroShockie, 4, 4, 0),
+        overworld_frame(gObjectEventPic_HamtaroShockie, 4, 4, 1),
+        overworld_frame(gObjectEventPic_HamtaroShockie, 4, 4, 2),
 };
 
 static const struct SpriteFrameImage sPicTable_BrendanMachBike[] = {
@@ -1470,7 +1473,17 @@ static const struct SpriteFrameImage sPicTable_Oxnard[] = {
 };
 
 static const struct SpriteFrameImage sPicTable_Panda[] = {
-    overworld_ascending_frames(gObjectEventPic_Panda, 4, 4),
+    overworld_frame(gObjectEventPic_Panda, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Panda, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Panda, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Panda, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Panda, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Panda, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Panda, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Panda, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Panda, 4, 4, 8),
+    overworld_frame(gObjectEventPic_Panda, 4, 4, 9),
+    overworld_frame(gObjectEventPic_Panda, 4, 4, 10),
 };
 
 static const struct SpriteFrameImage sPicTable_Pashmina[] = {

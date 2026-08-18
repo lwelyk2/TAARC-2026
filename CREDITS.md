@@ -2,6 +2,27 @@
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/en/reference/emoji-key/)):
 
+### Ham-Ham Battle Credits
+
+#### Music
+HamtaroTh3Gavst3r
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <th colspan="100">Music</th>
+    <tr>
+    <tr><th>Song</th><th>Source</th></tr>
+    <tr><td>Hamtaro Time MIDI</td><td><a href="https://www.ninsheetmusic.org/forum/index.php?topic=7995.0">Th3Gavst3r</a></td></tr>
+    <tr><td>Ham Ham Heartbreak Map MIDI</td><td><a href="https://www.ninsheetmusic.org/forum/index.php?topic=7995.0">Th3Gavst3r</a></td></tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+### Emerald Expansion Credits
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->

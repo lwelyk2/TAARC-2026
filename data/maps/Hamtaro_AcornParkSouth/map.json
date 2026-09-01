@@ -35,6 +35,7 @@
       "flag": "FLAG_GAVE_PANDA_HAMMER"
     },
     {
+      "local_id": "LOCALID_SNOOZER",
       "graphics_id": "OBJ_EVENT_GFX_SNOOZER",
       "x": 20,
       "y": 4,

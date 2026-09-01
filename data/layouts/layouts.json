@@ -9373,6 +9373,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Hamtaro_AcornParkSouth/border.bin",
       "blockdata_filepath": "data/layouts/Hamtaro_AcornParkSouth/map.bin"
+    },
+    {
+      "id": "LAYOUT_INTRO_ROOM",
+      "name": "IntroRoom_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_HamtaroInterior",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/IntroRoom/border.bin",
+      "blockdata_filepath": "data/layouts/IntroRoom/map.bin"
     }
   ]
 }

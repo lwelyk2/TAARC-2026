@@ -44,3 +44,11 @@ AcornParkEntranceOxnard_6:
 	call Common_EventScript_DigDig
 	goto AcornParkEntranceOxnard_1
 
+
+IntroSetupTest::
+# 26 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	additem ITEM_TM_TACKLE, 1
+# 27 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	additem ITEM_TM_DIG, 1
+	end
+

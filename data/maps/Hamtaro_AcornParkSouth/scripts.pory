@@ -166,8 +166,80 @@ script AcornPathSouthPanda {
 
 script AcornParkSouthSnoozer {
     lock
-    applymovement(LOCALID_PLAYER, EmoteTest)
-    waitmovement(LOCALID_PLAYER)
+    dynmultipush(gText_Hamha, 0)
+    dynmultipush(gText_HifHif, 1)
+    dynmultipush(gText_TackQ, 2)
+    dynmultipush(gText_DigDig, 3)
+    if(checkitem(ITEM_TM_UPROAR)) {
+        dynmultipush(AcornParkSouthDingBang, 4)
+    }
+    dynmultistack(1, 1, FALSE, 5, 0, DYN_MULTICHOICE_CB_NONE, DYN_MULTICHOICE_CB_NONE)
+    switch(var(VAR_RESULT)) {
+        case 0:
+            call(Common_EventScript_Hamha)
+            createfieldmugshot(MUGSHOT_SNOOZER, EMOTE_NORMAL)
+            setspeaker("Snoozer")
+            msgbox("Zzzzzzzzzzzzzzzzzzzz...$")
+            
+            break
+        case 1:
+            call(Common_EventScript_HifHif)
+            msgbox("Smells like Snoozer$")
+            createfieldmugshot(MUGSHOT_SNOOZER, EMOTE_NORMAL)
+            setspeaker("Snoozer")
+            msgbox("Zzzzzzzzzzzzzzzzzzzz...$")
+            
+            break
+        case 2:
+            call(Common_EventScript_TackQ)
+            createfieldmugshot(MUGSHOT_SNOOZER, EMOTE_NORMAL)
+            setspeaker("Snoozer")
+            if(checkitem(ITEM_TM_REST)) {
+                msgbox("Zzzzzzzzzzzzzzzzzzzz...$")
+                
+            } else {
+                msgbox("Zzzzz... I'm {COLOR RED}Zuzuzu$")
+                
+                // Show Zuzuzu graphics here
+                // waitmovement
+                setspeaker(SP_NAME_NONE)
+                message(format("You learned {COLOR RED}Zuzuzu!$"))
+                playse(MUS_RG_OBTAIN_KEY_ITEM)
+                additem(ITEM_TM_REST, 1)
+                applymovement(LOCALID_PLAYER, AcornParkSouthDictionary)
+                waitmovement
+                waitse
+                waitmessage
+                waitbuttonpress
+                closemessage
+                applymovement(LOCALID_PLAYER, moves(face_up))
+                waitmovement
+            }
+            msgbox("He's still asleep...$")
+            applymovement(LOCALID_PLAYER, moves(face_down))
+            waitmovement
+            msgbox("How did he sleep through that?!?!$")
+            break
+        case 3:
+            call(Common_EventScript_DigDig)
+            msgbox(format("There's a little bit of dirt on Snoozer now, but he's still sleeping through it.$"))
+            break
+        case 4:
+            // Insert Dingbang graphics here
+            msgbox("DingBang!$")
+            applymovement(LOCALID_SNOOZER, moves(
+                walk_in_place_up
+            ))
+            waitmovement
+            createfieldmugshot(MUGSHOT_SNOOZER, EMOTE_NORMAL)
+            setspeaker("Snoozer")
+            msgbox("Huh? what's going on? Why is it so noisy...")
+            applymovement(LOCALID_SNOOZER, moves(
+                walk_in_place_left
+            ))
+            waitmovement
+            break
+    }
     release
     end
 }
@@ -208,4 +280,8 @@ movement EmoteTest {
     delay_16
     delay_16
     delay_16
+}
+
+text AcornParkSouthDingBang {
+    "DingBang$"
 }

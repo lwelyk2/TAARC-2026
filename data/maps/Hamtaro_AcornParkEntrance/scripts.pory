@@ -1,1 +1,23 @@
 mapscripts Hamtaro_AcornParkEntrance_MapScripts {}
+
+script AcornParkEntranceOxnard {
+    lock
+    faceplayer
+    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)
+    switch(var(VAR_RESULT)) {
+        case 0:
+            call(Common_EventScript_Hamha)
+            break
+        case 1:
+            call(Common_EventScript_HifHif)
+            break
+        case 2:
+            call(Common_EventScript_TackQ)
+            break
+        case 3:
+            call(Common_EventScript_DigDig)
+            break
+    }
+    release
+    end
+}

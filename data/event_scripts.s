@@ -1683,6 +1683,51 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	releaseall
 	end
 
+Common_EventScript_Hamha::
+	playmoncry SPECIES_HAMTARO, CRY_MODE_ENCOUNTER
+    createfieldmugshot MUGSHOT_HAMTARO, EMOTE_NORMAL
+    setspeaker SP_NAME_PLAYER
+    message gText_Hamha
+    applymovement LOCALID_PLAYER Common_Movement_Hamha
+    waitmovement
+    waitmessage
+    waitbuttonpress
+    closemessage
+	return
+
+Common_EventScript_HifHif::
+    createfieldmugshot MUGSHOT_HAMTARO, EMOTE_NORMAL
+    setspeaker SP_NAME_PLAYER
+    message gText_HifHif
+    applymovement LOCALID_PLAYER Common_Movement_Hifhif
+    waitmovement
+    waitmessage
+    waitbuttonpress
+    closemessage
+	return
+
+Common_EventScript_TackQ::
+    createfieldmugshot MUGSHOT_HAMTARO, EMOTE_NORMAL
+    setspeaker SP_NAME_PLAYER
+    message gText_TackQ
+    applymovement LOCALID_PLAYER Common_Movement_TackQ
+    waitmovement
+    waitmessage
+    waitbuttonpress
+    closemessage
+	return
+
+Common_EventScript_DigDig::
+	playmoncry SPECIES_HAMTARO, CRY_MODE_ENCOUNTER
+    createfieldmugshot MUGSHOT_HAMTARO, EMOTE_NORMAL
+    setspeaker SP_NAME_PLAYER
+    message gText_DigDig
+    applymovement LOCALID_PLAYER Common_Movement_DigDig
+    waitmovement
+    waitmessage
+    waitbuttonpress
+    closemessage
+	return
 
 	.include "data/scripts/pc_transfer.inc"
 	.include "data/scripts/questionnaire.inc"

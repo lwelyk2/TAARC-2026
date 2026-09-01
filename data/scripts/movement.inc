@@ -174,3 +174,19 @@ Common_Movement_WalkRightFaster::
 Common_Movement_WalkLeftFaster::
 	walk_faster_left
 	step_end
+
+Common_Movement_Hamha::
+	hamha
+	step_end
+
+Common_Movement_Hifhif::
+	hifhif
+	step_end
+
+Common_Movement_TackQ::
+	tackq
+	step_end
+
+Common_Movement_DigDig::
+	digdig
+	step_end

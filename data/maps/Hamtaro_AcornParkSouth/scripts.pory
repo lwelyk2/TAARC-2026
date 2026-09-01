@@ -29,6 +29,25 @@ script AcornPark_FixLadder {
 
 script AcornPathSouthPanda {
     lock
+    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)
+    switch(var(VAR_RESULT)) {
+        case 0:
+            break
+        case 1:
+            call(Common_EventScript_HifHif)
+            msgbox("Smells like PANDA!$")
+            release
+            end
+        case 2:
+            call(Common_EventScript_TackQ)
+            release
+            end
+        case 3:
+            call(Common_EventScript_DigDig)
+            msgbox("Nothing there...$")
+            release
+            end
+    }
     getobjectfacingdirection(LOCALID_PLAYER, VAR_TEMP_1)
     switch (var(VAR_TEMP_1)) {
         case DIR_EAST:
@@ -48,15 +67,7 @@ script AcornPathSouthPanda {
         default:
             break
     }
-    playmoncry(SPECIES_HAMTARO, CRY_MODE_ENCOUNTER)
-    createfieldmugshot(MUGSHOT_HAMTARO, EMOTE_NORMAL)
-    setspeaker("Hamtaro")
-    message("{COLOR RED}Hamha!$")
-    applymovement(LOCALID_PLAYER, AcornParkSouthHamha)
-    waitmovement(LOCALID_PLAYER)
-    waitmessage
-    waitbuttonpress
-    closemessage
+    call(Common_EventScript_Hamha)
     applymovement(LOCALID_PLAYER, moves(face_up))
     waitmovement
     applymovement(LOCALID_PANDA, moves(walk_in_place_down))

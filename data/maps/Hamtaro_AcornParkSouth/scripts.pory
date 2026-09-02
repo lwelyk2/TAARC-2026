@@ -173,7 +173,7 @@ script AcornParkSouthSnoozer {
     if(checkitem(ITEM_TM_UPROAR)) {
         dynmultipush(AcornParkSouthDingBang, 4)
     }
-    dynmultistack(1, 1, FALSE, 5, 0, DYN_MULTICHOICE_CB_NONE, DYN_MULTICHOICE_CB_NONE)
+    dynmultistack(1, 1, FALSE, 5, 0, 0, DYN_MULTICHOICE_CB_NONE)
     switch(var(VAR_RESULT)) {
         case 0:
             call(Common_EventScript_Hamha)

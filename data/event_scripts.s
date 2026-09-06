@@ -1796,3 +1796,5 @@ Common_EventScript_DigDig::
 	.include "data/maps/Hamtaro_AcornParkSouth/scripts.inc"
 
 	.include "data/maps/IntroRoom/scripts.inc"
+
+	.include "data/maps/HamBattleRoom/scripts.inc"

@@ -304,7 +304,7 @@ AcornParkSouthSnoozer::
 	goto_if_ne AcornParkSouthSnoozer_2
 AcornParkSouthSnoozer_1:
 # 176 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	dynmultistack 1, 1, FALSE, 5, 0, DYN_MULTICHOICE_CB_NONE, DYN_MULTICHOICE_CB_NONE
+	dynmultistack 1, 1, FALSE, 5, 0, 0, DYN_MULTICHOICE_CB_NONE
 # 177 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	switch VAR_RESULT
 # 178 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"

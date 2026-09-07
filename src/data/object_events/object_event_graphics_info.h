@@ -3622,7 +3622,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GroudonSide = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fossil = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_2,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,
@@ -4481,7 +4481,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Boss = {
     .tracks = TRACKS_FOOT,
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
-    .anims = sAnimTable_Standard_Asym,
+    .anims = sAnimTable_Boss,
     .images = sPicTable_Boss,
 };
 

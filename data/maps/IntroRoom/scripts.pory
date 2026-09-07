@@ -1,1 +1,53 @@
-mapscripts IntroRoom_MapScripts {}
+mapscripts IntroRoom_MapScripts { 
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: IntroCutscene
+    ]
+}
+
+script IntroCutscene {
+    lockall
+    applymovement(LOCALID_PLAYER, moves(
+        face_up
+    ))
+    setvar(VAR_TEMP_0, 1) 
+    applymovement(LOCALID_PLAYER, moves(emote_double_exclamation_mark, delay_16, delay_16))
+    waitmovement(LOCALID_PLAYER)
+    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+    setspeaker("Boss")
+    msgbox("Hey, Hamtaro! Wake up already!")
+    applymovement(LOCALID_PLAYER, moves(emote_double_exclamation_mark, delay_16))
+    waitmovement(LOCALID_PLAYER)
+    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+    setspeaker("Boss")
+    msgbox("Hamtaro! I need your help!")
+    applymovement(LOCALID_PLAYER, moves(emote_double_exclamation_mark, delay_16))
+    waitmovement(LOCALID_PLAYER)
+    applymovement(LOCALID_BOSS, moves(
+        walk_left
+        walk_left
+        walk_down
+        walk_down
+        walk_down
+        walk_down
+        walk_down
+        walk_right
+        walk_right
+        walk_up
+    ))
+    waitmovement(LOCALID_BOSS)
+    applymovement(LOCALID_PLAYER, moves(emote_double_exclamation_mark, delay_16))
+    waitmovement(LOCALID_PLAYER)
+    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+    setspeaker("Boss")
+    message("{COLOR RED}TACK-Q!$")
+    applymovement(LOCALID_BOSS, moves(tackq))
+    waitmessage
+    waitbuttonpress
+    closemessage
+    applymovement(LOCALID_PLAYER, moves(
+        emote_exclamation_mark
+        delay_16
+        face_down
+    ))
+    end
+}

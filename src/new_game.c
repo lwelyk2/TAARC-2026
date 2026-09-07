@@ -138,7 +138,7 @@ static void WarpToTruck(void)
     if (IS_FRLG)
         SetWarpDestination(MAP_GROUP(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), MAP_NUM(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), WARP_ID_NONE, 6, 6);
     else
-        SetWarpDestination(MAP_GROUP(MAP_HAMTARO_ACORN_PARK_SOUTH), MAP_NUM(MAP_HAMTARO_ACORN_PARK_SOUTH), WARP_ID_NONE, 5, 20);
+        SetWarpDestination(MAP_GROUP(MAP_INTRO_ROOM), MAP_NUM(MAP_INTRO_ROOM), WARP_ID_NONE, 4, 11);
     WarpIntoMap();
 }
 

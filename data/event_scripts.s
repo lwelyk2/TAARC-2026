@@ -1798,3 +1798,5 @@ Common_EventScript_DigDig::
 	.include "data/maps/IntroRoom/scripts.inc"
 
 	.include "data/maps/HamBattleRoom/scripts.inc"
+
+	.include "data/maps/JungleGym/scripts.inc"

@@ -9377,8 +9377,8 @@
     {
       "id": "LAYOUT_INTRO_ROOM",
       "name": "IntroRoom_Layout",
-      "width": 33,
-      "height": 24,
+      "width": 21,
+      "height": 14,
       "primary_tileset": "gTileset_HamtaroInterior",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/IntroRoom/border.bin",
@@ -9387,12 +9387,22 @@
     {
       "id": "LAYOUT_HAM_BATTLE_ROOM",
       "name": "HamBattleRoom_Layout",
-      "width": 21,
-      "height": 14,
+      "width": 33,
+      "height": 24,
       "primary_tileset": "gTileset_HamtaroInterior",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/HamBattleRoom/border.bin",
       "blockdata_filepath": "data/layouts/HamBattleRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUNGLE_GYM",
+      "name": "JungleGym_Layout",
+      "width": 21,
+      "height": 14,
+      "primary_tileset": "gTileset_HamtaroInterior",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/JungleGym/border.bin",
+      "blockdata_filepath": "data/layouts/JungleGym/map.bin"
     }
   ]
 }

@@ -1,31 +1,65 @@
 mapscripts IntroRoom_MapScripts { 
+    MAP_SCRIPT_ON_LOAD: IntroRoom_TurnHamtaro
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_TEMP_0, 0: IntroCutscene
     ]
 }
 
+script IntroRoom_TurnHamtaro {
+    applymovement(LOCALID_PLAYER, moves(
+        face_up
+    ))
+    end
+}
 script IntroCutscene {
     lockall
     applymovement(LOCALID_PLAYER, moves(
         face_up
+        emote_double_exclamation_mark
     ))
-    setvar(VAR_TEMP_0, 1) 
-    applymovement(LOCALID_PLAYER, moves(emote_double_exclamation_mark, delay_16, delay_16))
-    waitmovement(LOCALID_PLAYER)
     createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
     setspeaker("Boss")
-    msgbox("Hey, Hamtaro! Wake up already!")
-    applymovement(LOCALID_PLAYER, moves(emote_double_exclamation_mark, delay_16))
-    waitmovement(LOCALID_PLAYER)
-    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
-    setspeaker("Boss")
-    msgbox("Hamtaro! I need your help!")
-    applymovement(LOCALID_PLAYER, moves(emote_double_exclamation_mark, delay_16))
-    waitmovement(LOCALID_PLAYER)
+    message("... and the dance parties just aren't\nas popular anymore.$")
+    applymovement(LOCALID_PLAYER, moves(emote_double_exclamation_mark))
+    applymovement(LOCALID_BOSS, moves(
+        walk_left
+        walk_left
+    ))
+    waitmovement
+    waitbuttonpress
+    message("So, I got to thinking, Ham-chat's still\ncool, but how else can we use it?$")
+    applymovement(LOCALID_PLAYER, moves(emote_double_exclamation_mark))
+    applymovement(LOCALID_BOSS, moves(
+        walk_right
+        walk_right
+        walk_right
+        walk_right
+    ))
+    waitmovement
+    waitbuttonpress
+    message("So that's when I...")
+    applymovement(LOCALID_PLAYER, moves(emote_double_exclamation_mark))
+    applymovement(LOCALID_BOSS, moves(
+        face_down
+    ))
+    waitmovement
+    waitbuttonpress
+    message("...wait...")
+    applymovement(LOCALID_PLAYER, moves(emote_double_exclamation_mark))
     applymovement(LOCALID_BOSS, moves(
         walk_left
         walk_left
         walk_down
+    ))
+    waitmovement
+    waitbuttonpress
+    message("Hey, Hamtaro! Stop falling asleep while\nI'm talking to you!")
+    applymovement(LOCALID_PLAYER, moves(emote_double_exclamation_mark, delay_16))
+    waitmovement(LOCALID_PLAYER)
+    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+    applymovement(LOCALID_BOSS, moves(
+        walk_left
+        walk_left
         walk_down
         walk_down
         walk_down
@@ -35,19 +69,70 @@ script IntroCutscene {
         walk_up
     ))
     waitmovement(LOCALID_BOSS)
+    waitmessage
+    waitbuttonpress
     applymovement(LOCALID_PLAYER, moves(emote_double_exclamation_mark, delay_16))
     waitmovement(LOCALID_PLAYER)
     createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
     setspeaker("Boss")
     message("{COLOR RED}TACK-Q!$")
-    applymovement(LOCALID_BOSS, moves(tackq))
+    applymovement(LOCALID_BOSS, moves(tackq, delay_16))
+    playse(SE_M_ROCK_THROW)
+    waitmovement
+    waitse
     waitmessage
-    waitbuttonpress
-    closemessage
     applymovement(LOCALID_PLAYER, moves(
         emote_exclamation_mark
         delay_16
         face_down
     ))
+    applymovement(LOCALID_BOSS, moves(walk_down))
+    waitmovement(LOCALID_BOSS)
+    turnobject(LOCALID_BOSS, DIR_NORTH)
+    waitbuttonpress
+    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+    setspeaker("Boss")
+    message("Now, as I was saying, we need\nto find a new, more exciting way to\luse Ham-chat!$")
+    applymovement(LOCALID_BOSS, moves(
+        walk_left
+        walk_left
+        walk_up
+        walk_up
+        walk_up
+        walk_up
+        walk_up
+        walk_right
+        walk_right
+        walk_down
+    ))
+    waitmovement(LOCALID_BOSS)
+    turnobject(LOCALID_PLAYER, DIR_NORTH)
+    waitmessage
+    waitbuttonpress
+    givemon(SPECIES_HAMTARO, 5, ITEM_SITRUS_BERRY)
+    additem(ITEM_TM_TACKLE, 1)
+    additem(ITEM_TM_DIG, 1)
+    additem(ITEM_TM_SCRATCH, 1)
+    message("It hit me when I saw a video game!\pWe'll have a tournament where strength,\ncunning, and knowledge of hamchat are the \lkey to victory!\pHere, let's give it a shot!$")
+    setflag(FLAG_USED_ROOM_1_KEY)
+    waitmessage
+    waitbuttonpress
+    closemessage
+    setflag(FLAG_NO_WHITEOUT)
+    setwildbattle(SPECIES_BOSS, 5)
+	dowildbattle
+	specialvar(VAR_RESULT, GetBattleOutcome)
+
+    switch(var(VAR_RESULT)) {
+        case B_OUTCOME_WON:
+            msgbox("You won!")
+            end
+        case B_OUTCOME_RAN:
+            msgbox("You ran away!")
+            end
+        case B_OUTCOME_PLAYER_TELEPORTED:
+            msgbox("You ran away!")
+            end
+    }
     end
 }

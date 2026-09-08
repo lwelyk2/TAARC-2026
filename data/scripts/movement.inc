@@ -190,3 +190,12 @@ Common_Movement_TackQ::
 Common_Movement_DigDig::
 	digdig
 	step_end
+
+
+Common_Movement_YepP::
+	yepp
+	step_end
+
+Common_Movement_NoP::
+	nop
+	step_end

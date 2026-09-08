@@ -1,11 +1,11 @@
 gText_Birch_Welcome::
-	.string "Hey there, I've been super busy, so I\n"
-	.string " didn't even see ya there.\p"
-	.string "My name is BOSS.\n"
-	.string "I'm kind of the boss of the Ham-Hams\p"
-	.string "Ham-chat's still very cool, but it's my\n"
-	.string "job to make sure that we Ham-Hams are\l"
-	.string "up-to-date on all the new trends.\p$"
+	.string "...and the dance parties just aren't\n"
+	.string "as popular anymore.\p"
+	.string "So I got to thinking, Ham-chat's still\n"
+	.string "cool, but how else can we use it?\p"
+	.string "So that's when I... Wait.\p"
+	.string "Hamtaro! Stop falling asleep while I'm\n"
+	.string "talkin' to ya!\p$"
 
 gText_Birch_Pokemon::
 	.string "This is what's called a “POKéMON.”\p"

@@ -1729,6 +1729,30 @@ Common_EventScript_DigDig::
     closemessage
 	return
 
+Common_EventScript_YepP::
+	playmoncry SPECIES_HAMTARO, CRY_MODE_ENCOUNTER
+    createfieldmugshot MUGSHOT_HAMTARO, EMOTE_NORMAL
+    setspeaker SP_NAME_PLAYER
+    message gText_YepP
+    applymovement LOCALID_PLAYER Common_Movement_YepP
+    waitmovement
+    waitmessage
+    waitbuttonpress
+    closemessage
+	return
+
+Common_EventScript_NoP::
+	playmoncry SPECIES_HAMTARO, CRY_MODE_ENCOUNTER
+    createfieldmugshot MUGSHOT_HAMTARO, EMOTE_NORMAL
+    setspeaker SP_NAME_PLAYER
+    message gText_NoP
+    applymovement LOCALID_PLAYER Common_Movement_NoP
+    waitmovement
+    waitmessage
+    waitbuttonpress
+    closemessage
+	return
+
 	.include "data/scripts/pc_transfer.inc"
 	.include "data/scripts/questionnaire.inc"
 	.include "data/scripts/abnormal_weather.inc"

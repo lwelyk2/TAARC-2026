@@ -1183,3 +1183,5 @@ const u8 gText_HifHif[] = _("{COLOR RED}HIFHIF{COLOR DARK_GRAY}");
 const u8 gText_TackQ[] = _("{COLOR RED}TACKQ{COLOR DARK_GRAY}");
 const u8 gText_DigDig[] = _("{COLOR RED}DIGDIG{COLOR DARK_GRAY}");
 const u8 gText_Scoochie[] = _("{COLOR RED}SCOOCHIE{COLOR DARK_GRAY}");
+const u8 gText_YepP[] = _("{COLOR RED}YEP-P{COLOR DARK_GRAY}");
+const u8 gText_NoP[] = _("{COLOR RED}NO-P{COLOR DARK_GRAY}");

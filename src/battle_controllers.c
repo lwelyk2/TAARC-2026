@@ -2033,12 +2033,12 @@ void StartSendOutAnim(enum BattlerId battler, bool32 dontClearTransform, bool32 
     gSprites[gBattlerSpriteIds[battler]].data[2] = species;
     gSprites[gBattlerSpriteIds[battler]].oam.paletteNum = battler;
     StartSpriteAnim(&gSprites[gBattlerSpriteIds[battler]], 0);
-    gSprites[gBattlerSpriteIds[battler]].invisible = TRUE;
+    // gSprites[gBattlerSpriteIds[battler]].invisible = TRUE;
     gSprites[gBattlerSpriteIds[battler]].callback = SpriteCallbackDummy;
 
     gSprites[gBattleControllerData[battler]].data[1] = gBattlerSpriteIds[battler];
     gSprites[gBattleControllerData[battler]].data[2] = battler;
-    gSprites[gBattleControllerData[battler]].data[0] = DoPokeballSendOutAnimation(battler, 0, sendoutType);
+    // gSprites[gBattleControllerData[battler]].data[0] = DoPokeballSendOutAnimation(battler, 0, sendoutType);
 }
 
 static void FreeMonSprite(enum BattlerId battler)

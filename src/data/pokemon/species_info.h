@@ -817,7 +817,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Boss,
         .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sHamtaroLevelUpLearnset,
+        .levelUpLearnset = sBossLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),

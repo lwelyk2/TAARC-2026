@@ -53,6 +53,8 @@ script IntroCutscene {
     ))
     waitmovement
     waitbuttonpress
+    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+    setspeaker("Boss")
     message("Hey, Hamtaro! Stop falling asleep while\nI'm talking to you!")
     applymovement(LOCALID_PLAYER, moves(emote_double_exclamation_mark, delay_16))
     waitmovement(LOCALID_PLAYER)
@@ -75,9 +77,8 @@ script IntroCutscene {
     waitmovement(LOCALID_PLAYER)
     createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
     setspeaker("Boss")
-    message("{COLOR RED}TACK-Q!$")
     applymovement(LOCALID_BOSS, moves(tackq, delay_16))
-    playse(SE_M_ROCK_THROW)
+    message("{COLOR RED}TACK-Q!{PLAY_SE SE_M_COMET_PUNCH}$")
     waitmovement
     waitse
     waitmessage
@@ -98,6 +99,10 @@ script IntroCutscene {
         walk_left
         walk_up
         walk_up
+    ))
+    waitmovement(LOCALID_BOSS)
+    turnobject(LOCALID_PLAYER, DIR_WEST)
+    applymovement(LOCALID_BOSS, moves(
         walk_up
         walk_up
         walk_up
@@ -110,29 +115,55 @@ script IntroCutscene {
     waitmessage
     waitbuttonpress
     givemon(SPECIES_HAMTARO, 5, ITEM_SITRUS_BERRY)
-    additem(ITEM_TM_TACKLE, 1)
-    additem(ITEM_TM_DIG, 1)
-    additem(ITEM_TM_SCRATCH, 1)
-    message("It hit me when I saw a video game!\pWe'll have a tournament where strength,\ncunning, and knowledge of hamchat are the \lkey to victory!\pHere, let's give it a shot!$")
+    message("It hit me when I saw a video game!\pWe'll have a tournament where strength,\ncunning, and knowledge of hamchat are \lthe key to victory!\pHere, let's give it a shot!$")
     setflag(FLAG_USED_ROOM_1_KEY)
     waitmessage
     waitbuttonpress
     closemessage
+    call(IntroBattleHandler)
+	specialvar(VAR_RESULT, GetBattleOutcome)
+    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+    setspeaker("Boss")
+    switch(var(VAR_RESULT)) {
+        case B_OUTCOME_WON:
+            msgbox("Wow, you're really good at this HAMTARO!")
+        case B_OUTCOME_RAN:
+            msgbox("Come on HAMTARO, it's not fun if you\ngive up right away.\pLet's do it again for real this time!")
+            special(HealPlayerParty)
+            call(IntroBattleHandler)
+        case B_OUTCOME_LOST:
+            msgbox("Only makes sense that I'd win this\nfirst one since I invented it.\pYou'll get better with practice.")
+            end
+    }
+    message("Now, let me give you a new\nHamchat Dictionary.\pThis has the words you just used and\nthe ones you saw me use.")
+    waitmessage
+    waitbuttonpress
+    closemessage
+    applymovement(LOCALID_BOSS, moves(emote_x, delay_16))
+    waitmovement
+    applymovement(LOCALID_PLAYER, moves(emote_x, delay_16))
+    waitmovement
+    turnobject(LOCALID_PLAYER, DIR_SOUTH)
+    additem(ITEM_TM_TACKLE, 1)
+    additem(ITEM_TM_YAWN, 1)
+    additem(ITEM_TM_DIG, 1)
+    message("You received the Hamchat Dictionary!{PLAY_SE MUS_RG_OBTAIN_KEY_ITEM}$")
+    waitse
+    waitmessage
+    waitbuttonpress
+    message("Use it to learn new Hamchat and to\nremember the ones you already know.\pYou can have up to four hamchat ready\nfor a battle at once.$")
+    waitmessage
+    waitbuttonpress
+    closemessage
+    msgbox("You learned {COLOR RED}HAMHA{COLOR DARK_GRAY},{COLOR RED}BLAHH{COLOR DARK_GRAY}, \nand {COLOR RED}TACK-Q{COLOR DARK_GRAY}!")
+    applymovement(LOCALID_PLAYER, moves(yepp))
+    waitmovement
+    end
+}
+
+script IntroBattleHandler {
     setflag(FLAG_NO_WHITEOUT)
     setwildbattle(SPECIES_BOSS, 5)
 	dowildbattle
-	specialvar(VAR_RESULT, GetBattleOutcome)
-
-    switch(var(VAR_RESULT)) {
-        case B_OUTCOME_WON:
-            msgbox("You won!")
-            end
-        case B_OUTCOME_RAN:
-            msgbox("You ran away!")
-            end
-        case B_OUTCOME_PLAYER_TELEPORTED:
-            msgbox("You ran away!")
-            end
-    }
-    end
+    return
 }

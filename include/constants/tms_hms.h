@@ -29,7 +29,7 @@
     F(ROCK_POLISH) \
     F(SWITCHEROO) \
     F(ACID_SPRAY) \
-    F(EMBER) \
+    F(YAWN) \
     F(PSYCHIC) \
     F(SHADOW_BALL) \
     F(BRICK_BREAK) \

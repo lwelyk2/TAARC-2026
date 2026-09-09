@@ -1149,13 +1149,13 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_LEER] =
     {
-        .name = COMPOUND_STRING("Leer"),
+        .name = COMPOUND_STRING("Blahh"),
         .description = COMPOUND_STRING(
-            "Frightens the foes with a\n"
-            "leer to lower Defense."),
+            "Tires the foe to lower\n"
+            "their Defense."),
         .effect = EFFECT_STAT_CHANGE,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_GRASS,
         .accuracy = 100,
         .pp = 30,
         .target = TARGET_BOTH,
@@ -4088,9 +4088,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_SPLASH] =
     {
-        .name = COMPOUND_STRING("Splash"),
+        .name = COMPOUND_STRING("Hamha"),
         .description = COMPOUND_STRING(
-            "It's just a splash...\n"
+            "It's just saying hello...\n"
             "Has no effect whatsoever."),
         .effect = EFFECT_DO_NOTHING,
         .power = 0,
@@ -7698,7 +7698,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_YAWN] =
     {
-        .name = COMPOUND_STRING("Yawn"),
+        .name = COMPOUND_STRING("Blahh"),
         .description = COMPOUND_STRING(
             "Lulls the foe into yawning,\n"
             "then sleeping next turn."),

@@ -12738,14 +12738,14 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_EMBER] =
+    [ITEM_TM_YAWN] =
     {
-        .name = ITEM_NAME("TM28"),
+        .name = ITEM_NAME("HC"),
         .price = 2000,
         .description = COMPOUND_STRING(
-            "Digs underground\n"
-            "the 1st turn, then\n"
-            "strikes next turn."),
+            "Meaning: Tired\n"
+            "Yawn to make your\n"
+            "foe sleepy like you."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,

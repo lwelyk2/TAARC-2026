@@ -52,10 +52,10 @@
 #else
 
 #define FLAG_GAVE_PANDA_HAMMER    0x20
-#define FLAG_NO_WHITEOUT    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
+#define FLAG_NO_WHITEOUT     0x21 // Unused Flag
+#define FLAG_NOT_GOT_PANDA   0x22 // Unused Flag
+#define FLAG_GOT_PANDA       0x23 // Unused Flag
+#define FLAG_INTRO_DONE      0x24 // Unused Flag
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag

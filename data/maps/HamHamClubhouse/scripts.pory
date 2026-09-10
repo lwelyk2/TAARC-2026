@@ -1,5 +1,26 @@
 mapscripts HamHamClubhouse_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: Clubhouse_IntroCutscene
+    ]
+}
 
+script Clubhouse_IntroCutscene {
+    if(flag(FLAG_INTRO_DONE)){
+        setvar(VAR_TEMP_0, 1)
+    } else {
+        setvar(VAR_TEMP_0, 1)
+        setflag(FLAG_INTRO_DONE)
+        lock
+        applymovement(LOCALID_BOSS_BLOCKING, moves(walk_down walk_right * 2 walk_left * 2 walk_up * 2 walk_down))
+        applymovement(LOCALID_PLAYER, moves(delay_16 walk_down * 2 face_up))
+        turnobject(LOCALID_BOSS,DIR_SOUTH)
+        turnobject(LOCALID_PLAYER,DIR_NORTH)
+        waitmovement(LOCALID_BOSS_BLOCKING)
+        createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+        setspeaker("Boss")
+        msgbox("Alright! I think everyone's playing\nin Acorn Park as usual, so you should\llook for them there and see if you can\llearn somet new Hamchat while you're\lat it!")
+        release
+    }
 }
 
 script ClubhouseBoss {

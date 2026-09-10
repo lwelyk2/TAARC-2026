@@ -12,6 +12,8 @@ script IntroRoom_TurnHamtaro {
     end
 }
 script IntroCutscene {
+    setflag(VAR_TEMP_0)
+    setflag(FLAG_NOT_GOT_PANDA)
     lockall
     applymovement(LOCALID_PLAYER, moves(
         face_up
@@ -82,11 +84,13 @@ script IntroCutscene {
     waitmovement
     waitse
     waitmessage
+    playse(SE_PIN)
     applymovement(LOCALID_PLAYER, moves(
         emote_exclamation_mark
         delay_16
         face_down
     ))
+    waitse
     applymovement(LOCALID_BOSS, moves(walk_down))
     waitmovement(LOCALID_BOSS)
     turnobject(LOCALID_BOSS, DIR_NORTH)
@@ -114,7 +118,7 @@ script IntroCutscene {
     turnobject(LOCALID_PLAYER, DIR_NORTH)
     waitmessage
     waitbuttonpress
-    givemon(SPECIES_HAMTARO, 5, ITEM_SITRUS_BERRY)
+    givemon(SPECIES_HAMTARO, 100, ITEM_SITRUS_BERRY)
     message("It hit me when I saw a video game!\pWe'll have a tournament where strength,\ncunning, and knowledge of hamchat are \lthe key to victory!\pHere, let's give it a shot!$")
     setflag(FLAG_USED_ROOM_1_KEY)
     waitmessage
@@ -139,7 +143,7 @@ script IntroCutscene {
     waitmessage
     waitbuttonpress
     closemessage
-    applymovement(LOCALID_BOSS, moves(emote_x, delay_16))
+    applymovement(LOCALID_BOSS, moves(emote_x, delay_16, delay_16, delay_16))
     waitmovement
     applymovement(LOCALID_PLAYER, moves(emote_x, delay_16))
     waitmovement
@@ -147,7 +151,8 @@ script IntroCutscene {
     additem(ITEM_TM_TACKLE, 1)
     additem(ITEM_TM_YAWN, 1)
     additem(ITEM_TM_DIG, 1)
-    message("You received the Hamchat Dictionary!{PLAY_SE MUS_RG_OBTAIN_KEY_ITEM}$")
+    message("{PLAY_SE MUS_RG_OBTAIN_KEY_ITEM}You received the Hamchat Dictionary!$")
+    applymovement(LOCALID_PLAYER, moves(yepp))
     waitse
     waitmessage
     waitbuttonpress
@@ -155,9 +160,43 @@ script IntroCutscene {
     waitmessage
     waitbuttonpress
     closemessage
-    msgbox("You learned {COLOR RED}HAMHA{COLOR DARK_GRAY},{COLOR RED}BLAHH{COLOR DARK_GRAY}, \nand {COLOR RED}TACK-Q{COLOR DARK_GRAY}!")
+    message("You learned {COLOR RED}HAMHA{COLOR DARK_GRAY},{COLOR RED}BLAHH{COLOR DARK_GRAY}, \nand {COLOR RED}TACK-Q{COLOR DARK_GRAY}!")
     applymovement(LOCALID_PLAYER, moves(yepp))
+    waitmessage
+    waitbuttonpress
+    closemessage
+    turnobject(LOCALID_PLAYER, DIR_NORTH)
     waitmovement
+    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+    setspeaker("Boss")
+    message("Great! You should be good to get\nto get started now!\pI need your help to get everyone\nback to the clubhouse so we can\lget the tournament started!$")
+    waitmessage
+    waitbuttonpress
+    applymovement(LOCALID_BOSS, moves(emote_exclamation_mark, delay_16))
+    playse(SE_PIN)
+    waitmovement
+    waitse
+    message("Oh! And we need PANDA's help to remodel\nthis room for the new tournament!\pCome on Hamtaro, let's get going!$")
+    waitmessage
+    waitbuttonpress
+    applymovement(LOCALID_BOSS, moves(
+        walk_down
+        walk_right * 17
+    ))
+    applymovement(LOCALID_PLAYER, moves(
+        delay_16
+        delay_16
+        walk_up
+        walk_right * 17
+    ))
+    waitmovement(LOCALID_BOSS)
+    playse(SE_EXIT)
+    removeobject(LOCALID_BOSS)
+    waitse
+    waitmovement(LOCALID_PLAYER)
+    warp(MAP_HAM_HAM_CLUBHOUSE, 0)
+    waitstate
+    releaseall
     end
 }
 

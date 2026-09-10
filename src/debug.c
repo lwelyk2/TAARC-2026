@@ -4263,7 +4263,12 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_RG_SLOW_PALLET)           \
     X(MUS_RG_TEACHY_TV_MENU)        \
     X(MUS_HAMTAROTIME)              \
-    X(MUS_MAP)
+    X(MUS_MAP)                      \
+    X(MUS_BOSS_THEME_ALTISSIMO)     \
+    X(MUS_CLUBHOUSE_ROOMS_1_ALTISSIMO) \
+    X(MUS_CLUBHOUSE_ROOMS_2_ALTISSIMO) \
+    X(MUS_CLUBHOUSE_ROOMS_3_ALTISSIMO) \
+    X(MUS_HAMHAMHEARTBREAK_BOSS_ALTISSIMO)
 
 #define SOUND_LIST_SE               \
     X(SE_USE_ITEM)                  \

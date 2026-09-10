@@ -2,7 +2,7 @@
   "id": "MAP_INTRO_ROOM",
   "name": "IntroRoom",
   "layout": "LAYOUT_INTRO_ROOM",
-  "music": "MUS_DUMMY",
+  "music": "MUS_BOSS_THEME_ALTISSIMO",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

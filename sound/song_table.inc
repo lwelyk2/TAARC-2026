@@ -618,6 +618,11 @@ gSongTable::
 	song ph_nurse_solo, MUSIC_PLAYER_SE2, 2
 	song mus_hamtarotime, MUSIC_PLAYER_BGM, 0
 	song mus_map, MUSIC_PLAYER_BGM, 0
+	song mus_boss_theme_altissimo, MUSIC_PLAYER_BGM, 0
+	song mus_clubhouse_rooms_1_altissimo, MUSIC_PLAYER_BGM, 0
+	song mus_clubhouse_rooms_2_altissimo, MUSIC_PLAYER_BGM, 0
+	song mus_clubhouse_rooms_3_altissimo, MUSIC_PLAYER_BGM, 0
+	song mus_hamhamheartbreak_boss_altissimo, MUSIC_PLAYER_BGM, 0
 
 	.align 2
 dummy_song_header:

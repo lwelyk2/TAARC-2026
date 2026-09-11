@@ -12752,14 +12752,14 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_PSYCHIC] =
+    [ITEM_TM_TEARFUL_LOOK] =
     {
-        .name = ITEM_NAME("TM29"),
+        .name = ITEM_NAME("HC"),
         .price = 2000,
         .description = COMPOUND_STRING(
-            "A powerful psychic\n"
-            "attack that may\n"
-            "lower Sp. Def."),
+            "Meaning: Sad\n"
+            "Tear up, to lower\n"
+            "foe's damage"),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,

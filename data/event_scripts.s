@@ -1753,6 +1753,24 @@ Common_EventScript_NoP::
     closemessage
 	return
 
+Common_EventScript_MoveToFront::
+	call_if_eq VAR_FACING, DIR_NORTH, Common_EventScript_MoveFromTop
+	call_if_eq VAR_FACING, DIR_EAST, Common_EventScript_MoveFromRight
+	call_if_eq VAR_FACING, DIR_WEST, Common_EventScript_MoveFromLeft
+	return
+
+Common_EventScript_MoveFromTop::
+	applymovement LOCALID_PLAYER Common_Movement_MoveFromTop
+	return
+
+Common_EventScript_MoveFromLeft::
+	applymovement LOCALID_PLAYER Common_Movement_MoveFromLeft
+	return
+
+Common_EventScript_MoveFromRight::
+	applymovement LOCALID_PLAYER Common_Movement_MoveFromRight
+	return
+
 	.include "data/scripts/pc_transfer.inc"
 	.include "data/scripts/questionnaire.inc"
 	.include "data/scripts/abnormal_weather.inc"

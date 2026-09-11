@@ -3,27 +3,41 @@ mapscripts Hamtaro_AcornParkEntrance_MapScripts {}
 script AcornParkEntranceOxnard {
     lock
     faceplayer
-    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)
+    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha,  gText_TackQ, gText_DigDig)
     switch(var(VAR_RESULT)) {
         case 0:
+            call(Common_EventScript_MoveToFront)
             call(Common_EventScript_Hamha)
+            createfieldmugshot(MUGSHOT_OXNARD, EMOTE_NORMAL)
+            setspeaker("Oxnard")
+            message("*sniff* oh... Hi HAMTARO...\pDid you need something?\pOh... I don't think I can go back to\nthe clubhouse right now... Y'see...\lI lost my sunflower seed...$")
+            waitmessage
+            waitbuttonpress
+            message("I'm just too... {COLOR RED}BLUHOO{COLOR DARK_GRAY} right now.")
+            applymovement(LOCALID_PLAYER, AcornParkSouthShockie)
+            waitmovement
+            setspeaker(SP_NAME_NONE)
+            message(format("You learned {COLOR RED}Bluhoo!$"))
+            playse(MUS_RG_OBTAIN_KEY_ITEM)
+            additem(ITEM_TM_ASTONISH, 1)
+            applymovement(LOCALID_PLAYER, AcornParkSouthDictionary)
+            waitmovement
+            waitse
+            waitmessage
+            waitbuttonpress
+            closemessage
+            applymovement(LOCALID_PLAYER, moves(face_up))
+            waitmovement
+            additem(ITEM_TM_TEARFUL_LOOK)
             break
         case 1:
-            call(Common_EventScript_HifHif)
-            break
-        case 2:
+            call(Common_EventScript_MoveToFront)
             call(Common_EventScript_TackQ)
             break
-        case 3:
+        case 2:
             call(Common_EventScript_DigDig)
             break
     }
     release
-    end
-}
-
-script IntroSetupTest {
-    additem(ITEM_TM_TACKLE, 1)
-    additem(ITEM_TM_DIG, 1)
     end
 }

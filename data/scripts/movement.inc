@@ -199,3 +199,23 @@ Common_Movement_YepP::
 Common_Movement_NoP::
 	nop
 	step_end
+
+Common_Movement_MoveFromTop::
+	walk_left
+	walk_down
+	walk_down
+	walk_right
+	face_up
+	step_end
+
+Common_Movement_MoveFromLeft::
+	walk_down
+	walk_right
+	face_up
+	step_end
+
+Common_Movement_MoveFromRight::
+	walk_down
+	walk_left
+	face_up
+	step_end

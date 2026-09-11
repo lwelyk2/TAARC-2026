@@ -23,6 +23,76 @@ script Clubhouse_IntroCutscene {
     }
 }
 
+script ClubhouseBlockingBoss {
+    lock
+    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_TackQ, gText_DigDig)
+    switch(var(VAR_RESULT)) {
+        case 0:
+            getobjectfacingdirection(LOCALID_PLAYER, VAR_TEMP_1)
+            switch (var(VAR_TEMP_1)) {
+                case DIR_EAST:
+                    applymovement(LOCALID_PLAYER, moves(
+                        walk_down
+                        walk_right
+                        face_up
+                    ))
+                    waitmovement
+                case DIR_WEST:
+                    applymovement(LOCALID_PLAYER, moves(
+                        walk_down
+                        walk_left
+                        face_up
+                    ))
+                    waitmovement
+                default:
+                    break
+            }
+            call(Common_EventScript_Hamha)
+            turnobject(LOCALID_PLAYER, DIR_NORTH)
+            break
+        case 1:
+            getobjectfacingdirection(LOCALID_PLAYER, VAR_TEMP_1)
+            switch (var(VAR_TEMP_1)) {
+                case DIR_EAST:
+                    applymovement(LOCALID_PLAYER, moves(
+                        walk_down
+                        walk_right
+                        face_up
+                    ))
+                    waitmovement
+                case DIR_WEST:
+                    applymovement(LOCALID_PLAYER, moves(
+                        walk_down
+                        walk_left
+                        face_up
+                    ))
+                    waitmovement
+                default:
+                    break
+            }
+            call(Common_EventScript_TackQ)
+            turnobject(LOCALID_PLAYER, DIR_NORTH)
+            createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+            setspeaker("Boss")
+            msgbox("Hey! We're not doing a battle right now!\pDon't {COLOR RED}TACK-Q{COLOR DARK_GRAY} me!")
+            release
+            end
+        case 2:
+            call(Common_EventScript_DigDig)
+            msgbox("Nothing there...$")
+            createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+            setspeaker("Boss")
+            msgbox("I appreciate the enthusiasm Hamtaro,\nbut let's let PANDA do all the\lrenovations.")
+            release
+            end
+    }
+    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+    setspeaker("Boss")
+    msgbox("Hamtaro, keep looking for everyone,\nit's no fun without the whole gang!")
+    release
+    end
+}
+
 script ClubhouseBoss {
     lock
     faceplayer

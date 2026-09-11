@@ -1816,6 +1816,9 @@ static void Task_NewGameBirchSpeech_Cleanup(u8 taskId)
         FreeAllWindowBuffers();
         FreeAndDestroyMonPicSprite(gTasks[taskId].tLotadSpriteId);
         ResetAllPicSprites();
+        gSaveBlock2Ptr->playerGender = MALE;
+        static const u8 sText_PlayerMale[] = _("HAMTARO");
+        StringCopy_PlayerName(gSaveBlock2Ptr->playerName, sText_PlayerMale);
         SetMainCallback2(CB2_NewGame);
         DestroyTask(taskId);
     }

@@ -72,6 +72,7 @@ static void ExpansionIntro_InitBgs();
 static void ExpansionIntro_StartBlend();
 static void ExpansionIntro_LoadGraphics();
 static void ExpansionIntro_CreateSprites();
+void CB2_InitTitleScreen(void);
 
 static const union AnimCmd sAnimCmd_DizzyWalking[] =
 {
@@ -276,15 +277,16 @@ void Task_HandleExpansionIntro(u8 taskId)
             ResetSpriteData();
             FreeAllSpritePalettes();
             DestroyTask(taskId);
-            if (IS_FRLG)
-            {
-                SetMainCallback2(CB2_SetUpIntroFrlg);
-            }
-            else
-            {
-                CreateTask(Task_Scene1_Load, 0);
-                SetMainCallback2(MainCB2_Intro);
-            }
+            SetMainCallback2(CB2_InitTitleScreen);
+            // if (IS_FRLG)
+            // {
+            //     SetMainCallback2(CB2_SetUpIntroFrlg);
+            // }
+            // else
+            // {
+            //     CreateTask(Task_Scene1_Load, 0);
+            //     SetMainCallback2(MainCB2_Intro);
+            // }
         }
         break;
     }

@@ -683,6 +683,9 @@ extern const u8 Common_Movement_Hamha[];
 extern const u8 Common_Movement_Hifhif[];
 extern const u8 Common_Movement_TackQ[];
 extern const u8 Common_Movement_DigDig[];
+extern const u8 Common_Movement_KoochiQ[];
+extern const u8 Common_Movement_Tuggie[];
+extern const u8 Common_Movement_Bluhoo[];
 
 extern const u8 EventScript_CancelMessageBox[];
 extern const u8 Common_EventScript_ShowPokemonCenterSign[];

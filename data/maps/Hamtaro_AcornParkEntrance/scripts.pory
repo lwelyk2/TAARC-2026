@@ -8,34 +8,86 @@ script AcornParkEntranceOxnard {
         case 0:
             call(Common_EventScript_MoveToFront)
             call(Common_EventScript_Hamha)
+            applymovement(LOCALID_PLAYER,moves(face_up))
+            waitmovement
             createfieldmugshot(MUGSHOT_OXNARD, EMOTE_NORMAL)
             setspeaker("Oxnard")
-            message("*sniff* oh... Hi HAMTARO...\pDid you need something?\pOh... I don't think I can go back to\nthe clubhouse right now... Y'see...\lI lost my sunflower seed...$")
+            message("oh... Hi HAMTARO...\pDid you need something?\pOh... I don't think I can go back to\nthe clubhouse right now... Y'see...\lI lost my sunflower seed...$")
             waitmessage
             waitbuttonpress
-            message("I'm just too... {COLOR RED}BLUHOO{COLOR DARK_GRAY} right now.")
-            applymovement(LOCALID_PLAYER, AcornParkSouthShockie)
-            waitmovement
-            setspeaker(SP_NAME_NONE)
-            message(format("You learned {COLOR RED}Bluhoo!$"))
-            playse(MUS_RG_OBTAIN_KEY_ITEM)
-            additem(ITEM_TM_ASTONISH, 1)
-            applymovement(LOCALID_PLAYER, AcornParkSouthDictionary)
-            waitmovement
-            waitse
+            applymovement(LOCALID_OXNARDOW, moves(walk_in_place_up * 4))
+            message("I'm just too... {COLOR RED}BLUHOO{COLOR DARK_GRAY} right now.$")
             waitmessage
             waitbuttonpress
+            waitmovement
             closemessage
-            applymovement(LOCALID_PLAYER, moves(face_up))
+            checkitem(ITEM_TM_TEARFUL_LOOK)
+            if(!var(VAR_RESULT)){
+                setspeaker(SP_NAME_NONE)
+                message(format("You learned {COLOR RED}Bluhoo!$"))
+                applymovement(LOCALID_PLAYER, moves(bluhoo))
+                waitmovement
+                playse(MUS_RG_OBTAIN_KEY_ITEM)
+                additem(ITEM_TM_TEARFUL_LOOK, 1)
+                applymovement(LOCALID_PLAYER, moves(emote_x))
+                waitmessage
+                waitbuttonpress
+                closemessage
+                applymovement(LOCALID_PLAYER, moves(face_up))
+                waitmovement
+            }
+            applymovement(LOCALID_OXNARDOW, moves(walk_in_place_down))
             waitmovement
-            additem(ITEM_TM_TEARFUL_LOOK)
+            checkitem(ITEM_SUNFLOWER_SEED)
+            if(var(VAR_RESULT)){
+                createfieldmugshot(MUGSHOT_OXNARD, EMOTE_NORMAL)
+                setspeaker("Oxnard")
+                applymovement(LOCALID_OXNARDOW,moves(emote_exclamation_mark))
+                msgbox("Hamtaro! That smell, is it my \nsunflower seed?")
+                setspeaker(NULL)
+                removefieldmugshot
+                msgbox("Give OXNARD the sunflower seed?", MSGBOX_YESNO)
+                if(var(VAR_RESULT)) {
+                    call(Common_EventScript_YepP)
+                    applymovement(LOCALID_PLAYER, moves(face_up))
+                    waitmovement
+                    clearflag(FLAG_HIDDEN_OXNARD)
+                    removeobject(LOCALID_OXNARDOW)
+                    delay(1)
+                    addobject(LOCALID_OXNARD, MAP_HAMTARO_ACORN_PARK_ENTRANCE)
+                    delay(1)
+                    createfieldmugshot(MUGSHOT_OXNARD, EMOTE_NORMAL)
+                    setspeaker("Oxnard")
+                    msgbox("Thank you so much Hamtaro!")
+                    msgbox("BOSS wants to do a tournament?\pThere's fighting?\pSounds scary, but since you helped\nfind my sunflower seed I guess I'll try.\pSee you at the clubhouse HAMTARO!")
+                    applymovement(LOCALID_OXNARD,moves(walk_left *2 walk_down *8))
+                    waitmovement
+                    setflag(FLAG_GOT_OXNARD)
+                    removeobject(LOCALID_OXNARD)
+                } else {
+                    call(Common_EventScript_NoP)
+                    applymovement(LOCALID_PLAYER, moves(face_up))
+                    waitmovement
+                    createfieldmugshot(MUGSHOT_OXNARD, EMOTE_NORMAL)
+                    setspeaker("Oxnard")
+                    msgbox("Oh... okay...")
+                }
+            }
             break
         case 1:
             call(Common_EventScript_MoveToFront)
             call(Common_EventScript_TackQ)
+            applymovement(LOCALID_OXNARDOW, moves(walk_in_place_left * 4 ))
+            createfieldmugshot(MUGSHOT_OXNARD, EMOTE_NORMAL)
+            setspeaker("Oxnard")
+            message("Owww.... why did you do that HAMTARO?\nWhat did I do to you???\lwhy would you do that?$")
+            waitbuttonpress
+            closemessage
+            applymovement(LOCALID_OXNARDOW, moves(walk_in_place_down))
             break
         case 2:
             call(Common_EventScript_DigDig)
+            applymovement(LOCALID_PLAYER, moves(face_down))
             break
     }
     release

@@ -197,7 +197,7 @@ Common_Movement_YepP::
 	step_end
 
 Common_Movement_NoP::
-	nop
+	nopp
 	step_end
 
 Common_Movement_MoveFromTop::

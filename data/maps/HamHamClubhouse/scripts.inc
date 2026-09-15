@@ -53,18 +53,18 @@ ClubhouseBlockingBoss::
 	switch VAR_RESULT
 # 30 "data/maps/HamHamClubhouse/scripts.pory"
 	case 0, ClubhouseBlockingBoss_3
-# 52 "data/maps/HamHamClubhouse/scripts.pory"
+# 53 "data/maps/HamHamClubhouse/scripts.pory"
 	case 1, ClubhouseBlockingBoss_4
-# 78 "data/maps/HamHamClubhouse/scripts.pory"
+# 80 "data/maps/HamHamClubhouse/scripts.pory"
 	case 2, ClubhouseBlockingBoss_5
 ClubhouseBlockingBoss_1:
-# 87 "data/maps/HamHamClubhouse/scripts.pory"
-	createfieldmugshot MUGSHOT_BOSS, EMOTE_NORMAL
-# 88 "data/maps/HamHamClubhouse/scripts.pory"
-	setspeaker Clubhouse_IntroCutscene_Text_0
 # 89 "data/maps/HamHamClubhouse/scripts.pory"
-	msgbox ClubhouseBlockingBoss_Text_3
+	createfieldmugshot MUGSHOT_BOSS, EMOTE_NORMAL
 # 90 "data/maps/HamHamClubhouse/scripts.pory"
+	setspeaker Clubhouse_IntroCutscene_Text_0
+# 91 "data/maps/HamHamClubhouse/scripts.pory"
+	msgbox ClubhouseBlockingBoss_Text_3
+# 92 "data/maps/HamHamClubhouse/scripts.pory"
 	release
 	end
 
@@ -80,42 +80,46 @@ ClubhouseBlockingBoss_3:
 ClubhouseBlockingBoss_6:
 # 50 "data/maps/HamHamClubhouse/scripts.pory"
 	call Common_EventScript_Hamha
+# 51 "data/maps/HamHamClubhouse/scripts.pory"
+	turnobject LOCALID_PLAYER, DIR_NORTH
 	goto ClubhouseBlockingBoss_1
 
 ClubhouseBlockingBoss_4:
-# 53 "data/maps/HamHamClubhouse/scripts.pory"
-	getobjectfacingdirection LOCALID_PLAYER, VAR_TEMP_1
 # 54 "data/maps/HamHamClubhouse/scripts.pory"
-	switch VAR_TEMP_1
+	getobjectfacingdirection LOCALID_PLAYER, VAR_TEMP_1
 # 55 "data/maps/HamHamClubhouse/scripts.pory"
+	switch VAR_TEMP_1
+# 56 "data/maps/HamHamClubhouse/scripts.pory"
 	case DIR_EAST, ClubhouseBlockingBoss_13
-# 62 "data/maps/HamHamClubhouse/scripts.pory"
+# 63 "data/maps/HamHamClubhouse/scripts.pory"
 	case DIR_WEST, ClubhouseBlockingBoss_14
 ClubhouseBlockingBoss_11:
-# 72 "data/maps/HamHamClubhouse/scripts.pory"
-	call Common_EventScript_TackQ
 # 73 "data/maps/HamHamClubhouse/scripts.pory"
-	createfieldmugshot MUGSHOT_BOSS, EMOTE_NORMAL
+	call Common_EventScript_TackQ
 # 74 "data/maps/HamHamClubhouse/scripts.pory"
-	setspeaker Clubhouse_IntroCutscene_Text_0
+	turnobject LOCALID_PLAYER, DIR_NORTH
 # 75 "data/maps/HamHamClubhouse/scripts.pory"
-	msgbox ClubhouseBlockingBoss_Text_0
+	createfieldmugshot MUGSHOT_BOSS, EMOTE_NORMAL
 # 76 "data/maps/HamHamClubhouse/scripts.pory"
+	setspeaker Clubhouse_IntroCutscene_Text_0
+# 77 "data/maps/HamHamClubhouse/scripts.pory"
+	msgbox ClubhouseBlockingBoss_Text_0
+# 78 "data/maps/HamHamClubhouse/scripts.pory"
 	release
 	end
 
 ClubhouseBlockingBoss_5:
-# 79 "data/maps/HamHamClubhouse/scripts.pory"
-	call Common_EventScript_DigDig
-# 80 "data/maps/HamHamClubhouse/scripts.pory"
-	msgbox ClubhouseBlockingBoss_Text_1
 # 81 "data/maps/HamHamClubhouse/scripts.pory"
-	createfieldmugshot MUGSHOT_BOSS, EMOTE_NORMAL
+	call Common_EventScript_DigDig
 # 82 "data/maps/HamHamClubhouse/scripts.pory"
-	setspeaker Clubhouse_IntroCutscene_Text_0
+	msgbox ClubhouseBlockingBoss_Text_1
 # 83 "data/maps/HamHamClubhouse/scripts.pory"
-	msgbox ClubhouseBlockingBoss_Text_2
+	createfieldmugshot MUGSHOT_BOSS, EMOTE_NORMAL
 # 84 "data/maps/HamHamClubhouse/scripts.pory"
+	setspeaker Clubhouse_IntroCutscene_Text_0
+# 85 "data/maps/HamHamClubhouse/scripts.pory"
+	msgbox ClubhouseBlockingBoss_Text_2
+# 86 "data/maps/HamHamClubhouse/scripts.pory"
 	release
 	end
 
@@ -134,30 +138,30 @@ ClubhouseBlockingBoss_9:
 	goto ClubhouseBlockingBoss_6
 
 ClubhouseBlockingBoss_13:
-# 56 "data/maps/HamHamClubhouse/scripts.pory"
+# 57 "data/maps/HamHamClubhouse/scripts.pory"
 	applymovement LOCALID_PLAYER, ClubhouseBlockingBoss_Movement_0
-# 61 "data/maps/HamHamClubhouse/scripts.pory"
+# 62 "data/maps/HamHamClubhouse/scripts.pory"
 	waitmovement
 	goto ClubhouseBlockingBoss_11
 
 ClubhouseBlockingBoss_14:
-# 63 "data/maps/HamHamClubhouse/scripts.pory"
+# 64 "data/maps/HamHamClubhouse/scripts.pory"
 	applymovement LOCALID_PLAYER, ClubhouseBlockingBoss_Movement_1
-# 68 "data/maps/HamHamClubhouse/scripts.pory"
+# 69 "data/maps/HamHamClubhouse/scripts.pory"
 	waitmovement
 	goto ClubhouseBlockingBoss_11
 
 
 ClubhouseBoss::
-# 95 "data/maps/HamHamClubhouse/scripts.pory"
-	lock
-# 96 "data/maps/HamHamClubhouse/scripts.pory"
-	faceplayer
 # 97 "data/maps/HamHamClubhouse/scripts.pory"
-	createfieldmugshot MUGSHOT_BOSS, EMOTE_NORMAL
+	lock
 # 98 "data/maps/HamHamClubhouse/scripts.pory"
-	msgbox ClubhouseBoss_Text_0
+	faceplayer
 # 99 "data/maps/HamHamClubhouse/scripts.pory"
+	createfieldmugshot MUGSHOT_BOSS, EMOTE_NORMAL
+# 100 "data/maps/HamHamClubhouse/scripts.pory"
+	msgbox ClubhouseBoss_Text_0
+# 101 "data/maps/HamHamClubhouse/scripts.pory"
 	release
 	end
 
@@ -223,22 +227,22 @@ Clubhouse_IntroCutscene_Text_1:
 	.string "Alright! I think everyone's playing\nin Acorn Park as usual, so you should\llook for them there and see if you can\llearn somet new Hamchat while you're\lat it!$"
 
 ClubhouseBlockingBoss_Text_0:
-# 75 "data/maps/HamHamClubhouse/scripts.pory"
+# 77 "data/maps/HamHamClubhouse/scripts.pory"
 	.string "Hey! We're not doing a battle right now!\pDon't {COLOR RED}TACK-Q{COLOR DARK_GRAY} me!$"
 
 ClubhouseBlockingBoss_Text_1:
-# 80 "data/maps/HamHamClubhouse/scripts.pory"
+# 82 "data/maps/HamHamClubhouse/scripts.pory"
 	.string "Nothing there...$"
 
 ClubhouseBlockingBoss_Text_2:
-# 83 "data/maps/HamHamClubhouse/scripts.pory"
+# 85 "data/maps/HamHamClubhouse/scripts.pory"
 	.string "I appreciate the enthusiasm Hamtaro,\nbut let's let PANDA do all the\lrenovations.$"
 
 ClubhouseBlockingBoss_Text_3:
-# 89 "data/maps/HamHamClubhouse/scripts.pory"
+# 91 "data/maps/HamHamClubhouse/scripts.pory"
 	.string "Hamtaro, keep looking for everyone,\nit's no fun without the whole gang!$"
 
 ClubhouseBoss_Text_0:
-# 98 "data/maps/HamHamClubhouse/scripts.pory"
+# 100 "data/maps/HamHamClubhouse/scripts.pory"
 	.string "Hamtaro! You're late! Everyone else has\n"
 	.string "already left!$"

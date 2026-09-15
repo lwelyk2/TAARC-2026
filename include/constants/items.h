@@ -1054,6 +1054,7 @@ enum __attribute__((packed)) Item
 
     // Hamtaro Items
     ITEM_HAMMER = 874,
+    ITEM_SUNFLOWER_SEED = 875,
 
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,

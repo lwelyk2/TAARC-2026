@@ -30,7 +30,7 @@
     F(SWITCHEROO) \
     F(ACID_SPRAY) \
     F(YAWN) \
-    F(PSYCHIC) \
+    F(TEARFUL_LOOK) \
     F(SHADOW_BALL) \
     F(BRICK_BREAK) \
     F(GROWL) \

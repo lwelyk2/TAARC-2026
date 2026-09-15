@@ -51,14 +51,5 @@
   ],
   "warp_events": [],
   "coord_events": [],
-  "bg_events": [
-    {
-      "type": "hidden_item",
-      "x": 17,
-      "y": 8,
-      "elevation": 0,
-      "item": "ITEM_HAMMER",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_111_STARDUST"
-    }
-  ]
+  "bg_events": []
 }

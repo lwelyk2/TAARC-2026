@@ -1754,9 +1754,9 @@ Common_EventScript_NoP::
 	return
 
 Common_EventScript_MoveToFront::
-	call_if_eq VAR_FACING, DIR_NORTH, Common_EventScript_MoveFromTop
-	call_if_eq VAR_FACING, DIR_EAST, Common_EventScript_MoveFromRight
-	call_if_eq VAR_FACING, DIR_WEST, Common_EventScript_MoveFromLeft
+	call_if_eq VAR_FACING, DIR_SOUTH, Common_EventScript_MoveFromTop
+	call_if_eq VAR_FACING, DIR_EAST, Common_EventScript_MoveFromLeft
+	call_if_eq VAR_FACING, DIR_WEST, Common_EventScript_MoveFromRight
 	return
 
 Common_EventScript_MoveFromTop::

@@ -58,7 +58,18 @@ static const struct SpriteFrameImage sPicTable_BrendanNormal[] = {
         overworld_frame(gObjectEventPic_HamtaroNoP, 4, 4, 2),
         overworld_frame(gObjectEventPic_HamtaroShockie, 4, 4, 0),
         overworld_frame(gObjectEventPic_HamtaroShockie, 4, 4, 1),
-        overworld_frame(gObjectEventPic_HamtaroShockie, 4, 4, 2),
+        overworld_frame(gObjectEventPic_HamtaroDingbang, 4, 4, 0),
+        overworld_frame(gObjectEventPic_HamtaroDingbang, 4, 4, 1),
+        overworld_frame(gObjectEventPic_HamtaroDingbang, 4, 4, 2),
+        overworld_frame(gObjectEventPic_HamtaroDingbang, 4, 4, 3),
+        overworld_frame(gObjectEventPic_HamtaroKoochiQ, 4, 4, 0),
+        overworld_frame(gObjectEventPic_HamtaroKoochiQ, 4, 4, 1),
+        overworld_frame(gObjectEventPic_HamtaroKoochiQ, 4, 4, 2),
+        overworld_frame(gObjectEventPic_HamtaroTuggie, 4, 4, 0),
+        overworld_frame(gObjectEventPic_HamtaroTuggie, 4, 4, 1),
+        overworld_frame(gObjectEventPic_HamtaroBluhoo, 4, 4, 0),
+        overworld_frame(gObjectEventPic_HamtaroBluhoo, 4, 4, 1),
+        overworld_frame(gObjectEventPic_HamtaroBluhoo, 4, 4, 2),
 };
 
 static const struct SpriteFrameImage sPicTable_BrendanMachBike[] = {

@@ -176,6 +176,10 @@
 	create_movement_action nopp, MOVEMENT_ACTION_NOP
 	create_movement_action shockie, MOVEMENT_ACTION_SHOCKIE
 	create_movement_action hamchat, MOVEMENT_ACTION_HAMCHAT
+	create_movement_action dingbang, MOVEMENT_ACTION_DINGBANG
+	create_movement_action koochiq, MOVEMENT_ACTION_KOOCHIQ
+	create_movement_action tuggie, MOVEMENT_ACTION_TUGGIE
+	create_movement_action bluhoo, MOVEMENT_ACTION_BLUHOO
 
 	create_movement_action exit_pokeball, MOVEMENT_ACTION_EXIT_POKEBALL
 	create_movement_action enter_pokeball, MOVEMENT_ACTION_ENTER_POKEBALL

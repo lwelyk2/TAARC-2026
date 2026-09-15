@@ -14,6 +14,7 @@ script IntroRoom_TurnHamtaro {
 script IntroCutscene {
     setflag(VAR_TEMP_0)
     setflag(FLAG_NOT_GOT_PANDA)
+    setflag(FLAG_HIDDEN_OXNARD)
     lockall
     applymovement(LOCALID_PLAYER, moves(
         face_up

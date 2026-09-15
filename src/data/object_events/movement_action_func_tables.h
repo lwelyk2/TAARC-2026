@@ -309,6 +309,10 @@ u8 MovementAction_YepP_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementAction_NoP_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementAction_Shockie_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementAction_Hamchat_Step0(struct ObjectEvent *, struct Sprite *);
+u8 MovementAction_Dingbang_Step0(struct ObjectEvent *, struct Sprite *);
+u8 MovementAction_KoochiQ_Step0(struct ObjectEvent *, struct Sprite *);
+u8 MovementAction_Tuggie_Step0(struct ObjectEvent *, struct Sprite *);
+u8 MovementAction_Bluhoo_Step0(struct ObjectEvent *, struct Sprite *);
 
 
 u8 (*const gMovementActionFuncs_FaceDown[])(struct ObjectEvent *, struct Sprite *);
@@ -504,6 +508,10 @@ u8 (*const gMovementActionFuncs_YepP[])(struct ObjectEvent *, struct Sprite *);
 u8 (*const gMovementActionFuncs_NoP[])(struct ObjectEvent *, struct Sprite *);
 u8 (*const gMovementActionFuncs_Shockie[])(struct ObjectEvent *, struct Sprite *);
 u8 (*const gMovementActionFuncs_Hamchat[])(struct ObjectEvent *, struct Sprite *);
+u8 (*const gMovementActionFuncs_Dingbang[])(struct ObjectEvent *, struct Sprite *);
+u8 (*const gMovementActionFuncs_KoochiQ[])(struct ObjectEvent *, struct Sprite *);
+u8 (*const gMovementActionFuncs_Tuggie[])(struct ObjectEvent *, struct Sprite *);
+u8 (*const gMovementActionFuncs_Bluhoo[])(struct ObjectEvent *, struct Sprite *);
 
 u8 (*const *const gMovementActionFuncs[])(struct ObjectEvent *, struct Sprite *) = {
     [MOVEMENT_ACTION_FACE_DOWN] = gMovementActionFuncs_FaceDown,
@@ -697,6 +705,10 @@ u8 (*const *const gMovementActionFuncs[])(struct ObjectEvent *, struct Sprite *)
     [MOVEMENT_ACTION_NOP]              = gMovementActionFuncs_NoP,
     [MOVEMENT_ACTION_SHOCKIE]          = gMovementActionFuncs_Shockie,
     [MOVEMENT_ACTION_HAMCHAT]          = gMovementActionFuncs_Hamchat,
+    [MOVEMENT_ACTION_DINGBANG]         = gMovementActionFuncs_Dingbang,
+    [MOVEMENT_ACTION_KOOCHIQ]         = gMovementActionFuncs_KoochiQ,
+    [MOVEMENT_ACTION_TUGGIE]           = gMovementActionFuncs_Tuggie,
+    [MOVEMENT_ACTION_BLUHOO]           = gMovementActionFuncs_Bluhoo,
 };
 
 u8 (*const gMovementActionFuncs_FaceDown[])(struct ObjectEvent *, struct Sprite *) = {
@@ -1298,6 +1310,34 @@ u8 (*const gMovementActionFuncs_Hamchat[])(struct ObjectEvent *, struct Sprite *
     MovementAction_WaitSpriteAnim,
     MovementAction_Finish,
 };
+
+u8 (*const gMovementActionFuncs_Dingbang[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementAction_Dingbang_Step0,
+    MovementAction_WaitSpriteAnim,
+    MovementAction_Finish,
+};
+
+
+u8 (*const gMovementActionFuncs_KoochiQ[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementAction_KoochiQ_Step0,
+    MovementAction_WaitSpriteAnim,
+    MovementAction_Finish,
+};
+
+
+u8 (*const gMovementActionFuncs_Tuggie[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementAction_Tuggie_Step0,
+    MovementAction_WaitSpriteAnim,
+    MovementAction_Finish,
+};
+
+
+u8 (*const gMovementActionFuncs_Bluhoo[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementAction_Bluhoo_Step0,
+    MovementAction_WaitSpriteAnim,
+    MovementAction_Finish,
+};
+
 
 u8 (*const gMovementActionFuncs_EnableJumpLandingGroundEffect[])(struct ObjectEvent *, struct Sprite *) = {
     MovementAction_EnableJumpLandingGroundEffect_Step0,

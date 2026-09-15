@@ -27517,7 +27517,8 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
     const u16 gMonPalette_Oxnard[] = INCGFX_U16("graphics/pokemon/oxnard/normal.pal", ".gbapal");
     const u32 gMonBackPic_Oxnard[] = INCGFX_U32("graphics/pokemon/oxnard/back.png", ".4bpp.smol");
     const u8 gMonIcon_Oxnard[] = INCGFX_U8("graphics/pokemon/oxnard/icon.png", ".4bpp");
-    
+    const u32 gObjectEventPic_OxnardOW[] = INCGFX_COMP("graphics/pokemon/oxnard/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+
     const u32 gMonFrontPic_Boss[] = INCGFX_U32("graphics/pokemon/boss/front.png", ".4bpp.smol");
     const u16 gMonPalette_Boss[] = INCGFX_U16("graphics/pokemon/boss/normal.pal", ".gbapal");
     const u32 gMonBackPic_Boss[] = INCGFX_U32("graphics/pokemon/boss/back.png", ".4bpp.smol");

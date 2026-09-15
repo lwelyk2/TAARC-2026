@@ -8739,6 +8739,30 @@ bool8 MovementAction_Hamchat_Step0(struct ObjectEvent *objectEvent, struct Sprit
     return FALSE;
 }
 
+bool8 MovementAction_Dingbang_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    StartSpriteAnimInDirection(objectEvent, sprite, DIR_SOUTH, ANIM_DINGBANG);
+    return FALSE;
+}
+
+bool8 MovementAction_KoochiQ_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    StartSpriteAnimInDirection(objectEvent, sprite, DIR_SOUTH, ANIM_KOOCHIQ);
+    return FALSE;
+}
+
+bool8 MovementAction_Tuggie_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    StartSpriteAnimInDirection(objectEvent, sprite, DIR_SOUTH, ANIM_TUGGIE);
+    return FALSE;
+}
+
+
+bool8 MovementAction_Bluhoo_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    StartSpriteAnimInDirection(objectEvent, sprite, DIR_SOUTH, ANIM_BLUHOO);
+    return FALSE;
+}
 
 bool8 MovementAction_EnableJumpLandingGroundEffect_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
@@ -12295,3 +12319,15 @@ bool8 MovementType_OverworldWildEncounter_Despawn_Step11(struct ObjectEvent *obj
 }
 
 #undef sDespawnTimer
+
+void SetObjectMovementType(void)
+{
+    struct ObjectEvent *objectEvent = &gObjectEvents[GetObjectEventIdByLocalId(gSpecialVar_0x8005)];
+    u8 movementType = gSpecialVar_0x8006;
+    
+    objectEvent->movementType = movementType;
+    objectEvent->directionSequenceIndex = 0;
+    objectEvent->playerCopyableMovement = 0;
+    gSprites[objectEvent->spriteId].callback = sMovementTypeCallbacks[movementType];
+    gSprites[objectEvent->spriteId].data[1] = 0;
+}

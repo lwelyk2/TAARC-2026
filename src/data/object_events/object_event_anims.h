@@ -1244,11 +1244,96 @@ static const union AnimCmd sAnim_Shockie[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_Dingbang[] =
+{
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(29, 4),
+    ANIMCMD_FRAME(59, 4),
+    ANIMCMD_FRAME(60, 4),
+    ANIMCMD_FRAME(61, 4),
+    ANIMCMD_FRAME(60, 4),
+    ANIMCMD_FRAME(62, 4),
+    ANIMCMD_FRAME(60, 4),
+    ANIMCMD_FRAME(61, 4),
+    ANIMCMD_FRAME(60, 8),
+    ANIMCMD_FRAME(62, 4),
+    ANIMCMD_FRAME(60, 4),
+    ANIMCMD_FRAME(29, 4),
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_KoochiQ[] =
+{
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(63, 4),
+    ANIMCMD_FRAME(64, 4),
+    ANIMCMD_FRAME(65, 4),
+    ANIMCMD_FRAME(63, 4),
+    ANIMCMD_FRAME(64, 4),
+    ANIMCMD_FRAME(65, 4),
+    ANIMCMD_FRAME(63, 4),
+    ANIMCMD_FRAME(64, 4),
+    ANIMCMD_FRAME(65, 4),
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_Tuggie[] =
+{
+    ANIMCMD_FRAME(1, 4),
+    ANIMCMD_FRAME(66, 4),
+    ANIMCMD_FRAME(67, 4),
+    ANIMCMD_FRAME(66, 4),
+    ANIMCMD_FRAME(67, 4),
+    ANIMCMD_FRAME(66, 4),
+    ANIMCMD_FRAME(67, 4),
+    ANIMCMD_FRAME(66, 4),
+    ANIMCMD_FRAME(41, 4),
+    ANIMCMD_FRAME(1, 4),
+    ANIMCMD_FRAME(3, 4),
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_Bluhoo[] =
+{
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(68, 4),
+    ANIMCMD_FRAME(69, 4),
+    ANIMCMD_FRAME(68, 4),
+    ANIMCMD_FRAME(69, 4),
+    ANIMCMD_FRAME(68, 4),
+    ANIMCMD_FRAME(69, 4),
+    ANIMCMD_FRAME(68, 4),
+    ANIMCMD_FRAME(69, 4),
+    ANIMCMD_FRAME(70, 16),
+    ANIMCMD_FRAME(60, 4),
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_PandaShockie[] =
 {
     ANIMCMD_FRAME(0, 4),
     ANIMCMD_FRAME(9, 8),
     ANIMCMD_FRAME(10, 16),
+    ANIMCMD_FRAME(9, 8),
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_OxnardBluhoo[] =
+{
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(9, 16),
+    ANIMCMD_FRAME(10, 16),
+    ANIMCMD_FRAME(9, 16),
+    ANIMCMD_FRAME(10, 16),
+    ANIMCMD_FRAME(11, 16),
+    ANIMCMD_FRAME(12, 16),
+    ANIMCMD_FRAME(11, 16),
+    ANIMCMD_FRAME(12, 16),
     ANIMCMD_FRAME(9, 8),
     ANIMCMD_FRAME(0, 4),
     ANIMCMD_END,
@@ -1523,6 +1608,30 @@ static const union AnimCmd *const sAnimTable_Panda[] = {
     [ANIM_STD_GO_FASTEST_WEST] = sAnim_GoFastestWest,
     [ANIM_STD_GO_FASTEST_EAST] = sAnim_GoFastestEast,
     [ANIM_SHOCKIE] = sAnim_PandaShockie
+};
+
+static const union AnimCmd *const sAnimTable_Oxnard[] = {
+    [ANIM_STD_FACE_SOUTH] = sAnim_FaceSouth,
+    [ANIM_STD_FACE_NORTH] = sAnim_FaceNorth,
+    [ANIM_STD_FACE_WEST] = sAnim_FaceWest,
+    [ANIM_STD_FACE_EAST] = sAnim_FaceEast,
+    [ANIM_STD_GO_SOUTH] = sAnim_GoSouth,
+    [ANIM_STD_GO_NORTH] = sAnim_GoNorth,
+    [ANIM_STD_GO_WEST] = sAnim_GoWest,
+    [ANIM_STD_GO_EAST] = sAnim_GoEast,
+    [ANIM_STD_GO_FAST_SOUTH] = sAnim_GoFastSouth,
+    [ANIM_STD_GO_FAST_NORTH] = sAnim_GoFastNorth,
+    [ANIM_STD_GO_FAST_WEST] = sAnim_GoFastWest,
+    [ANIM_STD_GO_FAST_EAST] = sAnim_GoFastEast,
+    [ANIM_STD_GO_FASTER_SOUTH] = sAnim_GoFasterSouth,
+    [ANIM_STD_GO_FASTER_NORTH] = sAnim_GoFasterNorth,
+    [ANIM_STD_GO_FASTER_WEST] = sAnim_GoFasterWest,
+    [ANIM_STD_GO_FASTER_EAST] = sAnim_GoFasterEast,
+    [ANIM_STD_GO_FASTEST_SOUTH] = sAnim_GoFastestSouth,
+    [ANIM_STD_GO_FASTEST_NORTH] = sAnim_GoFastestNorth,
+    [ANIM_STD_GO_FASTEST_WEST] = sAnim_GoFastestWest,
+    [ANIM_STD_GO_FASTEST_EAST] = sAnim_GoFastestEast,
+    [ANIM_BLUHOO] = sAnim_OxnardBluhoo
 };
 
 static const union AnimCmd *const sAnimTable_Standard_Asym[] = {
@@ -1827,6 +1936,10 @@ static const union AnimCmd *const sAnimTable_BrendanMay_Asym[] = {
     [ANIM_YEPP] = sAnim_YepP,
     [ANIM_NOP] = sAnim_NoP,
     [ANIM_SHOCKIE] = sAnim_Shockie,
+    [ANIM_DINGBANG] = sAnim_Dingbang,
+    [ANIM_KOOCHIQ] = sAnim_KoochiQ,
+    [ANIM_TUGGIE] = sAnim_Tuggie,
+    [ANIM_BLUHOO] = sAnim_Bluhoo,
 };
 
 static const union AnimCmd *const sAnimTable_AcroBike[] = {

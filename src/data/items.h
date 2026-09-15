@@ -7267,6 +7267,24 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_Hammer,
     },
 
+    [ITEM_SUNFLOWER_SEED] = 
+    {
+        .name = ITEM_NAME("Sunflower Seed"),
+        .pluralName = ITEM_PLURAL_NAME("Sunflower Seed"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_NONE,
+        .description = COMPOUND_STRING(
+            "A very large sunflower\n"
+            "seed. Oxnard's prized\n"
+            "possession."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 0,
+        .iconPic = gItemIcon_Hammer,
+        .iconPalette = gItemIconPalette_Hammer,
+    },
+
 // Gems
     #if I_PRICE >= GEN_9
         #define GEM_PRICE 15000
@@ -12752,14 +12770,14 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_PSYCHIC] =
+    [ITEM_TM_TEARFUL_LOOK] =
     {
-        .name = ITEM_NAME("TM29"),
+        .name = ITEM_NAME("HC"),
         .price = 2000,
         .description = COMPOUND_STRING(
-            "A powerful psychic\n"
-            "attack that may\n"
-            "lower Sp. Def."),
+            "Meaning: Sad\n"
+            "Tear up, to lower\n"
+            "foe's damage"),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,

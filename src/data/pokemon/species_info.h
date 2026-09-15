@@ -757,13 +757,13 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
         OVERWORLD(
-            sPicTable_Hamtaro,
+            sPicTable_OxnardOW,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_NONE,
-            sAnimTable_Following_Asym,
-            gOverworldPalette_Hamtaro,
-            gShinyOverworldPalette_Hamtaro
+            sAnimTable_Following,
+            gMonPalette_Oxnard,
+            gMonPalette_Oxnard
         )
     },
     

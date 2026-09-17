@@ -9978,8 +9978,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_LEFTOVERS] =
     {
-        .name = ITEM_NAME("Leftovers"),
-        .pluralName = ITEM_PLURAL_NAME("Leftovers"),
+        .name = ITEM_NAME("Strawberry"),
+        .pluralName = ITEM_PLURAL_NAME("Strawberry"),
     #if I_PRICE >= GEN_9
         .price = 20000,
     #elif I_PRICE >= GEN_7
@@ -9990,9 +9990,9 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_LEFTOVERS,
         .holdEffectParam = 10,
         .description = COMPOUND_STRING(
-            "A hold item that\n"
-            "gradually restores\n"
-            "HP in battle."),
+            "A delicious berry\n"
+            "to munch on in\n"
+            "battle."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,

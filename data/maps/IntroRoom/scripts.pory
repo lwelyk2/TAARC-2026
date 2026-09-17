@@ -15,6 +15,9 @@ script IntroCutscene {
     setflag(VAR_TEMP_0)
     setflag(FLAG_NOT_GOT_PANDA)
     setflag(FLAG_HIDDEN_OXNARD)
+    setflag(FLAG_HIDE_SNOOZER)
+    setflag(FLAG_HIDE_CLUBHOUSE_OXNARD)
+    setflag(FLAG_HIDE_CLUBHOUSE_PANDA)
     lockall
     applymovement(LOCALID_PLAYER, moves(
         face_up

@@ -1,5 +1,26 @@
 mapscripts Hamtaro_AcornParkCave_MapScripts {}
 
+script AcornParkCaveMenu {
+    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_Hifhif, gText_TackQ, gText_DigDig)
+    switch(var(VAR_RESULT)) {
+        case 0:
+            call(Common_EventScript_Hamha)
+            release
+            end
+        case 1:
+            call(Common_EventScript_HifHif)
+            release
+            end
+        case 2:
+            call(Common_EventScript_TackQ)
+            release
+            end
+        case 3:
+            call(AcornParkCaveDigDig)
+            break
+    }
+}
+
 script AcornParkCaveDigDig { 
     getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
     if(var(VAR_TEMP_0) > VAR_TEMP_3){
@@ -74,40 +95,185 @@ script AcornParkCaveDigDig {
 
 script AcornParkCaveBottomLeft {
     lock
-    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_TackQ, gText_DigDig)
-    switch(var(VAR_RESULT)) {
-        case 0:
-            call(Common_EventScript_Hamha)
-            break
-        case 1:
-            call(Common_EventScript_TackQ)
-            break
-        case 2:
-            setvar(VAR_TEMP_3, 3)
-            setvar(VAR_TEMP_4, 17)
-            call(AcornParkCaveDigDig)
-            msgbox("Nothing here...")
-            break
+    setvar(VAR_TEMP_3, 3)
+    setvar(VAR_TEMP_4, 17)
+    call(AcornParkCaveMenu)
+    if(flag(FLAG_DAILY_ROUTE_114_RECEIVED_BERRY)){
+        msgbox("Nothing here...")
+    } else {
+        setflag(FLAG_DAILY_ROUTE_114_RECEIVED_BERRY)
+        giveitem(ITEM_ORAN_BERRY)
     }
-    release  
+    release
+    end
 }
 
 script AcornParkCaveMiddle {
     lock
-    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_TackQ, gText_DigDig)
+    setvar(VAR_TEMP_3, 10)
+    setvar(VAR_TEMP_4, 12)
+    call(AcornParkCaveMenu)
+    msgbox("Nothing here...")
+    release
+    end
+}
+
+
+script AcornParkCaveBottomRight {
+    lock
+    setvar(VAR_TEMP_3, 17)
+    setvar(VAR_TEMP_4, 18)
+    call(AcornParkCaveMenu)
+    msgbox("Nothing here...")
+    release
+    end
+}
+
+script AcornParkCaveRight {
+    lock
+    setvar(VAR_TEMP_3, 16)
+    setvar(VAR_TEMP_4, 12)
+    call(AcornParkCaveMenu)
+    msgbox("Nothing here...")
+    release
+    end
+}
+
+script AcornParkCaveUpperRight {
+    lock
+    setvar(VAR_TEMP_3, 14)
+    setvar(VAR_TEMP_4, 5)
+    call(AcornParkCaveMenu)
+    msgbox("Nothing here...")
+    release
+    end
+}
+
+script AcornParkCaveUpperLeft {
+    lock
+    setvar(VAR_TEMP_3, 7)
+    setvar(VAR_TEMP_4, 5)
+    call(AcornParkCaveMenu)
+    msgbox("Nothing here...")
+    release
+    end
+}
+
+script AcornParkCaveLeft {
+    lock
+    setvar(VAR_TEMP_3, 4)
+    setvar(VAR_TEMP_4, 11)
+    call(AcornParkCaveMenu)
+    if(flag(FLAG_DAILY_ROUTE_111_RECEIVED_BERRY)){
+        msgbox("Nothing here...")
+    } else {
+        setflag(FLAG_DAILY_ROUTE_111_RECEIVED_BERRY)
+        giveitem(ITEM_SITRUS_BERRY)
+    }
+    release
+    end
+}
+
+script AcornParkCaveSoccerHam {
+    lock
+    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_Hifhif, gText_TackQ, gText_DigDig)
     switch(var(VAR_RESULT)) {
         case 0:
+            call(Common_EventScript_MoveToFront)
             call(Common_EventScript_Hamha)
-            break
+            if(checkitem(ITEM_HAMMER)) {
+                call(HamhaSoccerHamGotHammer)
+            } elif(flag(FLAG_GOT_PANDA)) {
+                call(HamhaSoccerHamGotHammer)
+            } else {
+                call(HamhaSoccerHamNoHammer)
+            }
         case 1:
-            call(Common_EventScript_TackQ)
-            break
+            call(Common_EventScript_HifHif)
+            msdgbox("Smells like strawberries.\pAnd sweat.\pAnd crime.")
+            release
+            end
         case 2:
+            call(Common_EventScript_MoveToFront)
+            call(Common_EventScript_TackQ)
+            if(checkitem(ITEM_HAMMER)) {
+                call(TackQSoccerHamGotHammer)
+            } elif(flag(FLAG_GOT_PANDA)) {
+                call(TackQSoccerHamGotHammer)
+            } else {
+                call(TackQSoccerHamNoHammer)
+            }
+            release
+            end
+        case 3:
             setvar(VAR_TEMP_3, 10)
             setvar(VAR_TEMP_4, 12)
             call(AcornParkCaveDigDig)
-            msgbox("Nothing here...")
             break
     }
     release
+    end
+}
+
+script HamhaSoccerHamGotHammer {
+    msgbox("You may have found that hammer, but\nyour silly Ham-battles will never be as\lpopular as the great sport of straw-\l-berry soccer!")
+    return
+}
+script HamhaSoccerHamNoHammer {
+    msgbox("You'll never find that hammer!\pI've hidden it so perfectly that\nno one will ever find it.\pNot even I could find it at this point!")
+    return
+}
+
+script TackQSoccerHamNoHammer {
+    msgbox("Tack-Q all you want! I'll never tell you\nwhere that hammer is!")
+    return
+}
+
+script TackQsoccerHamGotHammer {
+    msgbox("Look, you got your hammer already, cut\nit out with the Tack-Qs.")
+    return
+}
+
+script AcornparkCaveDresser {
+    lock
+    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_Hifhif, gText_TackQ, gText_DigDig)
+    switch(var(VAR_RESULT)) {
+        case 0:
+            call(Common_EventScript_Hamha)
+            release
+            end
+        case 1:
+            call(Common_EventScript_HifHif)
+            msgbox("Smells like old socks, but also faintly\nof PANDA.")
+            release
+            end
+        case 2:
+            call(Common_EventScript_MoveToFront)
+            call(Common_EventScript_TackQ)
+            if(checkitem(ITEM_HAMMER)) {
+                release
+                end
+            } elif(flag(FLAG_GOT_PANDA)) {
+                release
+                end
+            } else {
+                msgbox("The bottom draw pops open and sticking\nout between some old socks you see\lPANDA's hammer!")
+                giveitem(ITEM_HAMMER)
+                msgbox("Hey you!")
+                applymovement(LOCALID_PLAYER,moves(emote_exclamation_mark delay_16))
+                playse(SE_PIN)
+                waitmovement
+                waitse
+                applymovement(LOCALID_PLAYER,moves(walk_down * 8 walk_right * 7 walk_up face_up))
+                waitmovement
+                applymovement(LOCALID_SOCCER_HAM,moves(walk_in_place_right))
+                waitmovement
+                msgbox("Look I know I took that hammer and all,\nbut it's pretty rude to go through a\lhamster's sock drawer.\pWho knows what I could keep in there?")
+                release
+                end
+            }
+        case 3:
+            call(AcornParkCaveDigDig)
+            break
+    }
 }

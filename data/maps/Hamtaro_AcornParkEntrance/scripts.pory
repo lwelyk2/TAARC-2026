@@ -64,6 +64,7 @@ script AcornParkEntranceOxnard {
                     waitmovement
                     setflag(FLAG_GOT_OXNARD)
                     removeobject(LOCALID_OXNARD)
+                    setflag(FLAG_GOT_EVERYONE)
                 } else {
                     call(Common_EventScript_NoP)
                     applymovement(LOCALID_PLAYER, moves(face_up))
@@ -93,3 +94,4 @@ script AcornParkEntranceOxnard {
     release
     end
 }
+

@@ -15,10 +15,10 @@
   "connections": null,
   "object_events": [
     {
-      "local_id": "LOCALID_BOSS",
-      "graphics_id": "OBJ_EVENT_GFX_BOSS",
-      "x": 12,
-      "y": 15,
+      "local_id": "LOCALID_OLIVE_OIL_HAM",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(OLIVE_OIL_HAM)",
+      "x": 9,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
@@ -29,9 +29,24 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(NURSE)",
+      "local_id": "LOCALID_SHOPKEEPER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SHOPKEEPER_HAM)",
       "x": 28,
       "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BattleRoom_ShopkeeperHam",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_SUN_BATHER_HAM",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SUN_BATHER_HAM)",
+      "x": 15,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,

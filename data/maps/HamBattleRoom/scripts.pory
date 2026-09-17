@@ -1,1 +1,18 @@
 mapscripts HamBattleRoom_MapScripts {}
+
+script BattleRoom_ShopkeeperHam {
+    lock
+    dynmultipush(gText_Hamha, 0)
+    dynmultipush(gText_HifHif, 1)
+    dynmultipush(gText_TackQ, 2)
+    dynmultipush(gText_DigDig, 3)
+    if(checkitem(ITEM_TM_UPROAR)) {
+        dynmultipush(AcornParkSouthDingBang, 4)
+    } else {
+        dynmultipush(AcornParkSouthQuestionMarks, 4)
+    }
+    dynmultistack(1, 1, FALSE, 5, 0, 0, DYN_MULTICHOICE_CB_NONE)
+
+}
+
+text 

@@ -12,13 +12,7 @@
   "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_HAMTARO_ACORN_PARK_SOUTH",
-      "offset": -2,
-      "direction": "up"
-    }
-  ],
+  "connections": null,
   "object_events": [
     {
       "local_id": "LOCALID_OXNARDOW",
@@ -49,7 +43,64 @@
       "flag": "FLAG_HIDDEN_OXNARD"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 9,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_HAM_HAM_CLUBHOUSE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 10,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_HAM_HAM_CLUBHOUSE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 8,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_HAM_HAM_CLUBHOUSE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 11,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_HAM_HAM_CLUBHOUSE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_HAMTARO_ACORN_PARK_SOUTH",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_HAMTARO_ACORN_PARK_SOUTH",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_HAMTARO_ACORN_PARK_SOUTH",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_HAMTARO_ACORN_PARK_SOUTH",
+      "dest_warp_id": "2"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }

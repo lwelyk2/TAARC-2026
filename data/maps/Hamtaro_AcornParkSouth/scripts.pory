@@ -27,11 +27,157 @@ script AcornPark_FixLadder {
         setmetatile(6, 9, 0x0FC, FALSE)
 }
 
+script AcornParkSouthSoccerHam {
+    lock
+    dynmultipush(gText_Hamha, 0)
+    dynmultipush(gText_HifHif, 1)
+    dynmultipush(gText_TackQ, 2)
+    dynmultipush(gText_DigDig, 3)
+    if(checkitem(ITEM_TM_ASTONISH)) {
+        dynmultipush(AcornParkSouthShockieText, 4)
+    } else {
+        dynmultipush(AcornParkSouthQuestionMarks, 4)
+    }
+    dynmultistack(1, 1, FALSE, 5, 0, 0, DYN_MULTICHOICE_CB_NONE)
+    switch(var(VAR_RESULT)) {
+        case 0:
+            call(Common_EventScript_MoveToFront)
+            call(Common_EventScript_Hamha)
+            break
+        case 1:
+            call(Common_EventScript_HifHif)
+            msgbox("Smells like strawberries...\pand sweat.$")
+            release
+            end
+        case 2:
+            call(Common_EventScript_MoveToFront)
+            call(Common_EventScript_TackQ)
+            applymovement(LOCALID_SOCCER_HAM,moves(walk_in_place_up))
+            createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
+            msgbox("Ha! You think that would hurt me?\pI'm made of tougher stuff than that!")
+            applymovement(LOCALID_SOCCER_HAM, moves(walk_in_place_down))
+            waitmovement
+            release
+            end
+        case 3:
+            call(Common_EventScript_DigDig)
+            getobjectfacingdirection(LOCALID_PLAYER, VAR_TEMP_1)
+            switch (var(VAR_TEMP_1)) {
+                case DIR_EAST:
+                    applymovement(LOCALID_PLAYER, moves(face_left))
+                    waitmovement
+                case DIR_WEST:
+                    applymovement(LOCALID_PLAYER, moves(face_right))
+                    waitmovement
+                default:
+                    break
+            }
+            createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
+            msgbox("Hahaha! You think I'd hide it there?\nerrr... I mean.\pWhy are you digging here? You're just\nmaking a mess!")
+            release
+            end
+        case 4:
+            setspeaker("Hamtaro")
+            createfieldmugshot(MUGSHOT_HAMTARO, EMOTE_NORMAL)
+            message("{COLOR RED}SHOCKIE!$")
+            applymovement(LOCALID_PLAYER, moves(shockie))
+            waitmovement
+            waitmessage
+            waitbuttonpress
+            if(flag(FLAG_FOUGHT_SOCCER_HAM)) {
+                break
+            }
+            if(checkitem(ITEM_TM_ASTONISH)){
+                createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
+                msgbox("Huh? SHOCKIE?\pOh, the ladder? Yeah that's a strange\none. I wonder who could have done that?\pI think that Hamster should spend more\ntime keeping track of his hammer and\lless time helping other Hamsters make\lnew sports that are worse than\lStrawberry Soccer.")
+                applymovement(LOCALID_SOCCER_HAM,moves(emote_exclamation_mark))
+                playse(SE_PIN)
+                waitmovement
+                waitse
+                createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
+                msgbox("Uhh I mean, assuming he had a hammer.\pThat he lost.\pAnd wasn't stolen.\pI mean you'd have to be a real {COLOR RED}DELIN-Q{COLOR DARK_GRAY}\nto do something like steal a tool.")
+                // applymovement(LOCALID_PLAYER, moves(delinq))
+                waitmovement
+                removefieldmugshot
+                setspeaker(SP_NAME_NONE)
+                message(format("You learned {COLOR RED}DELIN-Q!$"))
+                playse(MUS_RG_OBTAIN_KEY_ITEM)
+                additem(ITEM_TM_THIEF, 1)
+                applymovement(LOCALID_PLAYER, AcornParkSouthDictionary)
+                waitmovement
+                waitse
+                waitmessage
+                waitbuttonpress
+                closemessage
+                applymovement(LOCALID_PLAYER, moves(face_up))
+                waitmovement
+                createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
+                msgbox("What, who are you calling DELIN-Q?\pThat's it!")
+                applymovement(LOCALID_SOCCER_HAM, moves(walk_in_place_left))
+                waitmovement
+                createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
+                msgbox("It's time for me to teach you a lesson!")
+                call(SoccerHamBattleHandler)
+            }
+    }
+    if(flag(FLAG_FOUGHT_SOCCER_HAM)) {
+        createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
+        msgbox("Well, well, well. It seems you didn't learn\nyour lesson the last time.")
+        applymovement(LOCALID_SOCCER_HAM, moves(walk_in_place_right))
+        waitmovement
+        createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
+        msgbox("Get ready for a beating!")
+        call(SoccerHamBattleHandler)
+    } else {
+        createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
+        msgbox("Ham-howdy! You must be one of those\nHamHams who are always around here\lhaving adventures.\pYou should give up on this stupid new\nHam-battle idea and play some good old\lstrawberry soccer!")
+        applymovement(LOCALID_SOCCER_HAM,moves(walk_in_place_up))
+        waitmovement
+        release
+        end
+    }
+
+}
+
+
+script SoccerHamBattleHandler {
+    setflag(FLAG_FOUGHT_SOCCER_HAM)
+    setflag(FLAG_NO_WHITEOUT)
+    setwildbattle(SPECIES_STRAWBERRY_SOCCER_HAM, 5, ITEM_LEFTOVERS)
+	dowildbattle
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    switch(var(VAR_RESULT)) {
+        case B_OUTCOME_WON:
+            createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
+            msgbox("No way! You can't beat me! Not with\nall of my training!\pYou'll never get that hammer though!")
+            fadescreen(FADE_TO_BLACK)
+            playse(SE_EXIT)
+            removeobject(LOCALID_SOCCER_HAM)
+            waitse
+            fadescreen(FADE_FROM_BLACK)
+            release
+            end
+        case B_OUTCOME_RAN:
+            createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
+            msgbox("Ha! That's right, run away little Ham!")
+            special(HealPlayerParty)
+            release 
+            end
+        case B_OUTCOME_LOST:
+            createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
+            msgbox("I'm still the best!\pWho needs this ham-battle nonsense?\pI got all the strength I need from\nplaying strawberry soccer.")
+            release
+            end
+    }
+    return
+}
+
 script AcornPathSouthPanda {
     lock
     dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)
     switch(var(VAR_RESULT)) {
         case 0:
+            call(Common_EventScript_MoveToFront)
             break
         case 1:
             call(Common_EventScript_HifHif)
@@ -39,7 +185,15 @@ script AcornPathSouthPanda {
             release
             end
         case 2:
+            call(Common_EventScript_MoveToFront)
             call(Common_EventScript_TackQ)
+            applymovement(LOCALID_PANDA,moves(face_down))
+            waitmovement
+            createfieldmugshot(MUGSHOT_PANDA, EMOTE_NORMAL)
+            setspeaker("Panda")
+            msgbox("Ow! Hamtaro, why would you do that?")
+            applymovement(LOCALID_PANDA,moves(face_up))
+            waitmovement
             release
             end
         case 3:
@@ -47,25 +201,6 @@ script AcornPathSouthPanda {
             msgbox("Nothing there...$")
             release
             end
-    }
-    getobjectfacingdirection(LOCALID_PLAYER, VAR_TEMP_1)
-    switch (var(VAR_TEMP_1)) {
-        case DIR_EAST:
-            applymovement(LOCALID_PLAYER, moves(
-                walk_down
-                walk_right
-                face_up
-            ))
-            waitmovement
-        case DIR_WEST:
-            applymovement(LOCALID_PLAYER, moves(
-                walk_down
-                walk_left
-                face_up
-            ))
-            waitmovement
-        default:
-            break
     }
     call(Common_EventScript_Hamha)
     applymovement(LOCALID_PLAYER, moves(face_up))
@@ -144,12 +279,17 @@ script AcornPathSouthPanda {
         waitmovement
         setspeaker("Panda")
         createfieldmugshot(MUGSHOT_PANDA, EMOTE_NORMAL)
-        msgbox(format("It works! Thanks for your help Hamtaro! I'll see you at the clubhouse later!$"))
+        msgbox(format("It works and I got the parts I needed!\pThanks for your help Hamtaro! I'll see you at the clubhouse later!$"))
+        applymovement(LOCALID_PLAYER, moves(walk_down * 2 walk_right * 2 face_down))
         applymovement(LOCALID_PANDA, moves(
-            walk_left * 6
+            walk_down * 12
         ))
         waitmovement
         removeobject(LOCALID_PANDA)
+        setflag(FLAG_NEED_SNOOZER)
+        setflag(FLAG_GOT_PANDA)
+        clearflag(FLAG_HIDE_WORKING_PANDA)
+        clearflag(FLAG_NOT_GOT_PANDA)
         release
         end
     } else {
@@ -172,6 +312,8 @@ script AcornParkSouthSnoozer {
     dynmultipush(gText_DigDig, 3)
     if(checkitem(ITEM_TM_UPROAR)) {
         dynmultipush(AcornParkSouthDingBang, 4)
+    } else {
+        dynmultipush(AcornParkSouthQuestionMarks, 4)
     }
     dynmultistack(1, 1, FALSE, 5, 0, 0, DYN_MULTICHOICE_CB_NONE)
     switch(var(VAR_RESULT)) {
@@ -225,23 +367,64 @@ script AcornParkSouthSnoozer {
             msgbox(format("There's a little bit of dirt on Snoozer now, but he's still sleeping through it.$"))
             break
         case 4:
-            // Insert Dingbang graphics here
-            msgbox("DingBang!$")
-            applymovement(LOCALID_SNOOZER, moves(
-                walk_in_place_up
-            ))
-            waitmovement
-            createfieldmugshot(MUGSHOT_SNOOZER, EMOTE_NORMAL)
-            setspeaker("Snoozer")
-            msgbox("Huh? what's going on? Why is it so noisy...")
-            applymovement(LOCALID_SNOOZER, moves(
-                walk_in_place_left
-            ))
-            waitmovement
-            break
+            if(checkitem(ITEM_TM_UPROAR)) {
+                // Insert Dingbang graphics here
+                createfieldmugshot(MUGSHOT_HAMTARO, EMOTE_NORMAL)
+                setspeaker("Hamtaro")
+                message("DingBang!$")
+                applymovement(LOCALID_PLAYER, moves(dingbang))
+                waitmovement
+                waitmessage
+                waitbuttonpress
+                applymovement(LOCALID_SNOOZER, moves(
+                    walk_in_place_up
+                ))
+                waitmovement
+                createfieldmugshot(MUGSHOT_SNOOZER, EMOTE_NORMAL)
+                setspeaker("Snoozer")
+                msgbox("Huh? what's going on?\pWhy is it so noisy...")
+                applymovement(LOCALID_SNOOZER, moves(
+                    walk_in_place_left
+                ))
+                waitmovement
+                msgbox("Oh, back to the clubhouse?\pSure thing. I guess I can do that...")
+                fadescreen(FADE_TO_BLACK)
+                removeobject(LOCALID_SNOOZER)
+                playse(SE_EXIT)
+                waitse
+                fadescreen(FADE_FROM_BLACK)
+                break
+            }
     }
     release
     end
+}
+
+script AcornPark_OxnardsSunflowerSeed {
+    lock
+    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)
+    switch(var(VAR_RESULT)) {
+        case 0:
+            call(Common_EventScript_Hamha)
+            release
+            end
+        case 1:
+            call(Common_EventScript_HifHif)
+            giveitem(ITEM_SUNFLOWER_SEED)
+            removeobject(LOCALID_SEED)
+            release
+            end
+        case 2:
+            call(Common_EventScript_TackQ)
+            release
+            end
+        case 3:
+            call(Common_EventScript_DigDig)
+            msgbox("Nothing here...")
+            release
+            end
+    }
+
 }
 
 movement AcornParkSouthHamha {
@@ -283,5 +466,11 @@ movement EmoteTest {
 }
 
 text AcornParkSouthDingBang {
-    "DingBang$"
+    "{COLOR RED}DINGBANG$"
+}
+text AcornParkSouthShockieText {
+    "{COLOR RED}SHOCKIE$"
+}
+text AcornParkSouthQuestionMarks {
+    "?????$"
 }

@@ -64,6 +64,15 @@ script AcornParkEntranceOxnard {
                     waitmovement
                     setflag(FLAG_GOT_OXNARD)
                     removeobject(LOCALID_OXNARD)
+                    setflag(FLAG_GOT_EVERYONE)
+                    setflag(FLAG_HIDE_WORKING_PANDA)
+                    clearflag(FLAG_HIDE_CLUBHOUSE_OXNARD)
+                    clearflag(FLAG_HIDE_CLUBHOUSE_PANDA)
+                    msgbox("You got everyone!\pIt's time to go back to the clubhouse!")
+                    warp(MAP_HAM_HAM_CLUBHOUSE_ENDING, 0)
+                    waitstate
+                    releaseall
+                    end
                 } else {
                     call(Common_EventScript_NoP)
                     applymovement(LOCALID_PLAYER, moves(face_up))
@@ -93,3 +102,4 @@ script AcornParkEntranceOxnard {
     release
     end
 }
+

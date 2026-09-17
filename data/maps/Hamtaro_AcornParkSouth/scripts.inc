@@ -50,654 +50,1152 @@ AcornPark_FixLadder::
 	return
 
 
-AcornPathSouthPanda::
+AcornParkSouthSoccerHam::
 # 31 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	lock
 # 32 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	dynmultichoice 1, 1, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig
+	dynmultipush gText_Hamha, 0
 # 33 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	switch VAR_RESULT
+	dynmultipush gText_HifHif, 1
 # 34 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	case 0, AcornPathSouthPanda_3
-# 36 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	case 1, AcornPathSouthPanda_4
+	dynmultipush gText_TackQ, 2
+# 35 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	dynmultipush gText_DigDig, 3
+	checkitem ITEM_TM_ASTONISH
+# 0 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne AcornParkSouthSoccerHam_2
+# 39 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	dynmultipush AcornParkSouthQuestionMarks, 4
+AcornParkSouthSoccerHam_1:
 # 41 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	case 2, AcornPathSouthPanda_5
+	dynmultistack 1, 1, FALSE, 5, 0, 0, DYN_MULTICHOICE_CB_NONE
+# 42 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	switch VAR_RESULT
+# 43 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case 0, AcornParkSouthSoccerHam_7
+# 47 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case 1, AcornParkSouthSoccerHam_8
+# 52 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case 2, AcornParkSouthSoccerHam_9
+# 62 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case 3, AcornParkSouthSoccerHam_10
+# 79 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case 4, AcornParkSouthSoccerHam_11
+AcornParkSouthSoccerHam_5:
+# 123 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	goto_if_set FLAG_FOUGHT_SOCCER_HAM, AcornParkSouthSoccerHam_12
+# 132 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	createfieldmugshot MUGSHOT_SOCCER_HAM, EMOTE_NORMAL
+# 133 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornParkSouthSoccerHam_Text_12
+# 134 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_SOCCER_HAM, AcornParkSouthSoccerHam_Movement_0
+# 135 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmovement
+# 136 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	release
+	end
+
+AcornParkSouthSoccerHam_2:
+# 37 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	dynmultipush AcornParkSouthShockieText, 4
+	goto AcornParkSouthSoccerHam_1
+
+AcornParkSouthSoccerHam_7:
+# 44 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	call Common_EventScript_MoveToFront
 # 45 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	call Common_EventScript_Hamha
+	goto AcornParkSouthSoccerHam_5
+
+AcornParkSouthSoccerHam_8:
+# 48 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	call Common_EventScript_HifHif
+# 49 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornParkSouthSoccerHam_Text_0
+# 50 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	release
+	end
+
+AcornParkSouthSoccerHam_9:
+# 53 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	call Common_EventScript_MoveToFront
+# 54 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	call Common_EventScript_TackQ
+# 55 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_SOCCER_HAM, AcornParkSouthSoccerHam_Movement_0
+# 56 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	createfieldmugshot MUGSHOT_SOCCER_HAM, EMOTE_NORMAL
+# 57 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornParkSouthSoccerHam_Text_1
+# 58 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_SOCCER_HAM, AcornParkSouthSoccerHam_Movement_1
+# 59 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmovement
+# 60 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	release
+	end
+
+AcornParkSouthSoccerHam_10:
+# 63 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	call Common_EventScript_DigDig
+# 64 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	getobjectfacingdirection LOCALID_PLAYER, VAR_TEMP_1
+# 65 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	switch VAR_TEMP_1
+# 66 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case DIR_EAST, AcornParkSouthSoccerHam_17
+# 69 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case DIR_WEST, AcornParkSouthSoccerHam_18
+AcornParkSouthSoccerHam_15:
+# 75 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	createfieldmugshot MUGSHOT_SOCCER_HAM, EMOTE_NORMAL
+# 76 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornParkSouthSoccerHam_Text_2
+# 77 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	release
+	end
+
+AcornParkSouthSoccerHam_11:
+# 80 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	setspeaker AcornParkSouthSoccerHam_Text_3
+# 81 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	createfieldmugshot MUGSHOT_HAMTARO, EMOTE_NORMAL
+# 82 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	message AcornParkSouthSoccerHam_Text_4
+# 83 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PLAYER, AcornParkSouthSoccerHam_Movement_4
+# 84 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmovement
+# 85 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmessage
+# 86 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitbuttonpress
+# 87 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	goto_if_set FLAG_FOUGHT_SOCCER_HAM, AcornParkSouthSoccerHam_21
+	checkitem ITEM_TM_ASTONISH
+# 0 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne AcornParkSouthSoccerHam_23
+	goto AcornParkSouthSoccerHam_5
+
+AcornParkSouthSoccerHam_12:
+# 124 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	createfieldmugshot MUGSHOT_SOCCER_HAM, EMOTE_NORMAL
+# 125 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornParkSouthSoccerHam_Text_10
+# 126 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_SOCCER_HAM, AcornParkSouthSoccerHam_Movement_8
+# 127 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmovement
+# 128 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	createfieldmugshot MUGSHOT_SOCCER_HAM, EMOTE_NORMAL
+# 129 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornParkSouthSoccerHam_Text_11
+# 130 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	call SoccerHamBattleHandler
+	return
+
+AcornParkSouthSoccerHam_17:
+# 67 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PLAYER, AcornParkSouthSoccerHam_Movement_2
+# 68 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmovement
+	goto AcornParkSouthSoccerHam_15
+
+AcornParkSouthSoccerHam_18:
+# 70 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PLAYER, AcornParkSouthSoccerHam_Movement_3
+# 71 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmovement
+	goto AcornParkSouthSoccerHam_15
+
+AcornParkSouthSoccerHam_21:
+	goto AcornParkSouthSoccerHam_5
+
+AcornParkSouthSoccerHam_23:
+# 91 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	createfieldmugshot MUGSHOT_SOCCER_HAM, EMOTE_NORMAL
+# 92 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornParkSouthSoccerHam_Text_5
+# 93 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_SOCCER_HAM, AcornParkSouthSoccerHam_Movement_5
+# 94 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	playse SE_PIN
+# 95 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmovement
+# 96 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitse
+# 97 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	createfieldmugshot MUGSHOT_SOCCER_HAM, EMOTE_NORMAL
+# 98 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornParkSouthSoccerHam_Text_6
+# 100 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmovement
+# 101 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	removefieldmugshot
+# 102 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	setspeaker SP_NAME_NONE
+# 103 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	message AcornParkSouthSoccerHam_Text_7
+# 104 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	playse MUS_RG_OBTAIN_KEY_ITEM
+# 105 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	additem ITEM_TM_THIEF, 1
+# 106 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PLAYER, AcornParkSouthDictionary
+# 107 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmovement
+# 108 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitse
+# 109 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmessage
+# 110 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitbuttonpress
+# 111 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	closemessage
+# 112 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PLAYER, AcornParkSouthSoccerHam_Movement_6
+# 113 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmovement
+# 114 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	createfieldmugshot MUGSHOT_SOCCER_HAM, EMOTE_NORMAL
+# 115 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornParkSouthSoccerHam_Text_8
+# 116 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_SOCCER_HAM, AcornParkSouthSoccerHam_Movement_7
+# 117 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmovement
+# 118 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	createfieldmugshot MUGSHOT_SOCCER_HAM, EMOTE_NORMAL
+# 119 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornParkSouthSoccerHam_Text_9
+# 120 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	call SoccerHamBattleHandler
+	goto AcornParkSouthSoccerHam_5
+
+
+SoccerHamBattleHandler::
+# 144 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	setflag FLAG_FOUGHT_SOCCER_HAM
+# 145 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	setflag FLAG_NO_WHITEOUT
+# 146 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	setwildbattle SPECIES_STRAWBERRY_SOCCER_HAM, 5, ITEM_LEFTOVERS
+# 147 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	dowildbattle
+# 148 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 149 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	switch VAR_RESULT
+# 150 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case B_OUTCOME_WON, SoccerHamBattleHandler_3
+# 160 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case B_OUTCOME_RAN, SoccerHamBattleHandler_4
+# 166 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case B_OUTCOME_LOST, SoccerHamBattleHandler_5
+	return
+
+SoccerHamBattleHandler_3:
+# 151 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	createfieldmugshot MUGSHOT_SOCCER_HAM, EMOTE_NORMAL
+# 152 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox SoccerHamBattleHandler_Text_0
+# 153 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 154 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	playse SE_EXIT
+# 155 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	removeobject LOCALID_SOCCER_HAM
+# 156 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitse
+# 157 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 158 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	release
+	end
+
+SoccerHamBattleHandler_4:
+# 161 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	createfieldmugshot MUGSHOT_SOCCER_HAM, EMOTE_NORMAL
+# 162 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox SoccerHamBattleHandler_Text_1
+# 163 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	special HealPlayerParty
+# 164 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	release
+	end
+
+SoccerHamBattleHandler_5:
+# 167 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	createfieldmugshot MUGSHOT_SOCCER_HAM, EMOTE_NORMAL
+# 168 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox SoccerHamBattleHandler_Text_2
+# 169 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	release
+	end
+
+
+AcornPathSouthPanda::
+# 176 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	lock
+# 177 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	dynmultichoice 1, 1, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig
+# 178 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	switch VAR_RESULT
+# 179 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case 0, AcornPathSouthPanda_3
+# 182 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case 1, AcornPathSouthPanda_4
+# 187 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case 2, AcornPathSouthPanda_5
+# 199 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	case 3, AcornPathSouthPanda_6
 AcornPathSouthPanda_1:
-# 51 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	getobjectfacingdirection LOCALID_PLAYER, VAR_TEMP_1
-# 52 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	switch VAR_TEMP_1
-# 53 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	case DIR_EAST, AcornPathSouthPanda_9
-# 60 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	case DIR_WEST, AcornPathSouthPanda_10
-AcornPathSouthPanda_7:
-# 70 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 205 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	call Common_EventScript_Hamha
-# 71 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	applymovement LOCALID_PLAYER, AcornPathSouthPanda_Movement_2
-# 72 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 206 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PLAYER, AcornParkSouthSoccerHam_Movement_6
+# 207 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitmovement
-# 73 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	applymovement LOCALID_PANDA, AcornPathSouthPanda_Movement_3
-# 74 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 208 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PANDA, AcornParkSouthSoccerHam_Movement_1
+# 209 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitmovement
-# 75 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 210 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	createfieldmugshot MUGSHOT_PANDA, EMOTE_NORMAL
-# 76 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	setspeaker AcornPathSouthPanda_Text_2
-# 77 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	msgbox AcornPathSouthPanda_Text_3
-# 78 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	applymovement LOCALID_PANDA, AcornPathSouthPanda_Movement_4
-# 79 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 211 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	setspeaker AcornPathSouthPanda_Text_1
+# 212 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornPathSouthPanda_Text_4
+# 213 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PANDA, AcornParkSouthSoccerHam_Movement_0
+# 214 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitmovement
-# 80 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 215 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	createfieldmugshot MUGSHOT_PANDA, EMOTE_NORMAL
-# 81 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	setspeaker AcornPathSouthPanda_Text_2
-# 82 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	message AcornPathSouthPanda_Text_4
-# 83 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	applymovement LOCALID_PANDA, AcornPathSouthPanda_Movement_3
-# 84 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	waitmessage
-# 85 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	waitbuttonpress
-# 86 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	closemessage
-# 87 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	createfieldmugshot MUGSHOT_PANDA, EMOTE_NORMAL
-# 88 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	setspeaker AcornPathSouthPanda_Text_2
-# 89 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 216 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	setspeaker AcornPathSouthPanda_Text_1
+# 217 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	message AcornPathSouthPanda_Text_5
-# 90 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	applymovement LOCALID_PANDA, AcornParkSouthShockie
-# 91 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 218 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PANDA, AcornParkSouthSoccerHam_Movement_1
+# 219 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitmessage
-# 92 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 220 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitbuttonpress
-# 93 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 221 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	closemessage
-# 94 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 222 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	createfieldmugshot MUGSHOT_PANDA, EMOTE_NORMAL
+# 223 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	setspeaker AcornPathSouthPanda_Text_1
+# 224 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	message AcornPathSouthPanda_Text_6
+# 225 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PANDA, AcornParkSouthShockie
+# 226 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmessage
+# 227 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitbuttonpress
+# 228 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	closemessage
+# 229 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	removefieldmugshot
 	checkitem ITEM_TM_ASTONISH, 1
 # 0 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_eq AcornPathSouthPanda_13
-AcornPathSouthPanda_12:
+	goto_if_eq AcornPathSouthPanda_8
+AcornPathSouthPanda_7:
 	checkitem ITEM_HAMMER
 # 0 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_ne AcornPathSouthPanda_16
-# 156 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	goto_if_ne AcornPathSouthPanda_11
+# 296 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	createfieldmugshot MUGSHOT_PANDA, EMOTE_NORMAL
-# 157 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	setspeaker AcornPathSouthPanda_Text_2
-# 158 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	msgbox AcornPathSouthPanda_Text_10
-# 159 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	applymovement LOCALID_PANDA, AcornPathSouthPanda_Movement_4
-# 160 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 297 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	setspeaker AcornPathSouthPanda_Text_1
+# 298 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornPathSouthPanda_Text_11
+# 299 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PANDA, AcornParkSouthSoccerHam_Movement_0
+# 300 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitmovement
-# 161 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 301 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	release
 	end
 
 AcornPathSouthPanda_3:
+# 180 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	call Common_EventScript_MoveToFront
 	goto AcornPathSouthPanda_1
 
 AcornPathSouthPanda_4:
-# 37 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 183 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	call Common_EventScript_HifHif
-# 38 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 184 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	msgbox AcornPathSouthPanda_Text_0
-# 39 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 185 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	release
 	end
 
 AcornPathSouthPanda_5:
-# 42 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 188 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	call Common_EventScript_MoveToFront
+# 189 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	call Common_EventScript_TackQ
-# 43 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 190 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PANDA, AcornPathSouthPanda_Movement_0
+# 191 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmovement
+# 192 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	createfieldmugshot MUGSHOT_PANDA, EMOTE_NORMAL
+# 193 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	setspeaker AcornPathSouthPanda_Text_1
+# 194 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornPathSouthPanda_Text_2
+# 195 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PANDA, AcornParkSouthSoccerHam_Movement_6
+# 196 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmovement
+# 197 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	release
 	end
 
 AcornPathSouthPanda_6:
-# 46 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 200 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	call Common_EventScript_DigDig
-# 47 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	msgbox AcornPathSouthPanda_Text_1
-# 48 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 201 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornPathSouthPanda_Text_3
+# 202 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	release
 	end
 
-AcornPathSouthPanda_9:
-# 54 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	applymovement LOCALID_PLAYER, AcornPathSouthPanda_Movement_0
-# 59 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	waitmovement
-	goto AcornPathSouthPanda_7
-
-AcornPathSouthPanda_10:
-# 61 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	applymovement LOCALID_PLAYER, AcornPathSouthPanda_Movement_1
-# 66 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	waitmovement
-	goto AcornPathSouthPanda_7
-
-AcornPathSouthPanda_13:
-# 96 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornPathSouthPanda_8:
+# 231 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	applymovement LOCALID_PLAYER, AcornParkSouthShockie
-# 97 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 232 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitmovement
-# 98 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 233 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	setspeaker SP_NAME_NONE
-# 99 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	message AcornPathSouthPanda_Text_6
-# 100 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 234 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	message AcornPathSouthPanda_Text_7
+# 235 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	playse MUS_RG_OBTAIN_KEY_ITEM
-# 101 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 236 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	additem ITEM_TM_ASTONISH, 1
-# 102 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 237 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	applymovement LOCALID_PLAYER, AcornParkSouthDictionary
-# 103 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 238 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitmovement
-# 104 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 239 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitse
-# 105 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 240 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitmessage
-# 106 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 241 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitbuttonpress
-# 107 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 242 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	closemessage
-# 108 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	applymovement LOCALID_PLAYER, AcornPathSouthPanda_Movement_2
-# 109 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 243 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PLAYER, AcornParkSouthSoccerHam_Movement_6
+# 244 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitmovement
-	goto AcornPathSouthPanda_12
+	goto AcornPathSouthPanda_7
 
-AcornPathSouthPanda_16:
-# 112 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornPathSouthPanda_11:
+# 247 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	createfieldmugshot MUGSHOT_PANDA, EMOTE_NORMAL
-# 113 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	setspeaker AcornPathSouthPanda_Text_2
-# 114 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	applymovement LOCALID_PANDA, AcornPathSouthPanda_Movement_5
-# 115 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	msgbox AcornPathSouthPanda_Text_7
-# 116 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	applymovement LOCALID_PANDA, AcornPathSouthPanda_Movement_4
-# 117 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	waitmovement
-# 118 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	applymovement LOCALID_PLAYER, AcornPathSouthPanda_Movement_6
-# 123 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	waitmovement
-# 124 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 125 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	playse SE_M_EARTHQUAKE
-# 126 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	waitse
-# 127 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	playse SE_M_DIG
-# 128 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	waitse
-# 129 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	playse SE_M_CUT
-# 130 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	waitse
-# 131 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	call AcornPark_FixLadder
-# 132 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	special DrawWholeMapView
-# 133 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	fadescreen FADE_FROM_BLACK
-# 134 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	setspeaker AcornPathSouthPanda_Text_2
-# 135 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	createfieldmugshot MUGSHOT_PANDA, EMOTE_NORMAL
-# 136 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 248 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	setspeaker AcornPathSouthPanda_Text_1
+# 249 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PANDA, AcornParkSouthSoccerHam_Movement_5
+# 250 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	msgbox AcornPathSouthPanda_Text_8
-# 137 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	applymovement LOCALID_PANDA, AcornPathSouthPanda_Movement_7
-# 141 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	applymovement LOCALID_PLAYER, AcornPathSouthPanda_Movement_8
-# 144 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 251 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PANDA, AcornParkSouthSoccerHam_Movement_0
+# 252 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitmovement
-# 145 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	setspeaker AcornPathSouthPanda_Text_2
-# 146 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 253 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PLAYER, AcornPathSouthPanda_Movement_1
+# 258 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmovement
+# 259 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 260 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	playse SE_M_EARTHQUAKE
+# 261 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitse
+# 262 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	playse SE_M_DIG
+# 263 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitse
+# 264 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	playse SE_M_CUT
+# 265 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitse
+# 266 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	call AcornPark_FixLadder
+# 267 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	special DrawWholeMapView
+# 268 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 269 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	setspeaker AcornPathSouthPanda_Text_1
+# 270 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	createfieldmugshot MUGSHOT_PANDA, EMOTE_NORMAL
-# 147 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 271 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	msgbox AcornPathSouthPanda_Text_9
-# 148 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	applymovement LOCALID_PANDA, AcornPathSouthPanda_Movement_9
-# 151 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 272 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PANDA, AcornPathSouthPanda_Movement_2
+# 276 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PLAYER, AcornPathSouthPanda_Movement_3
+# 279 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitmovement
-# 152 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 280 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	setspeaker AcornPathSouthPanda_Text_1
+# 281 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	createfieldmugshot MUGSHOT_PANDA, EMOTE_NORMAL
+# 282 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornPathSouthPanda_Text_10
+# 283 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PLAYER, AcornPathSouthPanda_Movement_4
+# 284 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PANDA, AcornPathSouthPanda_Movement_5
+# 287 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmovement
+# 288 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	removeobject LOCALID_PANDA
-# 153 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 289 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	setflag FLAG_NEED_SNOOZER
+# 290 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	setflag FLAG_GOT_PANDA
+# 291 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	clearflag FLAG_HIDE_WORKING_PANDA
+# 292 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	clearflag FLAG_NOT_GOT_PANDA
+# 293 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	release
 	end
 
 
 AcornParkSouthSnoozer::
-# 168 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 308 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	lock
-# 169 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 309 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	dynmultipush gText_Hamha, 0
-# 170 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 310 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	dynmultipush gText_HifHif, 1
-# 171 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 311 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	dynmultipush gText_TackQ, 2
-# 172 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 312 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	dynmultipush gText_DigDig, 3
 	checkitem ITEM_TM_UPROAR
 # 0 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne AcornParkSouthSnoozer_2
+# 316 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	dynmultipush AcornParkSouthQuestionMarks, 4
 AcornParkSouthSnoozer_1:
-# 176 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 318 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	dynmultistack 1, 1, FALSE, 5, 0, 0, DYN_MULTICHOICE_CB_NONE
-# 177 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 319 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	switch VAR_RESULT
-# 178 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	case 0, AcornParkSouthSnoozer_6
-# 185 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	case 1, AcornParkSouthSnoozer_7
-# 193 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	case 2, AcornParkSouthSnoozer_8
-# 223 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	case 3, AcornParkSouthSnoozer_9
-# 227 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	case 4, AcornParkSouthSnoozer_10
-AcornParkSouthSnoozer_4:
-# 243 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 320 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case 0, AcornParkSouthSnoozer_7
+# 327 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case 1, AcornParkSouthSnoozer_8
+# 335 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case 2, AcornParkSouthSnoozer_9
+# 365 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case 3, AcornParkSouthSnoozer_10
+# 369 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case 4, AcornParkSouthSnoozer_11
+AcornParkSouthSnoozer_5:
+# 399 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	release
 	end
 
 AcornParkSouthSnoozer_2:
-# 174 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 314 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	dynmultipush AcornParkSouthDingBang, 4
 	goto AcornParkSouthSnoozer_1
 
-AcornParkSouthSnoozer_6:
-# 179 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	call Common_EventScript_Hamha
-# 180 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	createfieldmugshot MUGSHOT_SNOOZER, EMOTE_NORMAL
-# 181 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	setspeaker AcornParkSouthSnoozer_Text_0
-# 182 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	msgbox AcornParkSouthSnoozer_Text_1
-	goto AcornParkSouthSnoozer_4
-
 AcornParkSouthSnoozer_7:
-# 186 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	call Common_EventScript_HifHif
-# 187 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	msgbox AcornParkSouthSnoozer_Text_2
-# 188 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 321 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	call Common_EventScript_Hamha
+# 322 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	createfieldmugshot MUGSHOT_SNOOZER, EMOTE_NORMAL
-# 189 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 323 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	setspeaker AcornParkSouthSnoozer_Text_0
-# 190 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 324 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	msgbox AcornParkSouthSnoozer_Text_1
-	goto AcornParkSouthSnoozer_4
+	goto AcornParkSouthSnoozer_5
 
 AcornParkSouthSnoozer_8:
-# 194 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	call Common_EventScript_TackQ
-# 195 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 328 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	call Common_EventScript_HifHif
+# 329 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornParkSouthSnoozer_Text_2
+# 330 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	createfieldmugshot MUGSHOT_SNOOZER, EMOTE_NORMAL
-# 196 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 331 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	setspeaker AcornParkSouthSnoozer_Text_0
+# 332 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornParkSouthSnoozer_Text_1
+	goto AcornParkSouthSnoozer_5
+
+AcornParkSouthSnoozer_9:
+# 336 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	call Common_EventScript_TackQ
+# 337 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	createfieldmugshot MUGSHOT_SNOOZER, EMOTE_NORMAL
+# 338 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	setspeaker AcornParkSouthSnoozer_Text_0
 	checkitem ITEM_TM_REST
 # 0 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_ne AcornParkSouthSnoozer_12
-# 201 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	goto_if_ne AcornParkSouthSnoozer_13
+# 343 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	msgbox AcornParkSouthSnoozer_Text_3
-# 205 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 347 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	setspeaker SP_NAME_NONE
-# 206 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 348 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	message AcornParkSouthSnoozer_Text_4
-# 207 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 349 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	playse MUS_RG_OBTAIN_KEY_ITEM
-# 208 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 350 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	additem ITEM_TM_REST, 1
-# 209 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 351 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	applymovement LOCALID_PLAYER, AcornParkSouthDictionary
-# 210 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 352 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitmovement
-# 211 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 353 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitse
-# 212 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 354 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitmessage
-# 213 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 355 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitbuttonpress
-# 214 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 356 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	closemessage
-# 215 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	applymovement LOCALID_PLAYER, AcornPathSouthPanda_Movement_2
-# 216 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 357 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PLAYER, AcornParkSouthSoccerHam_Movement_6
+# 358 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitmovement
-AcornParkSouthSnoozer_11:
-# 218 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornParkSouthSnoozer_12:
+# 360 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	msgbox AcornParkSouthSnoozer_Text_5
-# 219 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	applymovement LOCALID_PLAYER, AcornParkSouthSnoozer_Movement_0
-# 220 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 361 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PLAYER, AcornPathSouthPanda_Movement_0
+# 362 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	waitmovement
-# 221 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 363 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	msgbox AcornParkSouthSnoozer_Text_6
-	goto AcornParkSouthSnoozer_4
-
-AcornParkSouthSnoozer_9:
-# 224 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	call Common_EventScript_DigDig
-# 225 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	msgbox AcornParkSouthSnoozer_Text_7
-	goto AcornParkSouthSnoozer_4
+	goto AcornParkSouthSnoozer_5
 
 AcornParkSouthSnoozer_10:
-# 229 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	msgbox AcornParkSouthSnoozer_Text_8
-# 230 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	applymovement LOCALID_SNOOZER, AcornPathSouthPanda_Movement_4
-# 233 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	waitmovement
-# 234 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	createfieldmugshot MUGSHOT_SNOOZER, EMOTE_NORMAL
-# 235 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	setspeaker AcornParkSouthSnoozer_Text_0
-# 236 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	msgbox AcornParkSouthSnoozer_Text_9
-# 237 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	applymovement LOCALID_SNOOZER, AcornParkSouthSnoozer_Movement_1
-# 240 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	waitmovement
-	goto AcornParkSouthSnoozer_4
+# 366 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	call Common_EventScript_DigDig
+# 367 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornParkSouthSnoozer_Text_7
+	goto AcornParkSouthSnoozer_5
 
-AcornParkSouthSnoozer_12:
-# 198 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornParkSouthSnoozer_11:
+	checkitem ITEM_TM_UPROAR
+# 0 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne AcornParkSouthSnoozer_16
+	goto AcornParkSouthSnoozer_5
+
+AcornParkSouthSnoozer_13:
+# 340 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	msgbox AcornParkSouthSnoozer_Text_1
-	goto AcornParkSouthSnoozer_11
+	goto AcornParkSouthSnoozer_12
+
+AcornParkSouthSnoozer_16:
+# 372 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	createfieldmugshot MUGSHOT_HAMTARO, EMOTE_NORMAL
+# 373 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	setspeaker AcornParkSouthSoccerHam_Text_3
+# 374 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	message AcornParkSouthSnoozer_Text_8
+# 375 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_PLAYER, AcornParkSouthSnoozer_Movement_0
+# 376 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmovement
+# 377 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmessage
+# 378 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitbuttonpress
+# 379 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_SNOOZER, AcornParkSouthSoccerHam_Movement_0
+# 382 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmovement
+# 383 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	createfieldmugshot MUGSHOT_SNOOZER, EMOTE_NORMAL
+# 384 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	setspeaker AcornParkSouthSnoozer_Text_0
+# 385 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornParkSouthSnoozer_Text_9
+# 386 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	applymovement LOCALID_SNOOZER, AcornParkSouthSoccerHam_Movement_7
+# 389 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitmovement
+# 390 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornParkSouthSnoozer_Text_10
+# 391 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 392 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	removeobject LOCALID_SNOOZER
+# 393 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	playse SE_EXIT
+# 394 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	waitse
+# 395 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+	goto AcornParkSouthSnoozer_5
 
 
-# 247 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornPark_OxnardsSunflowerSeed::
+# 404 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	lock
+# 405 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	dynmultichoice 1, 1, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig
+# 406 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	switch VAR_RESULT
+# 407 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case 0, AcornPark_OxnardsSunflowerSeed_2
+# 411 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case 1, AcornPark_OxnardsSunflowerSeed_3
+# 417 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case 2, AcornPark_OxnardsSunflowerSeed_4
+# 421 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	case 3, AcornPark_OxnardsSunflowerSeed_5
+	return
+
+AcornPark_OxnardsSunflowerSeed_2:
+# 408 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	call Common_EventScript_Hamha
+# 409 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	release
+	end
+
+AcornPark_OxnardsSunflowerSeed_3:
+# 412 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	call Common_EventScript_HifHif
+# 413 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	giveitem ITEM_SUNFLOWER_SEED
+# 414 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	removeobject LOCALID_SEED
+# 415 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	release
+	end
+
+AcornPark_OxnardsSunflowerSeed_4:
+# 418 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	call Common_EventScript_TackQ
+# 419 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	release
+	end
+
+AcornPark_OxnardsSunflowerSeed_5:
+# 422 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	call Common_EventScript_DigDig
+# 423 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	msgbox AcornPark_OxnardsSunflowerSeed_Text_0
+# 424 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	release
+	end
+
+
+# 430 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 AcornParkSouthHamha:
-# 248 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 431 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	hamha
 	step_end
 
-# 251 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 434 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 AcornParkSouthShockie:
-# 252 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 435 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	delay_16
-# 253 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 436 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	delay_16
-# 254 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 437 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	shockie
 	step_end
 
-# 257 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 440 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 AcornParkSouthDictionary:
-# 258 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 441 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	delay_8
-# 259 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 442 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	emote_x
 	step_end
 
-# 262 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 445 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 EmoteTest:
-# 263 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 446 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	emote_x
-# 264 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 447 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	delay_16
-# 265 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 448 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	delay_16
-# 266 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 449 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	delay_16
-# 267 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 450 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	emote_exclamation_mark
-# 268 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 451 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	delay_16
-# 269 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 452 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	delay_16
-# 270 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 453 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	delay_16
-# 271 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 454 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	emote_question_mark
-# 272 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 455 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	delay_16
-# 273 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 456 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	delay_16
-# 274 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 457 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	delay_16
-# 275 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 458 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	emote_heart
-# 276 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 459 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	delay_16
-# 277 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 460 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	delay_16
-# 278 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 461 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	delay_16
-# 279 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 462 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	emote_double_exclamation_mark
-# 280 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 463 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	delay_16
-# 281 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 464 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	delay_16
-# 282 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 465 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	delay_16
 	step_end
 
-# 54 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-AcornPathSouthPanda_Movement_0:
 # 55 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_down
-# 56 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_right
-# 57 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	face_up
-	step_end
-
-# 61 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-AcornPathSouthPanda_Movement_1:
-# 62 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_down
-# 63 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_left
-# 64 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	face_up
-	step_end
-
-# 71 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-AcornPathSouthPanda_Movement_2:
-# 71 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	face_up
-	step_end
-
-# 73 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-AcornPathSouthPanda_Movement_3:
-# 73 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_in_place_down
-	step_end
-
-# 78 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-AcornPathSouthPanda_Movement_4:
-# 78 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornParkSouthSoccerHam_Movement_0:
+# 55 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	walk_in_place_up
 	step_end
 
-# 114 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-AcornPathSouthPanda_Movement_5:
-# 114 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 58 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornParkSouthSoccerHam_Movement_1:
+# 58 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_in_place_down
+	step_end
+
+# 67 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornParkSouthSoccerHam_Movement_2:
+# 67 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	face_left
+	step_end
+
+# 70 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornParkSouthSoccerHam_Movement_3:
+# 70 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	face_right
+	step_end
+
+# 83 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornParkSouthSoccerHam_Movement_4:
+# 83 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	shockie
+	step_end
+
+# 93 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornParkSouthSoccerHam_Movement_5:
+# 93 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
-# 118 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-AcornPathSouthPanda_Movement_6:
-# 119 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	lock_facing_direction
-# 120 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_down
-# 121 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	unlock_facing_direction
+# 112 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornParkSouthSoccerHam_Movement_6:
+# 112 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	face_up
 	step_end
 
-# 137 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-AcornPathSouthPanda_Movement_7:
-# 138 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_up
-# 138 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_up
-# 138 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_up
-# 138 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_up
-# 138 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_up
-# 138 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_up
-# 139 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_down
-	step_end
-
-# 141 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-AcornPathSouthPanda_Movement_8:
-# 142 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_up
-# 142 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_up
-	step_end
-
-# 148 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-AcornPathSouthPanda_Movement_9:
-# 149 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_left
-# 149 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_left
-# 149 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_left
-# 149 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_left
-# 149 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_left
-# 149 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	walk_left
-	step_end
-
-# 219 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-AcornParkSouthSnoozer_Movement_0:
-# 219 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	face_down
-	step_end
-
-# 237 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-AcornParkSouthSnoozer_Movement_1:
-# 238 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 116 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornParkSouthSoccerHam_Movement_7:
+# 116 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	walk_in_place_left
 	step_end
 
+# 126 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornParkSouthSoccerHam_Movement_8:
+# 126 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_in_place_right
+	step_end
+
+# 190 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornPathSouthPanda_Movement_0:
+# 190 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	face_down
+	step_end
+
+# 253 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornPathSouthPanda_Movement_1:
+# 254 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	lock_facing_direction
+# 255 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_down
+# 256 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	unlock_facing_direction
+	step_end
+
+# 272 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornPathSouthPanda_Movement_2:
+# 273 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_up
+# 273 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_up
+# 273 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_up
+# 273 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_up
+# 273 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_up
+# 273 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_up
+# 274 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_down
+	step_end
+
+# 276 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornPathSouthPanda_Movement_3:
+# 277 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_up
+# 277 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_up
+	step_end
+
+# 283 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornPathSouthPanda_Movement_4:
+# 283 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_down
+# 283 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_down
+# 283 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_right
+# 283 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_right
+# 283 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	face_down
+	step_end
+
+# 284 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornPathSouthPanda_Movement_5:
+# 285 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_down
+# 285 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_down
+# 285 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_down
+# 285 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_down
+# 285 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_down
+# 285 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_down
+# 285 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_down
+# 285 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_down
+# 285 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_down
+# 285 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_down
+# 285 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_down
+# 285 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	walk_down
+	step_end
+
+# 375 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornParkSouthSnoozer_Movement_0:
+# 375 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	dingbang
+	step_end
+
+AcornParkSouthSoccerHam_Text_0:
+# 49 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "Smells like strawberries...\pand sweat.$"
+
+AcornParkSouthSoccerHam_Text_1:
+# 57 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "Ha! You think that would hurt me?\pI'm made of tougher stuff than that!$"
+
+AcornParkSouthSoccerHam_Text_2:
+# 76 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "Hahaha! You think I'd hide it there?\nerrr... I mean.\pWhy are you digging here? You're just\nmaking a mess!$"
+
+AcornParkSouthSoccerHam_Text_3:
+# 80 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "Hamtaro$"
+
+AcornParkSouthSoccerHam_Text_4:
+# 82 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "{COLOR RED}SHOCKIE!$"
+
+AcornParkSouthSoccerHam_Text_5:
+# 92 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "Huh? SHOCKIE?\pOh, the ladder? Yeah that's a strange\none. I wonder who could have done that?\pI think that Hamster should spend more\ntime keeping track of his hammer and\lless time helping other Hamsters make\lnew sports that are worse than\lStrawberry Soccer.$"
+
+AcornParkSouthSoccerHam_Text_6:
+# 98 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "Uhh I mean, assuming he had a hammer.\pThat he lost.\pAnd wasn't stolen.\pI mean you'd have to be a real {COLOR RED}DELIN-Q{COLOR DARK_GRAY}\nto do something like steal a tool.$"
+
+AcornParkSouthSoccerHam_Text_7:
+# 103 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "You learned {COLOR RED}DELIN-Q!$"
+
+AcornParkSouthSoccerHam_Text_8:
+# 115 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "What, who are you calling DELIN-Q?\pThat's it!$"
+
+AcornParkSouthSoccerHam_Text_9:
+# 119 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "It's time for me to teach you a lesson!$"
+
+AcornParkSouthSoccerHam_Text_10:
+# 125 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "Well, well, well. It seems you didn't learn\nyour lesson the last time.$"
+
+AcornParkSouthSoccerHam_Text_11:
+# 129 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "Get ready for a beating!$"
+
+AcornParkSouthSoccerHam_Text_12:
+# 133 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "Ham-howdy! You must be one of those\nHamHams who are always around here\lhaving adventures.\pYou should give up on this stupid new\nHam-battle idea and play some good old\lstrawberry soccer!$"
+
+SoccerHamBattleHandler_Text_0:
+# 152 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "No way! You can't beat me! Not with\nall of my training!\pYou'll never get that hammer though!$"
+
+SoccerHamBattleHandler_Text_1:
+# 162 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "Ha! That's right, run away little Ham!$"
+
+SoccerHamBattleHandler_Text_2:
+# 168 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "I'm still the best!\pWho needs this ham-battle nonsense?\pI got all the strength I need from\nplaying strawberry soccer.$"
+
 AcornPathSouthPanda_Text_0:
-# 38 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 184 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	.string "Smells like PANDA!$"
 
 AcornPathSouthPanda_Text_1:
-# 47 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	.string "Nothing there...$"
-
-AcornPathSouthPanda_Text_2:
-# 76 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 193 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	.string "Panda$"
 
+AcornPathSouthPanda_Text_2:
+# 194 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "Ow! Hamtaro, why would you do that?$"
+
 AcornPathSouthPanda_Text_3:
-# 77 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	.string "Hey Hamtaro, I'm glad you're here!\pI needed to get some extra parts,\nbut I came by this morning and saw this!$"
+# 201 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "Nothing there...$"
 
 AcornPathSouthPanda_Text_4:
-# 82 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	.string "The ladder is broken!$"
+# 212 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "Hey Hamtaro, I'm glad you're here!\pI needed to get some extra parts,\nbut I came by this morning and saw this!$"
 
 AcornPathSouthPanda_Text_5:
-# 89 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	.string "I was completely {COLOR RED}SHOCKIE{COLOR DARK_GRAY}!$"
+# 217 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "The ladder is broken!$"
 
 AcornPathSouthPanda_Text_6:
-# 99 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	.string "You learned {COLOR RED}Shockie!$"
+# 224 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "I was completely {COLOR RED}SHOCKIE{COLOR DARK_GRAY}!$"
 
 AcornPathSouthPanda_Text_7:
-# 115 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 234 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "You learned {COLOR RED}Shockie!$"
+
+AcornPathSouthPanda_Text_8:
+# 250 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	.string "My Hammer! I've been looking all over\n"
 	.string "for that!\p"
 	.string "Thanks Hamtaro, now I can fix this\n"
 	.string "ladder! Stand back and I'll get to work!$"
 
-AcornPathSouthPanda_Text_8:
-# 136 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+AcornPathSouthPanda_Text_9:
+# 271 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	.string "And that should do it!$"
 
-AcornPathSouthPanda_Text_9:
-# 147 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	.string "It works! Thanks for your help Hamtaro!\n"
-	.string "I'll see you at the clubhouse later!$"
-
 AcornPathSouthPanda_Text_10:
-# 158 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 282 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "It works and I got the parts I needed!\p"
+	.string "Thanks for your help Hamtaro! I'll see\n"
+	.string "you at the clubhouse later!$"
+
+AcornPathSouthPanda_Text_11:
+# 298 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	.string "I can fix this, but my hammer is missing\n"
 	.string "too!\p"
 	.string "If you find it, can you bring it to me?$"
 
 AcornParkSouthSnoozer_Text_0:
-# 181 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 323 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	.string "Snoozer$"
 
 AcornParkSouthSnoozer_Text_1:
-# 182 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 324 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	.string "Zzzzzzzzzzzzzzzzzzzz...$"
 
 AcornParkSouthSnoozer_Text_2:
-# 187 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 329 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	.string "Smells like Snoozer$"
 
 AcornParkSouthSnoozer_Text_3:
-# 201 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 343 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	.string "Zzzzz... I'm {COLOR RED}Zuzuzu$"
 
 AcornParkSouthSnoozer_Text_4:
-# 206 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 348 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	.string "You learned {COLOR RED}Zuzuzu!$"
 
 AcornParkSouthSnoozer_Text_5:
-# 218 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 360 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	.string "He's still asleep...$"
 
 AcornParkSouthSnoozer_Text_6:
-# 221 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 363 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	.string "How did he sleep through that?!?!$"
 
 AcornParkSouthSnoozer_Text_7:
-# 225 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 367 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	.string "There's a little bit of dirt on Snoozer\n"
 	.string "now, but he's still sleeping through it.$"
 
 AcornParkSouthSnoozer_Text_8:
-# 229 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+# 374 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
 	.string "DingBang!$"
 
 AcornParkSouthSnoozer_Text_9:
-# 236 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	.string "Huh? what's going on? Why is it so noisy...$"
+# 385 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "Huh? what's going on?\pWhy is it so noisy...$"
+
+AcornParkSouthSnoozer_Text_10:
+# 390 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "Oh, back to the clubhouse?\pSure thing. I guess I can do that...$"
+
+AcornPark_OxnardsSunflowerSeed_Text_0:
+# 423 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "Nothing here...$"
 
 AcornParkSouthDingBang::
-# 285 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
-	.string "DingBang$"
+# 468 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "{COLOR RED}DINGBANG$"
+
+AcornParkSouthShockieText::
+# 471 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "{COLOR RED}SHOCKIE$"
+
+AcornParkSouthQuestionMarks::
+# 474 "data/maps/Hamtaro_AcornParkSouth/scripts.pory"
+	.string "?????$"

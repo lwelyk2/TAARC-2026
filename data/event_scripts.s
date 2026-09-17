@@ -1842,3 +1842,7 @@ Common_EventScript_MoveFromRight::
 	.include "data/maps/HamBattleRoom/scripts.inc"
 
 	.include "data/maps/JungleGym/scripts.inc"
+
+	.include "data/maps/Hamtaro_AcornParkCave/scripts.inc"
+
+	.include "data/maps/HamHamClubhouse_Ending/scripts.inc"

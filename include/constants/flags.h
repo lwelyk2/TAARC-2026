@@ -52,23 +52,23 @@
 #else
 
 #define FLAG_GAVE_PANDA_HAMMER    0x20
-#define FLAG_NO_WHITEOUT     0x21 // Unused Flag
-#define FLAG_NOT_GOT_PANDA   0x22 // Unused Flag
-#define FLAG_GOT_PANDA       0x23 // Unused Flag
-#define FLAG_INTRO_DONE      0x24 // Unused Flag
-#define FLAG_GOT_OXNARD      0x25 // Unused Flag
-#define FLAG_HIDDEN_OXNARD   0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
+#define FLAG_NO_WHITEOUT     0x21 // Go back to map after battle
+#define FLAG_NOT_GOT_PANDA   0x22
+#define FLAG_GOT_PANDA       0x23
+#define FLAG_INTRO_DONE      0x24
+#define FLAG_GOT_OXNARD      0x25
+#define FLAG_HIDDEN_OXNARD   0x26
+#define FLAG_BEAT_SOCCER_HAM    0x27 // You won the fight with the soccer ham
+#define FLAG_FOUGHT_SOCCER_HAM    0x28 // You fought soccer ham at least once.
+#define FLAG_NEED_SNOOZER    0x29 // Unused Flag
+#define FLAG_GOT_SNOOZER     0x2A // Unused Flag
+#define FLAG_GOT_EVERYONE    0x2B // Unused Flag
+#define FLAG_HIDE_SNOOZER    0x2C // Unused Flag
+#define FLAG_GOT_SUNFLOWER_SEED    0x2D // Unused Flag
+#define FLAG_HIDE_CLUBHOUSE_OXNARD    0x2E // Unused Flag
+#define FLAG_HIDE_CLUBHOUSE_PANDA    0x2F // Unused Flag
+#define FLAG_HIDE_WORKING_PANDA    0x30 // Unused Flag
+#define FLAG_BEAT_GAME    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
 #define FLAG_UNUSED_0x033    0x33 // Unused Flag
 #define FLAG_UNUSED_0x034    0x34 // Unused Flag

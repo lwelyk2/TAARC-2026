@@ -2,6 +2,27 @@ mapscripts HamHamClubhouse_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_TEMP_0, 0: Clubhouse_IntroCutscene
     ]
+    MAP_SCRIPT_ON_LOAD: Clubhouse_CheckForPanda
+}
+
+script Clubhouse_CheckForPanda {
+    if(flag(FLAG_GAVE_PANDA_HAMMER)) {
+        if(flag(FLAG_BEAT_GAME)) {
+             return
+        } else {
+            call(Clubhouse_PandaWork)
+        }
+    }
+    return
+}
+
+script Clubhouse_PandaWork {
+        setmetatile(2, 2, 0x0D5, FALSE)
+        setmetatile(3, 2, 0x0D6, FALSE)
+        setmetatile(4, 2, 0x0D7, FALSE)
+        setmetatile(2, 3, 0x0DD, FALSE)
+        setmetatile(3, 3, 0x0DE, FALSE)
+        setmetatile(4, 3, 0x0DF, FALSE)
 }
 
 script Clubhouse_IntroCutscene {
@@ -18,58 +39,27 @@ script Clubhouse_IntroCutscene {
         waitmovement(LOCALID_BOSS_BLOCKING)
         createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
         setspeaker("Boss")
-        msgbox("Alright! I think everyone's playing\nin Acorn Park as usual, so you should\llook for them there and see if you can\llearn somet new Hamchat while you're\lat it!")
+        msgbox("Alright! I think everyone's playing\nin Acorn Park as usual, so you should\llook for them there and see if you can\llearn some new Hamchat while you're\lat it!")
         release
     }
 }
 
 script ClubhouseBlockingBoss {
     lock
-    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_TackQ, gText_DigDig)
+    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)
     switch(var(VAR_RESULT)) {
         case 0:
-            getobjectfacingdirection(LOCALID_PLAYER, VAR_TEMP_1)
-            switch (var(VAR_TEMP_1)) {
-                case DIR_EAST:
-                    applymovement(LOCALID_PLAYER, moves(
-                        walk_down
-                        walk_right
-                        face_up
-                    ))
-                    waitmovement
-                case DIR_WEST:
-                    applymovement(LOCALID_PLAYER, moves(
-                        walk_down
-                        walk_left
-                        face_up
-                    ))
-                    waitmovement
-                default:
-                    break
-            }
+            call(Common_EventScript_MoveToFront)
             call(Common_EventScript_Hamha)
             turnobject(LOCALID_PLAYER, DIR_NORTH)
             break
         case 1:
-            getobjectfacingdirection(LOCALID_PLAYER, VAR_TEMP_1)
-            switch (var(VAR_TEMP_1)) {
-                case DIR_EAST:
-                    applymovement(LOCALID_PLAYER, moves(
-                        walk_down
-                        walk_right
-                        face_up
-                    ))
-                    waitmovement
-                case DIR_WEST:
-                    applymovement(LOCALID_PLAYER, moves(
-                        walk_down
-                        walk_left
-                        face_up
-                    ))
-                    waitmovement
-                default:
-                    break
-            }
+            call(Common_EventScript_HifHif)
+            msgbox("Smells like BOSS")
+            release
+            end
+        case 2:
+            call(Common_EventScript_MoveToFront)
             call(Common_EventScript_TackQ)
             turnobject(LOCALID_PLAYER, DIR_NORTH)
             createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
@@ -77,7 +67,7 @@ script ClubhouseBlockingBoss {
             msgbox("Hey! We're not doing a battle right now!\pDon't {COLOR RED}TACK-Q{COLOR DARK_GRAY} me!")
             release
             end
-        case 2:
+        case 3:
             call(Common_EventScript_DigDig)
             msgbox("Nothing there...$")
             createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
@@ -95,9 +85,261 @@ script ClubhouseBlockingBoss {
 
 script ClubhouseBoss {
     lock
-    faceplayer
+    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)
+    switch(var(VAR_RESULT)) {
+        case 0:
+            call(Common_EventScript_MoveToFront)
+            call(Common_EventScript_Hamha)
+            turnobject(LOCALID_PLAYER, DIR_NORTH)
+            waitmovement
+            break
+        case 1:
+            call(Common_EventScript_HifHif)
+            msgbox("Smells like BOSS")
+            release
+            end
+        case 2:
+            call(Common_EventScript_MoveToFront)
+            call(Common_EventScript_TackQ)
+            turnobject(LOCALID_PLAYER, DIR_NORTH)
+            applymovement(LOCALID_BOSS_SITTING, moves(face_down))
+            waitmovement
+            createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+            setspeaker("Boss")
+            msgbox("Hey! We're not doing a battle right now!\pDon't {COLOR RED}TACK-Q{COLOR DARK_GRAY} me!")
+            release
+            end
+        case 3:
+            call(Common_EventScript_DigDig)
+            msgbox("Nothing there...$")
+            faceplayer
+            createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+            setspeaker("Boss")
+            msgbox("I appreciate the enthusiasm Hamtaro,\nbut let's let PANDA do all the\lrenovations.")
+            release
+            end
+    }
     createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
-    msgbox(format("Hamtaro! You're late! Everyone else has already left!"))
+    setspeaker("Boss")
+    if(flag(FLAG_NEED_SNOOZER)){
+        applymovement(LOCALID_BOSS_SITTING,moves(face_down))
+        waitmovement
+        msgbox("I hope PANDA finishes up soon, it's\nso {COLOR RED}DINGBANG{COLOR DARK_GRAY} in here while he's working.")
+        if(checkitem(ITEM_TM_UPROAR) == FALSE){
+            applymovement(LOCALID_PLAYER, moves(dingbang))
+            waitmovement
+            setspeaker(SP_NAME_NONE)
+            message(format("You learned {COLOR RED}Dingbang!$"))
+            playse(MUS_RG_OBTAIN_KEY_ITEM)
+            additem(ITEM_TM_UPROAR, 1)
+            applymovement(LOCALID_PLAYER, moves(emote_x))
+            waitmovement
+            waitse
+            waitmessage
+            waitbuttonpress
+            closemessage
+            applymovement(LOCALID_PLAYER, moves(face_up))
+            waitmovement
+        }
+    } else {
+        msgbox("Hamtaro, keep looking for everyone,\nit's no fun without the whole gang!")
+    }
+    release
+    end
+}
+
+script HamHamClubhouse_PandaWorking {
+    lock
+    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)
+    switch(var(VAR_RESULT)) {
+        case 0:
+            call(Common_EventScript_MoveToFront)
+            call(Common_EventScript_Hamha)
+            turnobject(LOCALID_PLAYER, DIR_NORTH)
+            break
+        case 1:
+            call(Common_EventScript_HifHif)
+            msgbox("Smells like PANDA")
+            release
+            end
+        case 2:
+            call(Common_EventScript_MoveToFront)
+            call(Common_EventScript_TackQ)
+            turnobject(LOCALID_PLAYER, DIR_NORTH)
+            faceplayer
+            createfieldmugshot(MUGSHOT_PANDA, EMOTE_NORMAL)
+            setspeaker("Panda")
+            msgbox("Hamtaro! I can handle the construction.\pSee if BOSS needs help with something.")
+            release
+            end
+        case 3:
+            call(Common_EventScript_DigDig)
+            msgbox("Nothing there...$")
+            faceplayer
+            createfieldmugshot(MUGSHOT_PANDA, EMOTE_NORMAL)
+            setspeaker("Panda")
+            msgbox("Thanks HAMTARO, but I can handle all\nthe renovations.\pMaybe see if BOSS needs help.")
+            applymovement(LOCALID_PANDA_WORKING, moves(face_up))
+            release
+            end
+    }
+    faceplayer
+    createfieldmugshot(MUGSHOT_PANDA, EMOTE_NORMAL)
+    setspeaker("Panda")
+    msgbox("Hey HAMTARO, I'm hard at work on the\nnew arena room.\pYou should see if BOSS needs help\nwith anything.")
+    applymovement(LOCALID_PANDA_WORKING, moves(face_up))
+    release
+    end
+
+}
+
+script Clubhouse_Oxnard {lock
+    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)
+    switch(var(VAR_RESULT)) {
+        case 0:
+            call(Common_EventScript_MoveToFront)
+            call(Common_EventScript_Hamha)
+            turnobject(LOCALID_PLAYER, DIR_NORTH)
+            break
+        case 1:
+            call(Common_EventScript_HifHif)
+            msgbox("Smells like OXNARD")
+            release
+            end
+        case 2:
+            call(Common_EventScript_MoveToFront)
+            call(Common_EventScript_TackQ)
+            turnobject(LOCALID_PLAYER, DIR_NORTH)
+            faceplayer
+            createfieldmugshot(MUGSHOT_OXNARD, EMOTE_NORMAL)
+            setspeaker("Oxnard")
+            msgbox("Hamtaro, why would you do that???")
+            release
+            end
+        case 3:
+            call(Common_EventScript_DigDig)
+            msgbox("Nothing there...$")
+            release
+            end
+    }
+    faceplayer
+    createfieldmugshot(MUGSHOT_OXNARD, EMOTE_NORMAL)
+    setspeaker("Oxnard")
+    msgbox("Hey HAMTARO! Thanks for finding my\nsunflower seed earlier!")
+    release
+    end 
+}
+
+
+script Clubhouse_Panda {
+    lock
+    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)
+    switch(var(VAR_RESULT)) {
+        case 0:
+            call(Common_EventScript_MoveToFront)
+            call(Common_EventScript_Hamha)
+            turnobject(LOCALID_PLAYER, DIR_NORTH)
+            break
+        case 1:
+            call(Common_EventScript_HifHif)
+            msgbox("Smells like PANDA")
+            release
+            end
+        case 2:
+            call(Common_EventScript_MoveToFront)
+            call(Common_EventScript_TackQ)
+            turnobject(LOCALID_PLAYER, DIR_NORTH)
+            faceplayer
+            createfieldmugshot(MUGSHOT_PANDA, EMOTE_NORMAL)
+            setspeaker("Panda")
+            msgbox("Hamtaro! You gotta save it for the\narena!")
+            release
+            end
+        case 3:
+            call(Common_EventScript_DigDig)
+            msgbox("Nothing there...$")
+            release
+            end
+    }
+    faceplayer
+    createfieldmugshot(MUGSHOT_PANDA, EMOTE_NORMAL)
+    setspeaker("Panda")
+    msgbox("Hey HAMTARO, thanks for all your help\ntoday!")
+    release
+    end
+
+}
+
+script Clubhouse_Snoozer {
+    lock
+    dynmultipush(gText_Hamha, 0)
+    dynmultipush(gText_HifHif, 1)
+    dynmultipush(gText_TackQ, 2)
+    dynmultipush(gText_DigDig, 3)
+    if(checkitem(ITEM_TM_UPROAR)) {
+        dynmultipush(AcornParkSouthDingBang, 4)
+    } else {
+        dynmultipush(AcornParkSouthQuestionMarks, 4)
+    }
+    dynmultistack(1, 1, FALSE, 5, 0, 0, DYN_MULTICHOICE_CB_NONE)
+    switch(var(VAR_RESULT)) {
+        case 0:
+            call(Common_EventScript_Hamha)
+            createfieldmugshot(MUGSHOT_SNOOZER, EMOTE_NORMAL)
+            setspeaker("Snoozer")
+            msgbox("Zzzzzzzzzzzzzzzzzzzz...$")
+            
+            break
+        case 1:
+            call(Common_EventScript_HifHif)
+            msgbox("Smells like Snoozer$")
+            createfieldmugshot(MUGSHOT_SNOOZER, EMOTE_NORMAL)
+            setspeaker("Snoozer")
+            msgbox("Zzzzzzzzzzzzzzzzzzzz...$")
+            
+            break
+        case 2:
+            call(Common_EventScript_TackQ)
+            createfieldmugshot(MUGSHOT_SNOOZER, EMOTE_NORMAL)
+            setspeaker("Snoozer")
+            msgbox("Zzzzzzzzzzzzzzzzzzzz...$")
+            removefieldmugshot
+            setspeaker(NULL)
+            msgbox("He's still asleep...$")
+            applymovement(LOCALID_PLAYER, moves(face_down))
+            waitmovement
+            msgbox("How did he sleep through that?!?!$")
+            break
+        case 3:
+            call(Common_EventScript_DigDig)
+            msgbox(format("There's a little bit of dirt on Snoozer now, but he's still sleeping through it.$"))
+            break
+        case 4:
+            if(checkitem(ITEM_TM_UPROAR)) {
+                // Insert Dingbang graphics here
+                createfieldmugshot(MUGSHOT_HAMTARO, EMOTE_NORMAL)
+                setspeaker("Hamtaro")
+                message("DingBang!$")
+                applymovement(LOCALID_PLAYER, moves(dingbang))
+                waitmovement
+                waitmessage
+                waitbuttonpress
+                applymovement(LOCALID_CLUB_SNOOZER, moves(
+                    walk_in_place_up
+                ))
+                waitmovement
+                createfieldmugshot(MUGSHOT_SNOOZER, EMOTE_NORMAL)
+                setspeaker("Snoozer")
+                msgbox("Huh? what's going on?\nWhy is it so noisy?")
+                applymovement(LOCALID_CLUB_SNOOZER, moves(
+                    walk_in_place_left
+                ))
+                waitmovement
+                msgbox("Oh, I'm in the clubhouse now...")
+                applymovement(LOCALID_CLUB_SNOOZER,moves(face_down))
+                break
+            }
+    }
     release
     end
 }

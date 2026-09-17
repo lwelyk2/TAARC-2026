@@ -48,6 +48,12 @@ static const u16 sFieldMugshotPal_SnoozerNormal[] = INCBIN_U16("graphics/field_m
 static const u32 sFieldMugshotGfx_StanNormal[] = INCBIN_U32("graphics/field_mugshots/stan/normal.4bpp.lz");
 static const u16 sFieldMugshotPal_StanNormal[] = INCBIN_U16("graphics/field_mugshots/stan/normal.gbapal");
 
+static const u32 sFieldMugshotGfx_ShopkeeperNormal[] = INCBIN_U32("graphics/field_mugshots/shopkeeper/normal.4bpp.lz");
+static const u16 sFieldMugshotPal_ShopkeeperNormal[] = INCBIN_U16("graphics/field_mugshots/shopkeeper/normal.gbapal");
+
+static const u32 sFieldMugshotGfx_SoccerHamNormal[] = INCBIN_U32("graphics/field_mugshots/strawberry_soccer_ham/normal.4bpp.lz");
+static const u16 sFieldMugshotPal_SoccerHamNormal[] = INCBIN_U16("graphics/field_mugshots/strawberry_soccer_ham/normal.gbapal");
+
 struct MugshotGfx
 {
     const u32 *gfx;
@@ -188,6 +194,22 @@ static const struct MugshotGfx sFieldMugshots[MUGSHOT_COUNT][EMOTE_COUNT] =
         {
             .gfx = sFieldMugshotGfx_StanNormal,
             .pal = sFieldMugshotPal_StanNormal,
+        },
+    },
+    [MUGSHOT_SHOPKEEPER] =
+    {
+        [EMOTE_NORMAL] =
+        {
+            .gfx = sFieldMugshotGfx_ShopkeeperNormal,
+            .pal = sFieldMugshotPal_ShopkeeperNormal,
+        },
+    },
+    [MUGSHOT_SOCCER_HAM] =
+    {
+        [EMOTE_NORMAL] =
+        {
+            .gfx = sFieldMugshotGfx_SoccerHamNormal,
+            .pal = sFieldMugshotPal_SoccerHamNormal,
         },
     },
 };

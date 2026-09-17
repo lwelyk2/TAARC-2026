@@ -9358,7 +9358,7 @@
       "id": "LAYOUT_HAMTARO_BROKEN_TV",
       "name": "Hamtaro_BrokenTV_Layout",
       "width": 21,
-      "height": 25,
+      "height": 24,
       "primary_tileset": "gTileset_BrokenTVPrimary",
       "secondary_tileset": "gTileset_HamtaroShrine",
       "border_filepath": "data/layouts/Hamtaro_BrokenTV/border.bin",
@@ -9399,10 +9399,30 @@
       "name": "JungleGym_Layout",
       "width": 21,
       "height": 14,
-      "primary_tileset": "gTileset_HamtaroInterior",
+      "primary_tileset": "gTileset_Playground",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/JungleGym/border.bin",
       "blockdata_filepath": "data/layouts/JungleGym/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAMTARO_ACORN_PARK_CAVE",
+      "name": "Hamtaro_AcornParkCave_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_HamtaroInterior",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Hamtaro_AcornParkCave/border.bin",
+      "blockdata_filepath": "data/layouts/Hamtaro_AcornParkCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAM_HAM_CLUBHOUSE_ENDING",
+      "name": "HamHamClubhouse_Ending_Layout",
+      "width": 16,
+      "height": 17,
+      "primary_tileset": "gTileset_HamtaroInterior",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HamHamClubhouse_Ending/border.bin",
+      "blockdata_filepath": "data/layouts/HamHamClubhouse_Ending/map.bin"
     }
   ]
 }

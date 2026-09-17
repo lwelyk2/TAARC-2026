@@ -1,0 +1,32 @@
+mapscripts HamHamClubhouse_Ending_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: EndingCutscene
+    ]
+}
+
+script EndingCutscene {
+    setflag(VAR_TEMP_0)
+    lockall
+    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+    setspeaker("Boss")
+    msgbox("HAMTARO! You're back!\pThanks to all your hard work, everyone\nis back at the clubhouse and we have\lour new arena built!")
+    applymovement(LOCALID_PASHMINA_ENDING,moves(walk_up))
+    setspeaker("Pashmina")
+    createfieldmugshot(MUGSHOT_PASHMINA, EMOTE_NORMAL)
+    msgbox("That's right HAMTARO, this was all\npossible thanks to you!")
+    applymovement(LOCALID_PASHMINA_ENDING, moves(lock_facing_direction walk_down))
+    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+    setspeaker("Boss")
+    msgbox("Come on HAMTARO, let's go look at\nPANDA's handiwork!")
+    applymovement(LOCALID_BOSS_ENDING,moves(walk_left * 9 delay_16 delay_16 walk_up * 3))
+    applymovement(LOCALID_PLAYER,moves(walk_down * 2 walk_left * 9 walk_up * 3))
+    waitmovement(LOCALID_BOSS)
+    playse(SE_EXIT)
+    removeobject(LOCALID_BOSS)
+    waitse
+    waitmovement(LOCALID_PLAYER)
+    warp(MAP_HAM_BATTLE_ROOM, 0)
+    waitstate
+    releaseall
+
+}   

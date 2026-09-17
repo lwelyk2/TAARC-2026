@@ -1,1 +1,32 @@
-mapscripts JungleGym_MapScripts {}
+mapscripts JungleGym_MapScripts {
+    MAP_SCRIPT_ON_LOAD: JungleGym_HidePlayer
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: JungleGym_Credits
+    ]
+}
+script JungleGym_HidePlayer {
+    hideplayer
+    special(SpawnCameraObject)
+}
+
+script JungleGym_Credits {
+    setvar(VAR_TEMP_0, 1)
+    hideplayer
+    special(SpawnCameraObject)
+    createfieldmugshot(MUGSHOT_PASHMINA, EMOTE_NORMAL)
+    setspeaker("Pashmina")
+    msgbox(format("Graphics either directly from or based on the graphics from Hamtaro HamHams Unite, also some from HamHam Heartbreak."))
+    applymovement(OBJ_EVENT_ID_CAMERA,moves(walk_fast_right * 9))
+    waitmovement
+    createfieldmugshot(MUGSHOT_PENELOPE, EMOTE_NORMAL)
+    setspeaker("Penelope")
+    msgbox(format("Big shout out to Jayman357 on The Spriters Resource for ripping so much of these games. The unused HamHams Unite-styled Broski, Pepper, Spat, and Harmony sprites in the repo are by him as well."))
+    applymovement(OBJ_EVENT_ID_CAMERA,moves(walk_fast_right * 4))
+    waitmovement
+    createfieldmugshot(MUGSHOT_SANDY, EMOTE_NORMAL)
+    setspeaker("Sandy")
+    msgbox(format("The Music was created using PORYDAW and Piano MIDIs of the Hamtaro music by Th3Gavst3r and Altissimo from NinSheetMusic."))
+    warp(MAP_HAMTARO_BROKEN_TV, 19, 12)
+    waitstate
+    releaseall
+}

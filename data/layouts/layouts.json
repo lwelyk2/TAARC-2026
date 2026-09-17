@@ -9403,6 +9403,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/JungleGym/border.bin",
       "blockdata_filepath": "data/layouts/JungleGym/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAMTARO_ACORN_PARK_CAVE",
+      "name": "Hamtaro_AcornParkCave_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_HamtaroInterior",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Hamtaro_AcornParkCave/border.bin",
+      "blockdata_filepath": "data/layouts/Hamtaro_AcornParkCave/map.bin"
     }
   ]
 }

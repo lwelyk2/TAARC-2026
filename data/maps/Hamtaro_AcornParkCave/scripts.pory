@@ -1,0 +1,113 @@
+mapscripts Hamtaro_AcornParkCave_MapScripts {}
+
+script AcornParkCaveDigDig { 
+    getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+    if(var(VAR_TEMP_0) > VAR_TEMP_3){
+        subvar(VAR_TEMP_0, VAR_TEMP_3)
+        switch(var(VAR_TEMP_0)) {
+            case 1:
+                applymovement(LOCALID_PLAYER, moves(walk_left))
+                waitmovement
+                break
+            case 2:
+                applymovement(LOCALID_PLAYER, moves(walk_left * 2))
+                waitmovement
+                break
+            case 3:
+                applymovement(LOCALID_PLAYER, moves(walk_left * 3))
+                waitmovement
+                break
+        }
+    } elif(var(VAR_TEMP_0) < VAR_TEMP_3){
+        subvar(VAR_TEMP_3, VAR_TEMP_0)
+        switch(var(VAR_TEMP_3)) {
+            case 1:
+                applymovement(LOCALID_PLAYER, moves(walk_right))
+                waitmovement
+                break
+            case 2:
+                applymovement(LOCALID_PLAYER, moves(walk_right * 2))
+                waitmovement
+                break
+            case 3:
+                applymovement(LOCALID_PLAYER, moves(walk_right * 3))
+                waitmovement
+                break
+        }
+    }
+    if(var(VAR_TEMP_1) > VAR_TEMP_4){
+        subvar(VAR_TEMP_1, VAR_TEMP_4)
+        switch(var(VAR_TEMP_1)) {
+            case 1:
+                applymovement(LOCALID_PLAYER, moves(walk_up))
+                waitmovement
+                break
+            case 2:
+                applymovement(LOCALID_PLAYER, moves(walk_up * 2))
+                waitmovement
+                break
+            case 3:
+                applymovement(LOCALID_PLAYER, moves(walk_up * 3))
+                waitmovement
+                break
+        }
+    } elif(var(VAR_TEMP_1) < VAR_TEMP_4){
+        subvar(VAR_TEMP_4, VAR_TEMP_1)
+        switch(var(VAR_TEMP_4)) {
+            case 1:
+                applymovement(LOCALID_PLAYER, moves(walk_down))
+                waitmovement
+                break
+            case 2:
+                applymovement(LOCALID_PLAYER, moves(walk_down * 2))
+                waitmovement
+                break
+            case 3:
+                applymovement(LOCALID_PLAYER, moves(walk_down * 3))
+                waitmovement
+                break
+        }
+    }
+    call(Common_EventScript_DigDig)
+    return
+}
+
+script AcornParkCaveBottomLeft {
+    lock
+    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_TackQ, gText_DigDig)
+    switch(var(VAR_RESULT)) {
+        case 0:
+            call(Common_EventScript_Hamha)
+            break
+        case 1:
+            call(Common_EventScript_TackQ)
+            break
+        case 2:
+            setvar(VAR_TEMP_3, 3)
+            setvar(VAR_TEMP_4, 17)
+            call(AcornParkCaveDigDig)
+            msgbox("Nothing here...")
+            break
+    }
+    release  
+}
+
+script AcornParkCaveMiddle {
+    lock
+    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_TackQ, gText_DigDig)
+    switch(var(VAR_RESULT)) {
+        case 0:
+            call(Common_EventScript_Hamha)
+            break
+        case 1:
+            call(Common_EventScript_TackQ)
+            break
+        case 2:
+            setvar(VAR_TEMP_3, 10)
+            setvar(VAR_TEMP_4, 12)
+            call(AcornParkCaveDigDig)
+            msgbox("Nothing here...")
+            break
+    }
+    release
+}

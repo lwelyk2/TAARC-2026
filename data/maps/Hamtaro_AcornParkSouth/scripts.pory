@@ -27,6 +27,13 @@ script AcornPark_FixLadder {
         setmetatile(6, 9, 0x0FC, FALSE)
 }
 
+script AcornParkSouthSoccerHam {
+    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha,  gText_TackQ, gText_DigDig)
+    switch(var(VAR_RESULT)) {
+        case 0:
+            call(Common_EventScript_MoveToFront)
+}
+
 script AcornPathSouthPanda {
     lock
     dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)

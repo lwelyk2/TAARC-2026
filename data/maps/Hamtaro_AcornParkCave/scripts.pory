@@ -1,7 +1,7 @@
 mapscripts Hamtaro_AcornParkCave_MapScripts {}
 
 script AcornParkCaveMenu {
-    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_Hifhif, gText_TackQ, gText_DigDig)
+    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)
     switch(var(VAR_RESULT)) {
         case 0:
             call(Common_EventScript_Hamha)
@@ -176,7 +176,7 @@ script AcornParkCaveLeft {
 
 script AcornParkCaveSoccerHam {
     lock
-    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_Hifhif, gText_TackQ, gText_DigDig)
+    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)
     switch(var(VAR_RESULT)) {
         case 0:
             call(Common_EventScript_MoveToFront)
@@ -190,7 +190,7 @@ script AcornParkCaveSoccerHam {
             }
         case 1:
             call(Common_EventScript_HifHif)
-            msdgbox("Smells like strawberries.\pAnd sweat.\pAnd crime.")
+            msgbox("Smells like strawberries.\pAnd sweat.\pAnd crime.")
             release
             end
         case 2:
@@ -229,14 +229,14 @@ script TackQSoccerHamNoHammer {
     return
 }
 
-script TackQsoccerHamGotHammer {
+script TackQSoccerHamGotHammer {
     msgbox("Look, you got your hammer already, cut\nit out with the Tack-Qs.")
     return
 }
 
-script AcornparkCaveDresser {
+script AcornParkCaveDresser {
     lock
-    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_Hifhif, gText_TackQ, gText_DigDig)
+    dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)
     switch(var(VAR_RESULT)) {
         case 0:
             call(Common_EventScript_Hamha)

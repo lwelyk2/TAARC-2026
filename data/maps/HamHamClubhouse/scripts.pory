@@ -47,7 +47,7 @@ script ClubhouseBlockingBoss {
     dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)
     switch(var(VAR_RESULT)) {
         case 0:
-            call(Common_EventSCript_MoveToFront)
+            call(Common_EventScript_MoveToFront)
             call(Common_EventScript_Hamha)
             turnobject(LOCALID_PLAYER, DIR_NORTH)
             break
@@ -57,7 +57,7 @@ script ClubhouseBlockingBoss {
             release
             end
         case 2:
-            call(Common_EventSCript_MoveToFront)
+            call(Common_EventScript_MoveToFront)
             call(Common_EventScript_TackQ)
             turnobject(LOCALID_PLAYER, DIR_NORTH)
             createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
@@ -86,7 +86,7 @@ script ClubhouseBoss {
     dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)
     switch(var(VAR_RESULT)) {
         case 0:
-            call(Common_EventSCript_MoveToFront)
+            call(Common_EventScript_MoveToFront)
             call(Common_EventScript_Hamha)
             turnobject(LOCALID_PLAYER, DIR_NORTH)
             waitmovement
@@ -97,10 +97,10 @@ script ClubhouseBoss {
             release
             end
         case 2:
-            call(Common_EventSCript_MoveToFront)
+            call(Common_EventScript_MoveToFront)
             call(Common_EventScript_TackQ)
             turnobject(LOCALID_PLAYER, DIR_NORTH)
-            applymovement(LOCALID_BOSS_SITTING, face_down)
+            applymovement(LOCALID_BOSS_SITTING, moves(face_down))
             waitmovement
             createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
             setspeaker("Boss")
@@ -123,13 +123,13 @@ script ClubhouseBoss {
         faceplayer
         msgbox("I hope PANDA finishes up soon, it's\nso {COLOR RED}DINGBANG{COLOR DARK_GRAY} in here while he's working.")
         if(checkitem(ITEM_TM_UPROAR) == FALSE){
-            applymovement(LOCALID_PLAYER, dingbang)
+            applymovement(LOCALID_PLAYER, moves(dingbang))
             waitmovement
             setspeaker(SP_NAME_NONE)
             message(format("You learned {COLOR RED}Dingbang!$"))
             playse(MUS_RG_OBTAIN_KEY_ITEM)
             additem(ITEM_TM_UPROAR, 1)
-            applymovement(LOCALID_PLAYER, emote_x)
+            applymovement(LOCALID_PLAYER, moves(emote_x))
             waitmovement
             waitse
             waitmessage
@@ -150,7 +150,7 @@ script HamHamClubhouse_PandaWorking {
     dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)
     switch(var(VAR_RESULT)) {
         case 0:
-            call(Common_EventSCript_MoveToFront)
+            call(Common_EventScript_MoveToFront)
             call(Common_EventScript_Hamha)
             turnobject(LOCALID_PLAYER, DIR_NORTH)
             break
@@ -160,7 +160,7 @@ script HamHamClubhouse_PandaWorking {
             release
             end
         case 2:
-            call(Common_EventSCript_MoveToFront)
+            call(Common_EventScript_MoveToFront)
             call(Common_EventScript_TackQ)
             turnobject(LOCALID_PLAYER, DIR_NORTH)
             faceplayer
@@ -176,7 +176,7 @@ script HamHamClubhouse_PandaWorking {
             createfieldmugshot(MUGSHOT_PANDA, EMOTE_NORMAL)
             setspeaker("Panda")
             msgbox("Thanks HAMTARO, but I can handle all\nthe renovations.\pMaybe see if BOSS needs help.")
-            applymovement(LOCALID_PANDA_WORKING, face_up)
+            applymovement(LOCALID_PANDA_WORKING, moves(face_up))
             release
             end
     }
@@ -184,17 +184,17 @@ script HamHamClubhouse_PandaWorking {
     createfieldmugshot(MUGSHOT_PANDA, EMOTE_NORMAL)
     setspeaker("Panda")
     msgbox("Hey HAMTARO, I'm hard at work on the\nnew arena room.\pYou should see if BOSS needs help\nwith anything.")
-    applymovement(LOCALID_PANDA_WORKING, face_up)
+    applymovement(LOCALID_PANDA_WORKING, moves(face_up))
     release
     end
 
 }
 
-script HamHamClubhouse_Oxnard {lock
+script Clubhouse_Oxnard {lock
     dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)
     switch(var(VAR_RESULT)) {
         case 0:
-            call(Common_EventSCript_MoveToFront)
+            call(Common_EventScript_MoveToFront)
             call(Common_EventScript_Hamha)
             turnobject(LOCALID_PLAYER, DIR_NORTH)
             break
@@ -204,7 +204,7 @@ script HamHamClubhouse_Oxnard {lock
             release
             end
         case 2:
-            call(Common_EventSCript_MoveToFront)
+            call(Common_EventScript_MoveToFront)
             call(Common_EventScript_TackQ)
             turnobject(LOCALID_PLAYER, DIR_NORTH)
             faceplayer
@@ -228,12 +228,12 @@ script HamHamClubhouse_Oxnard {lock
 }
 
 
-script HamHamClubhouse_Panda {
+script Clubhouse_Panda {
     lock
     dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)
     switch(var(VAR_RESULT)) {
         case 0:
-            call(Common_EventSCript_MoveToFront)
+            call(Common_EventScript_MoveToFront)
             call(Common_EventScript_Hamha)
             turnobject(LOCALID_PLAYER, DIR_NORTH)
             break
@@ -243,7 +243,7 @@ script HamHamClubhouse_Panda {
             release
             end
         case 2:
-            call(Common_EventSCript_MoveToFront)
+            call(Common_EventScript_MoveToFront)
             call(Common_EventScript_TackQ)
             turnobject(LOCALID_PLAYER, DIR_NORTH)
             faceplayer
@@ -312,28 +312,28 @@ script Clubhouse_Snoozer {
             msgbox(format("There's a little bit of dirt on Snoozer now, but he's still sleeping through it.$"))
             break
         case 4:
-            if(checkitem(ITEM_TM_DINGBANG)) {
+            if(checkitem(ITEM_TM_UPROAR)) {
                 // Insert Dingbang graphics here
                 createfieldmugshot(MUGSHOT_HAMTARO, EMOTE_NORMAL)
                 setspeaker("Hamtaro")
                 message("DingBang!$")
-                applymovement(LOCALID_PLAYER, dingbang)
+                applymovement(LOCALID_PLAYER, moves(dingbang))
                 waitmovement
                 waitmessage
                 waitbuttonpress
-                applymovement(LOCALID_SNOOZER, moves(
+                applymovement(LOCALID_CLUB_SNOOZER, moves(
                     walk_in_place_up
                 ))
                 waitmovement
                 createfieldmugshot(MUGSHOT_SNOOZER, EMOTE_NORMAL)
                 setspeaker("Snoozer")
                 msgbox("Huh? what's going on?\nWhy is it so noisy?")
-                applymovement(LOCALID_SNOOZER, moves(
+                applymovement(LOCALID_CLUB_SNOOZER, moves(
                     walk_in_place_left
                 ))
                 waitmovement
                 msgbox("Oh, I'm in the clubhouse now...")
-                applymovement(LOCALID_SNOOZER,moves(face_down))
+                applymovement(LOCALID_CLUB_SNOOZER,moves(face_down))
                 break
             }
     }

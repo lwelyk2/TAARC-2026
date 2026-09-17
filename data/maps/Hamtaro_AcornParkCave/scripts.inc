@@ -2,340 +2,726 @@ Hamtaro_AcornParkCave_MapScripts::
 	.byte 0
 
 
-AcornParkCaveDigDig::
+AcornParkCaveMenu::
 # 4 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	dynmultichoice 1, 1, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig
 # 5 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	switch VAR_RESULT
+# 6 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	case 0, AcornParkCaveMenu_2
+# 10 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	case 1, AcornParkCaveMenu_3
+# 14 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	case 2, AcornParkCaveMenu_4
+# 18 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	case 3, AcornParkCaveMenu_5
+	return
+
+AcornParkCaveMenu_2:
+# 7 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call Common_EventScript_Hamha
+# 8 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	release
+	end
+
+AcornParkCaveMenu_3:
+# 11 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call Common_EventScript_HifHif
+# 12 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	release
+	end
+
+AcornParkCaveMenu_4:
+# 15 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call Common_EventScript_TackQ
+# 16 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	release
+	end
+
+AcornParkCaveMenu_5:
+# 19 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call AcornParkCaveDigDig
+	return
+
+
+AcornParkCaveDigDig::
+# 25 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+# 26 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	compare VAR_TEMP_0, VAR_TEMP_3
 	goto_if_gt AcornParkCaveDigDig_2
-# 21 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 42 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	compare VAR_TEMP_0, VAR_TEMP_3
 	goto_if_lt AcornParkCaveDigDig_3
 AcornParkCaveDigDig_1:
-# 38 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 59 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	compare VAR_TEMP_1, VAR_TEMP_4
 	goto_if_gt AcornParkCaveDigDig_7
-# 54 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 75 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	compare VAR_TEMP_1, VAR_TEMP_4
 	goto_if_lt AcornParkCaveDigDig_8
 AcornParkCaveDigDig_6:
-# 71 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 92 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	call Common_EventScript_DigDig
 	return
 
 AcornParkCaveDigDig_2:
-# 6 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 27 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	subvar VAR_TEMP_0, VAR_TEMP_3
-# 7 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 28 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	switch VAR_TEMP_0
-# 8 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 29 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	case 1, AcornParkCaveDigDig_12
-# 12 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 33 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	case 2, AcornParkCaveDigDig_13
-# 16 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 37 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	case 3, AcornParkCaveDigDig_14
 	goto AcornParkCaveDigDig_1
 
 AcornParkCaveDigDig_3:
-# 22 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 43 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	subvar VAR_TEMP_3, VAR_TEMP_0
-# 23 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 44 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	switch VAR_TEMP_3
-# 24 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 45 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	case 1, AcornParkCaveDigDig_16
-# 28 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 49 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	case 2, AcornParkCaveDigDig_17
-# 32 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 53 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	case 3, AcornParkCaveDigDig_18
 	goto AcornParkCaveDigDig_1
 
 AcornParkCaveDigDig_7:
-# 39 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 60 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	subvar VAR_TEMP_1, VAR_TEMP_4
-# 40 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 61 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	switch VAR_TEMP_1
-# 41 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 62 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	case 1, AcornParkCaveDigDig_20
-# 45 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 66 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	case 2, AcornParkCaveDigDig_21
-# 49 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 70 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	case 3, AcornParkCaveDigDig_22
 	goto AcornParkCaveDigDig_6
 
 AcornParkCaveDigDig_8:
-# 55 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 76 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	subvar VAR_TEMP_4, VAR_TEMP_1
-# 56 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 77 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	switch VAR_TEMP_4
-# 57 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 78 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	case 1, AcornParkCaveDigDig_24
-# 61 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 82 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	case 2, AcornParkCaveDigDig_25
-# 65 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 86 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	case 3, AcornParkCaveDigDig_26
 	goto AcornParkCaveDigDig_6
 
 AcornParkCaveDigDig_12:
-# 9 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 30 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	applymovement LOCALID_PLAYER, AcornParkCaveDigDig_Movement_0
-# 10 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 31 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	waitmovement
 	goto AcornParkCaveDigDig_1
 
 AcornParkCaveDigDig_13:
-# 13 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 34 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	applymovement LOCALID_PLAYER, AcornParkCaveDigDig_Movement_1
-# 14 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 35 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	waitmovement
 	goto AcornParkCaveDigDig_1
 
 AcornParkCaveDigDig_14:
-# 17 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 38 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	applymovement LOCALID_PLAYER, AcornParkCaveDigDig_Movement_2
-# 18 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 39 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	waitmovement
 	goto AcornParkCaveDigDig_1
 
 AcornParkCaveDigDig_16:
-# 25 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 46 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	applymovement LOCALID_PLAYER, AcornParkCaveDigDig_Movement_3
-# 26 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 47 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	waitmovement
 	goto AcornParkCaveDigDig_1
 
 AcornParkCaveDigDig_17:
-# 29 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 50 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	applymovement LOCALID_PLAYER, AcornParkCaveDigDig_Movement_4
-# 30 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 51 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	waitmovement
 	goto AcornParkCaveDigDig_1
 
 AcornParkCaveDigDig_18:
-# 33 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 54 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	applymovement LOCALID_PLAYER, AcornParkCaveDigDig_Movement_5
-# 34 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 55 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	waitmovement
 	goto AcornParkCaveDigDig_1
 
 AcornParkCaveDigDig_20:
-# 42 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 63 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	applymovement LOCALID_PLAYER, AcornParkCaveDigDig_Movement_6
-# 43 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 64 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	waitmovement
 	goto AcornParkCaveDigDig_6
 
 AcornParkCaveDigDig_21:
-# 46 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 67 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	applymovement LOCALID_PLAYER, AcornParkCaveDigDig_Movement_7
-# 47 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 68 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	waitmovement
 	goto AcornParkCaveDigDig_6
 
 AcornParkCaveDigDig_22:
-# 50 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 71 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	applymovement LOCALID_PLAYER, AcornParkCaveDigDig_Movement_8
-# 51 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 72 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	waitmovement
 	goto AcornParkCaveDigDig_6
 
 AcornParkCaveDigDig_24:
-# 58 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 79 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	applymovement LOCALID_PLAYER, AcornParkCaveDigDig_Movement_9
-# 59 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 80 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	waitmovement
 	goto AcornParkCaveDigDig_6
 
 AcornParkCaveDigDig_25:
-# 62 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 83 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	applymovement LOCALID_PLAYER, AcornParkCaveDigDig_Movement_10
-# 63 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 84 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	waitmovement
 	goto AcornParkCaveDigDig_6
 
 AcornParkCaveDigDig_26:
-# 66 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 87 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	applymovement LOCALID_PLAYER, AcornParkCaveDigDig_Movement_11
-# 67 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 88 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	waitmovement
 	goto AcornParkCaveDigDig_6
 
 
 AcornParkCaveBottomLeft::
-# 76 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 97 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	lock
-# 77 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	dynmultichoice 1, 1, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_TackQ, gText_DigDig
-# 78 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	switch VAR_RESULT
-# 79 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	case 0, AcornParkCaveBottomLeft_3
-# 82 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	case 1, AcornParkCaveBottomLeft_4
-# 85 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	case 2, AcornParkCaveBottomLeft_5
-AcornParkCaveBottomLeft_1:
-# 92 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	release
-	return
-
-AcornParkCaveBottomLeft_3:
-# 80 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	call Common_EventScript_Hamha
-	goto AcornParkCaveBottomLeft_1
-
-AcornParkCaveBottomLeft_4:
-# 83 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	call Common_EventScript_TackQ
-	goto AcornParkCaveBottomLeft_1
-
-AcornParkCaveBottomLeft_5:
-# 86 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 98 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	setvar VAR_TEMP_3, 3
-# 87 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 99 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	setvar VAR_TEMP_4, 17
-# 88 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	call AcornParkCaveDigDig
-# 89 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 100 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call AcornParkCaveMenu
+# 101 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	goto_if_set FLAG_DAILY_ROUTE_114_RECEIVED_BERRY, AcornParkCaveBottomLeft_2
+# 104 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	setflag FLAG_DAILY_ROUTE_114_RECEIVED_BERRY
+# 105 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	giveitem ITEM_ORAN_BERRY
+AcornParkCaveBottomLeft_1:
+# 107 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	release
+	end
+
+AcornParkCaveBottomLeft_2:
+# 102 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	msgbox AcornParkCaveBottomLeft_Text_0
 	goto AcornParkCaveBottomLeft_1
 
 
 AcornParkCaveMiddle::
-# 96 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	lock
-# 97 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	dynmultichoice 1, 1, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_TackQ, gText_DigDig
-# 98 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	switch VAR_RESULT
-# 99 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	case 0, AcornParkCaveMiddle_3
-# 102 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	case 1, AcornParkCaveMiddle_4
-# 105 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	case 2, AcornParkCaveMiddle_5
-AcornParkCaveMiddle_1:
 # 112 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	lock
+# 113 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	setvar VAR_TEMP_3, 10
+# 114 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	setvar VAR_TEMP_4, 12
+# 115 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call AcornParkCaveMenu
+# 116 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	msgbox AcornParkCaveBottomLeft_Text_0
+# 117 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	release
+	end
+
+
+AcornParkCaveBottomRight::
+# 123 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	lock
+# 124 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	setvar VAR_TEMP_3, 17
+# 125 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	setvar VAR_TEMP_4, 18
+# 126 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call AcornParkCaveMenu
+# 127 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	msgbox AcornParkCaveBottomLeft_Text_0
+# 128 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	release
+	end
+
+
+AcornParkCaveRight::
+# 133 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	lock
+# 134 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	setvar VAR_TEMP_3, 16
+# 135 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	setvar VAR_TEMP_4, 12
+# 136 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call AcornParkCaveMenu
+# 137 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	msgbox AcornParkCaveBottomLeft_Text_0
+# 138 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	release
+	end
+
+
+AcornParkCaveUpperRight::
+# 143 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	lock
+# 144 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	setvar VAR_TEMP_3, 14
+# 145 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	setvar VAR_TEMP_4, 5
+# 146 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call AcornParkCaveMenu
+# 147 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	msgbox AcornParkCaveBottomLeft_Text_0
+# 148 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	release
+	end
+
+
+AcornParkCaveUpperLeft::
+# 153 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	lock
+# 154 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	setvar VAR_TEMP_3, 7
+# 155 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	setvar VAR_TEMP_4, 5
+# 156 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call AcornParkCaveMenu
+# 157 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	msgbox AcornParkCaveBottomLeft_Text_0
+# 158 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	release
+	end
+
+
+AcornParkCaveLeft::
+# 163 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	lock
+# 164 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	setvar VAR_TEMP_3, 4
+# 165 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	setvar VAR_TEMP_4, 11
+# 166 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call AcornParkCaveMenu
+# 167 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	goto_if_set FLAG_DAILY_ROUTE_111_RECEIVED_BERRY, AcornParkCaveLeft_2
+# 170 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	setflag FLAG_DAILY_ROUTE_111_RECEIVED_BERRY
+# 171 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	giveitem ITEM_SITRUS_BERRY
+AcornParkCaveLeft_1:
+# 173 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	release
+	end
+
+AcornParkCaveLeft_2:
+# 168 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	msgbox AcornParkCaveBottomLeft_Text_0
+	goto AcornParkCaveLeft_1
+
+
+AcornParkCaveSoccerHam::
+# 178 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	lock
+# 179 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	dynmultichoice 1, 1, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig
+# 180 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	switch VAR_RESULT
+# 181 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	case 0, AcornParkCaveSoccerHam_3
+# 191 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	case 1, AcornParkCaveSoccerHam_4
+# 196 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	case 2, AcornParkCaveSoccerHam_5
+# 208 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	case 3, AcornParkCaveSoccerHam_6
+AcornParkCaveSoccerHam_1:
+# 214 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	release
+	end
+
+AcornParkCaveSoccerHam_3:
+# 182 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call Common_EventScript_MoveToFront
+# 183 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call Common_EventScript_Hamha
+	checkitem ITEM_HAMMER
+# 0 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne AcornParkCaveSoccerHam_7
+# 186 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	goto_if_set FLAG_GOT_PANDA, AcornParkCaveSoccerHam_8
+# 189 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call HamhaSoccerHamNoHammer
+	goto AcornParkCaveSoccerHam_1
+
+AcornParkCaveSoccerHam_4:
+# 192 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call Common_EventScript_HifHif
+# 193 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	msgbox AcornParkCaveSoccerHam_Text_0
+# 194 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	release
+	end
+
+AcornParkCaveSoccerHam_5:
+# 197 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call Common_EventScript_MoveToFront
+# 198 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call Common_EventScript_TackQ
+	checkitem ITEM_HAMMER
+# 0 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne AcornParkCaveSoccerHam_13
+# 201 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	goto_if_set FLAG_GOT_PANDA, AcornParkCaveSoccerHam_14
+# 204 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call TackQSoccerHamNoHammer
+AcornParkCaveSoccerHam_12:
+# 206 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	release
+	end
+
+AcornParkCaveSoccerHam_6:
+# 209 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	setvar VAR_TEMP_3, 10
+# 210 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	setvar VAR_TEMP_4, 12
+# 211 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call AcornParkCaveDigDig
+	goto AcornParkCaveSoccerHam_1
+
+AcornParkCaveSoccerHam_7:
+# 185 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call HamhaSoccerHamGotHammer
+	goto AcornParkCaveSoccerHam_1
+
+AcornParkCaveSoccerHam_8:
+# 187 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call HamhaSoccerHamGotHammer
+	goto AcornParkCaveSoccerHam_1
+
+AcornParkCaveSoccerHam_13:
+# 200 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call TackQSoccerHamGotHammer
+	goto AcornParkCaveSoccerHam_12
+
+AcornParkCaveSoccerHam_14:
+# 202 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call TackQSoccerHamGotHammer
+	goto AcornParkCaveSoccerHam_12
+
+
+HamhaSoccerHamGotHammer::
+# 219 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	msgbox HamhaSoccerHamGotHammer_Text_0
 	return
 
-AcornParkCaveMiddle_3:
-# 100 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+
+HamhaSoccerHamNoHammer::
+# 223 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	msgbox HamhaSoccerHamNoHammer_Text_0
+	return
+
+
+TackQSoccerHamNoHammer::
+# 228 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	msgbox TackQSoccerHamNoHammer_Text_0
+	return
+
+
+TackQSoccerHamGotHammer::
+# 233 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	msgbox TackQSoccerHamGotHammer_Text_0
+	return
+
+
+AcornParkCaveDresser::
+# 238 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	lock
+# 239 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	dynmultichoice 1, 1, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig
+# 240 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	switch VAR_RESULT
+# 241 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	case 0, AcornParkCaveDresser_2
+# 245 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	case 1, AcornParkCaveDresser_3
+# 250 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	case 2, AcornParkCaveDresser_4
+# 275 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	case 3, AcornParkCaveDresser_5
+	return
+
+AcornParkCaveDresser_2:
+# 242 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	call Common_EventScript_Hamha
-	goto AcornParkCaveMiddle_1
+# 243 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	release
+	end
 
-AcornParkCaveMiddle_4:
-# 103 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+AcornParkCaveDresser_3:
+# 246 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call Common_EventScript_HifHif
+# 247 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	msgbox AcornParkCaveDresser_Text_0
+# 248 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	release
+	end
+
+AcornParkCaveDresser_4:
+# 251 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	call Common_EventScript_MoveToFront
+# 252 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	call Common_EventScript_TackQ
-	goto AcornParkCaveMiddle_1
+	checkitem ITEM_HAMMER
+# 0 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne AcornParkCaveDresser_6
+# 256 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	goto_if_set FLAG_GOT_PANDA, AcornParkCaveDresser_7
+# 260 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	msgbox AcornParkCaveDresser_Text_1
+# 261 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	giveitem ITEM_HAMMER
+# 262 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	msgbox AcornParkCaveDresser_Text_2
+# 263 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	applymovement LOCALID_PLAYER, AcornParkCaveDresser_Movement_0
+# 264 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	playse SE_PIN
+# 265 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	waitmovement
+# 266 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	waitse
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	applymovement LOCALID_PLAYER, AcornParkCaveDresser_Movement_1
+# 268 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	waitmovement
+# 269 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	applymovement LOCALID_SOCCER_HAM, AcornParkCaveDresser_Movement_2
+# 270 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	waitmovement
+# 271 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	msgbox AcornParkCaveDresser_Text_3
+# 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	release
+	end
 
-AcornParkCaveMiddle_5:
-# 106 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	setvar VAR_TEMP_3, 10
-# 107 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	setvar VAR_TEMP_4, 12
-# 108 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+AcornParkCaveDresser_5:
+# 276 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	call AcornParkCaveDigDig
-# 109 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	msgbox AcornParkCaveBottomLeft_Text_0
-	goto AcornParkCaveMiddle_1
+	return
+
+AcornParkCaveDresser_6:
+# 254 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	release
+	end
+
+AcornParkCaveDresser_7:
+# 257 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	release
+	end
 
 
-# 9 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 30 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 AcornParkCaveDigDig_Movement_0:
-# 9 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 30 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_left
 	step_end
 
-# 13 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 34 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 AcornParkCaveDigDig_Movement_1:
-# 13 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 34 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_left
-# 13 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 34 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_left
 	step_end
 
-# 17 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 38 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 AcornParkCaveDigDig_Movement_2:
-# 17 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 38 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_left
-# 17 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 38 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_left
-# 17 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 38 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_left
 	step_end
 
-# 25 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 46 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 AcornParkCaveDigDig_Movement_3:
-# 25 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 46 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_right
 	step_end
 
-# 29 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 50 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 AcornParkCaveDigDig_Movement_4:
-# 29 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 50 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_right
-# 29 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 50 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_right
 	step_end
 
-# 33 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 54 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 AcornParkCaveDigDig_Movement_5:
-# 33 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 54 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_right
-# 33 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 54 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_right
-# 33 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 54 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_right
 	step_end
 
-# 42 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 63 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 AcornParkCaveDigDig_Movement_6:
-# 42 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 63 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_up
 	step_end
 
-# 46 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 67 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 AcornParkCaveDigDig_Movement_7:
-# 46 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 67 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_up
-# 46 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 67 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_up
 	step_end
 
-# 50 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 71 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 AcornParkCaveDigDig_Movement_8:
-# 50 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 71 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_up
-# 50 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 71 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_up
-# 50 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 71 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_up
 	step_end
 
-# 58 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 79 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 AcornParkCaveDigDig_Movement_9:
-# 58 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 79 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_down
 	step_end
 
-# 62 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 83 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 AcornParkCaveDigDig_Movement_10:
-# 62 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 83 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_down
-# 62 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 83 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_down
 	step_end
 
-# 66 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 87 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 AcornParkCaveDigDig_Movement_11:
-# 66 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 87 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_down
-# 66 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 87 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_down
-# 66 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 87 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_down
+	step_end
+
+# 263 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+AcornParkCaveDresser_Movement_0:
+# 263 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	emote_exclamation_mark
+# 263 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	delay_16
+	step_end
+
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+AcornParkCaveDresser_Movement_1:
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	walk_down
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	walk_down
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	walk_down
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	walk_down
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	walk_down
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	walk_down
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	walk_down
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	walk_down
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	walk_right
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	walk_right
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	walk_right
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	walk_right
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	walk_right
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	walk_right
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	walk_right
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	walk_up
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	face_up
+	step_end
+
+# 269 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+AcornParkCaveDresser_Movement_2:
+# 269 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	walk_in_place_right
 	step_end
 
 AcornParkCaveBottomLeft_Text_0:
-# 89 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 102 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	.string "Nothing here...$"
+
+AcornParkCaveSoccerHam_Text_0:
+# 193 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	.string "Smells like strawberries.\pAnd sweat.\pAnd crime.$"
+
+HamhaSoccerHamGotHammer_Text_0:
+# 219 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	.string "You may have found that hammer, but\nyour silly Ham-battles will never be as\lpopular as the great sport of straw-\l-berry soccer!$"
+
+HamhaSoccerHamNoHammer_Text_0:
+# 223 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	.string "You'll never find that hammer!\pI've hidden it so perfectly that\nno one will ever find it.\pNot even I could find it at this point!$"
+
+TackQSoccerHamNoHammer_Text_0:
+# 228 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	.string "Tack-Q all you want! I'll never tell you\nwhere that hammer is!$"
+
+TackQSoccerHamGotHammer_Text_0:
+# 233 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	.string "Look, you got your hammer already, cut\nit out with the Tack-Qs.$"
+
+AcornParkCaveDresser_Text_0:
+# 247 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	.string "Smells like old socks, but also faintly\nof PANDA.$"
+
+AcornParkCaveDresser_Text_1:
+# 260 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	.string "The bottom draw pops open and sticking\nout between some old socks you see\lPANDA's hammer!$"
+
+AcornParkCaveDresser_Text_2:
+# 262 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	.string "Hey you!$"
+
+AcornParkCaveDresser_Text_3:
+# 271 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	.string "Look I know I took that hammer and all,\nbut it's pretty rude to go through a\lhamster's sock drawer.\pWho knows what I could keep in there?$"

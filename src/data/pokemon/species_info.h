@@ -687,7 +687,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Bijou,
         .iconPalIndex =1,
         FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sHamtaroLevelUpLearnset,
+        .levelUpLearnset = sBijouLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
@@ -752,7 +752,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Oxnard,
         .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sHamtaroLevelUpLearnset,
+        .levelUpLearnset = sOxnardLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
@@ -882,7 +882,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Maxwell,
         .iconPalIndex =0,
         FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sHamtaroLevelUpLearnset,
+        .levelUpLearnset = sMaxwellLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
@@ -947,7 +947,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Cappy,
         .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sHamtaroLevelUpLearnset,
+        .levelUpLearnset = sCappyLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
@@ -1013,7 +1013,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Pashmina,
         .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sHamtaroLevelUpLearnset,
+        .levelUpLearnset = sPashminaLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
@@ -1078,7 +1078,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Penelope,
         .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sHamtaroLevelUpLearnset,
+        .levelUpLearnset = sPenelopeLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
@@ -1143,7 +1143,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Howdy,
         .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sHamtaroLevelUpLearnset,
+        .levelUpLearnset = sHowdyLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
@@ -1208,7 +1208,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Dexter,
         .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sHamtaroLevelUpLearnset,
+        .levelUpLearnset = sDexterLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
@@ -1273,7 +1273,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Sandy,
         .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sHamtaroLevelUpLearnset,
+        .levelUpLearnset = sSandyLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
@@ -1338,7 +1338,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Stan,
         .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sHamtaroLevelUpLearnset,
+        .levelUpLearnset = sStanLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
@@ -1404,7 +1404,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Panda,
         .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sHamtaroLevelUpLearnset,
+        .levelUpLearnset = sPandaLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
@@ -1469,7 +1469,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Snoozer,
         .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sHamtaroLevelUpLearnset,
+        .levelUpLearnset = sSnoozerLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
@@ -1535,7 +1535,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_Jingle,
         .iconPalIndex = 0,
         FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sHamtaroLevelUpLearnset,
+        .levelUpLearnset = sJingleLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),
@@ -1733,7 +1733,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconSprite = gMonIcon_ShopkeeperHam,
         .iconPalIndex =1,
         FOOTPRINT(QuestionMark)
-        .levelUpLearnset = sHamtaroLevelUpLearnset,
+        .levelUpLearnset = sShopkeeperHamLevelUpLearnset,
         .teachableLearnset = sHamtaroTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),

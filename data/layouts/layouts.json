@@ -9358,7 +9358,7 @@
       "id": "LAYOUT_HAMTARO_BROKEN_TV",
       "name": "Hamtaro_BrokenTV_Layout",
       "width": 21,
-      "height": 25,
+      "height": 24,
       "primary_tileset": "gTileset_BrokenTVPrimary",
       "secondary_tileset": "gTileset_HamtaroShrine",
       "border_filepath": "data/layouts/Hamtaro_BrokenTV/border.bin",
@@ -9399,7 +9399,7 @@
       "name": "JungleGym_Layout",
       "width": 21,
       "height": 14,
-      "primary_tileset": "gTileset_HamtaroInterior",
+      "primary_tileset": "gTileset_Playground",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/JungleGym/border.bin",
       "blockdata_filepath": "data/layouts/JungleGym/map.bin"

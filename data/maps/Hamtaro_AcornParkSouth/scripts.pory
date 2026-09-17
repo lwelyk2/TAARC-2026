@@ -34,7 +34,7 @@ script AcornParkSouthSoccerHam {
     dynmultipush(gText_TackQ, 2)
     dynmultipush(gText_DigDig, 3)
     if(checkitem(ITEM_TM_ASTONISH)) {
-        dynmultipush(AcornParkSouthShockie, 4)
+        dynmultipush(AcornParkSouthShockieText, 4)
     } else {
         dynmultipush(AcornParkSouthQuestionMarks, 4)
     }
@@ -98,7 +98,7 @@ script AcornParkSouthSoccerHam {
                 applymovement(LOCALID_PLAYER, moves(face_up))
                 waitmovement
                 msgbox("What, who are you calling DELIN-Q?\pThat's it!")
-                applymovement(LOCAL_ID_SOCCER_HAM, moves(walk_in_place_right))
+                applymovement(LOCALID_SOCCER_HAM, moves(walk_in_place_right))
                 waitmovement
                 msgbox("It's time for me to teach you a lesson!")
                 call(SoccerHamBattleHandler)
@@ -106,7 +106,7 @@ script AcornParkSouthSoccerHam {
     }
     if(flag(FLAG_FOUGHT_SOCCER_HAM)) {
         msgbox("Well, well, well. It seems you didn't learn\nyour lesson the last time.")
-        applymovement(LOCAL_ID_SOCCER_HAM, moves(walk_in_place_right))
+        applymovement(LOCALID_SOCCER_HAM, moves(walk_in_place_right))
         waitmovement
         msgbox("Get ready for a beating!")
         call(SoccerHamBattleHandler)
@@ -166,7 +166,7 @@ script AcornPathSouthPanda {
             applymovement(LOCALID_PANDA,moves(face_down))
             waitmovement
             createfieldmugshot(MUGSHOT_PANDA, EMOTE_NORMAL)
-            speaker("Panda")
+            setspeaker("Panda")
             msgbox("Ow! Hamtaro, why would you do that?")
             applymovement(LOCALID_PANDA,moves(face_up))
             waitmovement
@@ -340,12 +340,12 @@ script AcornParkSouthSnoozer {
             msgbox(format("There's a little bit of dirt on Snoozer now, but he's still sleeping through it.$"))
             break
         case 4:
-            if(checkitem(ITEM_TM_DINGBANG)) {
+            if(checkitem(ITEM_TM_UPROAR)) {
                 // Insert Dingbang graphics here
                 createfieldmugshot(MUGSHOT_HAMTARO, EMOTE_NORMAL)
                 setspeaker("Hamtaro")
                 message("DingBang!$")
-                applymovement(LOCALID_PLAYER, dingbang)
+                applymovement(LOCALID_PLAYER, moves(dingbang))
                 waitmovement
                 waitmessage
                 waitbuttonpress
@@ -355,7 +355,7 @@ script AcornParkSouthSnoozer {
                 waitmovement
                 createfieldmugshot(MUGSHOT_SNOOZER, EMOTE_NORMAL)
                 setspeaker("Snoozer")
-                msgbox("Huh? what's going on? Why is it so noisy...")
+                msgbox("Huh? what's going on?\pWhy is it so noisy...")
                 applymovement(LOCALID_SNOOZER, moves(
                     walk_in_place_left
                 ))
@@ -378,21 +378,21 @@ script AcornPark_OxnardsSunflowerSeed {
     dynmultichoice(1, 1, FALSE, 4,0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig)
     switch(var(VAR_RESULT)) {
         case 0:
-            call(CommonEventScript_Hamha)
+            call(Common_EventScript_Hamha)
             release
             end
         case 1:
-            call(CommonEventScript_Hifhif)
+            call(Common_EventScript_HifHif)
             giveitem(ITEM_SUNFLOWER_SEED)
             removeobject(LOCALID_SEED)
             release
             end
         case 2:
-            call(CommonEventScript_TackQ)
+            call(Common_EventScript_TackQ)
             release
             end
         case 3:
-            call(CommonEventScript_DigDig)
+            call(Common_EventScript_DigDig)
             msgbox("Nothing here...")
             release
             end
@@ -441,7 +441,7 @@ movement EmoteTest {
 text AcornParkSouthDingBang {
     "DingBang$"
 }
-text AcornParkSouthShockie {
+text AcornParkSouthShockieText {
     "{COLOR RED}Shockie$"
 }
 text AcornParkSouthQuestionMarks {

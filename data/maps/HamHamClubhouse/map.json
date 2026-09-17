@@ -57,7 +57,7 @@
       "flag": "FLAG_GOT_PANDA"
     },
     {
-      "local_id": "LOCALID_SNOOZER",
+      "local_id": "LOCALID_CLUB_SNOOZER",
       "graphics_id": "OBJ_EVENT_GFX_SNOOZER",
       "x": 9,
       "y": 15,
@@ -71,7 +71,7 @@
       "flag": "FLAG_HIDE_SNOOZER"
     },
     {
-      "local_id": "LOCALID_OXNARD",
+      "local_id": "LOCALID_CLUB_OXNARD",
       "graphics_id": "OBJ_EVENT_GFX_OXNARD",
       "x": 2,
       "y": 15,

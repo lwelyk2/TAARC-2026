@@ -1,1 +1,37 @@
-mapscripts Hamtaro_BrokenTV_MapScripts {}
+mapscripts Hamtaro_BrokenTV_MapScripts {    
+    MAP_SCRIPT_ON_LOAD: BrokenTV_HidePlayer
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: BrokenTV_Credits
+    ]
+}
+script BrokenTV_HidePlayer {
+    hideplayer
+    special(SpawnCameraObject)
+}
+
+script BrokenTV_Credits {
+    setvar(VAR_TEMP_0,1)
+    hideplayer
+    special(SpawnCameraObject)
+    createfieldmugshot(MUGSHOT_BIJOU, EMOTE_NORMAL)
+    setspeaker("Bijou")
+    msgbox(format("The field mugshot system is from mudskipper13, and the TM/HM case code was from agsmgmaster64's FRLG Items Expansion."))
+    applymovement(OBJ_EVENT_ID_CAMERA,moves(walk_diag_northwest * 8))
+    waitmovement
+    createfieldmugshot(MUGSHOT_DEXTER, EMOTE_NORMAL)
+    setspeaker("Dexter")
+    msgbox(format("Thanks to Kasen in the Team Aqua's Hideout discord for pointing out my stupid mistake that took a lot of time."))
+    applymovement(OBJ_EVENT_ID_CAMERA,moves(walk_diag_southwest * 2 walk_fast_left * 7))
+    waitmovement
+    createfieldmugshot(MUGSHOT_HOWDY, EMOTE_NORMAL)
+    setspeaker("Howdy")
+    msgbox(format("Thanks to everyone who works on the Pokeemerald Expansion and for the Team Aqua's Hideout for getting me to actually sort of finish a gen 3 project with this one."))
+    applymovement(OBJ_EVENT_ID_CAMERA,moves(walk_diag_southeast * 6 walk_fast_down * 7))
+    waitmovement
+    createfieldmugshot(MUGSHOT_CAPPY, EMOTE_NORMAL)
+    setspeaker("Cappy")
+    msgbox(format("Okay, that's the ending!\pDue to changing the idea of this a few times and a variety of real life issues this is rushed and unfinished, but I wanted to get something out the door.\pI love the old Hamtaro gameboy color games and may revisit this idea if I ever do a sequel to my GBC hack and do the goofy corrupted sd card mixing up the ROMs concept again.\pYou'll be kicked back to the Clubhouse now and if I had time you'll be able to talk to the receptionist in the arena to fight whatever HamHam you want.\pProbably not worth it, didn't do too many moves and my ideas for this was more around using Hamtaro features for overworld navigation.\pAnyway, thanks for playing!"))
+    warp(MAP_HAM_HAM_CLUBHOUSE, 0)
+    waitstate
+    releaseall
+}

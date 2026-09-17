@@ -13,12 +13,12 @@ AcornParkEntranceOxnard::
 	switch VAR_RESULT
 # 8 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	case 0, AcornParkEntranceOxnard_3
-# 78 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+# 86 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	case 1, AcornParkEntranceOxnard_4
-# 89 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+# 97 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	case 2, AcornParkEntranceOxnard_5
 AcornParkEntranceOxnard_1:
-# 94 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+# 102 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	release
 	end
 
@@ -72,30 +72,30 @@ AcornParkEntranceOxnard_9:
 	goto AcornParkEntranceOxnard_1
 
 AcornParkEntranceOxnard_4:
-# 79 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
-	call Common_EventScript_MoveToFront
-# 80 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
-	call Common_EventScript_TackQ
-# 81 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
-	applymovement LOCALID_OXNARDOW, AcornParkEntranceOxnard_Movement_7
-# 82 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
-	createfieldmugshot MUGSHOT_OXNARD, EMOTE_NORMAL
-# 83 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
-	setspeaker AcornParkEntranceOxnard_Text_0
-# 84 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
-	message AcornParkEntranceOxnard_Text_9
-# 85 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
-	waitbuttonpress
-# 86 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
-	closemessage
 # 87 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	call Common_EventScript_MoveToFront
+# 88 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	call Common_EventScript_TackQ
+# 89 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	applymovement LOCALID_OXNARDOW, AcornParkEntranceOxnard_Movement_7
+# 90 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	createfieldmugshot MUGSHOT_OXNARD, EMOTE_NORMAL
+# 91 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	setspeaker AcornParkEntranceOxnard_Text_0
+# 92 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	message AcornParkEntranceOxnard_Text_10
+# 93 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	waitbuttonpress
+# 94 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	closemessage
+# 95 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	applymovement LOCALID_OXNARDOW, AcornParkEntranceOxnard_Movement_4
 	goto AcornParkEntranceOxnard_1
 
 AcornParkEntranceOxnard_5:
-# 90 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+# 98 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	call Common_EventScript_DigDig
-# 91 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+# 99 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	applymovement LOCALID_PLAYER, AcornParkEntranceOxnard_Movement_8
 	goto AcornParkEntranceOxnard_1
 
@@ -144,18 +144,18 @@ AcornParkEntranceOxnard_10:
 # 50 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne AcornParkEntranceOxnard_12
-# 69 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+# 77 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	call Common_EventScript_NoP
-# 70 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+# 78 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	applymovement LOCALID_PLAYER, AcornParkEntranceOxnard_Movement_0
-# 71 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+# 79 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	waitmovement
-# 72 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+# 80 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	createfieldmugshot MUGSHOT_OXNARD, EMOTE_NORMAL
-# 73 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+# 81 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	setspeaker AcornParkEntranceOxnard_Text_0
-# 74 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
-	msgbox AcornParkEntranceOxnard_Text_8
+# 82 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	msgbox AcornParkEntranceOxnard_Text_9
 	goto AcornParkEntranceOxnard_9
 
 AcornParkEntranceOxnard_12:
@@ -193,7 +193,21 @@ AcornParkEntranceOxnard_12:
 	removeobject LOCALID_OXNARD
 # 67 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	setflag FLAG_GOT_EVERYONE
-	goto AcornParkEntranceOxnard_9
+# 68 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	setflag FLAG_HIDE_WORKING_PANDA
+# 69 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	clearflag FLAG_HIDE_CLUBHOUSE_OXNARD
+# 70 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	clearflag FLAG_HIDE_CLUBHOUSE_PANDA
+# 71 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	msgbox AcornParkEntranceOxnard_Text_8
+# 72 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	warp MAP_HAM_HAM_CLUBHOUSE_ENDING, 0
+# 73 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	waitstate
+# 74 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	releaseall
+	end
 
 
 # 11 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
@@ -262,21 +276,21 @@ AcornParkEntranceOxnard_Movement_6:
 	walk_down
 	step_end
 
-# 81 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+# 89 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 AcornParkEntranceOxnard_Movement_7:
-# 81 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+# 89 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	walk_in_place_left
-# 81 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+# 89 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	walk_in_place_left
-# 81 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+# 89 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	walk_in_place_left
-# 81 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+# 89 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	walk_in_place_left
 	step_end
 
-# 91 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+# 99 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 AcornParkEntranceOxnard_Movement_8:
-# 91 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+# 99 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	face_down
 	step_end
 
@@ -313,9 +327,13 @@ AcornParkEntranceOxnard_Text_7:
 	.string "BOSS wants to do a tournament?\pThere's fighting?\pSounds scary, but since you helped\nfind my sunflower seed I guess I'll try.\pSee you at the clubhouse HAMTARO!$"
 
 AcornParkEntranceOxnard_Text_8:
-# 74 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
-	.string "Oh... okay...$"
+# 71 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	.string "You got everyone!\pIt's time to go back to the clubhouse!$"
 
 AcornParkEntranceOxnard_Text_9:
-# 84 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+# 82 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
+	.string "Oh... okay...$"
+
+AcornParkEntranceOxnard_Text_10:
+# 92 "data/maps/Hamtaro_AcornParkEntrance/scripts.pory"
 	.string "Owww.... why did you do that HAMTARO?\nWhat did I do to you???\lwhy would you do that?$"

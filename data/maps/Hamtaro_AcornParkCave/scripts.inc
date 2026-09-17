@@ -428,112 +428,124 @@ AcornParkCaveSoccerHam_14:
 
 HamhaSoccerHamGotHammer::
 # 219 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	createfieldmugshot MUGSHOT_SOCCER_HAM, EMOTE_NORMAL
+# 220 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	msgbox HamhaSoccerHamGotHammer_Text_0
 	return
 
 
 HamhaSoccerHamNoHammer::
-# 223 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 224 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	createfieldmugshot MUGSHOT_SOCCER_HAM, EMOTE_NORMAL
+# 225 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	msgbox HamhaSoccerHamNoHammer_Text_0
 	return
 
 
 TackQSoccerHamNoHammer::
-# 228 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 230 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	createfieldmugshot MUGSHOT_SOCCER_HAM, EMOTE_NORMAL
+# 231 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	msgbox TackQSoccerHamNoHammer_Text_0
 	return
 
 
 TackQSoccerHamGotHammer::
-# 233 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 236 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	createfieldmugshot MUGSHOT_SOCCER_HAM, EMOTE_NORMAL
+# 237 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	msgbox TackQSoccerHamGotHammer_Text_0
 	return
 
 
 AcornParkCaveDresser::
-# 238 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 242 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	lock
-# 239 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 243 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	dynmultichoice 1, 1, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, gText_Hamha, gText_HifHif, gText_TackQ, gText_DigDig
-# 240 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 244 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	switch VAR_RESULT
-# 241 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	case 0, AcornParkCaveDresser_2
 # 245 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	case 0, AcornParkCaveDresser_2
+# 249 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	case 1, AcornParkCaveDresser_3
-# 250 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 254 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	case 2, AcornParkCaveDresser_4
-# 275 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 281 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	case 3, AcornParkCaveDresser_5
 	return
 
 AcornParkCaveDresser_2:
-# 242 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 246 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	call Common_EventScript_Hamha
-# 243 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 247 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	release
 	end
 
 AcornParkCaveDresser_3:
-# 246 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 250 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	call Common_EventScript_HifHif
-# 247 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 251 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	msgbox AcornParkCaveDresser_Text_0
-# 248 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 252 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	release
 	end
 
 AcornParkCaveDresser_4:
-# 251 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 255 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	call Common_EventScript_MoveToFront
-# 252 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 256 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	call Common_EventScript_TackQ
 	checkitem ITEM_HAMMER
 # 0 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne AcornParkCaveDresser_6
-# 256 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	goto_if_set FLAG_GOT_PANDA, AcornParkCaveDresser_7
 # 260 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	msgbox AcornParkCaveDresser_Text_1
-# 261 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	giveitem ITEM_HAMMER
-# 262 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	msgbox AcornParkCaveDresser_Text_2
-# 263 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	applymovement LOCALID_PLAYER, AcornParkCaveDresser_Movement_0
+	goto_if_set FLAG_GOT_PANDA, AcornParkCaveDresser_7
 # 264 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	playse SE_PIN
+	msgbox AcornParkCaveDresser_Text_1
 # 265 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	waitmovement
+	giveitem ITEM_HAMMER
 # 266 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	waitse
+	createfieldmugshot MUGSHOT_SOCCER_HAM, EMOTE_NORMAL
 # 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	applymovement LOCALID_PLAYER, AcornParkCaveDresser_Movement_1
+	msgbox AcornParkCaveDresser_Text_2
 # 268 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	waitmovement
+	applymovement LOCALID_PLAYER, AcornParkCaveDresser_Movement_0
 # 269 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	applymovement LOCALID_SOCCER_HAM, AcornParkCaveDresser_Movement_2
+	playse SE_PIN
 # 270 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	waitmovement
 # 271 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
-	msgbox AcornParkCaveDresser_Text_3
+	waitse
 # 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	applymovement LOCALID_PLAYER, AcornParkCaveDresser_Movement_1
+# 273 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	waitmovement
+# 274 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	applymovement LOCALID_SOCCER_HAM, AcornParkCaveDresser_Movement_2
+# 275 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	waitmovement
+# 276 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	createfieldmugshot MUGSHOT_SOCCER_HAM, EMOTE_NORMAL
+# 277 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+	msgbox AcornParkCaveDresser_Text_3
+# 278 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	release
 	end
 
 AcornParkCaveDresser_5:
-# 276 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 282 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	call AcornParkCaveDigDig
 	return
 
 AcornParkCaveDresser_6:
-# 254 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 258 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	release
 	end
 
 AcornParkCaveDresser_7:
-# 257 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 261 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	release
 	end
 
@@ -634,55 +646,55 @@ AcornParkCaveDigDig_Movement_11:
 	walk_down
 	step_end
 
-# 263 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 268 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 AcornParkCaveDresser_Movement_0:
-# 263 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 268 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	emote_exclamation_mark
-# 263 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 268 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	delay_16
 	step_end
 
-# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 AcornParkCaveDresser_Movement_1:
-# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_down
-# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_down
-# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_down
-# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_down
-# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_down
-# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_down
-# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_down
-# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_down
-# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_right
-# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_right
-# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_right
-# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_right
-# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_right
-# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_right
-# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_right
-# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_up
-# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 272 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	face_up
 	step_end
 
-# 269 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 274 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 AcornParkCaveDresser_Movement_2:
-# 269 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 274 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	walk_in_place_right
 	step_end
 
@@ -695,33 +707,33 @@ AcornParkCaveSoccerHam_Text_0:
 	.string "Smells like strawberries.\pAnd sweat.\pAnd crime.$"
 
 HamhaSoccerHamGotHammer_Text_0:
-# 219 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 220 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	.string "You may have found that hammer, but\nyour silly Ham-battles will never be as\lpopular as the great sport of straw-\l-berry soccer!$"
 
 HamhaSoccerHamNoHammer_Text_0:
-# 223 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 225 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	.string "You'll never find that hammer!\pI've hidden it so perfectly that\nno one will ever find it.\pNot even I could find it at this point!$"
 
 TackQSoccerHamNoHammer_Text_0:
-# 228 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 231 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	.string "Tack-Q all you want! I'll never tell you\nwhere that hammer is!$"
 
 TackQSoccerHamGotHammer_Text_0:
-# 233 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 237 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	.string "Look, you got your hammer already, cut\nit out with the Tack-Qs.$"
 
 AcornParkCaveDresser_Text_0:
-# 247 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 251 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	.string "Smells like old socks, but also faintly\nof PANDA.$"
 
 AcornParkCaveDresser_Text_1:
-# 260 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 264 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	.string "The bottom draw pops open and sticking\nout between some old socks you see\lPANDA's hammer!$"
 
 AcornParkCaveDresser_Text_2:
-# 262 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 267 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	.string "Hey you!$"
 
 AcornParkCaveDresser_Text_3:
-# 271 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
+# 277 "data/maps/Hamtaro_AcornParkCave/scripts.pory"
 	.string "Look I know I took that hammer and all,\nbut it's pretty rude to go through a\lhamster's sock drawer.\pWho knows what I could keep in there?$"

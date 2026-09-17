@@ -42,6 +42,7 @@ script AcornParkSouthSoccerHam {
     switch(var(VAR_RESULT)) {
         case 0:
             call(Common_EventScript_MoveToFront)
+            call(Common_EventScript_Hamha)
             break
         case 1:
             call(Common_EventScript_HifHif)
@@ -52,8 +53,10 @@ script AcornParkSouthSoccerHam {
             call(Common_EventScript_MoveToFront)
             call(Common_EventScript_TackQ)
             applymovement(LOCALID_SOCCER_HAM,moves(walk_in_place_up))
+            createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
             msgbox("Ha! You think that would hurt me?\pI'm made of tougher stuff than that!")
             applymovement(LOCALID_SOCCER_HAM, moves(walk_in_place_down))
+            waitmovement
             release
             end
         case 3:
@@ -69,22 +72,33 @@ script AcornParkSouthSoccerHam {
                 default:
                     break
             }
+            createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
             msgbox("Hahaha! You think I'd hide it there?\nerrr... I mean.\pWhy are you digging here? You're just\nmaking a mess!")
             release
             end
         case 4:
+            setspeaker("Hamtaro")
+            createfieldmugshot(MUGSHOT_HAMTARO, EMOTE_NORMAL)
+            message("{COLOR RED}SHOCKIE!$")
+            applymovement(LOCALID_PLAYER, moves(shockie))
+            waitmovement
+            waitmessage
+            waitbuttonpress
             if(flag(FLAG_FOUGHT_SOCCER_HAM)) {
                 break
             }
             if(checkitem(ITEM_TM_ASTONISH)){
+                createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
                 msgbox("Huh? SHOCKIE?\pOh, the ladder? Yeah that's a strange\none. I wonder who could have done that?\pI think that Hamster should spend more\ntime keeping track of his hammer and\lless time helping other Hamsters make\lnew sports that are worse than\lStrawberry Soccer.")
                 applymovement(LOCALID_SOCCER_HAM,moves(emote_exclamation_mark))
                 playse(SE_PIN)
                 waitmovement
                 waitse
+                createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
                 msgbox("Uhh I mean, assuming he had a hammer.\pThat he lost.\pAnd wasn't stolen.\pI mean you'd have to be a real {COLOR RED}DELIN-Q{COLOR DARK_GRAY}\nto do something like steal a tool.")
                 // applymovement(LOCALID_PLAYER, moves(delinq))
                 waitmovement
+                removefieldmugshot
                 setspeaker(SP_NAME_NONE)
                 message(format("You learned {COLOR RED}DELIN-Q!$"))
                 playse(MUS_RG_OBTAIN_KEY_ITEM)
@@ -97,20 +111,25 @@ script AcornParkSouthSoccerHam {
                 closemessage
                 applymovement(LOCALID_PLAYER, moves(face_up))
                 waitmovement
+                createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
                 msgbox("What, who are you calling DELIN-Q?\pThat's it!")
-                applymovement(LOCALID_SOCCER_HAM, moves(walk_in_place_right))
+                applymovement(LOCALID_SOCCER_HAM, moves(walk_in_place_left))
                 waitmovement
+                createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
                 msgbox("It's time for me to teach you a lesson!")
                 call(SoccerHamBattleHandler)
             }
     }
     if(flag(FLAG_FOUGHT_SOCCER_HAM)) {
+        createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
         msgbox("Well, well, well. It seems you didn't learn\nyour lesson the last time.")
         applymovement(LOCALID_SOCCER_HAM, moves(walk_in_place_right))
         waitmovement
+        createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
         msgbox("Get ready for a beating!")
         call(SoccerHamBattleHandler)
     } else {
+        createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
         msgbox("Ham-howdy! You must be one of those\nHamHams who are always around here\lhaving adventures.\pYou should give up on this stupid new\nHam-battle idea and play some good old\lstrawberry soccer!")
         applymovement(LOCALID_SOCCER_HAM,moves(walk_in_place_up))
         waitmovement
@@ -129,18 +148,23 @@ script SoccerHamBattleHandler {
     specialvar(VAR_RESULT, GetBattleOutcome)
     switch(var(VAR_RESULT)) {
         case B_OUTCOME_WON:
-            msgbox("No way! You can't beat me! Not with\nall of my training!")
-            applymovement(LOCALID_SOCCER_HAM,moves(walk_up))
-            waitmovement(LOCALID_SOCCER_HAM)
+            createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
+            msgbox("No way! You can't beat me! Not with\nall of my training!\pYou'll never get that hammer though!")
+            fadescreen(FADE_TO_BLACK)
             playse(SE_EXIT)
             removeobject(LOCALID_SOCCER_HAM)
             waitse
+            fadescreen(FADE_FROM_BLACK)
+            release
+            end
         case B_OUTCOME_RAN:
+            createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
             msgbox("Ha! That's right, run away little Ham!")
             special(HealPlayerParty)
             release 
             end
         case B_OUTCOME_LOST:
+            createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
             msgbox("I'm still the best!\pWho needs this ham-battle nonsense?\pI got all the strength I need from\nplaying strawberry soccer.")
             release
             end
@@ -263,6 +287,9 @@ script AcornPathSouthPanda {
         waitmovement
         removeobject(LOCALID_PANDA)
         setflag(FLAG_NEED_SNOOZER)
+        setflag(FLAG_GOT_PANDA)
+        clearflag(FLAG_HIDE_WORKING_PANDA)
+        clearflag(FLAG_NOT_GOT_PANDA)
         release
         end
     } else {
@@ -362,7 +389,7 @@ script AcornParkSouthSnoozer {
                 waitmovement
                 msgbox("Oh, back to the clubhouse?\pSure thing. I guess I can do that...")
                 fadescreen(FADE_TO_BLACK)
-                setflag(FLAG_GOT_SNOOZER)
+                removeobject(LOCALID_SNOOZER)
                 playse(SE_EXIT)
                 waitse
                 fadescreen(FADE_FROM_BLACK)
@@ -439,10 +466,10 @@ movement EmoteTest {
 }
 
 text AcornParkSouthDingBang {
-    "DingBang$"
+    "{COLOR RED}DINGBANG$"
 }
 text AcornParkSouthShockieText {
-    "{COLOR RED}Shockie$"
+    "{COLOR RED}SHOCKIE$"
 }
 text AcornParkSouthQuestionMarks {
     "?????$"

@@ -2,7 +2,7 @@
   "id": "MAP_HAMTARO_ACORN_PARK_CAVE",
   "name": "Hamtaro_AcornParkCave",
   "layout": "LAYOUT_HAMTARO_ACORN_PARK_CAVE",
-  "music": "MUS_DUMMY",
+  "music": "MUS_CLUBHOUSE_ROOMS_1_ALTISSIMO",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

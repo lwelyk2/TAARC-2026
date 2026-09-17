@@ -67,8 +67,8 @@
 #define FLAG_GOT_SUNFLOWER_SEED    0x2D // Unused Flag
 #define FLAG_HIDE_CLUBHOUSE_OXNARD    0x2E // Unused Flag
 #define FLAG_HIDE_CLUBHOUSE_PANDA    0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
+#define FLAG_HIDE_WORKING_PANDA    0x30 // Unused Flag
+#define FLAG_BEAT_GAME    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
 #define FLAG_UNUSED_0x033    0x33 // Unused Flag
 #define FLAG_UNUSED_0x034    0x34 // Unused Flag

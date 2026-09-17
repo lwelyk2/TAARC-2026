@@ -550,6 +550,7 @@
 #define MUS_CLUBHOUSE_ROOMS_2_ALTISSIMO 614
 #define MUS_CLUBHOUSE_ROOMS_3_ALTISSIMO 615
 #define MUS_HAMHAMHEARTBREAK_BOSS_ALTISSIMO 616
+#define MUS_CREDITS_ALTISSIMO       617
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

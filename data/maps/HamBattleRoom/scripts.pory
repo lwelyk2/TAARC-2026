@@ -1,5 +1,49 @@
-mapscripts HamBattleRoom_MapScripts {}
+mapscripts HamBattleRoom_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: BattleRoomEndingCutscene
+    ]
+}
 
+script BattleRoomEndingCutscene {
+    setvar(VAR_TEMP_0, 1)
+    if(flag(FLAG_BEAT_GAME)){
+        end
+    }
+    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+    setspeaker("Boss")
+    msgbox("Here it is! The HamHam Arena!\pFollow me, I'll give you the grand tour!")
+    applymovement(LOCALID_BOSS_BATTLEROOM,moves(walk_left * 3 walk_up * 2))
+    applymovement(LOCALID_PLAYER, moves(walk_left * 3 walk_up *2))
+    waitmovement
+    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+    setspeaker("Boss")
+    msgbox("This guy here helps arrange the\nmatches between everyone, he's very\lfancy.")
+    applymovement(LOCALID_SHOPKEEPER, moves(walk_in_place_up))
+    waitmovement
+    createfieldmugshot(MUGSHOT_SHOPKEEPER, EMOTE_NORMAL)
+    setspeaker("Attendant")
+    msgbox("You're too kind, sir.")
+    applymovement(LOCALID_BOSS_BATTLEROOM,moves(face_right))
+    applymovement(LOCALID_PLAYER, moves(face_left))
+    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+    setspeaker("Boss")
+    msgbox("Alright, instead of going around and\nshowing you everything, let's test\l it out!\pThat's the best way to learn something!")
+    applymovement(LOCALID_BOSS_BATTLEROOM,moves(walk_down * 9 walk_left * 7))
+    applymovement(LOCALID_PLAYER, moves(walk_left * 3 walk_down * 3 walk_left * 21 walk_down * 5))
+    waitmovement
+    applymovement(LOCALID_PLAYER, moves(walk_right * 7))
+    applymovement(LOCALID_BOSS_BATTLEROOM,moves(walk_left * 7))
+    waitmovement
+    createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
+    setspeaker("Boss")
+    msgbox("You ready to battle HAMTARO?")
+    call(Common_EventScript_YepP)
+    setflag(FLAG_BEAT_GAME)
+    warp(MAP_JUNGLE_GYM, 4, 8)
+    waitstate
+    releaseall
+
+}   
 script BattleRoom_ShopkeeperHam {
     lock
     dynmultipush(gText_Hamha, 0)

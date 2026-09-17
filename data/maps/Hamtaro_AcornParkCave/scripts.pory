@@ -216,20 +216,24 @@ script AcornParkCaveSoccerHam {
 }
 
 script HamhaSoccerHamGotHammer {
+    createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
     msgbox("You may have found that hammer, but\nyour silly Ham-battles will never be as\lpopular as the great sport of straw-\l-berry soccer!")
     return
 }
 script HamhaSoccerHamNoHammer {
+    createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
     msgbox("You'll never find that hammer!\pI've hidden it so perfectly that\nno one will ever find it.\pNot even I could find it at this point!")
     return
 }
 
 script TackQSoccerHamNoHammer {
+    createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
     msgbox("Tack-Q all you want! I'll never tell you\nwhere that hammer is!")
     return
 }
 
 script TackQSoccerHamGotHammer {
+    createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
     msgbox("Look, you got your hammer already, cut\nit out with the Tack-Qs.")
     return
 }
@@ -259,6 +263,7 @@ script AcornParkCaveDresser {
             } else {
                 msgbox("The bottom draw pops open and sticking\nout between some old socks you see\lPANDA's hammer!")
                 giveitem(ITEM_HAMMER)
+                createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
                 msgbox("Hey you!")
                 applymovement(LOCALID_PLAYER,moves(emote_exclamation_mark delay_16))
                 playse(SE_PIN)
@@ -268,6 +273,7 @@ script AcornParkCaveDresser {
                 waitmovement
                 applymovement(LOCALID_SOCCER_HAM,moves(walk_in_place_right))
                 waitmovement
+                createfieldmugshot(MUGSHOT_SOCCER_HAM, EMOTE_NORMAL)
                 msgbox("Look I know I took that hammer and all,\nbut it's pretty rude to go through a\lhamster's sock drawer.\pWho knows what I could keep in there?")
                 release
                 end

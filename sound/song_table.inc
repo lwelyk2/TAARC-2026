@@ -623,6 +623,7 @@ gSongTable::
 	song mus_clubhouse_rooms_2_altissimo, MUSIC_PLAYER_BGM, 0
 	song mus_clubhouse_rooms_3_altissimo, MUSIC_PLAYER_BGM, 0
 	song mus_hamhamheartbreak_boss_altissimo, MUSIC_PLAYER_BGM, 0
+	song mus_credits_altissimo, MUSIC_PLAYER_BGM, 0
 
 	.align 2
 dummy_song_header:

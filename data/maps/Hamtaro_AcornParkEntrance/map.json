@@ -2,7 +2,7 @@
   "id": "MAP_HAMTARO_ACORN_PARK_ENTRANCE",
   "name": "Hamtaro_AcornParkEntrance",
   "layout": "LAYOUT_HAMTARO_ACORN_PARK_ENTRANCE",
-  "music": "MUS_DUMMY",
+  "music": "MUS_MAP",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

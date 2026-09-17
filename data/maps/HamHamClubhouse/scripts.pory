@@ -7,8 +7,10 @@ mapscripts HamHamClubhouse_MapScripts {
 
 script Clubhouse_CheckForPanda {
     if(flag(FLAG_GAVE_PANDA_HAMMER)) {
-        if(flag(FLAG_GOT_SNOOZER)) {
-             call(Clubhouse_PandaWork)
+        if(flag(FLAG_BEAT_GAME)) {
+             return
+        } else {
+            call(Clubhouse_PandaWork)
         }
     }
     return
@@ -37,7 +39,7 @@ script Clubhouse_IntroCutscene {
         waitmovement(LOCALID_BOSS_BLOCKING)
         createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
         setspeaker("Boss")
-        msgbox("Alright! I think everyone's playing\nin Acorn Park as usual, so you should\llook for them there and see if you can\llearn somet new Hamchat while you're\lat it!")
+        msgbox("Alright! I think everyone's playing\nin Acorn Park as usual, so you should\llook for them there and see if you can\llearn some new Hamchat while you're\lat it!")
         release
     }
 }
@@ -120,7 +122,8 @@ script ClubhouseBoss {
     createfieldmugshot(MUGSHOT_BOSS, EMOTE_NORMAL)
     setspeaker("Boss")
     if(flag(FLAG_NEED_SNOOZER)){
-        faceplayer
+        applymovement(LOCALID_BOSS_SITTING,moves(face_down))
+        waitmovement
         msgbox("I hope PANDA finishes up soon, it's\nso {COLOR RED}DINGBANG{COLOR DARK_GRAY} in here while he's working.")
         if(checkitem(ITEM_TM_UPROAR) == FALSE){
             applymovement(LOCALID_PLAYER, moves(dingbang))

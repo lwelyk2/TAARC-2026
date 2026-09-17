@@ -9413,6 +9413,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Hamtaro_AcornParkCave/border.bin",
       "blockdata_filepath": "data/layouts/Hamtaro_AcornParkCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAM_HAM_CLUBHOUSE_ENDING",
+      "name": "HamHamClubhouse_Ending_Layout",
+      "width": 16,
+      "height": 17,
+      "primary_tileset": "gTileset_HamtaroInterior",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HamHamClubhouse_Ending/border.bin",
+      "blockdata_filepath": "data/layouts/HamHamClubhouse_Ending/map.bin"
     }
   ]
 }
